@@ -16,6 +16,8 @@ try:
 except ImportError as exc:  # pragma: no cover
     raise SystemExit("Install dependencies first: python3 -m pip install -r requirements.txt") from exc
 
+from geometry import expand_apartment_geometry, validate_geometry_rules
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -68,9 +70,12 @@ def door_swing_polygon(door: dict[str, Any], steps: int = 36) -> Polygon:
 
 
 def main() -> int:
-    apartment = load_json("data/apartment.json")
+    apartment_source = load_json("data/apartment.json")
+    apartment = expand_apartment_geometry(apartment_source)
+    fixtures = load_json("data/fixed-fixtures.json")
     furniture = load_json("data/furniture.json")
     constraints = load_json("data/layout-constraints.json")
+    geometry_rules = load_json("data/geometry-rules.json")
 
     errors: list[str] = []
     warnings: list[str] = []
@@ -106,12 +111,23 @@ def main() -> int:
         if not view_polygon.covers(polygon):
             errors.append(f"Space {space['id']} leaves the configured viewBox.")
 
+    wall_ids = [wall["id"] for wall in apartment["walls"]]
+    if len(wall_ids) != len(set(wall_ids)):
+        errors.append("Wall IDs are not unique after parametric geometry expansion.")
+
     for wall in apartment["walls"]:
         if wall["start"] == wall["end"]:
             errors.append(f"Wall {wall['id']} has zero length.")
+        if not all(math.isfinite(value) for point in (wall["start"], wall["end"]) for value in point):
+            errors.append(f"Wall {wall['id']} contains non-finite coordinates.")
+        if wall["thicknessPx"] <= 0:
+            errors.append(f"Wall {wall['id']} has a non-positive thickness.")
         line = LineString([wall["start"], wall["end"]])
         if not view_polygon.buffer(1).covers(line):
             errors.append(f"Wall {wall['id']} leaves the configured viewBox.")
+
+    geometry_errors, geometry_results = validate_geometry_rules(apartment, fixtures, geometry_rules)
+    errors.extend(geometry_errors)
 
     door_ids = [door["id"] for door in apartment["doors"]]
     if len(door_ids) != len(set(door_ids)):
@@ -120,7 +136,7 @@ def main() -> int:
     active_layout = next((item for item in furniture["layouts"] if item["id"] == furniture["activeLayoutId"]), None)
     if active_layout is None:
         errors.append("Active layout does not exist.")
-        return finish(errors, warnings)
+        return finish(errors, warnings, geometry_results=geometry_results)
 
     cm_per_pixel = apartment["scale"]["cmPerPixel"]
     object_polygons: dict[str, Polygon] = {}
@@ -170,15 +186,25 @@ def main() -> int:
     if apartment["scale"]["status"] != "confirmed":
         warnings.append("Entrance-door anchor is confirmed, but real-world clearances remain estimates because the source is not to scale.")
 
-    return finish(errors, warnings, active_layout["id"], blocked_door_ids)
+    return finish(errors, warnings, active_layout["id"], blocked_door_ids, geometry_results)
 
 
-def finish(errors: list[str], warnings: list[str], layout_id: str | None = None, blocked: set[str] | None = None) -> int:
+def finish(
+    errors: list[str],
+    warnings: list[str],
+    layout_id: str | None = None,
+    blocked: set[str] | None = None,
+    geometry_results: list[str] | None = None,
+) -> int:
     print("Scaled Apartment Planner validation")
     if layout_id:
         print(f"  layout: {layout_id}")
     if blocked is not None:
         print(f"  blocked doors: {', '.join(sorted(blocked)) or 'none'}")
+    if geometry_results:
+        print("  geometry rules:")
+        for result in geometry_results:
+            print(f"    {result}")
     for warning in warnings:
         print(f"WARNING: {warning}")
     for error in errors:

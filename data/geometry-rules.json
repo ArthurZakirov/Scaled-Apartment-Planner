@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "defaults": {
+    "angleToleranceDeg": 0.1,
+    "distanceTolerancePx": 0.1
+  },
+  "rules": [
+    {
+      "id": "garderobe-long-sides-parallel",
+      "type": "parallel",
+      "wallIds": ["wall-flur-garderobe-upper", "wall-flur-garderobe-lower"],
+      "tolerance": 0.1
+    },
+    {
+      "id": "garderobe-upper-cap-right-angle",
+      "type": "perpendicular",
+      "wallIds": ["wall-flur-garderobe-upper", "wall-flur-garderobe-cap-right"],
+      "tolerance": 0.1
+    },
+    {
+      "id": "garderobe-lower-cap-right-angle",
+      "type": "perpendicular",
+      "wallIds": ["wall-flur-garderobe-lower", "wall-flur-garderobe-cap-right"],
+      "tolerance": 0.1
+    },
+    {
+      "id": "garderobe-upper-cap-connected",
+      "type": "shared_endpoint",
+      "points": [
+        {"wallId": "wall-flur-garderobe-upper", "endpoint": "end"},
+        {"wallId": "wall-flur-garderobe-cap-right", "endpoint": "start"}
+      ],
+      "tolerance": 0.1
+    },
+    {
+      "id": "garderobe-lower-cap-connected",
+      "type": "shared_endpoint",
+      "points": [
+        {"wallId": "wall-flur-garderobe-lower", "endpoint": "start"},
+        {"wallId": "wall-flur-garderobe-cap-right", "endpoint": "end"}
+      ],
+      "tolerance": 0.1
+    },
+    {
+      "id": "garderobe-upper-meets-entry-wall",
+      "type": "point_on_wall",
+      "point": {"wallId": "wall-flur-garderobe-upper", "endpoint": "start"},
+      "targetWallId": "wall-southwest",
+      "tolerance": 0.1
+    },
+    {
+      "id": "garderobe-lower-meets-entry-wall",
+      "type": "point_on_wall",
+      "point": {"wallId": "wall-flur-garderobe-lower", "endpoint": "end"},
+      "targetWallId": "wall-southwest",
+      "tolerance": 0.1
+    },
+    {
+      "id": "garderobe-entry-right-angle",
+      "type": "perpendicular",
+      "wallIds": ["wall-flur-garderobe-lower", "wall-southwest"],
+      "tolerance": 0.1
+    },
+    {
+      "id": "entry-jamb-left-connected",
+      "type": "shared_endpoint",
+      "points": [
+        {"wallId": "wall-entry-jamb-left", "endpoint": "start"},
+        {"wallId": "wall-west-lower", "endpoint": "start"}
+      ],
+      "tolerance": 0.1
+    },
+    {
+      "id": "entry-jamb-right-connected",
+      "type": "shared_endpoint",
+      "points": [
+        {"wallId": "wall-entry-jamb-right", "endpoint": "end"},
+        {"wallId": "wall-southwest", "endpoint": "end"}
+      ],
+      "tolerance": 0.1
+    },
+    {
+      "id": "bath-upper-near-right-angle",
+      "type": "perpendicular",
+      "wallIds": ["wall-bath-upper", "wall-outer-nw"],
+      "tolerance": 2.0
+    },
+    {
+      "id": "bath-lower-near-right-angle",
+      "type": "perpendicular",
+      "wallIds": ["wall-bath-lower", "wall-west-lower"],
+      "tolerance": 2.0
+    },
+    {
+      "id": "east-exterior-segments-parallel",
+      "type": "parallel",
+      "wallIds": ["wall-east-upper", "wall-east-middle"],
+      "tolerance": 0.1
+    },
+    {
+      "id": "east-lower-segment-parallel",
+      "type": "parallel",
+      "wallIds": ["wall-east-middle", "wall-east-lower"],
+      "tolerance": 0.1
+    },
+    {
+      "id": "garderobe-clear-of-kitchen-return",
+      "type": "wall_fixture_clearance",
+      "wallId": "wall-flur-garderobe-lower",
+      "fixtureId": "kitchen-return",
+      "minimumPx": 30,
+      "tolerance": 0.1
+    },
+    {
+      "id": "garderobe-clear-of-kitchen-bottom-run",
+      "type": "wall_fixture_clearance",
+      "wallId": "wall-flur-garderobe-lower",
+      "fixtureId": "kitchen-bottom-run",
+      "minimumPx": 5,
+      "tolerance": 0.1
+    }
+  ]
+}

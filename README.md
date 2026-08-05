@@ -15,7 +15,9 @@ The first committed experiment includes:
 - automatic door-swing intersection checks;
 - a normal vector-only view;
 - a calibration route that overlays the vector geometry on the immutable source image;
-- Python/Shapely validation.
+- parametric wall profiles whose parallel and perpendicular edges are derived from one baseline;
+- Python/Shapely validation for angles, connections, and wall-to-fixture clearances;
+- negative regression tests that prove invalid geometry is rejected.
 
 ## Run locally
 
@@ -50,6 +52,7 @@ Do not use the current measurements for final purchase decisions where small cle
 ## Data model
 
 - `data/apartment.json`: building geometry, spaces, walls, doors, windows, single-door-anchored estimated scale;
+- `data/geometry-rules.json`: declarative parallelism, orthogonality, connection, and clearance constraints;
 - `data/fixed-fixtures.json`: fitted kitchen and other permanent elements;
 - `data/furniture.json`: agent-controlled furniture layouts;
 - `data/layout-constraints.json`: door and clearance policies;

@@ -147,30 +147,26 @@
       "confidence": "high"
     }
   ],
-  "niches": [
+  "wallProfiles": [
     {
-      "id": "niche-garderobe",
-      "type": "storage",
-      "points": [
-        [
-          163.3717,
-          475.381
-        ],
-        [
-          286.7396,
-          388.8394
-        ],
-        [
-          300.5224,
-          408.4872
-        ],
-        [
-          177.1545,
-          495.0288
-        ]
-      ],
+      "id": "profile-garderobe",
+      "type": "rectangular_wall_profile",
+      "baselineStart": [163.3717, 475.381],
+      "baselineEnd": [286.7396, 388.8394],
+      "depthPx": 24,
+      "offsetSide": "right",
+      "kind": "interior",
+      "baselineThicknessPx": 2,
+      "wallThicknessPx": 24,
+      "wallIds": {
+        "baseline": "wall-flur-garderobe-upper",
+        "endCap": "wall-flur-garderobe-cap-right",
+        "farSide": "wall-flur-garderobe-lower"
+      },
+      "nicheId": "niche-garderobe",
+      "nicheType": "storage",
       "confidence": "estimated",
-      "note": "Rectangular empty recess in the flur wall for a wardrobe, reconstructed from the reference plan."
+      "note": "Parametric rectangular wardrobe profile reconstructed from the reference plan; all parallel and perpendicular edges are derived from this single baseline."
     }
   ],
   "walls": [
@@ -342,45 +338,6 @@
         380
       ],
       "thicknessPx": 18
-    },
-    {
-      "id": "wall-flur-garderobe-upper",
-      "kind": "interior",
-      "start": [
-        163.3717,
-        475.381
-      ],
-      "end": [
-        286.7396,
-        388.8394
-      ],
-      "thicknessPx": 2
-    },
-    {
-      "id": "wall-flur-garderobe-cap-right",
-      "kind": "interior",
-      "start": [
-        286.7396,
-        388.8394
-      ],
-      "end": [
-        300.5224,
-        408.4872
-      ],
-      "thicknessPx": 24
-    },
-    {
-      "id": "wall-flur-garderobe-lower",
-      "kind": "interior",
-      "start": [
-        300.5224,
-        408.4872
-      ],
-      "end": [
-        177.1545,
-        495.0288
-      ],
-      "thicknessPx": 24
     },
     {
       "id": "wall-entry-jamb-left",

@@ -39,11 +39,19 @@ The first pass contains:
 - continuous straight loggia edge at the neighbouring-loggia boundary;
 - thick, inward-stepped flur/garderobe wall that prevents a direct turn into the kitchen;
 - right-angled flur wall axis and garderobe return, perpendicular to the entrance-side wall;
-- rectangular garderobe profile reconstructed as two parallel long edges with short right-angle end caps;
+- rectangular garderobe profile reconstructed from one parametric baseline, a fixed depth, and one derived right-angle end cap;
 - approximate fitted-kitchen footprint;
 - approximate south kitchen window and balcony glazing.
 
 The structural model intentionally excludes the marketing illustration's bed, sofa, table, and other loose furniture.
+
+## Geometry safeguards
+
+- Parametric wall profiles are stored in `data/apartment.json`; their parallel side, perpendicular cap, and niche polygon are derived rather than edited independently.
+- Declarative cross-project constraints live in `data/geometry-rules.json`.
+- The validator reports measured angles, endpoint gaps, point-to-wall distances, and wall-to-fixture clearances.
+- Critical reconstructed geometry uses strict tolerances; estimated source relationships may declare a wider tolerance that reflects the marketing plan's uncertainty.
+- Automated negative tests verify that skewed walls, disconnected jambs, and kitchen overlaps fail validation.
 
 ## Known ambiguities
 

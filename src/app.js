@@ -1,3 +1,5 @@
+import { expandApartmentGeometry } from './geometry.js';
+
 const isCalibration = window.location.pathname.includes('/calibration');
 const base = isCalibration ? '..' : '.';
 const NS = 'http://www.w3.org/2000/svg';
@@ -382,11 +384,12 @@ function renderCalibrationControls() {
 async function main() {
   const root = document.querySelector('#app');
   try {
-    const [apartment, fixtures, furniture] = await Promise.all([
+    const [apartmentSource, fixtures, furniture] = await Promise.all([
       loadJson('data/apartment.json'),
       loadJson('data/fixed-fixtures.json'),
       loadJson('data/furniture.json')
     ]);
+    const apartment = expandApartmentGeometry(apartmentSource);
 
     const header = htmlEl('header', { className: 'app-header' });
     const titleWrap = htmlEl('div');
