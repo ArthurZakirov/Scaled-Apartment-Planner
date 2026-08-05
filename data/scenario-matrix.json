@@ -17,11 +17,14 @@
     "pax": {
       "id": "ikea-pax-divider",
       "templateId": "ikea-pax-58-236",
+      "baseVariantId": "pax-200",
+      "keepBathEndFixed": true,
       "positionPx": {"center": [280, 290], "rotationDeg": -36}
     },
     "desk": {
       "id": "vernal-l-desk",
       "templateId": "vernal-l-desk",
+      "wallContactCornerPx": [510.4211, 252],
       "positionPx": {"topLeft": [392, 252], "rotationDeg": 0, "handedness": "right"}
     }
   }

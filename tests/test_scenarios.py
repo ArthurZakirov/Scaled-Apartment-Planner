@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from furniture import resolve_scenario_data  # noqa: E402
 from geometry import expand_apartment_geometry  # noqa: E402
 from validate_geometry import evaluate_layout  # noqa: E402
+from scenario_metrics import furniture_polygon  # noqa: E402
 
 
 def load_json(relative: str):
@@ -57,9 +58,60 @@ class ScenarioTests(unittest.TestCase):
         self.assertEqual(len(wall_side_positions), 3)
         self.assertLess(max(wall_side_positions) - min(wall_side_positions), 0.001)
 
-    def test_expected_number_of_scenarios_are_geometrically_valid(self):
+    def test_pax_bath_end_and_cross_axis_stay_fixed_across_width_variants(self):
+        cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
+        bath_end_positions = []
+        cross_axis_positions = []
+        for layout in self.furniture["layouts"]:
+            if layout["selection"]["bedVariantId"] != "malm-140" or layout["selection"]["deskVariantId"] != "stable-180-150":
+                continue
+            pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
+            angle = math.radians(pax["positionPx"]["rotationDeg"])
+            long_axis = (math.cos(angle), math.sin(angle))
+            cross_axis = (-long_axis[1], long_axis[0])
+            center = pax["positionPx"]["center"]
+            bath_end_positions.append(
+                center[0] * long_axis[0] + center[1] * long_axis[1] - pax["dimensionsCm"]["width"] / cm_per_pixel / 2
+            )
+            cross_axis_positions.append(center[0] * cross_axis[0] + center[1] * cross_axis[1])
+        self.assertEqual(len(bath_end_positions), 3)
+        self.assertLess(max(bath_end_positions) - min(bath_end_positions), 0.001)
+        self.assertLess(max(cross_axis_positions) - min(cross_axis_positions), 0.001)
+
+    def test_desk_top_and_right_edges_touch_same_walls_for_every_size(self):
+        cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
+        anchors = []
+        for layout in self.furniture["layouts"]:
+            if layout["selection"]["bedVariantId"] != "malm-140" or layout["selection"]["paxVariantId"] != "pax-200":
+                continue
+            desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
+            polygon = furniture_polygon(desk, cm_per_pixel)
+            anchors.append((polygon.bounds[2], polygon.bounds[1]))
+        self.assertEqual(len(anchors), 4)
+        self.assertLess(max(anchor[0] for anchor in anchors) - min(anchor[0] for anchor in anchors), 0.001)
+        self.assertLess(max(anchor[1] for anchor in anchors) - min(anchor[1] for anchor in anchors), 0.001)
+
+    def test_bed_to_pax_gap_grows_as_bed_gets_narrower(self):
+        cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
+        signed_gaps = {}
+        for layout in self.furniture["layouts"]:
+            if layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150":
+                continue
+            bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
+            pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
+            angle = math.radians(bed["positionPx"]["rotationDeg"])
+            inward_axis = (math.cos(angle), math.sin(angle))
+            bed_projection = [x * inward_axis[0] + y * inward_axis[1] for x, y in furniture_polygon(bed, cm_per_pixel).exterior.coords]
+            pax_projection = [x * inward_axis[0] + y * inward_axis[1] for x, y in furniture_polygon(pax, cm_per_pixel).exterior.coords]
+            signed_gaps[layout["selection"]["bedVariantId"]] = min(pax_projection) - max(bed_projection)
+        self.assertGreater(signed_gaps["malm-140"], signed_gaps["malm-160"])
+        self.assertGreater(signed_gaps["malm-160"], signed_gaps["malm-180"])
+
+    def test_generated_evaluations_match_geometric_results(self):
         results = [evaluate_layout(layout, self.apartment, self.constraints) for layout in self.furniture["layouts"]]
-        self.assertEqual(sum(result["valid"] for result in results), 12)
+        evaluations = load_json("data/scenario-evaluations.json")
+        self.assertEqual(sum(result["valid"] for result in results), evaluations["validCount"])
+        self.assertGreater(evaluations["validCount"], 0)
         active = next(result for result in results if result["id"] == self.furniture["activeLayoutId"])
         self.assertTrue(active["valid"])
 

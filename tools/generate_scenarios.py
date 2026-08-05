@@ -36,6 +36,34 @@ def bed_position(base, base_variant, selected_variant, cm_per_pixel):
     return position
 
 
+def pax_position(base, base_variant, selected_variant, cm_per_pixel):
+    """Keep the bathroom-facing short end and the cross-axis position fixed."""
+    position = json.loads(json.dumps(base["positionPx"]))
+    if not base.get("keepBathEndFixed"):
+        return position
+    delta_cm = selected_variant["dimensionsCm"]["width"] - base_variant["dimensionsCm"]["width"]
+    shift_px = delta_cm / cm_per_pixel / 2
+    angle = math.radians(position["rotationDeg"])
+    position["center"] = [
+        round(position["center"][0] + math.cos(angle) * shift_px, 4),
+        round(position["center"][1] + math.sin(angle) * shift_px, 4),
+    ]
+    return position
+
+
+def desk_position(base, selected_variant, cm_per_pixel):
+    """Anchor the desk's top and right edges to the two wall-contact axes."""
+    position = json.loads(json.dumps(base["positionPx"]))
+    if "wallContactCornerPx" not in base:
+        return position
+    if position.get("rotationDeg", 0) != 0 or position.get("handedness") != "right":
+        raise ValueError("Wall-corner desk anchoring currently requires a right-handed, unrotated L desk.")
+    anchor_x, anchor_y = base["wallContactCornerPx"]
+    width_px = selected_variant["dimensionsCm"]["width"] / cm_per_pixel
+    position["topLeft"] = [round(anchor_x - width_px, 4), anchor_y]
+    return position
+
+
 def main():
     catalog = load_json("data/furniture-catalog.json")
     matrix = load_json("data/scenario-matrix.json")
@@ -43,6 +71,7 @@ def main():
     variants = variant_map(catalog)
     placements = matrix["placements"]
     base_bed_variant = variants[placements["bed"]["baseVariantId"]]
+    base_pax_variant = variants[placements["pax"]["baseVariantId"]]
     scenarios = []
 
     for bed_id in matrix["axes"]["bedVariantIds"]:
@@ -63,17 +92,19 @@ def main():
                             "deskVariantId": desk_id,
                         },
                         "notes": [
-                            "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-                            "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-                            "Desk keeps the same upper-right corner anchor and handedness.",
-                            "PAX requires a real anchoring solution before purchase or installation.",
+                            "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+                            "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+                            "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+                            "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung.",
                         ],
                         "objects": [
                             {
                                 "id": placements["pax"]["id"],
                                 "templateId": placements["pax"]["templateId"],
                                 "variantId": pax_id,
-                                "positionPx": placements["pax"]["positionPx"],
+                                "positionPx": pax_position(
+                                    placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
+                                ),
                             },
                             {
                                 "id": placements["bed"]["id"],
@@ -87,7 +118,9 @@ def main():
                                 "id": placements["desk"]["id"],
                                 "templateId": placements["desk"]["templateId"],
                                 "variantId": desk_id,
-                                "positionPx": placements["desk"]["positionPx"],
+                                "positionPx": desk_position(
+                                    placements["desk"], desk, apartment["scale"]["cmPerPixel"]
+                                ),
                             },
                         ],
                     }

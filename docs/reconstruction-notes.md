@@ -70,6 +70,13 @@ The browser reads a generated evaluation file and navigates only through valid s
 
 The ranking is an exploration aid, not a purchase recommendation: the approximate source scale can make small reported gaps unreliable.
 
+### Furniture anchor invariants
+
+- MALM width changes preserve the wall-side external frame edge. The free edge moves toward or away from PAX, so a narrower bed creates a larger signed bed-to-PAX gap.
+- PAX width changes preserve the bathroom-facing short end and its perpendicular offset from the bathroom wall. Only the free end toward the bed moves.
+- VERNAL dimensions are resolved from a fixed top-right wall-contact corner. Its top edge stays on the loggia-side wall and its right edge stays on the window/east wall for every variant.
+- Automated tests compare these projected edges and wall-contact coordinates across the complete variant matrix.
+
 ## Default layout experiment
 
 ### IKEA PAX divider

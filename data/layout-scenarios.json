@@ -14,10 +14,10 @@
         "deskVariantId": "quick-150-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -26,8 +26,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -50,7 +50,7 @@
           "variantId": "quick-150-150",
           "positionPx": {
             "topLeft": [
-              392,
+              411.7369,
               252
             ],
             "rotationDeg": 0,
@@ -69,10 +69,10 @@
         "deskVariantId": "stable-160-140"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -81,8 +81,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -105,7 +105,7 @@
           "variantId": "stable-160-140",
           "positionPx": {
             "topLeft": [
-              392,
+              405.1579,
               252
             ],
             "rotationDeg": 0,
@@ -124,10 +124,10 @@
         "deskVariantId": "quick-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -136,8 +136,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -160,7 +160,7 @@
           "variantId": "quick-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -179,10 +179,10 @@
         "deskVariantId": "stable-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -191,8 +191,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -215,7 +215,7 @@
           "variantId": "stable-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -234,10 +234,10 @@
         "deskVariantId": "quick-150-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -246,8 +246,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -270,7 +270,7 @@
           "variantId": "quick-150-150",
           "positionPx": {
             "topLeft": [
-              392,
+              411.7369,
               252
             ],
             "rotationDeg": 0,
@@ -289,10 +289,10 @@
         "deskVariantId": "stable-160-140"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -301,8 +301,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -325,7 +325,7 @@
           "variantId": "stable-160-140",
           "positionPx": {
             "topLeft": [
-              392,
+              405.1579,
               252
             ],
             "rotationDeg": 0,
@@ -344,10 +344,10 @@
         "deskVariantId": "quick-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -356,8 +356,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -380,7 +380,7 @@
           "variantId": "quick-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -399,10 +399,10 @@
         "deskVariantId": "stable-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -411,8 +411,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -435,7 +435,7 @@
           "variantId": "stable-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -454,10 +454,10 @@
         "deskVariantId": "quick-150-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -466,8 +466,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -490,7 +490,7 @@
           "variantId": "quick-150-150",
           "positionPx": {
             "topLeft": [
-              392,
+              411.7369,
               252
             ],
             "rotationDeg": 0,
@@ -509,10 +509,10 @@
         "deskVariantId": "stable-160-140"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -521,8 +521,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -545,7 +545,7 @@
           "variantId": "stable-160-140",
           "positionPx": {
             "topLeft": [
-              392,
+              405.1579,
               252
             ],
             "rotationDeg": 0,
@@ -564,10 +564,10 @@
         "deskVariantId": "quick-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -576,8 +576,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -600,7 +600,7 @@
           "variantId": "quick-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -619,10 +619,10 @@
         "deskVariantId": "stable-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -631,8 +631,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -655,7 +655,7 @@
           "variantId": "stable-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -674,10 +674,10 @@
         "deskVariantId": "quick-150-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -686,8 +686,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -710,7 +710,7 @@
           "variantId": "quick-150-150",
           "positionPx": {
             "topLeft": [
-              392,
+              411.7369,
               252
             ],
             "rotationDeg": 0,
@@ -729,10 +729,10 @@
         "deskVariantId": "stable-160-140"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -741,8 +741,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -765,7 +765,7 @@
           "variantId": "stable-160-140",
           "positionPx": {
             "topLeft": [
-              392,
+              405.1579,
               252
             ],
             "rotationDeg": 0,
@@ -784,10 +784,10 @@
         "deskVariantId": "quick-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -796,8 +796,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -820,7 +820,7 @@
           "variantId": "quick-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -839,10 +839,10 @@
         "deskVariantId": "stable-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -851,8 +851,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -875,7 +875,7 @@
           "variantId": "stable-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -894,10 +894,10 @@
         "deskVariantId": "quick-150-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -906,8 +906,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -930,7 +930,7 @@
           "variantId": "quick-150-150",
           "positionPx": {
             "topLeft": [
-              392,
+              411.7369,
               252
             ],
             "rotationDeg": 0,
@@ -949,10 +949,10 @@
         "deskVariantId": "stable-160-140"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -961,8 +961,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -985,7 +985,7 @@
           "variantId": "stable-160-140",
           "positionPx": {
             "topLeft": [
-              392,
+              405.1579,
               252
             ],
             "rotationDeg": 0,
@@ -1004,10 +1004,10 @@
         "deskVariantId": "quick-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1016,8 +1016,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -1040,7 +1040,7 @@
           "variantId": "quick-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -1059,10 +1059,10 @@
         "deskVariantId": "stable-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1071,8 +1071,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -1095,7 +1095,7 @@
           "variantId": "stable-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -1114,10 +1114,10 @@
         "deskVariantId": "quick-150-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1126,8 +1126,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -1150,7 +1150,7 @@
           "variantId": "quick-150-150",
           "positionPx": {
             "topLeft": [
-              392,
+              411.7369,
               252
             ],
             "rotationDeg": 0,
@@ -1169,10 +1169,10 @@
         "deskVariantId": "stable-160-140"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1181,8 +1181,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -1205,7 +1205,7 @@
           "variantId": "stable-160-140",
           "positionPx": {
             "topLeft": [
-              392,
+              405.1579,
               252
             ],
             "rotationDeg": 0,
@@ -1224,10 +1224,10 @@
         "deskVariantId": "quick-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1236,8 +1236,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -1260,7 +1260,7 @@
           "variantId": "quick-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -1279,10 +1279,10 @@
         "deskVariantId": "stable-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1291,8 +1291,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -1315,7 +1315,7 @@
           "variantId": "stable-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -1334,10 +1334,10 @@
         "deskVariantId": "quick-150-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1346,8 +1346,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -1370,7 +1370,7 @@
           "variantId": "quick-150-150",
           "positionPx": {
             "topLeft": [
-              392,
+              411.7369,
               252
             ],
             "rotationDeg": 0,
@@ -1389,10 +1389,10 @@
         "deskVariantId": "stable-160-140"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1401,8 +1401,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -1425,7 +1425,7 @@
           "variantId": "stable-160-140",
           "positionPx": {
             "topLeft": [
-              392,
+              405.1579,
               252
             ],
             "rotationDeg": 0,
@@ -1444,10 +1444,10 @@
         "deskVariantId": "quick-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1456,8 +1456,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -1480,7 +1480,7 @@
           "variantId": "quick-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -1499,10 +1499,10 @@
         "deskVariantId": "stable-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1511,8 +1511,8 @@
           "variantId": "pax-150",
           "positionPx": {
             "center": [
-              280,
-              290
+              266.6938,
+              299.6675
             ],
             "rotationDeg": -36
           }
@@ -1535,7 +1535,7 @@
           "variantId": "stable-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -1554,10 +1554,10 @@
         "deskVariantId": "quick-150-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1566,8 +1566,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -1590,7 +1590,7 @@
           "variantId": "quick-150-150",
           "positionPx": {
             "topLeft": [
-              392,
+              411.7369,
               252
             ],
             "rotationDeg": 0,
@@ -1609,10 +1609,10 @@
         "deskVariantId": "stable-160-140"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1621,8 +1621,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -1645,7 +1645,7 @@
           "variantId": "stable-160-140",
           "positionPx": {
             "topLeft": [
-              392,
+              405.1579,
               252
             ],
             "rotationDeg": 0,
@@ -1664,10 +1664,10 @@
         "deskVariantId": "quick-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1676,8 +1676,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -1700,7 +1700,7 @@
           "variantId": "quick-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -1719,10 +1719,10 @@
         "deskVariantId": "stable-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1731,8 +1731,8 @@
           "variantId": "pax-175",
           "positionPx": {
             "center": [
-              280,
-              290
+              273.3469,
+              294.8338
             ],
             "rotationDeg": -36
           }
@@ -1755,7 +1755,7 @@
           "variantId": "stable-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -1774,10 +1774,10 @@
         "deskVariantId": "quick-150-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1786,8 +1786,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -1810,7 +1810,7 @@
           "variantId": "quick-150-150",
           "positionPx": {
             "topLeft": [
-              392,
+              411.7369,
               252
             ],
             "rotationDeg": 0,
@@ -1829,10 +1829,10 @@
         "deskVariantId": "stable-160-140"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1841,8 +1841,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -1865,7 +1865,7 @@
           "variantId": "stable-160-140",
           "positionPx": {
             "topLeft": [
-              392,
+              405.1579,
               252
             ],
             "rotationDeg": 0,
@@ -1884,10 +1884,10 @@
         "deskVariantId": "quick-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1896,8 +1896,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -1920,7 +1920,7 @@
           "variantId": "quick-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,
@@ -1939,10 +1939,10 @@
         "deskVariantId": "stable-180-150"
       },
       "notes": [
-        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
-        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
-        "Desk keeps the same upper-right corner anchor and handedness.",
-        "PAX requires a real anchoring solution before purchase or installation."
+        "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
+        "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
+        "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+        "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung."
       ],
       "objects": [
         {
@@ -1951,8 +1951,8 @@
           "variantId": "pax-200",
           "positionPx": {
             "center": [
-              280,
-              290
+              280.0,
+              290.0
             ],
             "rotationDeg": -36
           }
@@ -1975,7 +1975,7 @@
           "variantId": "stable-180-150",
           "positionPx": {
             "topLeft": [
-              392,
+              392.0,
               252
             ],
             "rotationDeg": 0,

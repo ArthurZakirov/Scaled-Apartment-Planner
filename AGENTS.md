@@ -24,7 +24,9 @@
 - Run `npm run generate:scenarios` after editing the catalog or matrix; do not hand-edit generated scenario or evaluation files.
 - The user-facing navigation includes only scenarios that satisfy mandatory geometry and door constraints.
 - `ikea-pax-divider` varies between real modular widths of 149.6, 174.6, and 199.6 cm.
+- The bathroom-facing short end of PAX and its cross-axis offset are invariant; width changes move only the free end toward or away from the bed.
 - `ikea-malm-bed` varies between 140, 160, and 180 cm mattresses while keeping its wall-side edge fixed.
+- The VERNAL desk is anchored by its top-right wall-contact corner; both wall-facing edges remain in contact for every desk size.
 - `vernal-l-desk` is intentionally placed in the upper-right living-area corner.
 - The desk may block `door-loggia-living` and `door-balcony-upper`.
 - `door-loggia-bedroom` and `door-balcony-lower` must stay usable.
