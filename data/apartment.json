@@ -318,41 +318,67 @@
       "thicknessPx": 18
     },
     {
-      "id": "wall-flur-kitchen-main",
+      "id": "wall-flur-entry-connector",
       "kind": "interior",
       "start": [
         155,
         465
       ],
       "end": [
-        266,
-        388
+        205,
+        476
       ],
       "thicknessPx": 24
     },
     {
-      "id": "wall-flur-kitchen-return",
+      "id": "wall-flur-garderobe-upper",
       "kind": "interior",
       "start": [
-        266,
-        388
+        191,
+        456
       ],
       "end": [
-        280,
-        408
+        286,
+        388
       ],
-      "thicknessPx": 24
+      "thicknessPx": 8
     },
     {
-      "id": "wall-flur-garderobe-profile",
+      "id": "wall-flur-garderobe-cap-right",
       "kind": "interior",
       "start": [
-        280,
-        408
+        286,
+        388
       ],
       "end": [
         300,
-        394
+        408
+      ],
+      "thicknessPx": 24
+    },
+    {
+      "id": "wall-flur-garderobe-lower",
+      "kind": "interior",
+      "start": [
+        300,
+        408
+      ],
+      "end": [
+        205,
+        476
+      ],
+      "thicknessPx": 24
+    },
+    {
+      "id": "wall-flur-garderobe-cap-entry",
+      "kind": "interior",
+      "start": [
+        205,
+        476
+      ],
+      "end": [
+        191,
+        456
       ],
       "thicknessPx": 24
     },
