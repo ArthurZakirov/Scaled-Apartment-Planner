@@ -62,13 +62,22 @@ The structural model intentionally excludes the marketing illustration's bed, so
 - Exact fitted-kitchen cabinet geometry.
 - The source is a marketing illustration and may contain local distortion.
 
-## Initial layout experiment
+## Product variants and scenario matrix
+
+The catalog contains three MALM mattress sizes, three modular PAX widths, and four VERNAL L-desk variants. Their Cartesian product is generated as 36 explicit scenarios. Each scenario is checked for containment, furniture overlap, mandatory door access, at least one usable loggia door, and at least one usable balcony door.
+
+The browser reads a generated evaluation file and navigates only through valid scenarios, ranked by a transparent planning score. Invalid scenarios remain in the generated data for diagnosis and regression testing.
+
+The ranking is an exploration aid, not a purchase recommendation: the approximate source scale can make small reported gaps unreliable.
+
+## Default layout experiment
 
 ### IKEA PAX divider
 
-- Footprint: 200 × 58 cm.
-- Height: 236 cm.
+- Real modular footprint: 199.6 × 58 cm (two 99.8 cm corpuses).
+- Height: 236.4 cm.
 - Used as a visual divider rather than a structural wall.
+- Every PAX scenario carries an explicit anchoring warning.
 
 ### IKEA MALM bed
 

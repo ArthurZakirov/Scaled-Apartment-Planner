@@ -11,12 +11,13 @@ from pathlib import Path
 from typing import Any
 
 try:
-    from shapely.affinity import rotate, translate
     from shapely.geometry import LineString, Point, Polygon
 except ImportError as exc:  # pragma: no cover
     raise SystemExit("Install dependencies first: python3 -m pip install -r requirements.txt") from exc
 
 from geometry import expand_apartment_geometry, validate_geometry_rules
+from furniture import resolve_scenario_data
+from scenario_metrics import evaluate_layout, rank_results
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -26,54 +27,14 @@ def load_json(relative: str) -> dict[str, Any]:
         return json.load(handle)
 
 
-def furniture_polygon(obj: dict[str, Any], cm_per_pixel: float) -> Polygon:
-    dimensions = obj["dimensionsCm"]
-    position = obj["positionPx"]
-    shape = obj["render"]["shape"]
-
-    if shape == "l_desk":
-        width = dimensions["width"] / cm_per_pixel
-        depth = dimensions["depth"] / cm_per_pixel
-        main_depth = dimensions["mainTopDepth"] / cm_per_pixel
-        return_depth = dimensions["returnDepth"] / cm_per_pixel
-        x, y = position["topLeft"]
-        if position.get("handedness") == "left":
-            points = [(0, 0), (width, 0), (width, main_depth), (return_depth, main_depth), (return_depth, depth), (0, depth)]
-        else:
-            points = [(0, 0), (width, 0), (width, depth), (width - return_depth, depth), (width - return_depth, main_depth), (0, main_depth)]
-        polygon = Polygon(points)
-        polygon = rotate(polygon, position.get("rotationDeg", 0), origin=(0, 0), use_radians=False)
-        return translate(polygon, xoff=x, yoff=y)
-
-    width = dimensions["width"] / cm_per_pixel
-    depth = dimensions["depth"] / cm_per_pixel
-    cx, cy = position["center"]
-    polygon = Polygon([(-width / 2, -depth / 2), (width / 2, -depth / 2), (width / 2, depth / 2), (-width / 2, depth / 2)])
-    polygon = rotate(polygon, position.get("rotationDeg", 0), origin=(0, 0), use_radians=False)
-    return translate(polygon, xoff=cx, yoff=cy)
-
-
-def door_swing_polygon(door: dict[str, Any], steps: int = 36) -> Polygon:
-    hx, hy = door["hinge"]
-    closed = door["closedPoint"]
-    opened = door["openPoint"]
-    start = math.atan2(closed[1] - hy, closed[0] - hx)
-    end = math.atan2(opened[1] - hy, opened[0] - hx)
-    delta = (end - start + math.pi) % (2 * math.pi) - math.pi
-    radius = max(math.dist((hx, hy), closed), math.dist((hx, hy), opened))
-    points = [(hx, hy)]
-    points.extend(
-        (hx + radius * math.cos(start + delta * index / steps), hy + radius * math.sin(start + delta * index / steps))
-        for index in range(steps + 1)
-    )
-    return Polygon(points)
-
-
 def main() -> int:
     apartment_source = load_json("data/apartment.json")
     apartment = expand_apartment_geometry(apartment_source)
     fixtures = load_json("data/fixed-fixtures.json")
-    furniture = load_json("data/furniture.json")
+    catalog = load_json("data/furniture-catalog.json")
+    scenario_data = load_json("data/layout-scenarios.json")
+    scenario_evaluations = load_json("data/scenario-evaluations.json")
+    furniture = resolve_scenario_data(scenario_data, catalog)
     constraints = load_json("data/layout-constraints.json")
     geometry_rules = load_json("data/geometry-rules.json")
 
@@ -133,60 +94,41 @@ def main() -> int:
     if len(door_ids) != len(set(door_ids)):
         errors.append("Door IDs are not unique.")
 
+    if scenario_data.get("scenarioCount") != len(scenario_data["scenarios"]):
+        errors.append("Scenario count does not match the generated scenario list.")
+    if len(scenario_data["scenarios"]) != 36:
+        errors.append(f"Expected the 3 × 3 × 4 matrix to contain 36 scenarios, found {len(scenario_data['scenarios'])}.")
+
+    scenario_results = [evaluate_layout(layout, apartment, constraints) for layout in furniture["layouts"]]
+    valid_scenarios = rank_results(scenario_results)
+    expected_evaluations = {
+        "version": 1,
+        "scenarioCount": len(scenario_results),
+        "validCount": len(valid_scenarios),
+        "rankedValidScenarioIds": [result["id"] for result in valid_scenarios],
+        "results": scenario_results,
+    }
+    if scenario_evaluations != expected_evaluations:
+        errors.append("Scenario evaluations are stale; run npm run generate:scenarios.")
+    if not valid_scenarios:
+        errors.append("No generated furniture scenario satisfies the mandatory constraints.")
+
     active_layout = next((item for item in furniture["layouts"] if item["id"] == furniture["activeLayoutId"]), None)
     if active_layout is None:
         errors.append("Active layout does not exist.")
-        return finish(errors, warnings, geometry_results=geometry_results)
+        return finish(errors, warnings, geometry_results=geometry_results, scenario_results=scenario_results)
 
-    cm_per_pixel = apartment["scale"]["cmPerPixel"]
-    object_polygons: dict[str, Polygon] = {}
+    active_result = next(result for result in scenario_results if result["id"] == active_layout["id"])
+    errors.extend(active_result["reasons"])
+    blocked_door_ids = set(active_result["blockedBy"])
     for obj in active_layout["objects"]:
-        polygon = furniture_polygon(obj, cm_per_pixel)
-        object_polygons[obj["id"]] = polygon
-        if not polygon.is_valid:
-            errors.append(f"Furniture {obj['id']} has invalid geometry.")
-        if not spaces["space-main"].buffer(5).covers(polygon):
-            errors.append(f"Furniture {obj['id']} leaves the approximate interior by more than the 5 px reconstruction tolerance.")
-
-    object_ids = list(object_polygons)
-    for index, first_id in enumerate(object_ids):
-        for second_id in object_ids[index + 1 :]:
-            overlap = object_polygons[first_id].intersection(object_polygons[second_id]).area
-            if overlap > 0.5:
-                errors.append(f"Furniture overlap: {first_id} and {second_id} overlap by {overlap:.1f} px².")
-
-    required = set(constraints["doorPolicies"]["mustRemainUsable"])
-    permitted = set(constraints["doorPolicies"]["mayBeBlocked"])
-    intentionally_blocked = {
-        door_id
-        for obj in active_layout["objects"]
-        for door_id in obj.get("intentionalDoorBlocks", [])
-    }
-
-    blocked_door_ids: set[str] = set()
-    for door in apartment["doors"]:
-        zone = door_swing_polygon(door)
-        blockers = [obj_id for obj_id, polygon in object_polygons.items() if zone.intersects(polygon)]
-        if blockers:
-            blocked_door_ids.add(door["id"])
-            if door["id"] in required:
-                errors.append(f"Required door {door['id']} is blocked by {', '.join(blockers)}.")
-            elif door["id"] not in permitted:
-                warnings.append(f"Door {door['id']} is blocked but has no explicit policy.")
-
-    missing_intentional_blocks = intentionally_blocked - blocked_door_ids
-    if missing_intentional_blocks:
-        warnings.append("Objects declare intentional blocks that are not detected: " + ", ".join(sorted(missing_intentional_blocks)))
-
-    if not ({"door-loggia-bedroom", "door-loggia-living"} - blocked_door_ids):
-        errors.append("Both loggia doors are blocked.")
-    if not ({"door-balcony-upper", "door-balcony-lower"} - blocked_door_ids):
-        errors.append("Both balcony doors are blocked.")
+        if obj.get("requiresAnchoring"):
+            warnings.append(f"{obj['render']['label']} requires a verified anchoring solution before installation.")
 
     if apartment["scale"]["status"] != "confirmed":
         warnings.append("Entrance-door anchor is confirmed, but real-world clearances remain estimates because the source is not to scale.")
 
-    return finish(errors, warnings, active_layout["id"], blocked_door_ids, geometry_results)
+    return finish(errors, warnings, active_layout["id"], blocked_door_ids, geometry_results, scenario_results)
 
 
 def finish(
@@ -195,6 +137,7 @@ def finish(
     layout_id: str | None = None,
     blocked: set[str] | None = None,
     geometry_results: list[str] | None = None,
+    scenario_results: list[dict[str, Any]] | None = None,
 ) -> int:
     print("Scaled Apartment Planner validation")
     if layout_id:
@@ -205,6 +148,16 @@ def finish(
         print("  geometry rules:")
         for result in geometry_results:
             print(f"    {result}")
+    if scenario_results:
+        valid = sorted(
+            (result for result in scenario_results if result["valid"]),
+            key=lambda result: result["score"],
+            reverse=True,
+        )
+        print(f"  scenarios: {len(valid)}/{len(scenario_results)} valid")
+        for result in valid[:3]:
+            gap = result["minimumFurnitureGapCm"]
+            print(f"    score {result['score']:.1f} · gap {gap:.1f} cm · {result['name']}")
     for warning in warnings:
         print(f"WARNING: {warning}")
     for error in errors:

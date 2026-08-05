@@ -1,4 +1,5 @@
 import { expandApartmentGeometry } from './geometry.js';
+import { resolveScenarioData } from './furniture.js';
 
 const isCalibration = window.location.pathname.includes('/calibration');
 const base = isCalibration ? '..' : '.';
@@ -277,6 +278,17 @@ function buildSvg(apartment, fixtures, furniture, calibration) {
   }
   svg.append(furnitureLayer);
 
+  const furnitureCollisions = [];
+  for (let firstIndex = 0; firstIndex < furniturePolygons.length; firstIndex += 1) {
+    for (let secondIndex = firstIndex + 1; secondIndex < furniturePolygons.length; secondIndex += 1) {
+      const first = furniturePolygons[firstIndex];
+      const second = furniturePolygons[secondIndex];
+      if (polygonsIntersect(first.polygon, second.polygon)) {
+        furnitureCollisions.push([first.id, second.id]);
+      }
+    }
+  }
+
   const doorLayer = svgEl('g', { class: 'layer layer-doors' });
   const doorResults = [];
   for (const door of apartment.doors) {
@@ -322,13 +334,80 @@ function buildSvg(apartment, fixtures, furniture, calibration) {
     svg.append(annotations);
   }
 
-  return { svg, activeLayout, doorResults, furniturePolygons };
+  return { svg, activeLayout, doorResults, furniturePolygons, furnitureCollisions };
 }
 
-function renderStatusPanel(apartment, activeLayout, doorResults) {
+function selectScenario(scenarioId) {
+  const url = new URL(window.location.href);
+  url.searchParams.set('scenario', scenarioId);
+  window.location.assign(url);
+}
+
+function renderScenarioNavigation(furniture, activeLayout, evaluations) {
+  const index = furniture.layouts.findIndex((layout) => layout.id === activeLayout.id);
+  const navigation = htmlEl('div', { className: 'scenario-navigation' });
+  const previous = htmlEl('button', { type: 'button', 'aria-label': 'Vorheriges Szenario' }, '←');
+  const next = htmlEl('button', { type: 'button', 'aria-label': 'Nächstes Szenario' }, '→');
+  previous.addEventListener('click', () => selectScenario(furniture.layouts[(index - 1 + furniture.layouts.length) % furniture.layouts.length].id));
+  next.addEventListener('click', () => selectScenario(furniture.layouts[(index + 1) % furniture.layouts.length].id));
+  navigation.append(previous);
+  const position = htmlEl('div', { className: 'scenario-position' });
+  position.append(htmlEl('strong', {}, `Vorschlag ${index + 1} von ${furniture.layouts.length}`));
+  position.append(htmlEl('small', {}, `${evaluations.validCount} gültig · ${evaluations.scenarioCount} geprüft`));
+  navigation.append(position);
+  navigation.append(next);
+  return navigation;
+}
+
+function renderFurnitureSummary(activeLayout) {
+  const summary = htmlEl('div', { className: 'scenario-objects' });
+  for (const object of activeLayout.objects) {
+    const row = htmlEl('div', { className: 'scenario-object' });
+    row.append(htmlEl('strong', {}, object.render.label));
+    if (object.modules) row.append(htmlEl('small', {}, `${object.modules.length} PAX-Module · reale Breite ${object.dimensionsCm.width.toFixed(1)} cm`));
+    else if (object.mattressCm) row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
+    else row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
+    summary.append(row);
+  }
+  return summary;
+}
+
+function renderScenarioMetrics(evaluation) {
+  const metrics = htmlEl('div', { className: 'scenario-metrics' });
+  const entries = [
+    ['Bewertung', `${evaluation.score.toFixed(1)} / 100`],
+    ['Möbelabstand', `${evaluation.minimumFurnitureGapCm.toFixed(1)} cm`],
+    ['Freie Fläche', `ca. ${evaluation.freeFloorAreaM2.toFixed(1)} m²`],
+    ['Außentüren', `${evaluation.usableLoggiaDoors + evaluation.usableBalconyDoors} von 4 nutzbar`]
+  ];
+  for (const [label, value] of entries) {
+    const item = htmlEl('div', { className: 'scenario-metric' });
+    item.append(htmlEl('small', {}, label));
+    item.append(htmlEl('strong', {}, value));
+    metrics.append(item);
+  }
+  return metrics;
+}
+
+function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evaluations, doorResults, furnitureCollisions) {
   const panel = htmlEl('aside', { className: 'status-panel' });
-  panel.append(htmlEl('h2', {}, 'Aktueller Versuch'));
+  panel.append(renderScenarioNavigation(furniture, activeLayout, evaluations));
+  panel.append(htmlEl('h2', {}, 'Aktuelles Szenario'));
   panel.append(htmlEl('div', { className: 'layout-name' }, activeLayout.name));
+  const validity = htmlEl('div', { className: 'scenario-validity' });
+  validity.append(htmlEl('span', { className: 'status-dot' }));
+  validity.append(htmlEl('strong', {}, 'Geometrisch gültiger Vorschlag'));
+  panel.append(validity);
+  panel.append(renderScenarioMetrics(evaluation));
+  panel.append(renderFurnitureSummary(activeLayout));
+
+  const pax = activeLayout.objects.find((object) => object.requiresAnchoring);
+  if (pax) {
+    const anchoring = htmlEl('div', { className: 'notice danger' });
+    anchoring.append(htmlEl('strong', {}, 'PAX muss verankert werden'));
+    anchoring.append(htmlEl('span', {}, 'Die Raumteiler-Position ist nur eine Geometrieidee. Vor dem Kauf ist eine sichere Wand-, Decken- oder Fachkonstruktion erforderlich.'));
+    panel.append(anchoring);
+  }
 
   const scale = htmlEl('div', { className: 'notice warning' });
   scale.append(htmlEl('strong', {}, 'Maßstab aus Eingangstür abgeleitet'));
@@ -347,6 +426,11 @@ function renderStatusPanel(apartment, activeLayout, doorResults) {
     list.append(row);
   }
   panel.append(list);
+
+  const collision = htmlEl('div', { className: `collision-summary ${furnitureCollisions.length ? 'blocked' : 'clear'}` });
+  collision.append(htmlEl('span', { className: 'status-dot' }));
+  collision.append(htmlEl('strong', {}, furnitureCollisions.length ? `${furnitureCollisions.length} Möbelkollision(en)` : 'Keine Möbelkollisionen'));
+  panel.append(collision);
 
   const notes = htmlEl('div', { className: 'layout-notes' });
   notes.append(htmlEl('h3', {}, 'Absicht dieses Layouts'));
@@ -376,7 +460,7 @@ function renderCalibrationControls() {
   vectorLabel.append(vectorRange);
   controls.append(vectorLabel);
 
-  const link = htmlEl('a', { href: '../' }, 'Zur normalen Ansicht');
+  const link = htmlEl('a', { href: `../${window.location.search}` }, 'Zur normalen Ansicht');
   controls.append(link);
   return controls;
 }
@@ -384,12 +468,34 @@ function renderCalibrationControls() {
 async function main() {
   const root = document.querySelector('#app');
   try {
-    const [apartmentSource, fixtures, furniture] = await Promise.all([
+    const [apartmentSource, fixtures, catalog, scenarioData, evaluations] = await Promise.all([
       loadJson('data/apartment.json'),
       loadJson('data/fixed-fixtures.json'),
-      loadJson('data/furniture.json')
+      loadJson('data/furniture-catalog.json'),
+      loadJson('data/layout-scenarios.json'),
+      loadJson('data/scenario-evaluations.json')
     ]);
     const apartment = expandApartmentGeometry(apartmentSource);
+    const requestedScenario = new URLSearchParams(window.location.search).get('scenario');
+    const validIds = new Set(evaluations.rankedValidScenarioIds);
+    const selectedScenario = validIds.has(requestedScenario)
+      ? requestedScenario
+      : validIds.has(scenarioData.activeScenarioId)
+        ? scenarioData.activeScenarioId
+        : evaluations.rankedValidScenarioIds[0];
+    if (requestedScenario && requestedScenario !== selectedScenario) {
+      const canonicalUrl = new URL(window.location.href);
+      canonicalUrl.searchParams.set('scenario', selectedScenario);
+      window.history.replaceState(null, '', canonicalUrl);
+    }
+    const resolvedFurniture = resolveScenarioData(scenarioData, catalog, selectedScenario);
+    const layoutsById = new Map(resolvedFurniture.layouts.map((layout) => [layout.id, layout]));
+    const furniture = {
+      ...resolvedFurniture,
+      layouts: evaluations.rankedValidScenarioIds.map((id) => layoutsById.get(id)),
+      activeLayoutId: selectedScenario
+    };
+    const activeEvaluation = evaluations.results.find((result) => result.id === furniture.activeLayoutId);
 
     const header = htmlEl('header', { className: 'app-header' });
     const titleWrap = htmlEl('div');
@@ -397,20 +503,21 @@ async function main() {
     titleWrap.append(htmlEl('h1', {}, isCalibration ? 'Kalibrierungsansicht' : 'Wohnung 264 · Layout-Experiment'));
     header.append(titleWrap);
     const nav = htmlEl('nav');
-    nav.append(htmlEl('a', { href: isCalibration ? '../' : './calibration/' }, isCalibration ? 'Plan öffnen' : 'Kalibrierung öffnen'));
+    const scenarioSuffix = `?scenario=${encodeURIComponent(furniture.activeLayoutId)}`;
+    nav.append(htmlEl('a', { href: `${isCalibration ? '../' : './calibration/'}${scenarioSuffix}` }, isCalibration ? 'Plan öffnen' : 'Kalibrierung öffnen'));
     header.append(nav);
     root.append(header);
 
     if (isCalibration) root.append(renderCalibrationControls());
 
     const workspace = htmlEl('main', { className: isCalibration ? 'workspace calibration-workspace' : 'workspace' });
-    const planStack = htmlEl('div', { className: 'plan-stack' });
     const canvas = htmlEl('section', { className: 'canvas-card reconstructed-card' });
     const rendered = buildSvg(apartment, fixtures, furniture, isCalibration);
     canvas.append(rendered.svg);
-    planStack.append(canvas);
+    workspace.append(canvas);
 
     if (!isCalibration) {
+      workspace.append(renderStatusPanel(apartment, furniture, rendered.activeLayout, activeEvaluation, evaluations, rendered.doorResults, rendered.furnitureCollisions));
       const referenceCard = htmlEl('section', { className: 'reference-card' });
       referenceCard.append(htmlEl('h2', {}, 'Originalgrundriss'));
       referenceCard.append(htmlEl('p', { className: 'reference-caption' }, 'Unveränderte Referenzansicht zum direkten Vergleich mit der Rekonstruktion oben.'));
@@ -419,16 +526,14 @@ async function main() {
         alt: 'Originaler Wohnungsgrundriss',
         class: 'reference-plan'
       }));
-      planStack.append(referenceCard);
+      workspace.append(referenceCard);
     }
 
-    workspace.append(planStack);
-    if (!isCalibration) workspace.append(renderStatusPanel(apartment, rendered.activeLayout, rendered.doorResults));
     root.append(workspace);
 
     const footer = htmlEl('footer', { className: 'app-footer' });
     footer.append(htmlEl('span', {}, 'Gebäudegeometrie, feste Einbauten und lose Möbel sind getrennte Datenebenen.'));
-    footer.append(htmlEl('code', {}, `Layout: ${rendered.activeLayout.id}`));
+    footer.append(htmlEl('code', {}, `Szenario: ${rendered.activeLayout.id}`));
     root.append(footer);
   } catch (error) {
     console.error(error);

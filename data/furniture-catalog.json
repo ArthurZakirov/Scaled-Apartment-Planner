@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "families": [
+    {
+      "id": "ikea-malm-high",
+      "type": "bed",
+      "name": "IKEA MALM Bettgestell hoch",
+      "sourceUrl": "https://www.ikea.com/de/de/p/malm-bettgestell-hoch-weiss-s29931596/",
+      "confidence": "verified_official_product_page",
+      "variants": [
+        {
+          "id": "malm-140",
+          "label": "MALM 140 × 200",
+          "dimensionsCm": {"width": 156, "depth": 209, "height": 100},
+          "mattressCm": {"width": 140, "depth": 200},
+          "render": {"shape": "bed", "label": "MALM 140 · 156 × 209"}
+        },
+        {
+          "id": "malm-160",
+          "label": "MALM 160 × 200",
+          "dimensionsCm": {"width": 176, "depth": 209, "height": 100},
+          "mattressCm": {"width": 160, "depth": 200},
+          "render": {"shape": "bed", "label": "MALM 160 · 176 × 209"}
+        },
+        {
+          "id": "malm-180",
+          "label": "MALM 180 × 200",
+          "dimensionsCm": {"width": 196, "depth": 209, "height": 100},
+          "mattressCm": {"width": 180, "depth": 200},
+          "render": {"shape": "bed", "label": "MALM 180 · 196 × 209"}
+        }
+      ]
+    },
+    {
+      "id": "ikea-pax-58-236",
+      "type": "wardrobe",
+      "name": "IKEA PAX Korpus 58 × 236",
+      "sourceUrl": "https://www.ikea.com/de/de/cat/pax-korpusse-fuer-scharniertueren-19106/",
+      "confidence": "verified_official_product_page",
+      "requiresAnchoring": true,
+      "safetyNote": "PAX must be securely anchored; a free-standing room-divider installation requires a suitable wall, ceiling, or engineered support solution.",
+      "doorType": "none",
+      "planningDepthCm": 60,
+      "variants": [
+        {
+          "id": "pax-150",
+          "label": "PAX 150 × 58",
+          "modules": [
+            {"nominalWidthCm": 50, "widthCm": 49.8, "depthCm": 58, "heightCm": 236.4},
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4}
+          ],
+          "dimensionsCm": {"width": 149.6, "depth": 58, "height": 236.4},
+          "render": {"shape": "rectangle", "label": "PAX 150 × 58"}
+        },
+        {
+          "id": "pax-175",
+          "label": "PAX 175 × 58",
+          "modules": [
+            {"nominalWidthCm": 75, "widthCm": 74.8, "depthCm": 58, "heightCm": 236.4},
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4}
+          ],
+          "dimensionsCm": {"width": 174.6, "depth": 58, "height": 236.4},
+          "render": {"shape": "rectangle", "label": "PAX 175 × 58"}
+        },
+        {
+          "id": "pax-200",
+          "label": "PAX 200 × 58",
+          "modules": [
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4},
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4}
+          ],
+          "dimensionsCm": {"width": 199.6, "depth": 58, "height": 236.4},
+          "render": {"shape": "rectangle", "label": "PAX 200 × 58"}
+        }
+      ]
+    },
+    {
+      "id": "vernal-l-desk",
+      "type": "desk",
+      "name": "VERNAL L-förmiger Schreibtisch",
+      "sourceUrl": "https://www.vernalspace.de/products/vernal-l-formige-hohenverstellbarer-eckschreibtisch",
+      "confidence": "verified_dimensions_interpreted_axes",
+      "variants": [
+        {
+          "id": "quick-150-150",
+          "label": "VERNAL Schnell 150 × 150 × 70",
+          "dimensionsCm": {"width": 150, "depth": 150, "mainTopDepth": 70, "returnDepth": 70, "height": 70},
+          "heightRangeCm": [58, 123],
+          "render": {"shape": "l_desk", "label": "VERNAL 150 × 150"}
+        },
+        {
+          "id": "stable-160-140",
+          "label": "VERNAL Stabil 160 × 140 × 60",
+          "dimensionsCm": {"width": 160, "depth": 140, "mainTopDepth": 60, "returnDepth": 60, "height": 60},
+          "heightRangeCm": [66, 126],
+          "render": {"shape": "l_desk", "label": "VERNAL 160 × 140"}
+        },
+        {
+          "id": "quick-180-150",
+          "label": "VERNAL Schnell 180 × 150 × 70",
+          "dimensionsCm": {"width": 180, "depth": 150, "mainTopDepth": 70, "returnDepth": 70, "height": 70},
+          "heightRangeCm": [58, 123],
+          "render": {"shape": "l_desk", "label": "VERNAL 180 × 150 · schnell"}
+        },
+        {
+          "id": "stable-180-150",
+          "label": "VERNAL Stabil 180 × 150 × 75",
+          "dimensionsCm": {"width": 180, "depth": 150, "mainTopDepth": 75, "returnDepth": 70, "height": 75},
+          "heightRangeCm": [66, 126],
+          "render": {"shape": "l_desk", "label": "VERNAL 180 × 150 · stabil"}
+        }
+      ]
+    }
+  ]
+}

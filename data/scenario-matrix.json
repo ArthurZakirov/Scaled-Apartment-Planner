@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "activeScenarioId": "scenario-malm-140-pax-200-stable-180-150",
+  "axes": {
+    "bedVariantIds": ["malm-140", "malm-160", "malm-180"],
+    "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
+    "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"]
+  },
+  "placements": {
+    "bed": {
+      "id": "ikea-malm-bed",
+      "templateId": "ikea-malm-high",
+      "baseVariantId": "malm-140",
+      "positionPx": {"center": [235, 235], "rotationDeg": 54},
+      "keepWallSideFixed": true
+    },
+    "pax": {
+      "id": "ikea-pax-divider",
+      "templateId": "ikea-pax-58-236",
+      "positionPx": {"center": [280, 290], "rotationDeg": -36}
+    },
+    "desk": {
+      "id": "vernal-l-desk",
+      "templateId": "vernal-l-desk",
+      "positionPx": {"topLeft": [392, 252], "rotationDeg": 0, "handedness": "right"}
+    }
+  }
+}

@@ -17,19 +17,24 @@
 - Preserve the policy that at least one balcony door and at least one loggia door remain usable.
 - Run `npm run validate` before committing layout changes.
 
-## Current intended layout experiment
+## Current layout scenario system
 
-- `ikea-pax-divider` acts as a 200 × 58 cm room divider.
-- `ikea-malm-bed` is rotated 90° relative to the bed orientation in the source illustration.
+- `data/furniture-catalog.json` is the source of truth for product templates and verified external dimensions.
+- `data/scenario-matrix.json` defines the 3 MALM × 3 PAX × 4 VERNAL axes and common placement anchors.
+- Run `npm run generate:scenarios` after editing the catalog or matrix; do not hand-edit generated scenario or evaluation files.
+- The user-facing navigation includes only scenarios that satisfy mandatory geometry and door constraints.
+- `ikea-pax-divider` varies between real modular widths of 149.6, 174.6, and 199.6 cm.
+- `ikea-malm-bed` varies between 140, 160, and 180 cm mattresses while keeping its wall-side edge fixed.
 - `vernal-l-desk` is intentionally placed in the upper-right living-area corner.
 - The desk may block `door-loggia-living` and `door-balcony-upper`.
 - `door-loggia-bedroom` and `door-balcony-lower` must stay usable.
 
 ## Editing workflow
 
-1. Inspect `data/apartment.json`, `data/fixed-fixtures.json`, `data/furniture.json`, and `data/layout-constraints.json`.
+1. Inspect `data/apartment.json`, `data/fixed-fixtures.json`, `data/furniture-catalog.json`, `data/scenario-matrix.json`, and `data/layout-constraints.json`.
 2. Make the smallest structured-data change needed.
-3. Run `npm run validate`.
-4. Open `/calibration/` and compare the overlay with the original image.
-5. Open `/` and verify the resulting layout and door-status panel.
-6. Record new assumptions or ambiguities in `docs/reconstruction-notes.md`.
+3. Run `npm run generate:scenarios` for furniture-catalog or matrix changes.
+4. Run `npm run validate`.
+5. Open `/calibration/` and compare the overlay with the original image.
+6. Open `/` and verify the resulting layout, ranked navigation, metrics, and door-status panel.
+7. Record new assumptions or ambiguities in `docs/reconstruction-notes.md`.

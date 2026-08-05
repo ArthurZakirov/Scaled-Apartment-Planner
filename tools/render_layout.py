@@ -11,6 +11,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 import cairosvg
 
 from geometry import expand_apartment_geometry
+from furniture import resolve_scenario_data
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -69,7 +70,9 @@ def centroid(poly):
 def render(output_svg: Path, output_png: Path):
     apartment = expand_apartment_geometry(load_json(ROOT / "data/apartment.json"))
     fixtures = load_json(ROOT / "data/fixed-fixtures.json")
-    furniture = load_json(ROOT / "data/furniture.json")
+    catalog = load_json(ROOT / "data/furniture-catalog.json")
+    scenario_data = load_json(ROOT / "data/layout-scenarios.json")
+    furniture = resolve_scenario_data(scenario_data, catalog)
     layout = next(x for x in furniture["layouts"] if x["id"] == furniture["activeLayoutId"])
     _, _, vw, vh = apartment["coordinateSystem"]["viewBox"]
 

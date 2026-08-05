@@ -1,0 +1,1988 @@
+{
+  "version": 1,
+  "activeScenarioId": "scenario-malm-140-pax-200-stable-180-150",
+  "generatedFrom": "data/scenario-matrix.json",
+  "scenarioCount": 36,
+  "scenarios": [
+    {
+      "id": "scenario-malm-140-pax-150-quick-150-150",
+      "name": "MALM 140 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "quick-150-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-150-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-150-stable-160-140",
+      "name": "MALM 140 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "stable-160-140"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-160-140",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-150-quick-180-150",
+      "name": "MALM 140 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "quick-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-150-stable-180-150",
+      "name": "MALM 140 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "stable-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-175-quick-150-150",
+      "name": "MALM 140 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "quick-150-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-150-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-175-stable-160-140",
+      "name": "MALM 140 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "stable-160-140"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-160-140",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-175-quick-180-150",
+      "name": "MALM 140 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "quick-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-175-stable-180-150",
+      "name": "MALM 140 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "stable-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-200-quick-150-150",
+      "name": "MALM 140 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "quick-150-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-150-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-200-stable-160-140",
+      "name": "MALM 140 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "stable-160-140"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-160-140",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-200-quick-180-150",
+      "name": "MALM 140 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "quick-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-140-pax-200-stable-180-150",
+      "name": "MALM 140 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-140",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "stable-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-140",
+          "positionPx": {
+            "center": [
+              235.0,
+              235.0
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-150-quick-150-150",
+      "name": "MALM 160 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "quick-150-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-150-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-150-stable-160-140",
+      "name": "MALM 160 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "stable-160-140"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-160-140",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-150-quick-180-150",
+      "name": "MALM 160 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "quick-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-150-stable-180-150",
+      "name": "MALM 160 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "stable-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-175-quick-150-150",
+      "name": "MALM 160 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "quick-150-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-150-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-175-stable-160-140",
+      "name": "MALM 160 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "stable-160-140"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-160-140",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-175-quick-180-150",
+      "name": "MALM 160 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "quick-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-175-stable-180-150",
+      "name": "MALM 160 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "stable-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-200-quick-150-150",
+      "name": "MALM 160 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "quick-150-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-150-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-200-stable-160-140",
+      "name": "MALM 160 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "stable-160-140"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-160-140",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-200-quick-180-150",
+      "name": "MALM 160 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "quick-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-160-pax-200-stable-180-150",
+      "name": "MALM 160 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-160",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "stable-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-160",
+          "positionPx": {
+            "center": [
+              238.867,
+              240.3225
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-150-quick-150-150",
+      "name": "MALM 180 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "quick-150-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-150-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-150-stable-160-140",
+      "name": "MALM 180 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "stable-160-140"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-160-140",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-150-quick-180-150",
+      "name": "MALM 180 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "quick-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-150-stable-180-150",
+      "name": "MALM 180 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-150",
+        "deskVariantId": "stable-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-150",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-175-quick-150-150",
+      "name": "MALM 180 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "quick-150-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-150-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-175-stable-160-140",
+      "name": "MALM 180 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "stable-160-140"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-160-140",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-175-quick-180-150",
+      "name": "MALM 180 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "quick-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-175-stable-180-150",
+      "name": "MALM 180 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-175",
+        "deskVariantId": "stable-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-175",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-200-quick-150-150",
+      "name": "MALM 180 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "quick-150-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-150-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-200-stable-160-140",
+      "name": "MALM 180 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "stable-160-140"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-160-140",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-200-quick-180-150",
+      "name": "MALM 180 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "quick-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "quick-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scenario-malm-180-pax-200-stable-180-150",
+      "name": "MALM 180 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "status": "generated_experiment",
+      "selection": {
+        "bedVariantId": "malm-180",
+        "paxVariantId": "pax-200",
+        "deskVariantId": "stable-180-150"
+      },
+      "notes": [
+        "Bed remains aligned to the sloped northwest wall using its external frame footprint.",
+        "PAX keeps the same comparison center; its real modular corpus width changes by variant.",
+        "Desk keeps the same upper-right corner anchor and handedness.",
+        "PAX requires a real anchoring solution before purchase or installation."
+      ],
+      "objects": [
+        {
+          "id": "ikea-pax-divider",
+          "templateId": "ikea-pax-58-236",
+          "variantId": "pax-200",
+          "positionPx": {
+            "center": [
+              280,
+              290
+            ],
+            "rotationDeg": -36
+          }
+        },
+        {
+          "id": "ikea-malm-bed",
+          "templateId": "ikea-malm-high",
+          "variantId": "malm-180",
+          "positionPx": {
+            "center": [
+              242.734,
+              245.645
+            ],
+            "rotationDeg": 54
+          }
+        },
+        {
+          "id": "vernal-l-desk",
+          "templateId": "vernal-l-desk",
+          "variantId": "stable-180-150",
+          "positionPx": {
+            "topLeft": [
+              392,
+              252
+            ],
+            "rotationDeg": 0,
+            "handedness": "right"
+          }
+        }
+      ]
+    }
+  ]
+}
