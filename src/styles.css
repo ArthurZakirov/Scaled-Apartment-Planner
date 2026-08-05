@@ -28,9 +28,15 @@ a:hover { text-decoration: underline; }
 
 .workspace { width: 100%; padding: 20px clamp(14px, 3vw, 38px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(270px, 350px); gap: 20px; flex: 1; }
 .calibration-workspace { display: block; }
+.plan-stack { display: grid; gap: 20px; min-width: 0; }
 .canvas-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; min-height: 0; overflow: hidden; box-shadow: 0 12px 32px rgba(42,58,51,.08); }
 .floorplan { display: block; width: 100%; height: min(78vh, 820px); min-height: 540px; }
 .calibration-floorplan { height: calc(100vh - 185px); min-height: 620px; }
+
+.reference-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; box-shadow: 0 12px 32px rgba(42,58,51,.08); }
+.reference-card h2 { margin: 0; font-size: 18px; letter-spacing: -.02em; }
+.reference-caption { margin: 5px 0 16px; color: var(--muted); font-size: 12px; }
+.reference-plan { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: #fff; }
 
 .space { vector-effect: non-scaling-stroke; }
 .space-interior { fill: #fcfcfa; stroke: #cad1cc; stroke-width: 1; }

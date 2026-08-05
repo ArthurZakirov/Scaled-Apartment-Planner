@@ -401,10 +401,25 @@ async function main() {
     if (isCalibration) root.append(renderCalibrationControls());
 
     const workspace = htmlEl('main', { className: isCalibration ? 'workspace calibration-workspace' : 'workspace' });
-    const canvas = htmlEl('section', { className: 'canvas-card' });
+    const planStack = htmlEl('div', { className: 'plan-stack' });
+    const canvas = htmlEl('section', { className: 'canvas-card reconstructed-card' });
     const rendered = buildSvg(apartment, fixtures, furniture, isCalibration);
     canvas.append(rendered.svg);
-    workspace.append(canvas);
+    planStack.append(canvas);
+
+    if (!isCalibration) {
+      const referenceCard = htmlEl('section', { className: 'reference-card' });
+      referenceCard.append(htmlEl('h2', {}, 'Originalgrundriss'));
+      referenceCard.append(htmlEl('p', { className: 'reference-caption' }, 'Unveränderte Referenzansicht zum direkten Vergleich mit der Rekonstruktion oben.'));
+      referenceCard.append(htmlEl('img', {
+        src: './reference/floorplan-reference-upload.png',
+        alt: 'Originaler Wohnungsgrundriss',
+        class: 'reference-plan'
+      }));
+      planStack.append(referenceCard);
+    }
+
+    workspace.append(planStack);
     if (!isCalibration) workspace.append(renderStatusPanel(apartment, rendered.activeLayout, rendered.doorResults));
     root.append(workspace);
 
