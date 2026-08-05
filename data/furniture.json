@@ -4,11 +4,11 @@
   "layouts": [
     {
       "id": "pax-divider-v1",
-      "name": "PAX divider + rotated MALM + corner desk",
+      "name": "PAX left of entry + wall-aligned MALM + corner desk",
       "status": "experiment",
       "notes": [
-        "PAX acts as a visual room divider between the sleeping zone and the kitchen/office/living zone.",
-        "MALM is rotated 90 degrees relative to the bed orientation shown in the source illustration.",
+        "PAX stands on the bedroom side, left of the entry path, directly beside the bed.",
+        "MALM is rotated 90 degrees relative to the bed orientation shown in the source illustration and placed against the sloped northwest wall.",
         "The desk intentionally sacrifices the living-room loggia door and the upper balcony door.",
         "The bedroom loggia door and lower balcony door are intended to remain usable."
       ],
@@ -25,8 +25,8 @@
           },
           "positionPx": {
             "center": [
-              314,
-              344
+              280,
+              290
             ],
             "rotationDeg": -36
           },
@@ -52,8 +52,8 @@
           },
           "positionPx": {
             "center": [
-              250,
-              256
+              235,
+              235
             ],
             "rotationDeg": 54
           },
