@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "minimumClearanceCm": 80,
+  "doorPolicies": {
+    "mustRemainUsable": [
+      "door-entry",
+      "door-bath",
+      "door-loggia-bedroom",
+      "door-balcony-lower"
+    ],
+    "mayBeBlocked": [
+      "door-loggia-living",
+      "door-balcony-upper"
+    ]
+  },
+  "requirements": [
+    "At least one of the two loggia doors must remain usable.",
+    "At least one of the two balcony doors must remain usable.",
+    "The entrance and bathroom doors must remain usable.",
+    "Furniture geometry must use the external product footprint rather than mattress or tabletop marketing size alone.",
+    "The entrance-door scale anchor is confirmed; all other measurements derived from the non-scale source remain approximate."
+  ]
+}

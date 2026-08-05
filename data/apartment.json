@@ -1,0 +1,660 @@
+{
+  "version": 1,
+  "name": "Augusta & Luca – Wohnung 264",
+  "coordinateSystem": {
+    "units": "source_px",
+    "viewBox": [
+      0,
+      0,
+      670,
+      590
+    ],
+    "description": "Coordinates are relative to the cropped floor-plan region in the immutable source image."
+  },
+  "source": {
+    "image": "https://s3.eu-central-1.amazonaws.com/cloudios.production.image/2a/1af535e3-02c0-4c8b-9c7b-d84a39688b2a/2b/4b82f48b-4b2f-4ea2-baa1-fcb2e005472b/11/af5a9086-e8a3-481a-9a78-62b96ee25f11.jpg",
+    "originalUrl": "https://s3.eu-central-1.amazonaws.com/cloudios.production.image/2a/1af535e3-02c0-4c8b-9c7b-d84a39688b2a/2b/4b82f48b-4b2f-4ea2-baa1-fcb2e005472b/11/af5a9086-e8a3-481a-9a78-62b96ee25f11.jpg",
+    "naturalSizePx": [
+      1753,
+      1240
+    ],
+    "cropPx": {
+      "x": 390,
+      "y": 350,
+      "width": 670,
+      "height": 590
+    },
+    "declaredLivingAreaM2": 46.47,
+    "warning": "The source itself states that the floor plan is not to scale.",
+    "sha256": "aa8e5be780fa95c098a51b26f176c9b655cbb9cd01ffe95ee4a97c403325473a",
+    "repositoryCopy": "Optional: reference/floorplan-original.webp; source URL is used by default to keep the initial commit lightweight.",
+    "validationFile": "reference/floorplan-original.jpg"
+  },
+  "scale": {
+    "status": "single_anchor_estimate",
+    "cmPerPixel": 1.52,
+    "anchor": {
+      "doorId": "door-entry",
+      "assumedRealWidthCm": 100,
+      "measuredLeafLengthPx": 65.8,
+      "confidence": "confirmed_anchor_low_global_accuracy",
+      "note": "The broker confirmed that the apartment entrance door (door-entry) is 100 cm wide. The 1.52 cm/px conversion is therefore anchored to that door, but all other dimensions remain approximate because the marketing floor plan explicitly states that it is not to scale."
+    }
+  },
+  "spaces": [
+    {
+      "id": "space-main",
+      "name": "Wohnung innen",
+      "type": "interior",
+      "points": [
+        [
+          52,
+          303
+        ],
+        [
+          296,
+          122
+        ],
+        [
+          339,
+          181
+        ],
+        [
+          392,
+          250
+        ],
+        [
+          507,
+          250
+        ],
+        [
+          507,
+          527
+        ],
+        [
+          210,
+          527
+        ],
+        [
+          161,
+          458
+        ],
+        [
+          125,
+          406
+        ]
+      ],
+      "confidence": "estimated"
+    },
+    {
+      "id": "space-loggia",
+      "name": "Loggia",
+      "type": "exterior",
+      "points": [
+        [
+          350,
+          110
+        ],
+        [
+          378,
+          54
+        ],
+        [
+          455,
+          159
+        ],
+        [
+          503,
+          159
+        ],
+        [
+          503,
+          238
+        ],
+        [
+          404,
+          238
+        ],
+        [
+          351,
+          177
+        ]
+      ],
+      "confidence": "estimated"
+    },
+    {
+      "id": "space-balcony",
+      "name": "Balkon",
+      "type": "exterior",
+      "points": [
+        [
+          538,
+          160
+        ],
+        [
+          647,
+          160
+        ],
+        [
+          647,
+          548
+        ],
+        [
+          538,
+          548
+        ]
+      ],
+      "confidence": "high"
+    }
+  ],
+  "walls": [
+    {
+      "id": "wall-outer-nw",
+      "kind": "exterior",
+      "start": [
+        38,
+        302
+      ],
+      "end": [
+        303,
+        109
+      ],
+      "thicknessPx": 18
+    },
+    {
+      "id": "wall-outer-bedroom-loggia-left",
+      "kind": "exterior",
+      "start": [
+        303,
+        109
+      ],
+      "end": [
+        353,
+        177
+      ],
+      "thicknessPx": 21
+    },
+    {
+      "id": "wall-loggia-return-left",
+      "kind": "exterior",
+      "start": [
+        386,
+        220
+      ],
+      "end": [
+        404,
+        246
+      ],
+      "thicknessPx": 20
+    },
+    {
+      "id": "wall-loggia-bottom-left",
+      "kind": "exterior",
+      "start": [
+        404,
+        246
+      ],
+      "end": [
+        412,
+        246
+      ],
+      "thicknessPx": 20
+    },
+    {
+      "id": "wall-loggia-bottom-right",
+      "kind": "exterior",
+      "start": [
+        466,
+        246
+      ],
+      "end": [
+        521,
+        246
+      ],
+      "thicknessPx": 20
+    },
+    {
+      "id": "wall-east-upper",
+      "kind": "exterior",
+      "start": [
+        521,
+        160
+      ],
+      "end": [
+        521,
+        246
+      ],
+      "thicknessPx": 24
+    },
+    {
+      "id": "wall-east-middle",
+      "kind": "exterior",
+      "start": [
+        521,
+        333
+      ],
+      "end": [
+        521,
+        443
+      ],
+      "thicknessPx": 24
+    },
+    {
+      "id": "wall-east-lower",
+      "kind": "exterior",
+      "start": [
+        521,
+        499
+      ],
+      "end": [
+        521,
+        539
+      ],
+      "thicknessPx": 24
+    },
+    {
+      "id": "wall-south",
+      "kind": "exterior",
+      "start": [
+        521,
+        539
+      ],
+      "end": [
+        208,
+        539
+      ],
+      "thicknessPx": 18
+    },
+    {
+      "id": "wall-southwest",
+      "kind": "exterior",
+      "start": [
+        208,
+        539
+      ],
+      "end": [
+        161,
+        472
+      ],
+      "thicknessPx": 19
+    },
+    {
+      "id": "wall-west-lower",
+      "kind": "exterior",
+      "start": [
+        123,
+        415
+      ],
+      "end": [
+        38,
+        302
+      ],
+      "thicknessPx": 19
+    },
+    {
+      "id": "wall-bath-upper",
+      "kind": "interior",
+      "start": [
+        149,
+        232
+      ],
+      "end": [
+        222,
+        338
+      ],
+      "thicknessPx": 8
+    },
+    {
+      "id": "wall-bath-lower",
+      "kind": "interior",
+      "start": [
+        123,
+        410
+      ],
+      "end": [
+        165,
+        380
+      ],
+      "thicknessPx": 8
+    },
+    {
+      "id": "wall-flur-garderobe-short",
+      "kind": "interior",
+      "start": [
+        191,
+        456
+      ],
+      "end": [
+        209,
+        443
+      ],
+      "thicknessPx": 8
+    },
+    {
+      "id": "wall-flur-garderobe-return",
+      "kind": "interior",
+      "start": [
+        209,
+        443
+      ],
+      "end": [
+        225,
+        454
+      ],
+      "thicknessPx": 8
+    },
+    {
+      "id": "wall-flur-kitchen-main",
+      "kind": "interior",
+      "start": [
+        225,
+        454
+      ],
+      "end": [
+        286,
+        388
+      ],
+      "thicknessPx": 8
+    },
+    {
+      "id": "wall-entry-jamb-left",
+      "kind": "exterior",
+      "start": [
+        123,
+        415
+      ],
+      "end": [
+        129,
+        423
+      ],
+      "thicknessPx": 19
+    },
+    {
+      "id": "wall-entry-jamb-right",
+      "kind": "exterior",
+      "start": [
+        155,
+        465
+      ],
+      "end": [
+        161,
+        472
+      ],
+      "thicknessPx": 19
+    }
+  ],
+  "doors": [
+    {
+      "id": "door-entry",
+      "name": "Wohnungseingang",
+      "connects": [
+        "outside",
+        "space-main"
+      ],
+      "hinge": [
+        127,
+        416
+      ],
+      "closedPoint": [
+        161,
+        472
+      ],
+      "openPoint": [
+        190,
+        382
+      ],
+      "widthPx": 65.8,
+      "policy": "must_remain_usable",
+      "confidence": "medium"
+    },
+    {
+      "id": "door-bath",
+      "name": "Bad",
+      "connects": [
+        "space-main",
+        "bath"
+      ],
+      "hinge": [
+        222,
+        338
+      ],
+      "closedPoint": [
+        165,
+        380
+      ],
+      "openPoint": [
+        222,
+        407
+      ],
+      "widthPx": 69,
+      "policy": "must_remain_usable",
+      "confidence": "medium"
+    },
+    {
+      "id": "door-loggia-bedroom",
+      "name": "Loggia – Schlafbereich",
+      "connects": [
+        "space-main",
+        "space-loggia"
+      ],
+      "hinge": [
+        386,
+        220
+      ],
+      "closedPoint": [
+        352,
+        177
+      ],
+      "openPoint": [
+        330,
+        219
+      ],
+      "widthPx": 55,
+      "policy": "must_remain_usable",
+      "confidence": "medium"
+    },
+    {
+      "id": "door-loggia-living",
+      "name": "Loggia – Wohnbereich",
+      "connects": [
+        "space-main",
+        "space-loggia"
+      ],
+      "hinge": [
+        466,
+        246
+      ],
+      "closedPoint": [
+        412,
+        246
+      ],
+      "openPoint": [
+        466,
+        300
+      ],
+      "widthPx": 54,
+      "policy": "may_be_blocked",
+      "confidence": "high"
+    },
+    {
+      "id": "door-balcony-upper",
+      "name": "Balkon – oben",
+      "connects": [
+        "space-main",
+        "space-balcony"
+      ],
+      "hinge": [
+        521,
+        333
+      ],
+      "closedPoint": [
+        521,
+        278
+      ],
+      "openPoint": [
+        469,
+        333
+      ],
+      "widthPx": 55,
+      "policy": "may_be_blocked",
+      "confidence": "high"
+    },
+    {
+      "id": "door-balcony-lower",
+      "name": "Balkon – unten",
+      "connects": [
+        "space-main",
+        "space-balcony"
+      ],
+      "hinge": [
+        521,
+        499
+      ],
+      "closedPoint": [
+        521,
+        447
+      ],
+      "openPoint": [
+        474,
+        499
+      ],
+      "widthPx": 52,
+      "policy": "must_remain_usable",
+      "confidence": "high"
+    }
+  ],
+  "windows": [
+    {
+      "id": "window-kitchen-south",
+      "start": [
+        219,
+        533
+      ],
+      "end": [
+        326,
+        533
+      ],
+      "wallId": "wall-south",
+      "confidence": "medium"
+    },
+    {
+      "id": "window-balcony-upper",
+      "start": [
+        528,
+        278
+      ],
+      "end": [
+        528,
+        329
+      ],
+      "wallId": "wall-east-upper",
+      "confidence": "high"
+    },
+    {
+      "id": "window-balcony-lower",
+      "start": [
+        528,
+        448
+      ],
+      "end": [
+        528,
+        496
+      ],
+      "wallId": "wall-east-lower",
+      "confidence": "high"
+    }
+  ],
+  "balustrades": [
+    {
+      "id": "loggia-outer",
+      "points": [
+        [
+          378,
+          54
+        ],
+        [
+          455,
+          159
+        ],
+        [
+          503,
+          159
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "id": "balcony-outer",
+      "points": [
+        [
+          538,
+          160
+        ],
+        [
+          647,
+          160
+        ],
+        [
+          647,
+          548
+        ],
+        [
+          538,
+          548
+        ]
+      ],
+      "closed": true
+    }
+  ],
+  "labels": [
+    {
+      "text": "Bad",
+      "position": [
+        164,
+        316
+      ]
+    },
+    {
+      "text": "Flur",
+      "position": [
+        218,
+        397
+      ]
+    },
+    {
+      "text": "Schlafbereich",
+      "position": [
+        261,
+        247
+      ]
+    },
+    {
+      "text": "Küche",
+      "position": [
+        337,
+        435
+      ]
+    },
+    {
+      "text": "Wohnen / Essen",
+      "position": [
+        431,
+        443
+      ]
+    },
+    {
+      "text": "Loggia",
+      "position": [
+        416,
+        174
+      ]
+    },
+    {
+      "text": "Balkon",
+      "position": [
+        588,
+        387
+      ]
+    }
+  ]
+}

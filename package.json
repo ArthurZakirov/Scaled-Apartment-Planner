@@ -1,0 +1,11 @@
+{
+  "name": "scaled-apartment-planner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "validate": "python3 tools/validate_geometry.py",
+    "render": "python3 tools/render_layout.py"
+  }
+}

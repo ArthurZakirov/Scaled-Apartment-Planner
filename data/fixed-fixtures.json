@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "fixtures": [
+    {
+      "id": "kitchen-bottom-run",
+      "type": "kitchen_counter",
+      "shape": "rectangle",
+      "x": 205,
+      "y": 500,
+      "widthPx": 155,
+      "depthPx": 35,
+      "confidence": "estimated",
+      "note": "Approximate footprint reconstructed from the marketing floor plan; the source warns that the actual fitted kitchen may differ."
+    },
+    {
+      "id": "kitchen-return",
+      "type": "kitchen_counter",
+      "shape": "rectangle",
+      "x": 309,
+      "y": 463,
+      "widthPx": 51,
+      "depthPx": 72,
+      "confidence": "estimated"
+    },
+    {
+      "id": "kitchen-sink",
+      "type": "sink",
+      "shape": "rectangle",
+      "x": 213,
+      "y": 475,
+      "widthPx": 31,
+      "depthPx": 31,
+      "confidence": "estimated"
+    },
+    {
+      "id": "kitchen-hob",
+      "type": "hob",
+      "shape": "rectangle",
+      "x": 275,
+      "y": 501,
+      "widthPx": 24,
+      "depthPx": 33,
+      "confidence": "estimated"
+    }
+  ]
+}

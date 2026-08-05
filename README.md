@@ -4,7 +4,7 @@ A structured, agent-controlled apartment planner for Wohnung 264. The project re
 
 ## Current state
 
-The first experiment includes:
+The first committed experiment includes:
 
 - reconstructed sloped exterior envelope, interior partitions, doors, loggia, and balcony;
 - a separate fixed-kitchen layer;
@@ -35,12 +35,39 @@ python3 -m pip install -r requirements.txt
 npm run validate
 ```
 
-The apartment entrance door is the confirmed 100 cm scale anchor. All other dimensions remain estimates because the marketing floor plan explicitly states that it is not to scale.
+The current expected result is:
+
+- `door-loggia-living` blocked by the desk;
+- `door-balcony-upper` blocked by the desk;
+- entrance, bathroom, bedroom-side loggia door, and lower balcony door clear.
+
+## Important accuracy warning
+
+The marketing floor plan explicitly says it is not to scale. The broker confirmed that the apartment entrance door is 1 metre wide. The current 1.52 cm/px scale is anchored to that door. All other dimensions remain estimates because the marketing floor plan explicitly says it is not to scale.
+
+Do not use the current measurements for final purchase decisions where small clearances matter.
 
 ## Data model
 
-- `data/apartment.json`: building geometry, spaces, walls, doors, windows, and estimated scale;
-- `data/fixed-fixtures.json`: fitted kitchen and permanent elements;
+- `data/apartment.json`: building geometry, spaces, walls, doors, windows, single-door-anchored estimated scale;
+- `data/fixed-fixtures.json`: fitted kitchen and other permanent elements;
 - `data/furniture.json`: agent-controlled furniture layouts;
 - `data/layout-constraints.json`: door and clearance policies;
+- `the immutable source URL in `data/apartment.json``: immutable reference;
 - `AGENTS.md`: binding rules for Codex and other coding agents.
+
+## Agent interaction model
+
+The user-facing app intentionally contains no furniture form. A coding agent changes `data/furniture.json`, runs validation, and visually checks the result. Later this can be wrapped in CLI or MCP functions such as:
+
+```text
+extract_product(url)
+add_furniture(product, constraints)
+move_furniture(id, constraints)
+rotate_furniture(id, degrees)
+remove_furniture(id)
+check_collisions()
+check_clearances()
+find_valid_placement()
+render_layout()
+```
