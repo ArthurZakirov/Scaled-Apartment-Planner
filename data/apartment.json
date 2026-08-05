@@ -325,7 +325,7 @@
         465
       ],
       "end": [
-        286,
+        266,
         388
       ],
       "thicknessPx": 24
@@ -334,12 +334,25 @@
       "id": "wall-flur-kitchen-return",
       "kind": "interior",
       "start": [
-        286,
+        266,
         388
       ],
       "end": [
-        298,
-        409
+        280,
+        408
+      ],
+      "thicknessPx": 24
+    },
+    {
+      "id": "wall-flur-garderobe-profile",
+      "kind": "interior",
+      "start": [
+        280,
+        408
+      ],
+      "end": [
+        300,
+        394
       ],
       "thicknessPx": 24
     },
