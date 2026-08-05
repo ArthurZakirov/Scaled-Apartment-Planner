@@ -104,6 +104,8 @@ def render(output_svg: Path, output_png: Path):
     g = SubElement(svg, "g", {"transform":"translate(0,18) scale(0.93) translate(25,0)"})
     for space in apartment["spaces"]:
         SubElement(g, "polygon", {"points": points(space["points"]), "class": f"space-{space['type']}"})
+    for niche in apartment.get("niches", []):
+        SubElement(g, "polygon", {"points": points(niche["points"]), "class": "niche"})
     for bal in apartment["balustrades"]:
         tag = "polygon" if bal.get("closed") else "polyline"
         SubElement(g, tag, {"points": points(bal["points"]), "class":"balustrade"})

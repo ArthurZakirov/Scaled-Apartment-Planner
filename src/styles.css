@@ -38,6 +38,9 @@ a:hover { text-decoration: underline; }
 .calibration-floorplan .space { opacity: calc(var(--vector-opacity) * .38); }
 .reference-image { opacity: var(--reference-opacity); }
 
+.niche { fill: #ffffff; stroke: #819086; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.calibration-floorplan .niche { opacity: .22; }
+
 .wall { stroke: #172a24; stroke-linecap: square; vector-effect: non-scaling-stroke; opacity: var(--vector-opacity); }
 .wall-interior { stroke: #263b34; stroke-linecap: butt; }
 .calibration-floorplan .wall { stroke: #ff1f8f; }

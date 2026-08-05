@@ -208,6 +208,16 @@ function buildSvg(apartment, fixtures, furniture, calibration) {
   }
   svg.append(spaces);
 
+  const niches = svgEl('g', { class: 'layer layer-niches' });
+  for (const niche of apartment.niches ?? []) {
+    niches.append(svgEl('polygon', {
+      points: pointsAttr(niche.points),
+      class: 'niche',
+      'data-id': niche.id
+    }));
+  }
+  svg.append(niches);
+
   const balustrades = svgEl('g', { class: 'layer layer-balustrades' });
   for (const balustrade of apartment.balustrades) {
     balustrades.append(svgEl(balustrade.closed ? 'polygon' : 'polyline', {

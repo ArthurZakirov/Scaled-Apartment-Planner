@@ -147,6 +147,32 @@
       "confidence": "high"
     }
   ],
+  "niches": [
+    {
+      "id": "niche-garderobe",
+      "type": "storage",
+      "points": [
+        [
+          191,
+          456
+        ],
+        [
+          286,
+          388
+        ],
+        [
+          300,
+          408
+        ],
+        [
+          205,
+          476
+        ]
+      ],
+      "confidence": "estimated",
+      "note": "Rectangular empty recess in the flur wall for a wardrobe, reconstructed from the reference plan."
+    }
+  ],
   "walls": [
     {
       "id": "wall-outer-nw",
