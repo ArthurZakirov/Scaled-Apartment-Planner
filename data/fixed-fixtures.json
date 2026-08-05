@@ -16,11 +16,12 @@
       "id": "kitchen-return",
       "type": "kitchen_counter",
       "shape": "rectangle",
-      "x": 309,
-      "y": 463,
+      "x": 300,
+      "y": 408,
       "widthPx": 51,
-      "depthPx": 72,
-      "confidence": "estimated"
+      "depthPx": 127,
+      "confidence": "estimated",
+      "note": "Return extends to the flur wall, matching the kitchen profile visible in the reference plan."
     },
     {
       "id": "kitchen-sink",
