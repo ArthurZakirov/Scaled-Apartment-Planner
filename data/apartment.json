@@ -334,14 +334,14 @@
       "id": "wall-flur-garderobe-entry",
       "kind": "interior",
       "start": [
-        161,
-        472
+        155,
+        465
       ],
       "end": [
-        191,
-        456
+        209,
+        443
       ],
-      "thicknessPx": 18
+      "thicknessPx": 24
     },
     {
       "id": "wall-flur-garderobe-return",
@@ -354,7 +354,7 @@
         225,
         454
       ],
-      "thicknessPx": 8
+      "thicknessPx": 24
     },
     {
       "id": "wall-flur-kitchen-main",
@@ -367,7 +367,7 @@
         286,
         388
       ],
-      "thicknessPx": 8
+      "thicknessPx": 24
     },
     {
       "id": "wall-entry-jamb-left",
