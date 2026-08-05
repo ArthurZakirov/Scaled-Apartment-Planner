@@ -92,8 +92,8 @@
       "type": "exterior",
       "points": [
         [
-          350,
-          110
+          303,
+          109
         ],
         [
           378,
@@ -302,7 +302,7 @@
         222,
         338
       ],
-      "thicknessPx": 8
+      "thicknessPx": 18
     },
     {
       "id": "wall-bath-lower",
@@ -315,7 +315,7 @@
         165,
         380
       ],
-      "thicknessPx": 8
+      "thicknessPx": 18
     },
     {
       "id": "wall-flur-garderobe-short",
@@ -328,7 +328,7 @@
         209,
         443
       ],
-      "thicknessPx": 8
+      "thicknessPx": 18
     },
     {
       "id": "wall-flur-garderobe-return",

@@ -36,6 +36,8 @@ The first pass contains:
 - two loggia access doors;
 - two balcony doors;
 - loggia and balcony outlines;
+- continuous straight loggia edge at the neighbouring-loggia boundary;
+- thick, inward-stepped flur/garderobe wall that prevents a direct turn into the kitchen;
 - approximate fitted-kitchen footprint;
 - approximate south kitchen window and balcony glazing.
 
