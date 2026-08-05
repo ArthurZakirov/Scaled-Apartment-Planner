@@ -331,6 +331,19 @@
       "thicknessPx": 18
     },
     {
+      "id": "wall-flur-garderobe-entry",
+      "kind": "interior",
+      "start": [
+        161,
+        472
+      ],
+      "end": [
+        191,
+        456
+      ],
+      "thicknessPx": 18
+    },
+    {
       "id": "wall-flur-garderobe-return",
       "kind": "interior",
       "start": [
