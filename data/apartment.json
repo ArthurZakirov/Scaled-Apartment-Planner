@@ -344,6 +344,19 @@
       "thicknessPx": 18
     },
     {
+      "id": "wall-flur-entry-connector",
+      "kind": "interior",
+      "start": [
+        155,
+        465
+      ],
+      "end": [
+        204.7828,
+        475.6478
+      ],
+      "thicknessPx": 24
+    },
+    {
       "id": "wall-flur-garderobe-upper",
       "kind": "interior",
       "start": [
