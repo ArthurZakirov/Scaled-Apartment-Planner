@@ -325,8 +325,8 @@
         456
       ],
       "end": [
-        209,
-        443
+        208,
+        438
       ],
       "thicknessPx": 18
     },
@@ -338,8 +338,8 @@
         465
       ],
       "end": [
-        209,
-        443
+        191,
+        456
       ],
       "thicknessPx": 24
     },
@@ -347,8 +347,8 @@
       "id": "wall-flur-garderobe-return",
       "kind": "interior",
       "start": [
-        209,
-        443
+        208,
+        438
       ],
       "end": [
         225,
