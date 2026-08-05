@@ -318,54 +318,28 @@
       "thicknessPx": 18
     },
     {
-      "id": "wall-flur-garderobe-short",
-      "kind": "interior",
-      "start": [
-        191,
-        456
-      ],
-      "end": [
-        208,
-        438
-      ],
-      "thicknessPx": 18
-    },
-    {
-      "id": "wall-flur-garderobe-entry",
+      "id": "wall-flur-kitchen-main",
       "kind": "interior",
       "start": [
         155,
         465
       ],
       "end": [
-        191,
-        456
-      ],
-      "thicknessPx": 24
-    },
-    {
-      "id": "wall-flur-garderobe-return",
-      "kind": "interior",
-      "start": [
-        208,
-        438
-      ],
-      "end": [
-        225,
-        454
-      ],
-      "thicknessPx": 24
-    },
-    {
-      "id": "wall-flur-kitchen-main",
-      "kind": "interior",
-      "start": [
-        225,
-        454
-      ],
-      "end": [
         286,
         388
+      ],
+      "thicknessPx": 24
+    },
+    {
+      "id": "wall-flur-kitchen-return",
+      "kind": "interior",
+      "start": [
+        286,
+        388
+      ],
+      "end": [
+        298,
+        409
       ],
       "thicknessPx": 24
     },
