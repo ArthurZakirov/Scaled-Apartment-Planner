@@ -64,7 +64,7 @@ The structural model intentionally excludes the marketing illustration's bed, so
 
 ## Product variants and scenario matrix
 
-The catalog contains three MALM mattress sizes, three modular PAX widths, and four VERNAL L-desk variants. Their Cartesian product is generated as 36 explicit scenarios. Each scenario is checked for containment, furniture overlap, mandatory door access, at least one usable loggia door, and at least one usable balcony door.
+The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, three MALM mattress sizes, three modular PAX widths, and four VERNAL L-desk variants. Their Cartesian product is generated as 48 explicit scenarios. Each scenario is checked for containment, furniture overlap, mandatory door access, at least one usable loggia door, and at least one usable balcony door.
 
 The browser reads a generated evaluation file and navigates only through valid scenarios, ranked by a transparent planning score. Invalid scenarios remain in the generated data for diagnosis and regression testing.
 

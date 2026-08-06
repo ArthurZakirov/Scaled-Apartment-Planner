@@ -14,8 +14,8 @@ function resolveScenarioObject(placement, families) {
     variantId: variant.id,
     type: family.type,
     name: variant.label,
-    sourceUrl: family.sourceUrl,
-    confidence: family.confidence,
+    sourceUrl: variant.sourceUrl ?? family.sourceUrl ?? null,
+    confidence: variant.confidence ?? family.confidence,
     dimensionsCm: structuredClone(variant.dimensionsCm),
     positionPx: structuredClone(placement.positionPx),
     render: structuredClone(variant.render)

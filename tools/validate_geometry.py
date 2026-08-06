@@ -96,8 +96,13 @@ def main() -> int:
 
     if scenario_data.get("scenarioCount") != len(scenario_data["scenarios"]):
         errors.append("Scenario count does not match the generated scenario list.")
-    if len(scenario_data["scenarios"]) != 36:
-        errors.append(f"Expected the 3 × 3 × 4 matrix to contain 36 scenarios, found {len(scenario_data['scenarios'])}.")
+    matrix = load_json("data/scenario-matrix.json")
+    expected_scenario_count = math.prod(len(values) for values in matrix["axes"].values())
+    if len(scenario_data["scenarios"]) != expected_scenario_count:
+        errors.append(
+            f"Expected the scenario matrix to contain {expected_scenario_count} combinations, "
+            f"found {len(scenario_data['scenarios'])}."
+        )
 
     scenario_results = [evaluate_layout(layout, apartment, constraints) for layout in furniture["layouts"]]
     valid_scenarios = rank_results(scenario_results)

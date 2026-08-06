@@ -9,8 +9,8 @@ The planner currently includes:
 - reconstructed sloped exterior envelope, interior partitions, doors, loggia, and balcony;
 - a separate fixed-kitchen layer;
 - a separate furniture layer;
-- three real MALM frame sizes, three modular PAX widths, and four VERNAL L-desk variants;
-- a generated 3 × 3 × 4 matrix with 36 explicit scenarios;
+- the current 111 × 204 cm bed plus three real MALM frame sizes, three modular PAX widths, and four VERNAL L-desk variants;
+- a generated 4 × 3 × 4 matrix with 48 explicit scenarios;
 - automatic filtering and ranking of geometrically valid scenarios;
 - previous/next navigation through valid proposals with score, minimum furniture gap, free floor estimate, and usable exterior doors;
 - automatic door-swing intersection checks;
@@ -43,7 +43,7 @@ The current expected result is:
 - `door-loggia-living` blocked by the desk;
 - `door-balcony-upper` blocked by the desk;
 - entrance, bathroom, bedroom-side loggia door, and lower balcony door clear.
-- 12 of the 36 generated furniture scenarios geometrically valid.
+- the valid count derived automatically from all 48 generated furniture scenarios.
 
 After editing the catalog or scenario matrix, regenerate derived data before validating:
 
@@ -64,7 +64,7 @@ Do not use the current measurements for final purchase decisions where small cle
 - `data/fixed-fixtures.json`: fitted kitchen and other permanent elements;
 - `data/furniture-catalog.json`: reusable MALM, PAX, and VERNAL templates with verified exterior dimensions;
 - `data/scenario-matrix.json`: scenario axes and base placements;
-- `data/layout-scenarios.json`: generated 36-layout matrix;
+- `data/layout-scenarios.json`: generated 48-layout matrix;
 - `data/scenario-evaluations.json`: generated validation metrics and ranked valid scenario IDs;
 - `data/furniture.json`: lightweight manifest linking the furniture data layers;
 - `data/layout-constraints.json`: door and clearance policies;

@@ -28,10 +28,10 @@ class ScenarioTests(unittest.TestCase):
         cls.apartment = expand_apartment_geometry(load_json("data/apartment.json"))
         cls.constraints = load_json("data/layout-constraints.json")
 
-    def test_matrix_contains_36_unique_scenarios(self):
+    def test_matrix_contains_48_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 36)
-        self.assertEqual(len(set(ids)), 36)
+        self.assertEqual(len(ids), 48)
+        self.assertEqual(len(set(ids)), 48)
 
     def test_external_product_dimensions_are_resolved(self):
         active = next(layout for layout in self.furniture["layouts"] if layout["id"] == self.furniture["activeLayoutId"])
@@ -41,6 +41,21 @@ class ScenarioTests(unittest.TestCase):
         self.assertEqual(bed["dimensionsCm"]["depth"], 209)
         self.assertEqual(pax["dimensionsCm"]["width"], 199.6)
         self.assertTrue(pax["requiresAnchoring"])
+
+    def test_current_bed_is_a_separate_product_with_user_dimensions(self):
+        layout = next(
+            layout for layout in self.furniture["layouts"]
+            if layout["selection"] == {
+                "bedVariantId": "current-bed-90",
+                "paxVariantId": "pax-200",
+                "deskVariantId": "stable-180-150",
+            }
+        )
+        bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
+        self.assertEqual(bed["templateId"], "current-bed")
+        self.assertEqual(bed["dimensionsCm"], {"width": 111, "depth": 204})
+        self.assertEqual(bed["mattressCm"], {"width": 90, "depth": 200})
+        self.assertEqual(bed["confidence"], "user_provided_dimensions")
 
     def test_bed_wall_side_stays_fixed_across_width_variants(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
@@ -55,7 +70,7 @@ class ScenarioTests(unittest.TestCase):
             wall_side_positions.append(
                 center[0] * axis[0] + center[1] * axis[1] - bed["dimensionsCm"]["width"] / cm_per_pixel / 2
             )
-        self.assertEqual(len(wall_side_positions), 3)
+        self.assertEqual(len(wall_side_positions), 4)
         self.assertLess(max(wall_side_positions) - min(wall_side_positions), 0.001)
 
     def test_pax_bath_end_and_cross_axis_stay_fixed_across_width_variants(self):

@@ -2,7 +2,7 @@
   "version": 1,
   "activeScenarioId": "scenario-malm-140-pax-200-stable-180-150",
   "axes": {
-    "bedVariantIds": ["malm-140", "malm-160", "malm-180"],
+    "bedVariantIds": ["current-bed-90", "malm-140", "malm-160", "malm-180"],
     "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
     "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"]
   },

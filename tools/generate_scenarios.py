@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the deterministic 3 × 3 × 4 furniture scenario matrix."""
+"""Generate the deterministic bed × PAX × desk furniture scenario matrix."""
 
 from __future__ import annotations
 
@@ -17,6 +17,14 @@ def load_json(relative: str):
 def variant_map(catalog):
     return {
         variant["id"]: variant
+        for family in catalog["families"]
+        for variant in family["variants"]
+    }
+
+
+def family_by_variant(catalog):
+    return {
+        variant["id"]: family
         for family in catalog["families"]
         for variant in family["variants"]
     }
@@ -69,6 +77,7 @@ def main():
     matrix = load_json("data/scenario-matrix.json")
     apartment = load_json("data/apartment.json")
     variants = variant_map(catalog)
+    variant_families = family_by_variant(catalog)
     placements = matrix["placements"]
     base_bed_variant = variants[placements["bed"]["baseVariantId"]]
     base_pax_variant = variants[placements["pax"]["baseVariantId"]]
@@ -108,7 +117,7 @@ def main():
                             },
                             {
                                 "id": placements["bed"]["id"],
-                                "templateId": placements["bed"]["templateId"],
+                                "templateId": variant_families[bed_id]["id"],
                                 "variantId": bed_id,
                                 "positionPx": bed_position(
                                     placements["bed"], base_bed_variant, bed, apartment["scale"]["cmPerPixel"]

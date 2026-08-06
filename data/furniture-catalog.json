@@ -75,6 +75,21 @@
       ]
     },
     {
+      "id": "current-bed",
+      "type": "bed",
+      "name": "Aktuelles Bett",
+      "confidence": "user_provided_dimensions",
+      "variants": [
+        {
+          "id": "current-bed-90",
+          "label": "Aktuelles Bett 90 × 200",
+          "dimensionsCm": {"width": 111, "depth": 204},
+          "mattressCm": {"width": 90, "depth": 200},
+          "render": {"shape": "bed", "label": "Aktuelles Bett · 111 × 204"}
+        }
+      ]
+    },
+    {
       "id": "vernal-l-desk",
       "type": "desk",
       "name": "VERNAL L-förmiger Schreibtisch",
