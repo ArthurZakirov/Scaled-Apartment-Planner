@@ -7,10 +7,10 @@ import { resolveScenarioData } from '../src/furniture.js';
 const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.json', import.meta.url), 'utf8'));
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
 
-test('browser resolves all 48 product-variant scenarios', () => {
+test('browser resolves all 144 product and orientation scenarios', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  assert.equal(furniture.layouts.length, 48);
-  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 48);
+  assert.equal(furniture.layouts.length, 144);
+  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 144);
 });
 
 test('current bed resolves independently from MALM', () => {
@@ -31,6 +31,18 @@ test('active scenario uses external MALM and real modular PAX dimensions', () =>
   assert.equal(pax.dimensionsCm.width, 199.6);
   assert.equal(pax.modules.length, 2);
   assert.equal(pax.requiresAnchoring, true);
+});
+
+test('both PAX heights and all three arrangements resolve', () => {
+  const furniture = resolveScenarioData(scenarios, catalog);
+  const paxHeights = new Set();
+  const arrangements = new Set();
+  for (const layout of furniture.layouts) {
+    arrangements.add(layout.arrangementId);
+    paxHeights.add(layout.objects.find((object) => object.type === 'wardrobe').dimensionsCm.height);
+  }
+  assert.deepEqual(paxHeights, new Set([201.2, 236.4]));
+  assert.deepEqual(arrangements, new Set(['divider', 'bath-wall-bed-shifted', 'bath-wall-both-rotated']));
 });
 
 test('query-selected scenario becomes active without mutating stored data', () => {

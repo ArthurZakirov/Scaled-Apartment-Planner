@@ -174,6 +174,19 @@ function makeFurnitureGroup(object, cmPerPixel) {
     group.append(svgEl('polygon', { points: pointsAttr(inner), class: 'mattress' }));
   }
 
+  if (object.type === 'wardrobe') {
+    const [frontStart, frontEnd] = polygon;
+    group.append(svgEl('line', {
+      x1: frontStart[0], y1: frontStart[1], x2: frontEnd[0], y2: frontEnd[1],
+      class: 'wardrobe-opening-edge'
+    }));
+    group.append(svgEl('text', {
+      x: (frontStart[0] + frontEnd[0]) / 2,
+      y: (frontStart[1] + frontEnd[1]) / 2 - 3,
+      class: 'wardrobe-opening-label'
+    }, 'offen'));
+  }
+
   const centroid = polygon.reduce((sum, [x, y]) => [sum[0] + x / polygon.length, sum[1] + y / polygon.length], [0, 0]);
   group.append(svgEl('text', { x: centroid[0], y: centroid[1] - 3, class: 'furniture-label' }, object.render.label));
   group.append(svgEl('text', { x: centroid[0], y: centroid[1] + 10, class: 'furniture-id' }, object.id));
@@ -359,12 +372,43 @@ function renderScenarioNavigation(furniture, activeLayout, evaluations) {
   return navigation;
 }
 
+function renderArrangementNavigation(furniture, activeLayout) {
+  const labels = {
+    divider: 'Raumteiler quer',
+    'bath-wall-bed-shifted': 'PAX an Badwand',
+    'bath-wall-both-rotated': 'Beide gedreht'
+  };
+  const navigation = htmlEl('div', { className: 'arrangement-navigation', role: 'group', 'aria-label': 'Grundorientierung' });
+  for (const [arrangementId, label] of Object.entries(labels)) {
+    const target = furniture.layouts.find((layout) =>
+      layout.selection.arrangementId === arrangementId &&
+      layout.selection.bedVariantId === activeLayout.selection.bedVariantId &&
+      layout.selection.paxVariantId === activeLayout.selection.paxVariantId &&
+      layout.selection.deskVariantId === activeLayout.selection.deskVariantId
+    );
+    const buttonAttrs = {
+      type: 'button',
+      'aria-current': activeLayout.selection.arrangementId === arrangementId ? 'true' : 'false'
+    };
+    if (!target) buttonAttrs.disabled = '';
+    const button = htmlEl('button', buttonAttrs, label);
+    if (target && target.id !== activeLayout.id) button.addEventListener('click', () => selectScenario(target.id));
+    navigation.append(button);
+  }
+  return navigation;
+}
+
 function renderFurnitureSummary(activeLayout) {
   const summary = htmlEl('div', { className: 'scenario-objects' });
   for (const object of activeLayout.objects) {
     const row = htmlEl('div', { className: 'scenario-object' });
     row.append(htmlEl('strong', {}, object.render.label));
-    if (object.modules) row.append(htmlEl('small', {}, `${object.modules.length} PAX-Module · reale Breite ${object.dimensionsCm.width.toFixed(1)} cm`));
+    if (object.modules) {
+      const heightNote = object.heightClass === 'high'
+        ? 'hohe Variante · größerer Kipphebel'
+        : 'niedrige Variante · trotzdem verankerungspflichtig';
+      row.append(htmlEl('small', {}, `${object.modules.length} offene PAX-Module · ${object.dimensionsCm.width.toFixed(1)} × ${object.dimensionsCm.depth.toFixed(0)} × ${object.dimensionsCm.height.toFixed(1)} cm · ${heightNote}`));
+    }
     else if (object.mattressCm) row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
     else row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
     summary.append(row);
@@ -373,10 +417,15 @@ function renderFurnitureSummary(activeLayout) {
 }
 
 function renderScenarioMetrics(evaluation) {
+  const accessLabel = evaluation.bedPaxGapCm >= 60
+    ? `${evaluation.bedPaxGapCm.toFixed(1)} cm · gut`
+    : evaluation.bedPaxGapCm >= 45
+      ? `${evaluation.bedPaxGapCm.toFixed(1)} cm · knapp`
+      : `${evaluation.bedPaxGapCm.toFixed(1)} cm · zu eng`;
   const metrics = htmlEl('div', { className: 'scenario-metrics' });
   const entries = [
     ['Bewertung', `${evaluation.score.toFixed(1)} / 100`],
-    ['Möbelabstand', `${evaluation.minimumFurnitureGapCm.toFixed(1)} cm`],
+    ['Bett–PAX', accessLabel],
     ['Freie Fläche', `ca. ${evaluation.freeFloorAreaM2.toFixed(1)} m²`],
     ['Außentüren', `${evaluation.usableLoggiaDoors + evaluation.usableBalconyDoors} von 4 nutzbar`]
   ];
@@ -392,8 +441,15 @@ function renderScenarioMetrics(evaluation) {
 function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evaluations, doorResults, furnitureCollisions) {
   const panel = htmlEl('aside', { className: 'status-panel' });
   panel.append(renderScenarioNavigation(furniture, activeLayout, evaluations));
+  panel.append(renderArrangementNavigation(furniture, activeLayout));
   panel.append(htmlEl('h2', {}, 'Aktuelles Szenario'));
   panel.append(htmlEl('div', { className: 'layout-name' }, activeLayout.name));
+  const arrangement = htmlEl('div', { className: 'arrangement-summary' });
+  arrangement.append(htmlEl('strong', {}, activeLayout.arrangementLabel ?? 'PAX quer als Raumteiler'));
+  arrangement.append(htmlEl('small', {}, activeLayout.kitchenExposure === 'low'
+    ? 'PAX-Rückwand zeigt zur Küche · geringere direkte Küchenexposition'
+    : 'PAX-Öffnung zeigt stärker zum Wohnraum · Lüftung oder textiler Schutz sinnvoll'));
+  panel.append(arrangement);
   const validity = htmlEl('div', { className: 'scenario-validity' });
   validity.append(htmlEl('span', { className: 'status-dot' }));
   validity.append(htmlEl('strong', {}, 'Geometrisch gültiger Vorschlag'));
@@ -403,9 +459,10 @@ function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evalu
 
   const pax = activeLayout.objects.find((object) => object.requiresAnchoring);
   if (pax) {
-    const anchoring = htmlEl('div', { className: 'notice danger' });
-    anchoring.append(htmlEl('strong', {}, 'PAX muss verankert werden'));
-    anchoring.append(htmlEl('span', {}, 'Die Raumteiler-Position ist nur eine Geometrieidee. Vor dem Kauf ist eine sichere Wand-, Decken- oder Fachkonstruktion erforderlich.'));
+    const wallCandidate = activeLayout.installationStatus === 'manufacturer_wall_mount_candidate';
+    const anchoring = htmlEl('div', { className: `notice ${wallCandidate ? 'safety' : 'danger'}` });
+    anchoring.append(htmlEl('strong', {}, wallCandidate ? 'Wandmontage grundsätzlich möglich' : 'Nicht freistehend verwenden'));
+    anchoring.append(htmlEl('span', {}, activeLayout.recommendation ?? 'Vor dem Kauf ist eine sichere und fachlich geprüfte Verankerung erforderlich.'));
     panel.append(anchoring);
   }
 

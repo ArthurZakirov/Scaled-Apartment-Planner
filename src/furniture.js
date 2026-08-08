@@ -21,7 +21,7 @@ function resolveScenarioObject(placement, families) {
     render: structuredClone(variant.render)
   };
 
-  for (const key of ['mattressCm', 'modules', 'heightRangeCm']) {
+  for (const key of ['mattressCm', 'modules', 'heightRangeCm', 'heightClass']) {
     if (variant[key] !== undefined) resolved[key] = structuredClone(variant[key]);
   }
   for (const key of ['requiresAnchoring', 'safetyNote', 'doorType', 'planningDepthCm']) {

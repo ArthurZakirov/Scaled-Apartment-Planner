@@ -83,57 +83,71 @@ def main():
     base_pax_variant = variants[placements["pax"]["baseVariantId"]]
     scenarios = []
 
-    for bed_id in matrix["axes"]["bedVariantIds"]:
-        for pax_id in matrix["axes"]["paxVariantIds"]:
-            for desk_id in matrix["axes"]["deskVariantIds"]:
-                bed = variants[bed_id]
-                pax = variants[pax_id]
-                desk = variants[desk_id]
-                scenario_id = f"scenario-{bed_id}-{pax_id}-{desk_id}"
-                scenarios.append(
-                    {
-                        "id": scenario_id,
-                        "name": f"{bed['label']} · {pax['label']} · {desk['label']}",
-                        "status": "generated_experiment",
-                        "selection": {
-                            "bedVariantId": bed_id,
-                            "paxVariantId": pax_id,
-                            "deskVariantId": desk_id,
-                        },
-                        "notes": [
-                            "Die wandseitige Außenkante des Betts bleibt bei jeder Breite am selben Wandanker.",
-                            "Die kurze PAX-Seite an der Badwand und seine Querposition bleiben bei jeder Breite fest.",
-                            "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
-                            "PAX benötigt vor Kauf oder Montage eine reale und geprüfte Verankerungslösung.",
-                        ],
-                        "objects": [
-                            {
-                                "id": placements["pax"]["id"],
-                                "templateId": placements["pax"]["templateId"],
-                                "variantId": pax_id,
-                                "positionPx": pax_position(
-                                    placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
-                                ),
+    arrangements = matrix.get("arrangements") or [{"id": "divider", "label": "Standard"}]
+    for arrangement in arrangements:
+        bed_ids = arrangement.get("bedVariantIds", matrix["axes"]["bedVariantIds"])
+        for bed_id in bed_ids:
+            for pax_id in matrix["axes"]["paxVariantIds"]:
+                for desk_id in matrix["axes"]["deskVariantIds"]:
+                    bed = variants[bed_id]
+                    pax = variants[pax_id]
+                    desk = variants[desk_id]
+                    if arrangement["id"] == "divider":
+                        scenario_id = f"scenario-{bed_id}-{pax_id}-{desk_id}"
+                    else:
+                        scenario_id = f"scenario-{arrangement['id']}-{bed_id}-{pax_id}-{desk_id}"
+                    bed_position_px = arrangement.get("bedPositionPx") or bed_position(
+                        placements["bed"], base_bed_variant, bed, apartment["scale"]["cmPerPixel"]
+                    )
+                    pax_position_px = arrangement.get("paxPositionPx") or pax_position(
+                        placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
+                    )
+                    scenarios.append(
+                        {
+                            "id": scenario_id,
+                            "name": f"{arrangement['label']} · {bed['label']} · {pax['label']} · {desk['label']}",
+                            "status": "generated_experiment",
+                            "arrangementId": arrangement["id"],
+                            "arrangementLabel": arrangement["label"],
+                            "installationStatus": arrangement.get("installationStatus", "requires_engineered_solution"),
+                            "kitchenExposure": arrangement.get("kitchenExposure", "unknown"),
+                            "recommendation": arrangement.get("recommendation", "Befestigung vor Kauf fachlich prüfen."),
+                            "selection": {
+                                "arrangementId": arrangement["id"],
+                                "bedVariantId": bed_id,
+                                "paxVariantId": pax_id,
+                                "deskVariantId": desk_id,
                             },
-                            {
-                                "id": placements["bed"]["id"],
-                                "templateId": variant_families[bed_id]["id"],
-                                "variantId": bed_id,
-                                "positionPx": bed_position(
-                                    placements["bed"], base_bed_variant, bed, apartment["scale"]["cmPerPixel"]
-                                ),
-                            },
-                            {
-                                "id": placements["desk"]["id"],
-                                "templateId": placements["desk"]["templateId"],
-                                "variantId": desk_id,
-                                "positionPx": desk_position(
-                                    placements["desk"], desk, apartment["scale"]["cmPerPixel"]
-                                ),
-                            },
-                        ],
-                    }
-                )
+                            "notes": [
+                                "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
+                                "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+                                "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
+                                arrangement.get("recommendation", "PAX benötigt eine geprüfte Verankerungslösung."),
+                            ],
+                            "objects": [
+                                {
+                                    "id": placements["pax"]["id"],
+                                    "templateId": placements["pax"]["templateId"],
+                                    "variantId": pax_id,
+                                    "positionPx": pax_position_px,
+                                },
+                                {
+                                    "id": placements["bed"]["id"],
+                                    "templateId": variant_families[bed_id]["id"],
+                                    "variantId": bed_id,
+                                    "positionPx": bed_position_px,
+                                },
+                                {
+                                    "id": placements["desk"]["id"],
+                                    "templateId": placements["desk"]["templateId"],
+                                    "variantId": desk_id,
+                                    "positionPx": desk_position(
+                                        placements["desk"], desk, apartment["scale"]["cmPerPixel"]
+                                    ),
+                                },
+                            ],
+                        }
+                    )
 
     output = {
         "version": 1,

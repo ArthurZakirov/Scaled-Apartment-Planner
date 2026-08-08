@@ -107,6 +107,7 @@ def evaluate_layout(
     bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
     pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
     desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
+    bed_pax_gap_cm = object_polygons[bed["id"]].distance(object_polygons[pax["id"]]) * cm_per_pixel
     score = 0.0
     if not reasons:
         score = min(
@@ -121,11 +122,14 @@ def evaluate_layout(
     return {
         "id": layout["id"],
         "name": layout["name"],
+        "arrangementId": layout.get("arrangementId", "divider"),
+        "installationStatus": layout.get("installationStatus", "requires_engineered_solution"),
         "valid": not reasons,
         "reasons": reasons,
         "collisions": collisions,
         "blockedBy": blocked_by,
         "minimumFurnitureGapCm": round(minimum_gap_cm, 1),
+        "bedPaxGapCm": round(bed_pax_gap_cm, 1),
         "freeFloorAreaM2": round(free_floor_m2, 1),
         "usableLoggiaDoors": usable_loggia,
         "usableBalconyDoors": usable_balcony,
@@ -136,5 +140,9 @@ def evaluate_layout(
 def rank_results(results: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return sorted(
         (result for result in results if result["valid"]),
-        key=lambda result: (-result["score"], result["id"]),
+        key=lambda result: (
+            0 if result.get("installationStatus") == "manufacturer_wall_mount_candidate" else 1,
+            -result["score"],
+            result["id"],
+        ),
     )

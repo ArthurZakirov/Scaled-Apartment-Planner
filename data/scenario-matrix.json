@@ -3,9 +3,38 @@
   "activeScenarioId": "scenario-malm-140-pax-200-stable-180-150",
   "axes": {
     "bedVariantIds": ["current-bed-90", "malm-140", "malm-160", "malm-180"],
-    "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
+    "paxVariantIds": ["pax-150-low", "pax-150", "pax-175-low", "pax-175", "pax-200-low", "pax-200"],
     "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"]
   },
+  "arrangements": [
+    {
+      "id": "divider",
+      "label": "PAX quer als Raumteiler",
+      "installationStatus": "requires_engineered_solution",
+      "kitchenExposure": "low",
+      "recommendation": "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
+    },
+    {
+      "id": "bath-wall-bed-shifted",
+      "label": "PAX an Badwand · Bett zur Loggia",
+      "bedVariantIds": ["current-bed-90"],
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "kitchenExposure": "higher",
+      "recommendation": "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante.",
+      "paxPositionPx": {"center": [208.6255, 269.074], "rotationDeg": 55.4456},
+      "bedPositionPx": {"center": [266.72, 193.62], "rotationDeg": 54}
+    },
+    {
+      "id": "bath-wall-both-rotated",
+      "label": "PAX und Bett um 90° gedreht",
+      "bedVariantIds": ["current-bed-90"],
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "kitchenExposure": "higher",
+      "recommendation": "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen.",
+      "paxPositionPx": {"center": [208.6255, 269.074], "rotationDeg": 55.4456},
+      "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066}
+    }
+  ],
   "placements": {
     "bed": {
       "id": "ikea-malm-bed",

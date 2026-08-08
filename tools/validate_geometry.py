@@ -97,7 +97,13 @@ def main() -> int:
     if scenario_data.get("scenarioCount") != len(scenario_data["scenarios"]):
         errors.append("Scenario count does not match the generated scenario list.")
     matrix = load_json("data/scenario-matrix.json")
-    expected_scenario_count = math.prod(len(values) for values in matrix["axes"].values())
+    arrangements = matrix.get("arrangements") or [{}]
+    expected_scenario_count = sum(
+        len(arrangement.get("bedVariantIds", matrix["axes"]["bedVariantIds"]))
+        * len(matrix["axes"]["paxVariantIds"])
+        * len(matrix["axes"]["deskVariantIds"])
+        for arrangement in arrangements
+    )
     if len(scenario_data["scenarios"]) != expected_scenario_count:
         errors.append(
             f"Expected the scenario matrix to contain {expected_scenario_count} combinations, "

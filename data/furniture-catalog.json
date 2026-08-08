@@ -43,34 +43,70 @@
       "planningDepthCm": 60,
       "variants": [
         {
+          "id": "pax-150-low",
+          "label": "PAX 150 × 58 × 201",
+          "heightClass": "low",
+          "modules": [
+            {"nominalWidthCm": 50, "widthCm": 49.8, "depthCm": 58, "heightCm": 201.2},
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 201.2}
+          ],
+          "dimensionsCm": {"width": 149.6, "depth": 58, "height": 201.2},
+          "render": {"shape": "rectangle", "label": "PAX 150 · H 201"}
+        },
+        {
           "id": "pax-150",
-          "label": "PAX 150 × 58",
+          "label": "PAX 150 × 58 × 236",
+          "heightClass": "high",
           "modules": [
             {"nominalWidthCm": 50, "widthCm": 49.8, "depthCm": 58, "heightCm": 236.4},
             {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4}
           ],
           "dimensionsCm": {"width": 149.6, "depth": 58, "height": 236.4},
-          "render": {"shape": "rectangle", "label": "PAX 150 × 58"}
+          "render": {"shape": "rectangle", "label": "PAX 150 · H 236"}
+        },
+        {
+          "id": "pax-175-low",
+          "label": "PAX 175 × 58 × 201",
+          "heightClass": "low",
+          "modules": [
+            {"nominalWidthCm": 75, "widthCm": 74.8, "depthCm": 58, "heightCm": 201.2},
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 201.2}
+          ],
+          "dimensionsCm": {"width": 174.6, "depth": 58, "height": 201.2},
+          "render": {"shape": "rectangle", "label": "PAX 175 · H 201"}
         },
         {
           "id": "pax-175",
-          "label": "PAX 175 × 58",
+          "label": "PAX 175 × 58 × 236",
+          "heightClass": "high",
           "modules": [
             {"nominalWidthCm": 75, "widthCm": 74.8, "depthCm": 58, "heightCm": 236.4},
             {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4}
           ],
           "dimensionsCm": {"width": 174.6, "depth": 58, "height": 236.4},
-          "render": {"shape": "rectangle", "label": "PAX 175 × 58"}
+          "render": {"shape": "rectangle", "label": "PAX 175 · H 236"}
+        },
+        {
+          "id": "pax-200-low",
+          "label": "PAX 200 × 58 × 201",
+          "heightClass": "low",
+          "modules": [
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 201.2},
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 201.2}
+          ],
+          "dimensionsCm": {"width": 199.6, "depth": 58, "height": 201.2},
+          "render": {"shape": "rectangle", "label": "PAX 200 · H 201"}
         },
         {
           "id": "pax-200",
-          "label": "PAX 200 × 58",
+          "label": "PAX 200 × 58 × 236",
+          "heightClass": "high",
           "modules": [
             {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4},
             {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4}
           ],
           "dimensionsCm": {"width": 199.6, "depth": 58, "height": 236.4},
-          "render": {"shape": "rectangle", "label": "PAX 200 × 58"}
+          "render": {"shape": "rectangle", "label": "PAX 200 · H 236"}
         }
       ]
     },

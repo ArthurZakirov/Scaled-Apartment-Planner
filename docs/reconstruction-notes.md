@@ -64,7 +64,19 @@ The structural model intentionally excludes the marketing illustration's bed, so
 
 ## Product variants and scenario matrix
 
-The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, three MALM mattress sizes, three modular PAX widths, and four VERNAL L-desk variants. Their Cartesian product is generated as 48 explicit scenarios. Each scenario is checked for containment, furniture overlap, mandatory door access, at least one usable loggia door, and at least one usable balcony door.
+The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, three MALM mattress sizes, three modular PAX widths in 201.2 and 236.4 cm height, and four VERNAL L-desk variants. Three orientation concepts produce 144 explicit scenarios: transverse divider, PAX along the bathroom wall with the bed shifted toward the loggia, and PAX plus bed rotated by 90 degrees. Each scenario is checked for containment, furniture overlap, mandatory door access, at least one usable loggia door, and at least one usable balcony door.
+
+The transverse divider remains a geometric experiment only because IKEA requires PAX to be wall anchored. A short-end-only attachment is not treated as equivalent to the documented rear wall mounting. Bathroom-wall-parallel concepts are marked as mounting candidates, not as verified installations; the actual wall substrate, fasteners, permitted drilling, and wardrobe access clearance must be confirmed before purchase.
+
+The open wardrobe edge is rendered explicitly. The planner reports the bed-to-PAX gap as an access proxy: 60 cm or more is shown as good, 45–60 cm as tight, and less than 45 cm as too tight. These thresholds remain planning heuristics because the source drawing is not to scale.
+
+Safety research references:
+
+- IKEA PAX 50 × 58 × 201 product page and wall-mounting requirement: https://www.ikea.com/de/de/p/pax-korpus-kleiderschrank-weiss-70458217/
+- IKEA PAX 100 × 58 × 201 product page and wall-mounting requirement: https://www.ikea.com/de/de/p/pax-korpus-kleiderschrank-weiss-70458203/
+- IKEA PAX assembly instructions: https://www.ikea.com/de/de/assembly_instructions/pax-korpus-kleiderschrank-weiss__AA-1289393-10-2.pdf
+- IKEA wall-anchoring guide: https://www.ikea.com/de/de/files/pdf/1a/98/1a987529/bf_leitfaden_wandverankerung_07-2026_online.pdf
+- US EPA guidance on cooking-generated indoor particles and range-hood use: https://www.epa.gov/indoor-air-quality-iaq/sources-indoor-particulate-matter-pm
 
 The browser reads a generated evaluation file and navigates only through valid scenarios, ranked by a transparent planning score. Invalid scenarios remain in the generated data for diagnosis and regression testing.
 
