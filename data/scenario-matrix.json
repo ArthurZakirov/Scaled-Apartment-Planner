@@ -3,7 +3,7 @@
   "activeScenarioId": "scenario-malm-140-pax-200-stable-180-150",
   "axes": {
     "bedVariantIds": ["current-bed-90", "malm-140", "malm-160", "malm-180"],
-    "paxVariantIds": ["pax-150-low", "pax-150", "pax-175-low", "pax-175", "pax-200-low", "pax-200"],
+    "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
     "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"]
   },
   "arrangements": [
@@ -45,7 +45,7 @@
     },
     "pax": {
       "id": "ikea-pax-divider",
-      "templateId": "ikea-pax-58-236",
+      "templateId": "ikea-pax-58",
       "baseVariantId": "pax-200",
       "keepBathEndFixed": true,
       "positionPx": {"center": [280, 290], "rotationDeg": -36}

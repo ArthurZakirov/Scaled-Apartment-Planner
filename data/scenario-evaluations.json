@@ -1,201 +1,61 @@
 {
   "version": 1,
-  "scenarioCount": 144,
-  "validCount": 96,
+  "scenarioCount": 72,
+  "validCount": 48,
   "rankedValidScenarioIds": [
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-200-low-quick-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-200-low-stable-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-175-low-quick-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-175-low-stable-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-200-low-quick-150-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-150-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-200-low-stable-160-140",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-160-140",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-150-low-quick-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-150-low-stable-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-175-low-quick-150-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-175-low-stable-160-140",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-150-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-160-140",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-150-low-quick-150-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-150-low-stable-160-140",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-150-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-160-140",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-low-quick-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-low-stable-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-low-quick-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-low-stable-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-low-quick-150-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-low-stable-160-140",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-150-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-160-140",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-low-quick-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-low-stable-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-quick-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-low-quick-150-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-low-stable-160-140",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-150-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-160-140",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-low-quick-150-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-quick-150-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-low-stable-160-140",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-160-140",
-    "scenario-current-bed-90-pax-200-low-quick-180-150",
-    "scenario-current-bed-90-pax-200-low-stable-180-150",
     "scenario-current-bed-90-pax-200-quick-180-150",
     "scenario-current-bed-90-pax-200-stable-180-150",
-    "scenario-current-bed-90-pax-175-low-quick-180-150",
-    "scenario-current-bed-90-pax-175-low-stable-180-150",
     "scenario-current-bed-90-pax-175-quick-180-150",
     "scenario-current-bed-90-pax-175-stable-180-150",
-    "scenario-current-bed-90-pax-200-low-quick-150-150",
     "scenario-current-bed-90-pax-200-quick-150-150",
-    "scenario-current-bed-90-pax-200-low-stable-160-140",
     "scenario-current-bed-90-pax-200-stable-160-140",
-    "scenario-malm-140-pax-200-low-quick-180-150",
-    "scenario-malm-140-pax-200-low-stable-180-150",
     "scenario-malm-140-pax-200-quick-180-150",
     "scenario-malm-140-pax-200-stable-180-150",
-    "scenario-current-bed-90-pax-150-low-quick-180-150",
-    "scenario-current-bed-90-pax-150-low-stable-180-150",
     "scenario-current-bed-90-pax-150-quick-180-150",
     "scenario-current-bed-90-pax-150-stable-180-150",
-    "scenario-current-bed-90-pax-175-low-quick-150-150",
-    "scenario-current-bed-90-pax-175-low-stable-160-140",
     "scenario-current-bed-90-pax-175-quick-150-150",
     "scenario-current-bed-90-pax-175-stable-160-140",
-    "scenario-malm-140-pax-175-low-quick-180-150",
-    "scenario-malm-140-pax-175-low-stable-180-150",
     "scenario-malm-140-pax-175-quick-180-150",
     "scenario-malm-140-pax-175-stable-180-150",
-    "scenario-malm-140-pax-200-low-quick-150-150",
-    "scenario-malm-140-pax-200-low-stable-160-140",
     "scenario-malm-140-pax-200-quick-150-150",
     "scenario-malm-140-pax-200-stable-160-140",
-    "scenario-current-bed-90-pax-150-low-quick-150-150",
     "scenario-current-bed-90-pax-150-quick-150-150",
-    "scenario-current-bed-90-pax-150-low-stable-160-140",
     "scenario-current-bed-90-pax-150-stable-160-140",
-    "scenario-malm-140-pax-150-low-quick-180-150",
-    "scenario-malm-140-pax-150-low-stable-180-150",
     "scenario-malm-140-pax-150-quick-180-150",
     "scenario-malm-140-pax-150-stable-180-150",
-    "scenario-malm-140-pax-175-low-quick-150-150",
-    "scenario-malm-140-pax-175-low-stable-160-140",
     "scenario-malm-140-pax-175-quick-150-150",
     "scenario-malm-140-pax-175-stable-160-140",
-    "scenario-malm-140-pax-150-low-quick-150-150",
-    "scenario-malm-140-pax-150-low-stable-160-140",
     "scenario-malm-140-pax-150-quick-150-150",
     "scenario-malm-140-pax-150-stable-160-140"
   ],
   "results": [
     {
-      "id": "scenario-current-bed-90-pax-150-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.9,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 59.6
-    },
-    {
-      "id": "scenario-current-bed-90-pax-150-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 24.0,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 59.5
-    },
-    {
-      "id": "scenario-current-bed-90-pax-150-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 61.1
-    },
-    {
-      "id": "scenario-current-bed-90-pax-150-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 61.1
-    },
-    {
       "id": "scenario-current-bed-90-pax-150-quick-150-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -218,7 +78,7 @@
     },
     {
       "id": "scenario-current-bed-90-pax-150-stable-160-140",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -241,7 +101,7 @@
     },
     {
       "id": "scenario-current-bed-90-pax-150-quick-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -264,7 +124,7 @@
     },
     {
       "id": "scenario-current-bed-90-pax-150-stable-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -286,100 +146,8 @@
       "score": 61.1
     },
     {
-      "id": "scenario-current-bed-90-pax-175-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 60.8
-    },
-    {
-      "id": "scenario-current-bed-90-pax-175-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.9,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 60.8
-    },
-    {
-      "id": "scenario-current-bed-90-pax-175-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 62.3
-    },
-    {
-      "id": "scenario-current-bed-90-pax-175-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 62.3
-    },
-    {
       "id": "scenario-current-bed-90-pax-175-quick-150-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -402,7 +170,7 @@
     },
     {
       "id": "scenario-current-bed-90-pax-175-stable-160-140",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -425,7 +193,7 @@
     },
     {
       "id": "scenario-current-bed-90-pax-175-quick-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -448,7 +216,7 @@
     },
     {
       "id": "scenario-current-bed-90-pax-175-stable-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -470,100 +238,8 @@
       "score": 62.3
     },
     {
-      "id": "scenario-current-bed-90-pax-200-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 62.1
-    },
-    {
-      "id": "scenario-current-bed-90-pax-200-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.8,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 62.0
-    },
-    {
-      "id": "scenario-current-bed-90-pax-200-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.4,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 63.6
-    },
-    {
-      "id": "scenario-current-bed-90-pax-200-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 45.8,
-      "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.3,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 63.6
-    },
-    {
       "id": "scenario-current-bed-90-pax-200-quick-150-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -586,7 +262,7 @@
     },
     {
       "id": "scenario-current-bed-90-pax-200-stable-160-140",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -609,7 +285,7 @@
     },
     {
       "id": "scenario-current-bed-90-pax-200-quick-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -632,7 +308,7 @@
     },
     {
       "id": "scenario-current-bed-90-pax-200-stable-180-150",
-      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -654,100 +330,8 @@
       "score": 63.6
     },
     {
-      "id": "scenario-malm-140-pax-150-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.9,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 57.8
-    },
-    {
-      "id": "scenario-malm-140-pax-150-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 23.0,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 57.8
-    },
-    {
-      "id": "scenario-malm-140-pax-150-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 59.3
-    },
-    {
-      "id": "scenario-malm-140-pax-150-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 59.3
-    },
-    {
       "id": "scenario-malm-140-pax-150-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -770,7 +354,7 @@
     },
     {
       "id": "scenario-malm-140-pax-150-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -793,7 +377,7 @@
     },
     {
       "id": "scenario-malm-140-pax-150-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -816,7 +400,7 @@
     },
     {
       "id": "scenario-malm-140-pax-150-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -838,100 +422,8 @@
       "score": 59.3
     },
     {
-      "id": "scenario-malm-140-pax-175-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 59.1
-    },
-    {
-      "id": "scenario-malm-140-pax-175-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.9,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 59.1
-    },
-    {
-      "id": "scenario-malm-140-pax-175-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 60.6
-    },
-    {
-      "id": "scenario-malm-140-pax-175-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 60.6
-    },
-    {
       "id": "scenario-malm-140-pax-175-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -954,7 +446,7 @@
     },
     {
       "id": "scenario-malm-140-pax-175-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -977,7 +469,7 @@
     },
     {
       "id": "scenario-malm-140-pax-175-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -1000,7 +492,7 @@
     },
     {
       "id": "scenario-malm-140-pax-175-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -1022,100 +514,8 @@
       "score": 60.6
     },
     {
-      "id": "scenario-malm-140-pax-200-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 60.3
-    },
-    {
-      "id": "scenario-malm-140-pax-200-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.8,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 60.3
-    },
-    {
-      "id": "scenario-malm-140-pax-200-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.4,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 61.8
-    },
-    {
-      "id": "scenario-malm-140-pax-200-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.8,
-      "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.3,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 61.8
-    },
-    {
       "id": "scenario-malm-140-pax-200-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -1138,7 +538,7 @@
     },
     {
       "id": "scenario-malm-140-pax-200-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -1161,7 +561,7 @@
     },
     {
       "id": "scenario-malm-140-pax-200-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -1184,7 +584,7 @@
     },
     {
       "id": "scenario-malm-140-pax-200-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": true,
@@ -1206,116 +606,8 @@
       "score": 61.8
     },
     {
-      "id": "scenario-malm-160-pax-150-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.8,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-160-pax-150-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.9,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-160-pax-150-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-160-pax-150-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
       "id": "scenario-malm-160-pax-150-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1342,7 +634,7 @@
     },
     {
       "id": "scenario-malm-160-pax-150-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1369,7 +661,7 @@
     },
     {
       "id": "scenario-malm-160-pax-150-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1396,7 +688,7 @@
     },
     {
       "id": "scenario-malm-160-pax-150-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1422,116 +714,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-175-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-160-pax-175-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.8,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-160-pax-175-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-160-pax-175-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
       "id": "scenario-malm-160-pax-175-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1558,7 +742,7 @@
     },
     {
       "id": "scenario-malm-160-pax-175-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1585,7 +769,7 @@
     },
     {
       "id": "scenario-malm-160-pax-175-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1612,7 +796,7 @@
     },
     {
       "id": "scenario-malm-160-pax-175-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1638,116 +822,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-200-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-160-pax-200-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-160-pax-200-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-160-pax-200-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
       "id": "scenario-malm-160-pax-200-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1774,7 +850,7 @@
     },
     {
       "id": "scenario-malm-160-pax-200-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1801,7 +877,7 @@
     },
     {
       "id": "scenario-malm-160-pax-200-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1828,7 +904,7 @@
     },
     {
       "id": "scenario-malm-160-pax-200-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1854,116 +930,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-150-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-180-pax-150-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.8,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-180-pax-150-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-180-pax-150-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
       "id": "scenario-malm-180-pax-150-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -1990,7 +958,7 @@
     },
     {
       "id": "scenario-malm-180-pax-150-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2017,7 +985,7 @@
     },
     {
       "id": "scenario-malm-180-pax-150-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2044,7 +1012,7 @@
     },
     {
       "id": "scenario-malm-180-pax-150-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2070,116 +1038,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-175-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-180-pax-175-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.8,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-180-pax-175-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-180-pax-175-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
       "id": "scenario-malm-180-pax-175-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2206,7 +1066,7 @@
     },
     {
       "id": "scenario-malm-180-pax-175-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2233,7 +1093,7 @@
     },
     {
       "id": "scenario-malm-180-pax-175-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2260,7 +1120,7 @@
     },
     {
       "id": "scenario-malm-180-pax-175-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2286,116 +1146,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-200-low-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-180-pax-200-low-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-180-pax-200-low-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-malm-180-pax-200-low-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "divider",
-      "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)"
-      ],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 0.0,
-      "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
       "id": "scenario-malm-180-pax-200-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2422,7 +1174,7 @@
     },
     {
       "id": "scenario-malm-180-pax-200-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2449,7 +1201,7 @@
     },
     {
       "id": "scenario-malm-180-pax-200-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2476,7 +1228,7 @@
     },
     {
       "id": "scenario-malm-180-pax-200-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -2502,100 +1254,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-low-quick-150-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 6.0,
-      "bedPaxGapCm": 6.0,
-      "freeFloorAreaM2": 23.9,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 55.6
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-low-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 6.0,
-      "bedPaxGapCm": 6.0,
-      "freeFloorAreaM2": 24.1,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 55.5
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-low-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 6.0,
-      "bedPaxGapCm": 6.0,
-      "freeFloorAreaM2": 23.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 57.1
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-low-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 6.0,
-      "bedPaxGapCm": 6.0,
-      "freeFloorAreaM2": 23.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 57.1
-    },
-    {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-quick-150-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -2618,7 +1278,7 @@
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -2641,7 +1301,7 @@
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -2664,7 +1324,7 @@
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -2686,100 +1346,8 @@
       "score": 57.1
     },
     {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-low-quick-150-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 5.7,
-      "bedPaxGapCm": 5.7,
-      "freeFloorAreaM2": 23.8,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 56.8
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-low-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 5.7,
-      "bedPaxGapCm": 5.7,
-      "freeFloorAreaM2": 23.9,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 56.8
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-low-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 5.7,
-      "bedPaxGapCm": 5.7,
-      "freeFloorAreaM2": 23.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 58.3
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-low-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 5.7,
-      "bedPaxGapCm": 5.7,
-      "freeFloorAreaM2": 23.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 58.3
-    },
-    {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-150-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -2802,7 +1370,7 @@
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -2825,7 +1393,7 @@
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -2848,7 +1416,7 @@
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -2870,100 +1438,8 @@
       "score": 58.3
     },
     {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-low-quick-150-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 5.4,
-      "bedPaxGapCm": 5.4,
-      "freeFloorAreaM2": 23.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 58.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-low-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 5.4,
-      "bedPaxGapCm": 5.4,
-      "freeFloorAreaM2": 23.8,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 58.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-low-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 5.4,
-      "bedPaxGapCm": 5.4,
-      "freeFloorAreaM2": 23.4,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 59.5
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-low-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 5.4,
-      "bedPaxGapCm": 5.4,
-      "freeFloorAreaM2": 23.3,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 59.5
-    },
-    {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-150-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -2986,7 +1462,7 @@
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3009,7 +1485,7 @@
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3032,7 +1508,7 @@
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3054,100 +1530,8 @@
       "score": 59.5
     },
     {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-low-quick-150-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 51.4,
-      "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 23.9,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 60.1
-    },
-    {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-low-stable-160-140",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 51.4,
-      "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 24.0,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 60.1
-    },
-    {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-low-quick-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 51.4,
-      "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 23.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 61.6
-    },
-    {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-low-stable-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 51.4,
-      "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 23.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 61.6
-    },
-    {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-150-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3170,7 +1554,7 @@
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-160-140",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3193,7 +1577,7 @@
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3216,7 +1600,7 @@
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3238,100 +1622,8 @@
       "score": 61.6
     },
     {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-low-quick-150-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 51.1,
-      "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 23.7,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 61.3
-    },
-    {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-low-stable-160-140",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 51.1,
-      "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 23.9,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 61.3
-    },
-    {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-low-quick-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 51.1,
-      "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 23.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 62.8
-    },
-    {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-low-stable-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 51.1,
-      "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 23.5,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 62.8
-    },
-    {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-150-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3354,7 +1646,7 @@
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-160-140",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3377,7 +1669,7 @@
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3400,7 +1692,7 @@
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3422,100 +1714,8 @@
       "score": 62.8
     },
     {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-low-quick-150-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 50.7,
-      "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 23.6,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 62.6
-    },
-    {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-low-stable-160-140",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 50.7,
-      "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 23.8,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 62.5
-    },
-    {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-low-quick-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 50.7,
-      "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 23.4,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 64.1
-    },
-    {
-      "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-low-stable-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 201 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "bath-wall-both-rotated",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "minimumFurnitureGapCm": 50.7,
-      "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 23.3,
-      "usableLoggiaDoors": 1,
-      "usableBalconyDoors": 1,
-      "score": 64.1
-    },
-    {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-150-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 150 × 150 × 70",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3538,7 +1738,7 @@
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-160-140",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 160 × 140 × 60",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3561,7 +1761,7 @@
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Schnell 180 × 150 × 70",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,
@@ -3584,7 +1784,7 @@
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-180-150",
-      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 × 236 · VERNAL Stabil 180 × 150 × 75",
+      "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": true,

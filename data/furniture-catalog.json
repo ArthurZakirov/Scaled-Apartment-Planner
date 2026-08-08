@@ -32,81 +32,46 @@
       ]
     },
     {
-      "id": "ikea-pax-58-236",
+      "id": "ikea-pax-58",
       "type": "wardrobe",
-      "name": "IKEA PAX Korpus 58 × 236",
+      "name": "IKEA PAX Korpus 58 cm tief",
       "sourceUrl": "https://www.ikea.com/de/de/cat/pax-korpusse-fuer-scharniertueren-19106/",
       "confidence": "verified_official_product_page",
       "requiresAnchoring": true,
       "safetyNote": "PAX must be securely anchored; a free-standing room-divider installation requires a suitable wall, ceiling, or engineered support solution.",
       "doorType": "none",
       "planningDepthCm": 60,
+      "availableHeightsCm": [201.2, 236.4],
       "variants": [
         {
-          "id": "pax-150-low",
-          "label": "PAX 150 × 58 × 201",
-          "heightClass": "low",
-          "modules": [
-            {"nominalWidthCm": 50, "widthCm": 49.8, "depthCm": 58, "heightCm": 201.2},
-            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 201.2}
-          ],
-          "dimensionsCm": {"width": 149.6, "depth": 58, "height": 201.2},
-          "render": {"shape": "rectangle", "label": "PAX 150 · H 201"}
-        },
-        {
           "id": "pax-150",
-          "label": "PAX 150 × 58 × 236",
-          "heightClass": "high",
+          "label": "PAX 150 × 58",
           "modules": [
-            {"nominalWidthCm": 50, "widthCm": 49.8, "depthCm": 58, "heightCm": 236.4},
-            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4}
+            {"nominalWidthCm": 50, "widthCm": 49.8, "depthCm": 58},
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58}
           ],
-          "dimensionsCm": {"width": 149.6, "depth": 58, "height": 236.4},
-          "render": {"shape": "rectangle", "label": "PAX 150 · H 236"}
-        },
-        {
-          "id": "pax-175-low",
-          "label": "PAX 175 × 58 × 201",
-          "heightClass": "low",
-          "modules": [
-            {"nominalWidthCm": 75, "widthCm": 74.8, "depthCm": 58, "heightCm": 201.2},
-            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 201.2}
-          ],
-          "dimensionsCm": {"width": 174.6, "depth": 58, "height": 201.2},
-          "render": {"shape": "rectangle", "label": "PAX 175 · H 201"}
+          "dimensionsCm": {"width": 149.6, "depth": 58},
+          "render": {"shape": "rectangle", "label": "PAX 150"}
         },
         {
           "id": "pax-175",
-          "label": "PAX 175 × 58 × 236",
-          "heightClass": "high",
+          "label": "PAX 175 × 58",
           "modules": [
-            {"nominalWidthCm": 75, "widthCm": 74.8, "depthCm": 58, "heightCm": 236.4},
-            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4}
+            {"nominalWidthCm": 75, "widthCm": 74.8, "depthCm": 58},
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58}
           ],
-          "dimensionsCm": {"width": 174.6, "depth": 58, "height": 236.4},
-          "render": {"shape": "rectangle", "label": "PAX 175 · H 236"}
-        },
-        {
-          "id": "pax-200-low",
-          "label": "PAX 200 × 58 × 201",
-          "heightClass": "low",
-          "modules": [
-            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 201.2},
-            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 201.2}
-          ],
-          "dimensionsCm": {"width": 199.6, "depth": 58, "height": 201.2},
-          "render": {"shape": "rectangle", "label": "PAX 200 · H 201"}
+          "dimensionsCm": {"width": 174.6, "depth": 58},
+          "render": {"shape": "rectangle", "label": "PAX 175"}
         },
         {
           "id": "pax-200",
-          "label": "PAX 200 × 58 × 236",
-          "heightClass": "high",
+          "label": "PAX 200 × 58",
           "modules": [
-            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4},
-            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58, "heightCm": 236.4}
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58},
+            {"nominalWidthCm": 100, "widthCm": 99.8, "depthCm": 58}
           ],
-          "dimensionsCm": {"width": 199.6, "depth": 58, "height": 236.4},
-          "render": {"shape": "rectangle", "label": "PAX 200 · H 236"}
+          "dimensionsCm": {"width": 199.6, "depth": 58},
+          "render": {"shape": "rectangle", "label": "PAX 200"}
         }
       ]
     },

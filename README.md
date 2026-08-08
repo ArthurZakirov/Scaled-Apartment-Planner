@@ -9,9 +9,9 @@ The planner currently includes:
 - reconstructed sloped exterior envelope, interior partitions, doors, loggia, and balcony;
 - a separate fixed-kitchen layer;
 - a separate furniture layer;
-- the current 111 × 204 cm bed plus three real MALM frame sizes, three modular PAX widths in 201.2 and 236.4 cm height, and four VERNAL L-desk variants;
+- the current 111 × 204 cm bed plus three real MALM frame sizes, three modular PAX widths, and four VERNAL L-desk variants;
 - three orientation concepts: transverse divider, PAX along the bathroom wall with shifted bed, and PAX plus bed rotated by 90°;
-- 144 explicit generated scenarios with geometric and installation-safety classification;
+- 72 explicit generated scenarios with geometric and installation-safety classification;
 - automatic filtering and ranking of geometrically valid scenarios;
 - previous/next navigation through valid proposals with score, minimum furniture gap, free floor estimate, and usable exterior doors;
 - a direct three-button switch between the transverse divider and both bathroom-wall concepts;
@@ -45,7 +45,7 @@ The current expected result is:
 - `door-loggia-living` blocked by the desk;
 - `door-balcony-upper` blocked by the desk;
 - entrance, bathroom, bedroom-side loggia door, and lower balcony door clear.
-- the valid count derived automatically from all 144 generated furniture scenarios.
+- the valid count derived automatically from all 72 generated furniture scenarios.
 
 After editing the catalog or scenario matrix, regenerate derived data before validating:
 
@@ -66,7 +66,7 @@ Do not use the current measurements for final purchase decisions where small cle
 - `data/fixed-fixtures.json`: fitted kitchen and other permanent elements;
 - `data/furniture-catalog.json`: reusable MALM, PAX, and VERNAL templates with verified exterior dimensions;
 - `data/scenario-matrix.json`: scenario axes and base placements;
-- `data/layout-scenarios.json`: generated 144-layout matrix;
+- `data/layout-scenarios.json`: generated 72-layout matrix;
 - `data/scenario-evaluations.json`: generated validation metrics and ranked valid scenario IDs;
 - `data/furniture.json`: lightweight manifest linking the furniture data layers;
 - `data/layout-constraints.json`: door and clearance policies;

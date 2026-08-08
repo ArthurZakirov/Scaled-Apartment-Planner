@@ -1,5 +1,5 @@
 import { expandApartmentGeometry } from './geometry.js';
-import { resolveScenarioData } from './furniture.js';
+import { normalizeScenarioId, resolveScenarioData } from './furniture.js';
 
 const isCalibration = window.location.pathname.includes('/calibration');
 const base = isCalibration ? '..' : '.';
@@ -404,10 +404,7 @@ function renderFurnitureSummary(activeLayout) {
     const row = htmlEl('div', { className: 'scenario-object' });
     row.append(htmlEl('strong', {}, object.render.label));
     if (object.modules) {
-      const heightNote = object.heightClass === 'high'
-        ? 'hohe Variante · größerer Kipphebel'
-        : 'niedrige Variante · trotzdem verankerungspflichtig';
-      row.append(htmlEl('small', {}, `${object.modules.length} offene PAX-Module · ${object.dimensionsCm.width.toFixed(1)} × ${object.dimensionsCm.depth.toFixed(0)} × ${object.dimensionsCm.height.toFixed(1)} cm · ${heightNote}`));
+      row.append(htmlEl('small', {}, `${object.modules.length} offene PAX-Module · Stellfläche ${object.dimensionsCm.width.toFixed(1)} × ${object.dimensionsCm.depth.toFixed(0)} cm · Höhe separat beim Kauf wählen`));
     }
     else if (object.mattressCm) row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
     else row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
@@ -534,9 +531,10 @@ async function main() {
     ]);
     const apartment = expandApartmentGeometry(apartmentSource);
     const requestedScenario = new URLSearchParams(window.location.search).get('scenario');
+    const normalizedScenario = normalizeScenarioId(requestedScenario);
     const validIds = new Set(evaluations.rankedValidScenarioIds);
-    const selectedScenario = validIds.has(requestedScenario)
-      ? requestedScenario
+    const selectedScenario = validIds.has(normalizedScenario)
+      ? normalizedScenario
       : validIds.has(scenarioData.activeScenarioId)
         ? scenarioData.activeScenarioId
         : evaluations.rankedValidScenarioIds[0];

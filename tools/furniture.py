@@ -32,7 +32,7 @@ def resolve_scenario_object(
         "positionPx": copy.deepcopy(placement["positionPx"]),
         "render": copy.deepcopy(variant["render"]),
     }
-    for key in ("mattressCm", "modules", "heightRangeCm", "heightClass"):
+    for key in ("mattressCm", "modules", "heightRangeCm"):
         if key in variant:
             resolved[key] = copy.deepcopy(variant[key])
     for key in ("requiresAnchoring", "safetyNote", "doorType", "planningDepthCm"):

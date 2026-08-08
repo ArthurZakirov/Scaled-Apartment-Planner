@@ -64,7 +64,7 @@ The structural model intentionally excludes the marketing illustration's bed, so
 
 ## Product variants and scenario matrix
 
-The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, three MALM mattress sizes, three modular PAX widths in 201.2 and 236.4 cm height, and four VERNAL L-desk variants. Three orientation concepts produce 144 explicit scenarios: transverse divider, PAX along the bathroom wall with the bed shifted toward the loggia, and PAX plus bed rotated by 90 degrees. Each scenario is checked for containment, furniture overlap, mandatory door access, at least one usable loggia door, and at least one usable balcony door.
+The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, three MALM mattress sizes, three modular PAX widths, and four VERNAL L-desk variants. PAX height is purchase metadata rather than a 2D scenario axis because both available heights have the same footprint. Three orientation concepts produce 72 explicit scenarios: transverse divider, PAX along the bathroom wall with the bed shifted toward the loggia, and PAX plus bed rotated by 90 degrees. Each scenario is checked for containment, furniture overlap, mandatory door access, at least one usable loggia door, and at least one usable balcony door.
 
 The transverse divider remains a geometric experiment only because IKEA requires PAX to be wall anchored. A short-end-only attachment is not treated as equivalent to the documented rear wall mounting. Bathroom-wall-parallel concepts are marked as mounting candidates, not as verified installations; the actual wall substrate, fasteners, permitted drilling, and wardrobe access clearance must be confirmed before purchase.
 
@@ -94,7 +94,7 @@ The ranking is an exploration aid, not a purchase recommendation: the approximat
 ### IKEA PAX divider
 
 - Real modular footprint: 199.6 × 58 cm (two 99.8 cm corpuses).
-- Height: 236.4 cm.
+- Height is selected separately at purchase and does not create another 2D layout.
 - Used as a visual divider rather than a structural wall.
 - Every PAX scenario carries an explicit anchoring warning.
 

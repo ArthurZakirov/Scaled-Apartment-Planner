@@ -28,10 +28,10 @@ class ScenarioTests(unittest.TestCase):
         cls.apartment = expand_apartment_geometry(load_json("data/apartment.json"))
         cls.constraints = load_json("data/layout-constraints.json")
 
-    def test_matrix_contains_144_unique_scenarios(self):
+    def test_matrix_contains_72_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 144)
-        self.assertEqual(len(set(ids)), 144)
+        self.assertEqual(len(ids), 72)
+        self.assertEqual(len(set(ids)), 72)
 
     def test_external_product_dimensions_are_resolved(self):
         active = next(layout for layout in self.furniture["layouts"] if layout["id"] == self.furniture["activeLayoutId"])
@@ -80,8 +80,6 @@ class ScenarioTests(unittest.TestCase):
             if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "malm-140" or layout["selection"]["deskVariantId"] != "stable-180-150":
                 continue
             pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
-            if pax["heightClass"] != "high":
-                continue
             angle = math.radians(pax["positionPx"]["rotationDeg"])
             long_axis = (math.cos(angle), math.sin(angle))
             cross_axis = (-long_axis[1], long_axis[0])
@@ -123,21 +121,22 @@ class ScenarioTests(unittest.TestCase):
         self.assertGreater(signed_gaps["malm-140"], signed_gaps["malm-160"])
         self.assertGreater(signed_gaps["malm-160"], signed_gaps["malm-180"])
 
-    def test_both_pax_heights_are_available_and_require_anchoring(self):
+    def test_pax_height_does_not_create_duplicate_2d_variants(self):
         pax_objects = [
             obj
             for layout in self.furniture["layouts"]
             for obj in layout["objects"]
             if obj["type"] == "wardrobe"
         ]
-        self.assertEqual({obj["dimensionsCm"]["height"] for obj in pax_objects}, {201.2, 236.4})
+        self.assertEqual({obj["variantId"] for obj in pax_objects}, {"pax-150", "pax-175", "pax-200"})
+        self.assertTrue(all("height" not in obj["dimensionsCm"] for obj in pax_objects))
         self.assertTrue(all(obj["requiresAnchoring"] for obj in pax_objects))
 
     def test_wall_aligned_arrangements_are_geometrically_valid(self):
         results = {
             result["arrangementId"]: result
             for layout in self.furniture["layouts"]
-            if layout["selection"]["paxVariantId"] == "pax-200-low"
+            if layout["selection"]["paxVariantId"] == "pax-200"
             and layout["selection"]["deskVariantId"] == "stable-160-140"
             and layout["selection"]["arrangementId"] != "divider"
             for result in [evaluate_layout(layout, self.apartment, self.constraints)]

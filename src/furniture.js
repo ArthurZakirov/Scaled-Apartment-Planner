@@ -2,6 +2,10 @@ function indexFamilies(catalog) {
   return new Map(catalog.families.map((family) => [family.id, family]));
 }
 
+export function normalizeScenarioId(scenarioId) {
+  return scenarioId?.replace(/pax-(150|175|200)-low/, 'pax-$1') ?? null;
+}
+
 function resolveScenarioObject(placement, families) {
   const family = families.get(placement.templateId);
   if (!family) throw new Error(`Unknown furniture template: ${placement.templateId}`);
@@ -21,7 +25,7 @@ function resolveScenarioObject(placement, families) {
     render: structuredClone(variant.render)
   };
 
-  for (const key of ['mattressCm', 'modules', 'heightRangeCm', 'heightClass']) {
+  for (const key of ['mattressCm', 'modules', 'heightRangeCm']) {
     if (variant[key] !== undefined) resolved[key] = structuredClone(variant[key]);
   }
   for (const key of ['requiresAnchoring', 'safetyNote', 'doorType', 'planningDepthCm']) {
@@ -39,8 +43,9 @@ export function resolveScenarioData(scenarioData, catalog, selectedScenarioId = 
     ...structuredClone(scenario),
     objects: scenario.objects.map((placement) => resolveScenarioObject(placement, families))
   }));
-  const requested = selectedScenarioId && layouts.some((layout) => layout.id === selectedScenarioId)
-    ? selectedScenarioId
+  const canonicalScenarioId = normalizeScenarioId(selectedScenarioId);
+  const requested = canonicalScenarioId && layouts.some((layout) => layout.id === canonicalScenarioId)
+    ? canonicalScenarioId
     : scenarioData.activeScenarioId;
   return { activeLayoutId: requested, layouts };
 }
