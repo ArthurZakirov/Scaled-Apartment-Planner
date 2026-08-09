@@ -104,6 +104,45 @@
       "tolerance": 0.1
     },
     {
+      "id": "southeast-zig-first-right-angle",
+      "type": "perpendicular",
+      "wallIds": ["wall-east-lower", "wall-southeast-zig-horizontal"],
+      "tolerance": 0.1
+    },
+    {
+      "id": "southeast-zig-second-right-angle",
+      "type": "perpendicular",
+      "wallIds": ["wall-southeast-zig-horizontal", "wall-southeast-zig-vertical"],
+      "tolerance": 0.1
+    },
+    {
+      "id": "southeast-zig-connected-to-east",
+      "type": "shared_endpoint",
+      "points": [
+        {"wallId": "wall-east-lower", "endpoint": "end"},
+        {"wallId": "wall-southeast-zig-horizontal", "endpoint": "start"}
+      ],
+      "tolerance": 0.1
+    },
+    {
+      "id": "southeast-zig-connected-internally",
+      "type": "shared_endpoint",
+      "points": [
+        {"wallId": "wall-southeast-zig-horizontal", "endpoint": "end"},
+        {"wallId": "wall-southeast-zig-vertical", "endpoint": "start"}
+      ],
+      "tolerance": 0.1
+    },
+    {
+      "id": "southeast-zig-connected-to-south",
+      "type": "shared_endpoint",
+      "points": [
+        {"wallId": "wall-southeast-zig-vertical", "endpoint": "end"},
+        {"wallId": "wall-south", "endpoint": "start"}
+      ],
+      "tolerance": 0.1
+    },
+    {
       "id": "garderobe-clear-of-kitchen-return",
       "type": "wall_fixture_clearance",
       "wallId": "wall-flur-garderobe-lower",

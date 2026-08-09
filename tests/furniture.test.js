@@ -8,10 +8,10 @@ const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.jso
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
 const evaluations = JSON.parse(await readFile(new URL('../data/scenario-evaluations.json', import.meta.url), 'utf8'));
 
-test('browser resolves all 216 product and orientation scenarios', () => {
+test('browser resolves all 432 product, orientation, and desk-position scenarios', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  assert.equal(furniture.layouts.length, 216);
-  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 216);
+  assert.equal(furniture.layouts.length, 432);
+  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 432);
 });
 
 test('current bed resolves independently from estimated new beds', () => {
@@ -59,6 +59,7 @@ test('PAX height is not a 2D scenario axis and all three arrangements resolve', 
   }
   assert.deepEqual(paxVariants, new Set(['pax-150', 'pax-175', 'pax-200']));
   assert.deepEqual(arrangements, new Set(['divider', 'bath-wall-bed-shifted', 'bath-wall-both-rotated']));
+  assert.deepEqual(new Set(furniture.layouts.map((layout) => layout.selection.deskPlacementId)), new Set(['upper-loggia-corner', 'lower-balcony-corner']));
 });
 
 test('legacy low-height scenario links map to their width-only counterpart', () => {
@@ -78,7 +79,7 @@ test('user-facing bedroom layouts contain only valid geometry and preserve the d
   const furniture = resolveScenarioData(scenarios, catalog);
   const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
   const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
-  assert.equal(layouts.length, 6);
+  assert.equal(layouts.length, 12);
   assert.ok(layouts.every((layout) => validIds.has(layout.id)));
   assert.ok(layouts.every((layout) => layout.selection.deskVariantId === 'quick-150-150'));
 });

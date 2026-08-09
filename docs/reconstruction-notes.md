@@ -64,7 +64,7 @@ The structural model intentionally excludes the marketing illustration's bed, so
 
 ## Product variants and scenario matrix
 
-The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, the user's 57.5 × 43 × 54 cm bedside cabinet, five estimated new-bed footprints for 90, 120, 140, 160, and 180 cm mattresses, three modular PAX widths, and four VERNAL L-desk contexts. New-bed footprints assume 8 cm of frame on each mattress side and 9 cm additional total length, based on the previously verified 140 cm reference footprint; these are estimates, not product specifications. The cabinet follows each bed orientation with a 2 cm planning gap; in the divider arrangement it sits at the foot end with the drawers facing the open room and a reserved 35 cm operating strip. Configurations where it cannot fit or open remain invalid instead of hiding the cabinet. PAX height is purchase metadata rather than a 2D scenario axis because both available heights have the same footprint. Three orientation concepts produce 216 explicit scenarios: transverse divider, PAX along the bathroom wall with the bed shifted toward the loggia, and PAX plus bed rotated by 90 degrees. Each scenario is checked for containment, furniture overlap, mandatory door access, furniture operating zones, at least one usable loggia door, and at least one usable balcony door.
+The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, the user's 57.5 × 43 × 54 cm bedside cabinet, five estimated new-bed footprints for 90, 120, 140, 160, and 180 cm mattresses, three modular PAX widths, and four VERNAL L-desk contexts. New-bed footprints assume 8 cm of frame on each mattress side and 9 cm additional total length, based on the previously verified 140 cm reference footprint; these are estimates, not product specifications. The cabinet follows each bed orientation with a 2 cm planning gap; in the divider arrangement it sits at the foot end with the drawers facing the open room and a reserved 35 cm operating strip. Configurations where it cannot fit or open remain invalid instead of hiding the cabinet. PAX height is purchase metadata rather than a 2D scenario axis because both available heights have the same footprint. Three bedroom orientation concepts and two independent desk positions produce 432 explicit scenarios. The lower desk position is anchored to the reconstructed southeast wall step rather than a fictitious square corner. Each scenario is checked for containment, furniture overlap, mandatory door access, furniture operating zones, at least one usable loggia door, and at least one usable balcony door.
 
 The transverse divider remains a geometric experiment only because IKEA requires PAX to be wall anchored. A short-end-only attachment is not treated as equivalent to the documented rear wall mounting. Bathroom-wall-parallel concepts are marked as mounting candidates, not as verified installations; the actual wall substrate, fasteners, permitted drilling, and wardrobe access clearance must be confirmed before purchase.
 
@@ -84,7 +84,7 @@ Safety research references:
 - IKEA wall-anchoring guide: https://www.ikea.com/de/de/files/pdf/1a/98/1a987529/bf_leitfaden_wandverankerung_07-2026_online.pdf
 - US EPA guidance on cooking-generated indoor particles and range-hood use: https://www.epa.gov/indoor-air-quality-iaq/sources-indoor-particulate-matter-pm
 
-The browser reads a generated evaluation file and exposes the bedroom dimensions through dedicated controls. It keeps the selected VERNAL desk fixed while bed type, mattress width, PAX width, and orientation change. Only geometrically valid bedroom combinations are selectable; impossible mattress sizes are visibly disabled, while invalid scenarios remain in generated data solely for diagnostics and regression tests.
+The browser reads a generated evaluation file and exposes the bedroom dimensions through dedicated controls. It keeps the selected VERNAL desk size fixed while bed type, mattress width, PAX width, bedroom orientation, and desk position change independently. Only geometrically valid combinations are selectable; impossible choices are visibly disabled, while invalid scenarios remain in generated data solely for diagnostics and regression tests.
 
 Controls are axis-stable: selecting a mattress width never changes the orientation or PAX width, and selecting a PAX width never changes the bed or orientation. An invalid exact combination is disabled. Legacy links to invalid combinations fall back within the same orientation before considering another layout concept.
 
@@ -102,7 +102,7 @@ The ranking is an exploration aid, not a purchase recommendation: the approximat
 
 - New-bed width changes preserve the wall-side external frame edge. The free edge moves toward or away from PAX, so a narrower bed creates a larger signed bed-to-PAX gap.
 - PAX width changes preserve the bathroom-facing short end and its perpendicular offset from the bathroom wall. Only the free end toward the bed moves.
-- VERNAL dimensions are resolved from a fixed top-right wall-contact corner. Its top edge stays on the loggia-side wall and its right edge stays on the window/east wall for every variant.
+- VERNAL dimensions are resolved from one of two fixed anchors. The upper position touches the Loggia-side and east walls; the lower position touches the south wall and the inner face of the reconstructed southeast wall step.
 - Automated tests compare these projected edges and wall-contact coordinates across the complete variant matrix.
 
 ## Default layout experiment
@@ -125,8 +125,8 @@ The ranking is an exploration aid, not a purchase recommendation: the approximat
 - Outer extent: 180 × 150 cm.
 - Main top depth: 75 cm.
 - Return depth: 70 cm.
-- The initial position intentionally occupies the corner at the living-room loggia door and upper balcony door.
-- The lower balcony door and bedroom-side loggia door remain clear in the current geometric check.
+- The upper position intentionally occupies the corner at the living-room loggia door and upper balcony door.
+- The lower position sits beside the original southeast wall step and blocks the lower balcony door; the upper balcony door remains free.
 
 ## Next high-value measurements
 

@@ -31,10 +31,18 @@ class ScenarioTests(unittest.TestCase):
         cls.apartment = expand_apartment_geometry(load_json("data/apartment.json"))
         cls.constraints = load_json("data/layout-constraints.json")
 
-    def test_matrix_contains_216_unique_scenarios(self):
+    def test_matrix_contains_432_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 216)
-        self.assertEqual(len(set(ids)), 216)
+        self.assertEqual(len(ids), 432)
+        self.assertEqual(len(set(ids)), 432)
+
+    def test_southeast_interior_contour_preserves_original_wall_step(self):
+        main_points = next(space["points"] for space in self.apartment["spaces"] if space["id"] == "space-main")
+        self.assertIn([[507, 263], [507, 514], [493, 514], [493, 527]], [main_points[index:index + 4] for index in range(len(main_points) - 3)])
+        walls = {wall["id"]: wall for wall in self.apartment["walls"]}
+        self.assertEqual(walls["wall-east-lower"]["end"], [521, 526])
+        self.assertEqual(walls["wall-southeast-zig-horizontal"]["end"], [505, 526])
+        self.assertEqual(walls["wall-southeast-zig-vertical"]["end"], [505, 539])
 
     def test_estimated_new_bed_dimensions_are_resolved(self):
         layout = next(
@@ -86,7 +94,7 @@ class ScenarioTests(unittest.TestCase):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         wall_side_positions = []
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150":
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner":
                 continue
             bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
             angle = math.radians(bed["positionPx"]["rotationDeg"])
@@ -103,7 +111,7 @@ class ScenarioTests(unittest.TestCase):
         bath_end_positions = []
         cross_axis_positions = []
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["deskVariantId"] != "stable-180-150":
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner":
                 continue
             pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
             angle = math.radians(pax["positionPx"]["rotationDeg"])
@@ -118,24 +126,31 @@ class ScenarioTests(unittest.TestCase):
         self.assertLess(max(bath_end_positions) - min(bath_end_positions), 0.001)
         self.assertLess(max(cross_axis_positions) - min(cross_axis_positions), 0.001)
 
-    def test_desk_top_and_right_edges_touch_same_walls_for_every_size(self):
+    def test_each_desk_position_keeps_its_corner_anchor_for_every_size(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
-        anchors = []
+        anchors = {"upper-loggia-corner": [], "lower-balcony-corner": []}
         for layout in self.furniture["layouts"]:
             if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["paxVariantId"] != "pax-200":
                 continue
             desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
             polygon = furniture_polygon(desk, cm_per_pixel)
-            anchors.append((polygon.bounds[2], polygon.bounds[1]))
-        self.assertEqual(len(anchors), 4)
-        self.assertLess(max(anchor[0] for anchor in anchors) - min(anchor[0] for anchor in anchors), 0.001)
-        self.assertLess(max(anchor[1] for anchor in anchors) - min(anchor[1] for anchor in anchors), 0.001)
+            placement_id = layout["selection"]["deskPlacementId"]
+            anchor = (polygon.bounds[2], polygon.bounds[1]) if placement_id == "upper-loggia-corner" else (polygon.bounds[2], polygon.bounds[3])
+            anchors[placement_id].append(anchor)
+        self.assertEqual({key: len(value) for key, value in anchors.items()}, {"upper-loggia-corner": 4, "lower-balcony-corner": 4})
+        for values in anchors.values():
+            self.assertLess(max(anchor[0] for anchor in values) - min(anchor[0] for anchor in values), 0.001)
+            self.assertLess(max(anchor[1] for anchor in values) - min(anchor[1] for anchor in values), 0.001)
+        self.assertAlmostEqual(anchors["upper-loggia-corner"][0][0], 510.4211, places=3)
+        self.assertAlmostEqual(anchors["upper-loggia-corner"][0][1], 263, places=3)
+        self.assertAlmostEqual(anchors["lower-balcony-corner"][0][0], 493, places=3)
+        self.assertAlmostEqual(anchors["lower-balcony-corner"][0][1], 527, places=3)
 
     def test_bed_to_pax_gap_grows_as_bed_gets_narrower(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         signed_gaps = {}
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150":
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner":
                 continue
             bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
             pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
@@ -166,6 +181,7 @@ class ScenarioTests(unittest.TestCase):
             for layout in self.furniture["layouts"]
             if layout["selection"]["paxVariantId"] == "pax-200"
             and layout["selection"]["deskVariantId"] == "stable-160-140"
+            and layout["selection"]["deskPlacementId"] == "upper-loggia-corner"
             and layout["selection"]["bedVariantId"] == "current-bed-90"
             and layout["selection"]["arrangementId"] != "divider"
             for result in [evaluate_layout(layout, self.apartment, self.constraints)]
@@ -185,7 +201,7 @@ class ScenarioTests(unittest.TestCase):
             if layout["selection"]["arrangementId"] == "bath-wall-both-rotated"
             and layout["selection"]["bedVariantId"] == "new-bed-120"
         ]
-        self.assertEqual(len(layouts), 12)
+        self.assertEqual(len(layouts), 24)
         for layout in layouts:
             result = evaluate_layout(layout, self.apartment, self.constraints)
             self.assertFalse(result["valid"])
@@ -227,6 +243,15 @@ class ScenarioTests(unittest.TestCase):
             result = evaluate_layout(layout, self.apartment, self.constraints)
             if result["valid"]:
                 self.assertGreaterEqual(result["usableLoggiaDoors"], 1, layout["id"])
+
+    def test_lower_desk_position_preserves_the_upper_balcony_door(self):
+        for layout in self.furniture["layouts"]:
+            if layout["selection"]["deskPlacementId"] != "lower-balcony-corner":
+                continue
+            result = evaluate_layout(layout, self.apartment, self.constraints)
+            if result["valid"]:
+                self.assertNotIn("door-balcony-upper", result["blockedBy"], layout["id"])
+                self.assertIn("vernal-l-desk", result["blockedBy"].get("door-balcony-lower", []), layout["id"])
 
     def test_every_valid_scenario_keeps_every_furniture_item_out_of_pax_access_zone(self):
         for layout in self.furniture["layouts"]:

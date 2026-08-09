@@ -4,7 +4,8 @@
   "axes": {
     "bedVariantIds": ["current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"],
     "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
-    "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"]
+    "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"],
+    "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner"]
   },
   "arrangements": [
     {
@@ -65,9 +66,7 @@
     },
     "desk": {
       "id": "vernal-l-desk",
-      "templateId": "vernal-l-desk",
-      "wallContactCornerPx": [510.4211, 263],
-      "positionPx": {"topLeft": [392, 263], "rotationDeg": 0, "handedness": "right"}
+      "templateId": "vernal-l-desk"
     },
     "bedside": {
       "id": "owned-bedside-cabinet",
@@ -75,5 +74,21 @@
       "variantId": "bedside-cabinet-57",
       "gapToBedCm": 2
     }
-  }
+  },
+  "deskPlacements": [
+    {
+      "id": "upper-loggia-corner",
+      "label": "Oben an Loggia/Balkon",
+      "wallContactCornerPx": [510.4211, 263],
+      "positionPx": {"topLeft": [392, 263], "rotationDeg": 0, "handedness": "right"},
+      "note": "Der Tisch berührt oben die Loggiawand und rechts die Balkonwand."
+    },
+    {
+      "id": "lower-balcony-corner",
+      "label": "Unten an Balkon/Südwand",
+      "wallContactCornerPx": [493, 527],
+      "positionPx": {"topLeft": [493, 527], "rotationDeg": 180, "handedness": "left"},
+      "note": "Der Tisch steht links vom originalen Wandversatz; die obere Balkontür bleibt als Zugang frei."
+    }
+  ]
 }

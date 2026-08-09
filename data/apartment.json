@@ -69,6 +69,14 @@
         ],
         [
           507,
+          514
+        ],
+        [
+          493,
+          514
+        ],
+        [
+          493,
           527
         ],
         [
@@ -270,6 +278,32 @@
       ],
       "end": [
         521,
+        526
+      ],
+      "thicknessPx": 24
+    },
+    {
+      "id": "wall-southeast-zig-horizontal",
+      "kind": "exterior",
+      "start": [
+        521,
+        526
+      ],
+      "end": [
+        505,
+        526
+      ],
+      "thicknessPx": 24
+    },
+    {
+      "id": "wall-southeast-zig-vertical",
+      "kind": "exterior",
+      "start": [
+        505,
+        526
+      ],
+      "end": [
+        505,
         539
       ],
       "thicknessPx": 24
@@ -278,7 +312,7 @@
       "id": "wall-south",
       "kind": "exterior",
       "start": [
-        521,
+        505,
         539
       ],
       "end": [

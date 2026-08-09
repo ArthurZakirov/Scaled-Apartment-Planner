@@ -475,7 +475,7 @@ function renderScenarioNavigation(furniture, activeLayout, evaluations) {
   const navigation = htmlEl('div', { className: 'scenario-navigation' });
   const position = htmlEl('div', { className: 'scenario-position' });
   position.append(htmlEl('strong', {}, 'Schlafbereich-Experiment'));
-  position.append(htmlEl('small', {}, `${furniture.layouts.length} geometrisch mögliche Kombinationen · Schreibtisch bleibt unverändert`));
+  position.append(htmlEl('small', {}, `${furniture.layouts.length} geometrisch mögliche Kombinationen · Schreibtischgröße bleibt unverändert`));
   navigation.append(position);
   return navigation;
 }
@@ -486,7 +486,8 @@ function findBedroomLayout(furniture, activeLayout, overrides) {
     layout.selection.arrangementId === selection.arrangementId &&
     layout.selection.bedVariantId === selection.bedVariantId &&
     layout.selection.paxVariantId === selection.paxVariantId &&
-    layout.selection.deskVariantId === selection.deskVariantId
+    layout.selection.deskVariantId === selection.deskVariantId &&
+    layout.selection.deskPlacementId === selection.deskPlacementId
   );
 }
 
@@ -537,6 +538,18 @@ function renderBedroomControls(furniture, activeLayout) {
     disabled: !findBedroomLayout(furniture, activeLayout, { paxVariantId: `pax-${width}` })
   })), (width) => {
     const target = findBedroomLayout(furniture, activeLayout, { paxVariantId: `pax-${width}` });
+    if (target) selectScenario(target.id);
+  });
+
+  const deskPlacementOptions = [
+    { value: 'upper-loggia-corner', label: 'Oben an Loggia/Balkon' },
+    { value: 'lower-balcony-corner', label: 'Unten an Balkon/Südwand' }
+  ].map((option) => ({
+    ...option,
+    disabled: !findBedroomLayout(furniture, activeLayout, { deskPlacementId: option.value })
+  }));
+  addSelect('Schreibtischposition', activeLayout.selection.deskPlacementId, deskPlacementOptions, (deskPlacementId) => {
+    const target = findBedroomLayout(furniture, activeLayout, { deskPlacementId });
     if (target) selectScenario(target.id);
   });
 
@@ -740,6 +753,7 @@ async function main() {
           const isCurrent = bed === 'current-bed-90';
           const width = Number(bed.replace('new-bed-', '')) || 90;
           return (scenario.selection.arrangementId === requestedLayout.selection.arrangementId ? 1000 : 0)
+            + (scenario.selection.deskPlacementId === requestedLayout.selection.deskPlacementId ? 500 : 0)
             + (scenario.selection.paxVariantId === requestedLayout.selection.paxVariantId ? 100 : 0)
             + (isCurrent === requestedIsCurrent ? 20 : 0)
             - Math.abs(width - requestedWidth);

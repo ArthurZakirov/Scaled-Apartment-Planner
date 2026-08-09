@@ -102,6 +102,7 @@ def main() -> int:
         len(arrangement.get("bedVariantIds", matrix["axes"]["bedVariantIds"]))
         * len(matrix["axes"]["paxVariantIds"])
         * len(matrix["axes"]["deskVariantIds"])
+        * len(matrix["axes"].get("deskPlacementIds", ["upper-loggia-corner"]))
         for arrangement in arrangements
     )
     if len(scenario_data["scenarios"]) != expected_scenario_count:
