@@ -1,5 +1,12 @@
 import { expandApartmentGeometry } from './geometry.js';
 import { findLayoutForSelection, normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from './furniture.js';
+import {
+  DISPLAY_OPTIONS,
+  allDisplayLayers,
+  applyDisplayState,
+  parseDisplayState,
+  setDisplayStateInUrl
+} from './display-filter.js';
 
 const isCalibration = window.location.pathname.includes('/calibration');
 const base = isCalibration ? '..' : '.';
@@ -520,6 +527,100 @@ function selectScenario(scenarioId) {
   window.location.assign(url);
 }
 
+function renderDisplayControls(svg) {
+  const section = htmlEl('fieldset', { className: 'display-controls control-section' });
+  section.append(htmlEl('legend', {}, 'Anzeige'));
+
+  const popoverId = `display-options-${isCalibration ? 'calibration' : 'main'}`;
+  const toggle = htmlEl('button', {
+    type: 'button',
+    className: 'display-toggle',
+    'aria-expanded': 'false',
+    'aria-controls': popoverId
+  });
+  const toggleLabel = htmlEl('span', {}, 'Ebenen auswählen');
+  const toggleStatus = htmlEl('span', { className: 'display-toggle-status', 'aria-hidden': 'true' });
+  toggle.append(toggleLabel, toggleStatus);
+
+  const popover = htmlEl('div', {
+    id: popoverId,
+    className: 'display-popover',
+    role: 'group',
+    'aria-label': 'Sichtbare Ebenen',
+    hidden: ''
+  });
+  const checkboxById = new Map();
+  let visibleLayers = parseDisplayState(new URLSearchParams(window.location.search));
+
+  const sync = () => {
+    applyDisplayState(svg, visibleLayers);
+    for (const option of DISPLAY_OPTIONS) checkboxById.get(option.id).checked = visibleLayers.has(option.id);
+    toggleStatus.textContent = `${visibleLayers.size} von ${DISPLAY_OPTIONS.length}`;
+    toggle.setAttribute('aria-label', `Anzeigeebenen auswählen, ${visibleLayers.size} von ${DISPLAY_OPTIONS.length} sichtbar`);
+  };
+
+  const commit = (nextVisibleLayers) => {
+    visibleLayers = nextVisibleLayers;
+    const nextUrl = setDisplayStateInUrl(window.location.href, visibleLayers);
+    if (nextUrl.href !== window.location.href) window.history.pushState(null, '', nextUrl);
+    sync();
+  };
+
+  for (const option of DISPLAY_OPTIONS) {
+    const label = htmlEl('label', { className: 'display-option' });
+    const checkbox = htmlEl('input', { type: 'checkbox', value: option.id });
+    checkbox.checked = visibleLayers.has(option.id);
+    checkbox.addEventListener('change', () => {
+      const next = new Set(visibleLayers);
+      if (checkbox.checked) next.add(option.id);
+      else next.delete(option.id);
+      commit(next);
+    });
+    checkboxById.set(option.id, checkbox);
+    label.append(checkbox, htmlEl('span', {}, option.label));
+    popover.append(label);
+  }
+
+  const actions = htmlEl('div', { className: 'display-actions' });
+  const showAll = htmlEl('button', { type: 'button' }, 'Alles anzeigen');
+  showAll.addEventListener('click', () => commit(allDisplayLayers()));
+  const hideAll = htmlEl('button', { type: 'button' }, 'Alles ausblenden');
+  hideAll.addEventListener('click', () => commit(allDisplayLayers(false)));
+  actions.append(showAll, hideAll);
+  popover.append(actions);
+
+  const close = () => {
+    popover.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  toggle.addEventListener('click', () => {
+    const isOpen = !popover.hidden;
+    if (isOpen) close();
+    else {
+      popover.hidden = false;
+      toggle.setAttribute('aria-expanded', 'true');
+      popover.querySelector('input')?.focus();
+    }
+  });
+  section.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !popover.hidden) {
+      close();
+      toggle.focus();
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (!section.contains(event.target)) close();
+  });
+  window.addEventListener('popstate', () => {
+    visibleLayers = parseDisplayState(new URLSearchParams(window.location.search));
+    sync();
+  });
+
+  section.append(toggle, popover);
+  sync();
+  return section;
+}
+
 function renderScenarioNavigation(furniture, activeLayout, evaluations) {
   const navigation = htmlEl('div', { className: 'scenario-navigation' });
   const position = htmlEl('div', { className: 'scenario-position' });
@@ -690,10 +791,11 @@ function renderScenarioMetrics(evaluation) {
   return metrics;
 }
 
-function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evaluations, doorResults, furnitureCollisions) {
+function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evaluations, doorResults, furnitureCollisions, svg) {
   const panel = htmlEl('aside', { className: 'status-panel' });
   panel.append(renderScenarioNavigation(furniture, activeLayout, evaluations));
   panel.append(renderBedroomControls(furniture, activeLayout));
+  panel.append(renderDisplayControls(svg));
   panel.append(htmlEl('h2', {}, 'Aktuelles Szenario'));
   panel.append(htmlEl('div', { className: 'layout-name' }, activeLayout.name));
   const arrangement = htmlEl('div', { className: 'arrangement-summary' });
@@ -772,26 +874,28 @@ function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evalu
   return panel;
 }
 
-function renderCalibrationControls() {
+function renderCalibrationControls(svg) {
   const controls = htmlEl('div', { className: 'calibration-controls' });
-  controls.append(htmlEl('strong', {}, 'Kalibrierung'));
+  const opacityControls = htmlEl('fieldset', { className: 'calibration-opacity-controls' });
+  opacityControls.append(htmlEl('legend', {}, 'Kalibrierung'));
 
   const refLabel = htmlEl('label');
   refLabel.append(htmlEl('span', {}, 'Original'));
   const refRange = htmlEl('input', { type: 'range', min: '0', max: '1', step: '0.05', value: '0.55' });
   refRange.addEventListener('input', () => document.documentElement.style.setProperty('--reference-opacity', refRange.value));
   refLabel.append(refRange);
-  controls.append(refLabel);
+  opacityControls.append(refLabel);
 
   const vectorLabel = htmlEl('label');
   vectorLabel.append(htmlEl('span', {}, 'Vektor'));
   const vectorRange = htmlEl('input', { type: 'range', min: '0.1', max: '1', step: '0.05', value: '0.85' });
   vectorRange.addEventListener('input', () => document.documentElement.style.setProperty('--vector-opacity', vectorRange.value));
   vectorLabel.append(vectorRange);
-  controls.append(vectorLabel);
+  opacityControls.append(vectorLabel);
 
   const link = htmlEl('a', { href: `../${window.location.search}` }, 'Zur normalen Ansicht');
-  controls.append(link);
+  opacityControls.append(link);
+  controls.append(opacityControls, renderDisplayControls(svg));
   return controls;
 }
 
@@ -861,21 +965,19 @@ async function main() {
     titleWrap.append(htmlEl('h1', {}, isCalibration ? 'Kalibrierungsansicht' : 'Wohnung 264 · Layout-Experiment'));
     header.append(titleWrap);
     const nav = htmlEl('nav');
-    const scenarioSuffix = `?scenario=${encodeURIComponent(furniture.activeLayoutId)}`;
-    nav.append(htmlEl('a', { href: `${isCalibration ? '../' : './calibration/'}${scenarioSuffix}` }, isCalibration ? 'Plan öffnen' : 'Kalibrierung öffnen'));
+    nav.append(htmlEl('a', { href: `${isCalibration ? '../' : './calibration/'}${window.location.search}` }, isCalibration ? 'Plan öffnen' : 'Kalibrierung öffnen'));
     header.append(nav);
     root.append(header);
-
-    if (isCalibration) root.append(renderCalibrationControls());
 
     const workspace = htmlEl('main', { className: isCalibration ? 'workspace calibration-workspace' : 'workspace' });
     const canvas = htmlEl('section', { className: 'canvas-card reconstructed-card' });
     const rendered = buildSvg(apartment, fixtures, furniture, constraints, isCalibration);
+    if (isCalibration) root.append(renderCalibrationControls(rendered.svg));
     canvas.append(rendered.svg);
     workspace.append(canvas);
 
     if (!isCalibration) {
-      workspace.append(renderStatusPanel(apartment, furniture, rendered.activeLayout, activeEvaluation, evaluations, rendered.doorResults, rendered.furnitureCollisions));
+      workspace.append(renderStatusPanel(apartment, furniture, rendered.activeLayout, activeEvaluation, evaluations, rendered.doorResults, rendered.furnitureCollisions, rendered.svg));
     }
 
     root.append(workspace);
