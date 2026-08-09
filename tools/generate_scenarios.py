@@ -202,7 +202,7 @@ def main():
                     pax_position_px = arrangement.get("paxPositionPx") or pax_position(
                         placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
                     )
-                    bedside_position_px = bedside_position(
+                    bedside_position_px = arrangement.get("bedsidePositionPx") or bedside_position(
                         bed_position_px,
                         bed,
                         bedside_variant,
@@ -235,7 +235,11 @@ def main():
                                     else "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker."
                                 ),
                                 f"Vor dem PAX sind {pax_access_depth_cm} cm als frei zu haltende Zugriffsfläche reserviert; 0 cm bedeutet keine zusätzliche Reserve über die Stellfläche hinaus.",
-                                "Die vorhandene Kommode steht mit 2 cm Planungsabstand am Bettende oder an der Bettseite; vor den Schubladen bleiben 35 cm Bedienfläche frei.",
+                                (
+                                    "Die vorhandene Kommode steht in der geprüften Schlafbereichsecke; vor den Schubladen bleiben 35 cm Bedienfläche frei."
+                                    if arrangement.get("bedsidePositionPx")
+                                    else "Die vorhandene Kommode steht mit 2 cm Planungsabstand am Bettende oder an der Bettseite; vor den Schubladen bleiben 35 cm Bedienfläche frei."
+                                ),
                                 desk_placement["note"],
                                 arrangement.get("recommendation", "PAX benötigt eine geprüfte Verankerungslösung."),
                             ],

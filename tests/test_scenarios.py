@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from furniture import resolve_scenario_data  # noqa: E402
 from geometry import expand_apartment_geometry  # noqa: E402
 from validate_geometry import evaluate_layout  # noqa: E402
-from scenario_metrics import furniture_polygon, wardrobe_access_polygon  # noqa: E402
+from scenario_metrics import furniture_polygon, wall_solid_polygon, wardrobe_access_polygon  # noqa: E402
 
 
 def load_json(relative: str):
@@ -91,13 +91,16 @@ class ScenarioTests(unittest.TestCase):
         self.assertEqual(bed["mattressCm"], {"width": 90, "depth": 200})
         self.assertEqual(bed["confidence"], "user_provided_dimensions")
 
-    def test_owned_bedside_cabinet_follows_every_bed(self):
+    def test_owned_bedside_cabinet_follows_bed_outside_fixed_corner_layout(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         for layout in self.furniture["layouts"]:
             bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
             cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
             self.assertEqual(cabinet["dimensionsCm"], {"width": 57.5, "depth": 43, "height": 54})
             self.assertEqual(cabinet["accessLabel"], "Schubladen")
+            if layout["selection"]["arrangementId"] == "divider":
+                self.assertEqual(cabinet["positionPx"], {"center": [290, 160], "rotationDeg": 144})
+                continue
             self.assertAlmostEqual(
                 furniture_polygon(bed, cm_per_pixel).distance(furniture_polygon(cabinet, cm_per_pixel)) * cm_per_pixel,
                 2,
@@ -108,6 +111,60 @@ class ScenarioTests(unittest.TestCase):
                 (cabinet["positionPx"]["rotationDeg"] - bed["positionPx"]["rotationDeg"]) % 180,
                 expected_rotation_difference,
             )
+
+    def test_divider_commode_stays_out_of_bathroom_walls(self):
+        cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
+        bath_wall_solids = [
+            wall_solid_polygon(wall)
+            for wall in self.apartment["walls"]
+            if wall["id"] in {"wall-bath-upper", "wall-bath-lower"}
+        ]
+        for layout in self.furniture["layouts"]:
+            if layout["selection"]["arrangementId"] != "divider":
+                continue
+            cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
+            cabinet_polygon = furniture_polygon(cabinet, cm_per_pixel)
+            self.assertTrue(all(cabinet_polygon.intersection(wall).area <= 0.5 for wall in bath_wall_solids), layout["id"])
+
+    def test_divider_commode_remains_next_to_90_cm_beds_with_clear_drawers(self):
+        cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
+        for bed_variant_id in ("current-bed-90", "new-bed-90"):
+            layout = next(
+                item
+                for item in self.furniture["layouts"]
+                if item["selection"]["arrangementId"] == "divider"
+                and item["selection"]["bedVariantId"] == bed_variant_id
+            )
+            bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
+            cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
+            self.assertLessEqual(
+                furniture_polygon(bed, cm_per_pixel).distance(furniture_polygon(cabinet, cm_per_pixel)) * cm_per_pixel,
+                5,
+            )
+            self.assertNotIn("sleeping-bed", evaluate_layout(layout, self.apartment, self.constraints)["storageAccessBlockedBy"])
+
+    def test_every_valid_scenario_is_clear_of_fixed_interior_wall_solids(self):
+        for layout in self.furniture["layouts"]:
+            result = evaluate_layout(layout, self.apartment, self.constraints)
+            if result["valid"]:
+                self.assertEqual(result["interiorWallCollisions"], [], layout["id"])
+
+    def test_furniture_placed_across_bath_wall_is_rejected(self):
+        layout = deepcopy(next(item for item in self.furniture["layouts"] if item["id"] == self.furniture["activeLayoutId"]))
+        cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
+        bath_wall = next(wall for wall in self.apartment["walls"] if wall["id"] == "wall-bath-lower")
+        cabinet["positionPx"] = {
+            "center": [
+                (bath_wall["start"][0] + bath_wall["end"][0]) / 2,
+                (bath_wall["start"][1] + bath_wall["end"][1]) / 2,
+            ],
+            "rotationDeg": 0,
+        }
+        result = evaluate_layout(layout, self.apartment, self.constraints)
+        self.assertFalse(result["valid"])
+        self.assertTrue(
+            any("owned-bedside-cabinet ↔ wall-bath-lower" in collision for collision in result["interiorWallCollisions"])
+        )
 
     def test_bed_wall_side_stays_fixed_across_width_variants(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]

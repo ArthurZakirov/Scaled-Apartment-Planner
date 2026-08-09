@@ -14,9 +14,7 @@
       "label": "PAX quer als Raumteiler",
       "installationStatus": "requires_engineered_solution",
       "kitchenExposure": "low",
-      "bedsidePlacement": "end",
-      "bedsideDirection": 1,
-      "bedsideRotationOffsetDeg": 180,
+      "bedsidePositionPx": {"center": [290, 160], "rotationDeg": 144},
       "recommendation": "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
     },
     {

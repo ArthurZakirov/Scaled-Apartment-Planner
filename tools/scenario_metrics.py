@@ -6,7 +6,7 @@ import math
 from typing import Any
 
 from shapely.affinity import rotate, translate
-from shapely.geometry import Polygon
+from shapely.geometry import LineString, Polygon
 from shapely.ops import unary_union
 
 
@@ -35,6 +35,13 @@ def furniture_polygon(obj: dict[str, Any], cm_per_pixel: float) -> Polygon:
     polygon = Polygon([(-width / 2, -depth / 2), (width / 2, -depth / 2), (width / 2, depth / 2), (-width / 2, depth / 2)])
     polygon = rotate(polygon, position.get("rotationDeg", 0), origin=(0, 0), use_radians=False)
     return translate(polygon, xoff=cx, yoff=cy)
+
+
+def wall_solid_polygon(wall: dict[str, Any]) -> Polygon:
+    """Expand a wall centerline into its physical solid using its modeled thickness."""
+    return LineString([wall["start"], wall["end"]]).buffer(
+        wall["thicknessPx"] / 2, cap_style=2, join_style=2
+    )
 
 
 def door_swing_polygon(door: dict[str, Any], steps: int = 36) -> Polygon:
@@ -87,6 +94,12 @@ def evaluate_layout(
     objects_by_id = {obj["id"]: obj for obj in layout["objects"]}
     reasons: list[str] = []
     collisions: list[str] = []
+    interior_wall_collisions: list[str] = []
+    interior_wall_solids = {
+        wall["id"]: wall_solid_polygon(wall)
+        for wall in apartment["walls"]
+        if wall.get("kind") == "interior"
+    }
 
     for obj in layout["objects"]:
         polygon = furniture_polygon(obj, cm_per_pixel)
@@ -95,6 +108,12 @@ def evaluate_layout(
             reasons.append(f"Furniture {obj['id']} has invalid geometry.")
         if not interior.buffer(5).covers(polygon):
             reasons.append(f"Furniture {obj['id']} leaves the approximate interior.")
+        for wall_id, wall_solid in interior_wall_solids.items():
+            overlap = polygon.intersection(wall_solid).area
+            if overlap > 0.5:
+                collision = f"{obj['id']} ↔ {wall_id} ({overlap:.1f}px²)"
+                interior_wall_collisions.append(collision)
+                reasons.append(f"Furniture crosses fixed interior wall: {collision}.")
 
     object_ids = list(object_polygons)
     pair_distances: list[float] = []
@@ -195,6 +214,7 @@ def evaluate_layout(
         "valid": not reasons,
         "reasons": reasons,
         "collisions": collisions,
+        "interiorWallCollisions": interior_wall_collisions,
         "blockedBy": blocked_by,
         "wardrobeAccessBlockedBy": wardrobe_access_blocked_by,
         "wardrobeAccessDepthCm": wardrobe_access_depth_cm,
