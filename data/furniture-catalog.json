@@ -110,6 +110,23 @@
       ]
     },
     {
+      "id": "kesser-minifridge",
+      "type": "appliance",
+      "name": "Vorhandener KESSER-Minikühlschrank",
+      "confidence": "user_provided_dimensions",
+      "accessEdge": "negativeDepth",
+      "accessLabel": "Kühlschranktür",
+      "accessDepthCm": 50,
+      "variants": [
+        {
+          "id": "kesser-minifridge-40",
+          "label": "KESSER-Minikühlschrank 40 × 43 × 57",
+          "dimensionsCm": {"width": 40, "depth": 43, "height": 57},
+          "render": {"shape": "rectangle", "label": "KESSER 40 × 43"}
+        }
+      ]
+    },
+    {
       "id": "current-bed",
       "type": "bed",
       "name": "Aktuelles Bett",

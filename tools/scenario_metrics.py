@@ -6,7 +6,7 @@ import math
 from typing import Any
 
 from shapely.affinity import rotate, translate
-from shapely.geometry import Polygon
+from shapely.geometry import LineString, Polygon
 from shapely.ops import unary_union
 
 from desk_geometry import desk_work_zone_polygon, fixed_fixture_polygon, fixed_fixture_union
@@ -131,13 +131,21 @@ def evaluate_layout(
         fixture["id"]: fixed_fixture_polygon(fixture) for fixture in fixtures["fixtures"]
     }
     fixed_union = fixed_fixture_union(fixtures["fixtures"])
+    fixed_fixture_blocked_by: dict[str, list[str]] = {}
+    for obj in layout["objects"]:
+        blockers = [
+            fixture_id
+            for fixture_id, fixture_polygon in fixture_polygons.items()
+            if object_polygons[obj["id"]].intersection(fixture_polygon).area > 0.5
+        ]
+        if blockers:
+            fixed_fixture_blocked_by[obj["id"]] = blockers
+            for fixture_id in blockers:
+                reasons.append(f"Furniture {obj['id']} overlaps fixed fixture {fixture_id}.")
+
     desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
     desk_polygon = object_polygons[desk["id"]]
-    desk_fixture_blocked_by: list[str] = []
-    for fixture_id, fixture_polygon in fixture_polygons.items():
-        if desk_polygon.intersection(fixture_polygon).area > 0.5:
-            desk_fixture_blocked_by.append(fixture_id)
-            reasons.append(f"Desk overlaps fixed fixture {fixture_id}.")
+    desk_fixture_blocked_by = fixed_fixture_blocked_by.get(desk["id"], [])
 
     desk_fixture_clearance_cm = desk_polygon.distance(fixed_union) * cm_per_pixel
     if layout["selection"].get("deskPlacementId") == "lower-balcony-corner":
@@ -213,12 +221,61 @@ def evaluate_layout(
                 storage_access_blocked_by.append(door["id"])
                 reasons.append(f"Storage access for {storage['id']} conflicts with {door['id']}.")
 
+    appliance_access_blocked_by: list[str] = []
+    appliance_interior_wall_blocked_by: list[str] = []
+    for appliance in (
+        obj for obj in layout["objects"] if obj["type"] == "appliance" and obj.get("accessLabel")
+    ):
+        footprint = object_polygons[appliance["id"]]
+        if not interior.covers(footprint):
+            appliance_access_blocked_by.append("interior-boundary")
+            reasons.append(f"Appliance {appliance['id']} leaves the apartment interior.")
+        for wall in (item for item in apartment["walls"] if item["kind"] == "interior"):
+            wall_polygon = LineString([wall["start"], wall["end"]]).buffer(
+                wall["thicknessPx"] / 2, cap_style=2, join_style=2
+            )
+            if footprint.intersection(wall_polygon).area > 0.5:
+                appliance_interior_wall_blocked_by.append(wall["id"])
+                reasons.append(f"Appliance {appliance['id']} overlaps interior wall {wall['id']}.")
+
+        access_zone = wardrobe_access_polygon(
+            appliance,
+            cm_per_pixel,
+            appliance.get("accessDepthCm", constraints.get("applianceAccessDepthCm", 50)),
+        )
+        if not interior.covers(access_zone):
+            appliance_access_blocked_by.append("interior-boundary")
+            reasons.append(f"Appliance access for {appliance['id']} leaves the apartment interior.")
+        for zone_id, (zone_polygon, tolerance) in exclusion_zones.items():
+            if access_zone.intersection(zone_polygon).area > tolerance:
+                appliance_access_blocked_by.append(zone_id)
+                reasons.append(f"Appliance access for {appliance['id']} enters {zone_id}.")
+        for fixture_id, fixture_polygon in fixture_polygons.items():
+            if access_zone.intersection(fixture_polygon).area > 0.5:
+                appliance_access_blocked_by.append(fixture_id)
+                reasons.append(f"Appliance access for {appliance['id']} is blocked by fixed fixture {fixture_id}.")
+        for other in (obj for obj in layout["objects"] if obj["id"] != appliance["id"]):
+            if access_zone.intersection(object_polygons[other["id"]]).area > 0.5:
+                appliance_access_blocked_by.append(other["id"])
+                reasons.append(f"Appliance access for {appliance['id']} is blocked by {other['id']}.")
+        for door in apartment["doors"]:
+            if access_zone.intersection(door_swing_polygon(door)).area > 0.5:
+                appliance_access_blocked_by.append(door["id"])
+                reasons.append(f"Appliance access for {appliance['id']} conflicts with {door['id']}.")
+
     blocked_by: dict[str, list[str]] = {}
     for door in apartment["doors"]:
         zone = door_swing_polygon(door)
         blockers = [obj_id for obj_id, polygon in object_polygons.items() if zone.intersects(polygon)]
         if blockers:
             blocked_by[door["id"]] = blockers
+            appliance_blockers = [
+                obj_id for obj_id in blockers if objects_by_id[obj_id]["type"] == "appliance"
+            ]
+            if appliance_blockers:
+                reasons.append(
+                    f"Door {door['id']} is blocked by appliance {', '.join(appliance_blockers)}."
+                )
 
     required = set(constraints["doorPolicies"]["mustRemainUsable"])
     for door_id in sorted(required & blocked_by.keys()):
@@ -260,6 +317,9 @@ def evaluate_layout(
         "wardrobeAccessBlockedBy": wardrobe_access_blocked_by,
         "wardrobeAccessDepthCm": wardrobe_access_depth_cm,
         "storageAccessBlockedBy": storage_access_blocked_by,
+        "applianceAccessBlockedBy": sorted(set(appliance_access_blocked_by)),
+        "applianceInteriorWallBlockedBy": sorted(set(appliance_interior_wall_blocked_by)),
+        "fixedFixtureBlockedBy": fixed_fixture_blocked_by,
         "deskFixedFixtureBlockedBy": desk_fixture_blocked_by,
         "deskWorkZoneBlockedBy": desk_work_zone_blocked_by,
         "deskFixedFixtureClearanceCm": round(desk_fixture_clearance_cm, 1),

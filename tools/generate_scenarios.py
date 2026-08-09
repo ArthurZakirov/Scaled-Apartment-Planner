@@ -101,6 +101,56 @@ def desk_position(base, selected_variant, cm_per_pixel):
     return position
 
 
+def minifridge_position(placement, selected_variant, apartment):
+    """Anchor the fridge to geometry derived from the Garderobe wall profile."""
+    profile = next(
+        item for item in apartment.get("wallProfiles", [])
+        if item["id"] == placement["profileId"]
+    )
+    start = profile["baselineStart"]
+    end = profile["baselineEnd"]
+    axis_x, axis_y = end[0] - start[0], end[1] - start[1]
+    axis_length = math.hypot(axis_x, axis_y)
+    if not axis_length:
+        raise ValueError("Minifridge profile anchor requires a non-zero baseline.")
+    axis_x, axis_y = axis_x / axis_length, axis_y / axis_length
+    side_direction = -1 if profile.get("offsetSide") == "left" else 1
+    side_x = side_direction * -axis_y
+    side_y = side_direction * axis_x
+    far_end = [
+        end[0] + side_x * profile["depthPx"],
+        end[1] + side_y * profile["depthPx"],
+    ]
+    cm_per_pixel = apartment["scale"]["cmPerPixel"]
+    width_px = selected_variant["dimensionsCm"]["width"] / cm_per_pixel
+    depth_px = selected_variant["dimensionsCm"]["depth"] / cm_per_pixel
+    wall_half_px = profile["wallThicknessPx"] / 2
+
+    if placement["anchor"] == "end_cap_extension":
+        cap_midpoint = [(end[0] + far_end[0]) / 2, (end[1] + far_end[1]) / 2]
+        center = [
+            cap_midpoint[0] + axis_x * (wall_half_px + depth_px / 2),
+            cap_midpoint[1] + axis_y * (wall_half_px + depth_px / 2),
+        ]
+        rotation_deg = math.degrees(math.atan2(side_y, side_x))
+    elif placement["anchor"] == "kitchen_side_back_wall":
+        end_offset_px = placement.get("endOffsetCm", 0) / cm_per_pixel
+        center = [
+            far_end[0] + axis_x * (width_px / 2 + end_offset_px) + side_x * (wall_half_px + depth_px / 2),
+            far_end[1] + axis_y * (width_px / 2 + end_offset_px) + side_y * (wall_half_px + depth_px / 2),
+        ]
+        # The first polygon edge is the marked door edge. Using the negative
+        # profile axis as width direction makes that edge face the kitchen.
+        rotation_deg = math.degrees(math.atan2(-axis_y, -axis_x))
+    else:
+        raise ValueError(f"Unsupported minifridge anchor: {placement['anchor']}")
+
+    return {
+        "center": [round(center[0], 4), round(center[1], 4)],
+        "rotationDeg": round(rotation_deg, 4),
+    }
+
+
 def bedside_position(bed_position_px, bed_variant, bedside_variant, bedside_base, arrangement, cm_per_pixel):
     """Place the cabinet beside a bed side/end without obstructing the PAX front."""
     angle = math.radians(bed_position_px["rotationDeg"])
@@ -148,7 +198,13 @@ def main():
     base_bed_variant = variants[placements["bed"]["baseVariantId"]]
     base_pax_variant = variants[placements["pax"]["baseVariantId"]]
     bedside_variant = variants[placements["bedside"]["variantId"]]
+    minifridge_variant = variants[placements["minifridge"]["variantId"]]
     desk_placements = matrix.get("deskPlacements") or [{"id": "upper-loggia-corner", **placements["desk"]}]
+    minifridge_placement_map = {item["id"]: item for item in matrix["minifridgePlacements"]}
+    minifridge_placements = [
+        minifridge_placement_map[item_id]
+        for item_id in matrix["axes"]["minifridgePlacementIds"]
+    ]
     scenarios = []
 
     arrangements = matrix.get("arrangements") or [{"id": "divider", "label": "Standard"}]
@@ -156,10 +212,11 @@ def main():
         bed_ids = arrangement.get("bedVariantIds", matrix["axes"]["bedVariantIds"])
         for bed_id in bed_ids:
             for pax_id in matrix["axes"]["paxVariantIds"]:
-                for desk_id, desk_placement, pax_access_depth_cm in itertools.product(
+                for desk_id, desk_placement, pax_access_depth_cm, minifridge_placement in itertools.product(
                     matrix["axes"]["deskVariantIds"],
                     desk_placements,
                     matrix["axes"].get("paxAccessDepthCm", [45]),
+                    minifridge_placements,
                 ):
                     bed = variants[bed_id]
                     pax = variants[pax_id]
@@ -174,6 +231,10 @@ def main():
                     # an explicit suffix so the axis can be shared/bookmarked.
                     if pax_access_depth_cm != 45:
                         scenario_id = f"{scenario_id}-pax-access-{pax_access_depth_cm}"
+                    # Placement A remains suffix-free so existing scenario URLs
+                    # keep selecting the default fridge placement.
+                    if minifridge_placement["id"] != "endcap-extension":
+                        scenario_id = f"{scenario_id}-fridge-{minifridge_placement['id']}"
                     if arrangement.get("bedPositionPx"):
                         arrangement_bed_base = variants[arrangement.get("bedBaseVariantId", "current-bed-90")]
                         arrangement_bed_placement = {
@@ -213,7 +274,7 @@ def main():
                     scenarios.append(
                         {
                             "id": scenario_id,
-                            "name": f"{arrangement['label']} · {bed['label']} · {pax['label']} · {pax_access_depth_cm} cm PAX-Zugriff · {desk['label']} · {desk_placement['label']}",
+                            "name": f"{arrangement['label']} · {bed['label']} · {pax['label']} · {pax_access_depth_cm} cm PAX-Zugriff · {desk['label']} · {desk_placement['label']} · Kühlschrank {minifridge_placement['label']}",
                             "status": "generated_experiment",
                             "arrangementId": arrangement["id"],
                             "arrangementLabel": arrangement["label"],
@@ -227,6 +288,7 @@ def main():
                                 "paxAccessDepthCm": pax_access_depth_cm,
                                 "deskVariantId": desk_id,
                                 "deskPlacementId": desk_placement["id"],
+                                "minifridgePlacementId": minifridge_placement["id"],
                             },
                             "notes": [
                                 (
@@ -241,6 +303,8 @@ def main():
                                     else "Die vorhandene Kommode steht mit 2 cm Planungsabstand am Bettende oder an der Bettseite; vor den Schubladen bleiben 35 cm Bedienfläche frei."
                                 ),
                                 desk_placement["note"],
+                                minifridge_placement["note"],
+                                "Vor der markierten Kühlschranktür bleiben 50 cm Bedienzone innerhalb der Wohnung frei.",
                                 arrangement.get("recommendation", "PAX benötigt eine geprüfte Verankerungslösung."),
                             ],
                             "objects": [
@@ -268,6 +332,14 @@ def main():
                                     "variantId": desk_id,
                                     "positionPx": desk_position(
                                         desk_placement, desk, apartment["scale"]["cmPerPixel"]
+                                    ),
+                                },
+                                {
+                                    "id": placements["minifridge"]["id"],
+                                    "templateId": placements["minifridge"]["templateId"],
+                                    "variantId": placements["minifridge"]["variantId"],
+                                    "positionPx": minifridge_position(
+                                        minifridge_placement, minifridge_variant, apartment
                                     ),
                                 },
                             ],

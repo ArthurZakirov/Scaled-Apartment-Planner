@@ -60,6 +60,8 @@ a:hover { text-decoration: underline; }
 .furniture-bed .furniture-footprint { fill: rgba(66,126,179,.45); stroke: #28618e; }
 .furniture-desk .furniture-footprint { fill: rgba(67,143,103,.48); stroke: #267348; }
 .furniture-storage .furniture-footprint { fill: rgba(130,103,171,.42); stroke: #73559c; }
+.furniture-appliance .furniture-footprint { fill: rgba(63,157,170,.5); stroke: #176a76; }
+.appliance-door-edge { stroke: #b72858; stroke-width: 4; vector-effect: non-scaling-stroke; }
 .mattress { fill: rgba(255,255,255,.38); stroke: rgba(40,97,142,.75); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .pillow { fill: rgba(255,255,255,.86); stroke: #28618e; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
 .head-label { fill: #174d73; font-size: 6px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
@@ -69,15 +71,20 @@ a:hover { text-decoration: underline; }
 .access-arrowhead-wardrobe { fill: #7e2e77; }
 .access-arrow-storage { stroke: #65438e; }
 .access-arrowhead-storage { fill: #65438e; }
+.access-arrow-appliance { stroke: #b72858; }
+.access-arrowhead-appliance { fill: #b72858; }
 .access-label { font-size: 6px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
 .access-label-wardrobe { fill: #7e2e77; }
 .access-label-storage { fill: #65438e; }
+.access-label-appliance { fill: #9a1845; }
 .furniture-label { font-size: 10px; font-weight: 800; text-anchor: middle; fill: #15241f; paint-order: stroke; stroke: rgba(255,255,255,.86); stroke-width: 3px; stroke-linejoin: round; }
 .furniture-id { font-size: 6px; text-anchor: middle; fill: #31423b; paint-order: stroke; stroke: rgba(255,255,255,.8); stroke-width: 2px; }
 .wardrobe-access-zone { fill: rgba(126,46,119,.08); stroke: rgba(126,46,119,.62); stroke-width: 1; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke; }
 .wardrobe-access-zone-label { fill: #7e2e77; font-size: 6px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
 .storage-access-zone { fill: rgba(91,73,148,.08); stroke: rgba(91,73,148,.68); stroke-width: 1; stroke-dasharray: 3 2; vector-effect: non-scaling-stroke; }
 .storage-access-zone-label { fill: #5b4994; font-size: 5px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
+.appliance-access-zone { fill: rgba(183,40,88,.08); stroke: rgba(183,40,88,.72); stroke-width: 1; stroke-dasharray: 4 2; vector-effect: non-scaling-stroke; }
+.appliance-access-zone-label { fill: #9a1845; font-size: 5px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
 .desk-work-zone { fill: rgba(38,115,72,.09); stroke: rgba(38,115,72,.75); stroke-width: 1; stroke-dasharray: 3 2; vector-effect: non-scaling-stroke; }
 .desk-work-zone-label { fill: #185c38; font-size: 5px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
 

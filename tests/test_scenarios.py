@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from furniture import resolve_scenario_data  # noqa: E402
 from geometry import expand_apartment_geometry  # noqa: E402
 from validate_geometry import evaluate_layout  # noqa: E402
-from desk_geometry import desk_work_zone_polygon, fixed_fixture_union  # noqa: E402
+from desk_geometry import desk_work_zone_polygon, fixed_fixture_polygon, fixed_fixture_union  # noqa: E402
 from scenario_metrics import furniture_polygon, wardrobe_access_polygon  # noqa: E402
 
 
@@ -36,10 +36,10 @@ class ScenarioTests(unittest.TestCase):
     def evaluate(self, layout):
         return evaluate_layout(layout, self.apartment, self.constraints, self.fixtures)
 
-    def test_matrix_contains_1728_unique_scenarios(self):
+    def test_matrix_contains_3456_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 1728)
-        self.assertEqual(len(set(ids)), 1728)
+        self.assertEqual(len(ids), 3456)
+        self.assertEqual(len(set(ids)), 3456)
 
     def test_pax_access_is_an_independent_axis_with_stable_legacy_urls(self):
         grouped = {}
@@ -51,6 +51,7 @@ class ScenarioTests(unittest.TestCase):
                 selection["paxVariantId"],
                 selection["deskVariantId"],
                 selection["deskPlacementId"],
+                selection["minifridgePlacementId"],
             )
             grouped.setdefault(key, {})[selection["paxAccessDepthCm"]] = layout["id"]
         self.assertTrue(grouped)
@@ -58,7 +59,45 @@ class ScenarioTests(unittest.TestCase):
             self.assertEqual(set(variants), {0, 30, 45, 60})
             self.assertNotIn("pax-access", variants[45])
             for depth in (0, 30, 60):
-                self.assertTrue(variants[depth].endswith(f"-pax-access-{depth}"))
+                self.assertIn(f"-pax-access-{depth}", variants[depth])
+
+    def test_minifridge_placement_is_independent_and_keeps_other_axes_fixed(self):
+        grouped = {}
+        for layout in self.furniture["layouts"]:
+            selection = layout["selection"]
+            key = tuple(
+                selection[name]
+                for name in (
+                    "arrangementId",
+                    "bedVariantId",
+                    "paxVariantId",
+                    "paxAccessDepthCm",
+                    "deskVariantId",
+                    "deskPlacementId",
+                )
+            )
+            grouped.setdefault(key, set()).add(selection["minifridgePlacementId"])
+        self.assertTrue(grouped)
+        self.assertTrue(
+            all(placements == {"endcap-extension", "kitchen-back-wall"} for placements in grouped.values())
+        )
+
+    def test_minifridge_footprint_and_door_zone_are_clear_in_every_valid_scenario(self):
+        interior = Polygon(next(space["points"] for space in self.apartment["spaces"] if space["id"] == "space-main"))
+        fixture_polygons = [fixed_fixture_polygon(item) for item in self.fixtures["fixtures"]]
+        for layout in self.furniture["layouts"]:
+            result = self.evaluate(layout)
+            if not result["valid"]:
+                continue
+            fridge = next(obj for obj in layout["objects"] if obj["type"] == "appliance")
+            footprint = furniture_polygon(fridge, self.apartment["scale"]["cmPerPixel"])
+            access = wardrobe_access_polygon(fridge, self.apartment["scale"]["cmPerPixel"], 50)
+            self.assertTrue(interior.covers(footprint), layout["id"])
+            self.assertTrue(interior.covers(access), layout["id"])
+            self.assertTrue(all(footprint.intersection(item).area <= 0.5 for item in fixture_polygons), layout["id"])
+            self.assertTrue(all(access.intersection(item).area <= 0.5 for item in fixture_polygons), layout["id"])
+            self.assertEqual(result["applianceAccessBlockedBy"], [], layout["id"])
+            self.assertEqual(result["applianceInteriorWallBlockedBy"], [], layout["id"])
 
     def test_southeast_interior_contour_preserves_original_wall_step(self):
         main_points = next(space["points"] for space in self.apartment["spaces"] if space["id"] == "space-main")
@@ -171,7 +210,7 @@ class ScenarioTests(unittest.TestCase):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         wall_side_positions = []
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner" or layout["selection"]["paxAccessDepthCm"] != 45:
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner" or layout["selection"]["paxAccessDepthCm"] != 45 or layout["selection"]["minifridgePlacementId"] != "endcap-extension":
                 continue
             bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
             angle = math.radians(bed["positionPx"]["rotationDeg"])
@@ -188,7 +227,7 @@ class ScenarioTests(unittest.TestCase):
         bath_end_positions = []
         cross_axis_positions = []
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner" or layout["selection"]["paxAccessDepthCm"] != 45:
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner" or layout["selection"]["paxAccessDepthCm"] != 45 or layout["selection"]["minifridgePlacementId"] != "endcap-extension":
                 continue
             pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
             angle = math.radians(pax["positionPx"]["rotationDeg"])
@@ -207,7 +246,7 @@ class ScenarioTests(unittest.TestCase):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         anchors = {"upper-loggia-corner": [], "lower-balcony-corner": []}
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["paxAccessDepthCm"] != 45:
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["paxAccessDepthCm"] != 45 or layout["selection"]["minifridgePlacementId"] != "endcap-extension":
                 continue
             desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
             polygon = furniture_polygon(desk, cm_per_pixel)
@@ -350,6 +389,7 @@ class ScenarioTests(unittest.TestCase):
             if layout["selection"]["arrangementId"] == "bath-wall-both-rotated"
             and layout["selection"]["bedVariantId"] == "new-bed-120"
             and layout["selection"]["paxAccessDepthCm"] == 45
+            and layout["selection"]["minifridgePlacementId"] == "endcap-extension"
         ]
         self.assertEqual(len(layouts), 24)
         for layout in layouts:
@@ -368,6 +408,7 @@ class ScenarioTests(unittest.TestCase):
                 for item in self.furniture["layouts"]
                 if item["selection"]["arrangementId"] == "bath-wall-both-rotated"
                 and item["selection"]["bedVariantId"] == bed_variant_id
+                and item["selection"]["minifridgePlacementId"] == "endcap-extension"
             )
             bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
             clear_gap_cm = (

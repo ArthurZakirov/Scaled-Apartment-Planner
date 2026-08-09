@@ -6,7 +6,8 @@
     "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
     "paxAccessDepthCm": [0, 30, 45, 60],
     "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"],
-    "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner"]
+    "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner"],
+    "minifridgePlacementIds": ["endcap-extension", "kitchen-back-wall"]
   },
   "arrangements": [
     {
@@ -72,8 +73,30 @@
       "templateId": "owned-bedside-cabinet",
       "variantId": "bedside-cabinet-57",
       "gapToBedCm": 2
+    },
+    "minifridge": {
+      "id": "kesser-minifridge",
+      "templateId": "kesser-minifridge",
+      "variantId": "kesser-minifridge-40"
     }
   },
+  "minifridgePlacements": [
+    {
+      "id": "endcap-extension",
+      "label": "A · direkt hinter der Endkappe",
+      "profileId": "profile-garderobe",
+      "anchor": "end_cap_extension",
+      "note": "Der Minikühlschrank verlängert die freie Endkappe des Garderobenprofils; die Tür öffnet vom Profil weg in den Wohnraum."
+    },
+    {
+      "id": "kitchen-back-wall",
+      "label": "B · bündig an der Küchenrückwand",
+      "profileId": "profile-garderobe",
+      "anchor": "kitchen_side_back_wall",
+      "endOffsetCm": 15,
+      "note": "Die Kühlschrankrückseite liegt bündig in der Flucht der küchenseitigen Profilrückwand; 15 cm Versatz hinter dem Profilende halten die 50-cm-Bedienzone aus dem festen Küchenrücklauf."
+    }
+  ],
   "deskPlacements": [
     {
       "id": "upper-loggia-corner",

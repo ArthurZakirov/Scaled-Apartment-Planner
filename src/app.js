@@ -281,6 +281,14 @@ function makeFurnitureGroup(object, cmPerPixel) {
   }
 
   if (object.type === 'storage') appendAccessIndicator(group, polygon, object.accessLabel ?? 'Schubladen', 'storage');
+  if (object.type === 'appliance') {
+    const [frontStart, frontEnd] = polygon;
+    group.append(svgEl('line', {
+      x1: frontStart[0], y1: frontStart[1], x2: frontEnd[0], y2: frontEnd[1],
+      class: 'appliance-door-edge'
+    }));
+    appendAccessIndicator(group, polygon, object.accessLabel ?? 'Tür', 'appliance');
+  }
 
   const centroid = polygon.reduce((sum, [x, y]) => [sum[0] + x / polygon.length, sum[1] + y / polygon.length], [0, 0]);
   group.append(svgEl('text', { x: centroid[0], y: centroid[1] - 3, class: 'furniture-label' }, object.render.label));
@@ -419,6 +427,17 @@ function buildSvg(apartment, fixtures, furniture, constraints, calibration) {
     const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
     accessLayer.append(svgEl('text', { x: center[0], y: center[1], class: 'storage-access-zone-label' }, `${depthCm} cm Schubladen`));
   }
+  for (const item of furniturePolygons.filter((entry) => entry.object.type === 'appliance' && entry.object.accessLabel)) {
+    const depthCm = item.object.accessDepthCm || constraints.applianceAccessDepthCm;
+    const zone = accessZonePolygon(item.polygon, depthCm / apartment.scale.cmPerPixel);
+    accessLayer.append(svgEl('polygon', {
+      points: pointsAttr(zone),
+      class: 'appliance-access-zone',
+      'data-id': `${item.id}-access-zone`
+    }));
+    const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
+    accessLayer.append(svgEl('text', { x: center[0], y: center[1], class: 'appliance-access-zone-label' }, `${depthCm} cm Bedienzone`));
+  }
   for (const item of furniturePolygons.filter((entry) => entry.object.type === 'desk')) {
     const zone = deskWorkZonePolygon(item.object, apartment.scale.cmPerPixel, constraints.deskWorkZoneCm);
     accessLayer.append(svgEl('polygon', {
@@ -518,7 +537,8 @@ function findBedroomLayout(furniture, activeLayout, overrides) {
     layout.selection.paxVariantId === selection.paxVariantId &&
     layout.selection.paxAccessDepthCm === selection.paxAccessDepthCm &&
     layout.selection.deskVariantId === selection.deskVariantId &&
-    layout.selection.deskPlacementId === selection.deskPlacementId
+    layout.selection.deskPlacementId === selection.deskPlacementId &&
+    layout.selection.minifridgePlacementId === selection.minifridgePlacementId
   );
 }
 
@@ -599,6 +619,18 @@ function renderBedroomControls(furniture, activeLayout) {
     if (target) selectScenario(target.id);
   });
 
+  const minifridgePlacementOptions = [
+    { value: 'endcap-extension', label: 'A · hinter der Endkappe' },
+    { value: 'kitchen-back-wall', label: 'B · bündig zur Küchenrückwand' }
+  ].map((option) => ({
+    ...option,
+    disabled: !findBedroomLayout(furniture, activeLayout, { minifridgePlacementId: option.value })
+  }));
+  addSelect('KESSER-Minikühlschrank', activeLayout.selection.minifridgePlacementId, minifridgePlacementOptions, (minifridgePlacementId) => {
+    const target = findBedroomLayout(furniture, activeLayout, { minifridgePlacementId });
+    if (target) selectScenario(target.id);
+  }, false, true);
+
   if (!currentBed) controls.append(htmlEl('p', {}, 'Geschätztes Bettgestell: Matratzenbreite + 16 cm, Länge ca. 209 cm.'));
   return controls;
 }
@@ -636,6 +668,7 @@ function renderFurnitureSummary(activeLayout) {
     }
     else if (object.mattressCm) row.append(htmlEl('small', {}, `${object.estimateNote ? 'Geschätzte ' : ''}Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm · Kopfseite markiert`));
     else if (object.type === 'storage') row.append(htmlEl('small', {}, `${object.dimensionsCm.width} × ${object.dimensionsCm.depth} × ${object.dimensionsCm.height} cm · Schubladenseite markiert`));
+    else if (object.type === 'appliance') row.append(htmlEl('small', {}, `${object.dimensionsCm.width} × ${object.dimensionsCm.depth} × ${object.dimensionsCm.height} cm · Türseite markiert · ${object.accessDepthCm} cm Bedienzone`));
     else row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
     summary.append(row);
   }
@@ -803,6 +836,7 @@ async function main() {
           const width = Number(bed.replace('new-bed-', '')) || 90;
           return (scenario.selection.arrangementId === requestedLayout.selection.arrangementId ? 1000 : 0)
             + (scenario.selection.paxAccessDepthCm === requestedLayout.selection.paxAccessDepthCm ? 2000 : 0)
+            + (scenario.selection.minifridgePlacementId === requestedLayout.selection.minifridgePlacementId ? 1500 : 0)
             + (scenario.selection.deskPlacementId === requestedLayout.selection.deskPlacementId ? 500 : 0)
             + (scenario.selection.paxVariantId === requestedLayout.selection.paxVariantId ? 100 : 0)
             + (isCurrent === requestedIsCurrent ? 20 : 0)
