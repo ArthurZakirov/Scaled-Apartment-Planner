@@ -639,15 +639,6 @@ async function main() {
 
     if (!isCalibration) {
       workspace.append(renderStatusPanel(apartment, furniture, rendered.activeLayout, activeEvaluation, evaluations, rendered.doorResults, rendered.furnitureCollisions));
-      const referenceCard = htmlEl('section', { className: 'reference-card' });
-      referenceCard.append(htmlEl('h2', {}, 'Originalgrundriss'));
-      referenceCard.append(htmlEl('p', { className: 'reference-caption' }, 'Unveränderte Referenzansicht zum direkten Vergleich mit der Rekonstruktion oben.'));
-      referenceCard.append(htmlEl('img', {
-        src: './reference/floorplan-reference-upload.png',
-        alt: 'Originaler Wohnungsgrundriss',
-        class: 'reference-plan'
-      }));
-      workspace.append(referenceCard);
     }
 
     root.append(workspace);
