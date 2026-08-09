@@ -13,7 +13,7 @@ The planner currently includes:
 - three orientation concepts: transverse divider, PAX along the bathroom wall with shifted bed, and PAX plus bed rotated by 90°;
 - 216 explicit generated scenarios with geometric and installation-safety classification;
 - dedicated selectors for current/new bed, mattress width, and PAX width while the selected desk remains fixed;
-- explicit rendering of both valid and invalid bedroom combinations with score, bed-to-PAX gap, free floor estimate, and usable loggia access;
+- strict filtering to geometrically valid bedroom combinations with score, bed-to-PAX gap, free floor estimate, and usable loggia access;
 - a direct three-button switch between the transverse divider and both bathroom-wall concepts;
 - automatic door-swing intersection checks;
 - a normal vector-only view;

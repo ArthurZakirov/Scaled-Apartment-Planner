@@ -22,7 +22,7 @@
 - `data/furniture-catalog.json` is the source of truth for product templates and verified external dimensions.
 - `data/scenario-matrix.json` defines bed, PAX width, VERNAL, and orientation concepts with common placement anchors.
 - Run `npm run generate:scenarios` after editing the catalog or matrix; do not hand-edit generated scenario or evaluation files.
-- The bedroom controls may display invalid combinations so the user can understand why they fail; never label an invalid scenario as a valid proposal.
+- The bedroom controls must expose only geometrically valid combinations. Keep invalid scenarios in generated evaluation data for diagnostics, but never make them selectable in the user-facing planner.
 - `ikea-pax-divider` varies between real modular widths of 149.6, 174.6, and 199.6 cm.
 - PAX height is deliberately not a 2D scenario axis. The purchasable 201.2 and 236.4 cm heights share the same footprint and both require anchoring.
 - The bathroom-facing short end of PAX and its cross-axis offset are invariant; width changes move only the free end toward or away from the bed.

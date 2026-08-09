@@ -2,10 +2,11 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
-import { normalizeScenarioId, resolveScenarioData } from '../src/furniture.js';
+import { normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from '../src/furniture.js';
 
 const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.json', import.meta.url), 'utf8'));
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
+const evaluations = JSON.parse(await readFile(new URL('../data/scenario-evaluations.json', import.meta.url), 'utf8'));
 
 test('browser resolves all 216 product and orientation scenarios', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
@@ -67,6 +68,15 @@ test('legacy low-height scenario links map to their width-only counterpart', () 
 test('legacy MALM scenario links map to estimated new-bed widths', () => {
   const legacy = 'scenario-malm-140-pax-200-quick-150-150';
   assert.equal(normalizeScenarioId(legacy), 'scenario-new-bed-140-pax-200-quick-150-150');
+});
+
+test('user-facing bedroom layouts contain only valid geometry and preserve the desk', () => {
+  const furniture = resolveScenarioData(scenarios, catalog);
+  const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
+  const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
+  assert.equal(layouts.length, 18);
+  assert.ok(layouts.every((layout) => validIds.has(layout.id)));
+  assert.ok(layouts.every((layout) => layout.selection.deskVariantId === 'quick-150-150'));
 });
 
 test('query-selected scenario becomes active without mutating stored data', () => {

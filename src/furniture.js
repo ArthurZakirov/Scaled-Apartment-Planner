@@ -51,3 +51,10 @@ export function resolveScenarioData(scenarioData, catalog, selectedScenarioId = 
     : scenarioData.activeScenarioId;
   return { activeLayoutId: requested, layouts };
 }
+
+export function validLayoutsForDesk(layouts, evaluations, deskVariantId) {
+  const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
+  return layouts.filter((layout) =>
+    layout.selection.deskVariantId === deskVariantId && validIds.has(layout.id)
+  );
+}

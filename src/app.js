@@ -1,5 +1,5 @@
 import { expandApartmentGeometry } from './geometry.js';
-import { normalizeScenarioId, resolveScenarioData } from './furniture.js';
+import { normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from './furniture.js';
 
 const isCalibration = window.location.pathname.includes('/calibration');
 const base = isCalibration ? '..' : '.';
@@ -358,11 +358,9 @@ function selectScenario(scenarioId) {
 
 function renderScenarioNavigation(furniture, activeLayout, evaluations) {
   const navigation = htmlEl('div', { className: 'scenario-navigation' });
-  const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
-  const validCount = furniture.layouts.filter((layout) => validIds.has(layout.id)).length;
   const position = htmlEl('div', { className: 'scenario-position' });
   position.append(htmlEl('strong', {}, 'Schlafbereich-Experiment'));
-  position.append(htmlEl('small', {}, `${validCount} von ${furniture.layouts.length} Kombinationen gültig · Schreibtisch bleibt unverändert`));
+  position.append(htmlEl('small', {}, `${furniture.layouts.length} geometrisch mögliche Kombinationen · Schreibtisch bleibt unverändert`));
   navigation.append(position);
   return navigation;
 }
@@ -377,6 +375,19 @@ function findBedroomLayout(furniture, activeLayout, overrides) {
   );
 }
 
+function findClosestBedroomLayout(furniture, activeLayout, overrides) {
+  const candidates = furniture.layouts.filter((layout) =>
+    Object.entries(overrides).every(([key, value]) => layout.selection[key] === value)
+  );
+  return candidates.sort((first, second) => {
+    const similarity = (layout) =>
+      (layout.selection.arrangementId === activeLayout.selection.arrangementId ? 4 : 0) +
+      (layout.selection.bedVariantId === activeLayout.selection.bedVariantId ? 3 : 0) +
+      (layout.selection.paxVariantId === activeLayout.selection.paxVariantId ? 2 : 0);
+    return similarity(second) - similarity(first);
+  })[0] ?? null;
+}
+
 function renderBedroomControls(furniture, activeLayout) {
   const controls = htmlEl('div', { className: 'bedroom-controls' });
   const currentBed = activeLayout.selection.bedVariantId === 'current-bed-90';
@@ -386,7 +397,10 @@ function renderBedroomControls(furniture, activeLayout) {
     label.append(htmlEl('span', {}, labelText));
     const select = htmlEl('select', disabled ? { disabled: '' } : {});
     for (const option of options) {
-      select.append(htmlEl('option', option.value === value ? { value: option.value, selected: '' } : { value: option.value }, option.label));
+      const attrs = { value: option.value };
+      if (option.value === value) attrs.selected = '';
+      if (option.disabled) attrs.disabled = '';
+      select.append(htmlEl('option', attrs, option.disabled ? `${option.label} · nicht passend` : option.label));
     }
     select.addEventListener('change', () => onChange(select.value));
     label.append(select);
@@ -394,31 +408,33 @@ function renderBedroomControls(furniture, activeLayout) {
   };
 
   addSelect('Bett', currentBed ? 'current' : 'new', [
-    { value: 'current', label: 'Mein aktuelles Bett' },
-    { value: 'new', label: 'Neues Bett' }
+    { value: 'current', label: 'Mein aktuelles Bett', disabled: !furniture.layouts.some((layout) => layout.selection.bedVariantId === 'current-bed-90') },
+    { value: 'new', label: 'Neues Bett', disabled: !furniture.layouts.some((layout) => layout.selection.bedVariantId.startsWith('new-bed-')) }
   ], (value) => {
     const bedVariantId = value === 'current'
       ? 'current-bed-90'
-      : currentBed ? 'new-bed-140' : activeLayout.selection.bedVariantId;
-    const target = findBedroomLayout(furniture, activeLayout, { bedVariantId });
+      : currentBed ? 'new-bed-90' : activeLayout.selection.bedVariantId;
+    const target = findClosestBedroomLayout(furniture, activeLayout, { bedVariantId });
     if (target) selectScenario(target.id);
   });
 
   const mattressWidth = currentBed ? '90' : activeLayout.selection.bedVariantId.replace('new-bed-', '');
   addSelect('Matratzenbreite', mattressWidth, ['90', '120', '140', '160', '180'].map((width) => ({
     value: width,
-    label: `${width} cm`
+    label: `${width} cm`,
+    disabled: !furniture.layouts.some((layout) => layout.selection.bedVariantId === `new-bed-${width}`)
   })), (width) => {
-    const target = findBedroomLayout(furniture, activeLayout, { bedVariantId: `new-bed-${width}` });
+    const target = findClosestBedroomLayout(furniture, activeLayout, { bedVariantId: `new-bed-${width}` });
     if (target) selectScenario(target.id);
   }, currentBed);
 
   const paxWidth = activeLayout.selection.paxVariantId.replace('pax-', '');
   addSelect('PAX-Breite', paxWidth, ['150', '175', '200'].map((width) => ({
     value: width,
-    label: `${width} cm`
+    label: `${width} cm`,
+    disabled: !furniture.layouts.some((layout) => layout.selection.paxVariantId === `pax-${width}`)
   })), (width) => {
-    const target = findBedroomLayout(furniture, activeLayout, { paxVariantId: `pax-${width}` });
+    const target = findClosestBedroomLayout(furniture, activeLayout, { paxVariantId: `pax-${width}` });
     if (target) selectScenario(target.id);
   });
 
@@ -597,12 +613,34 @@ async function main() {
     const apartment = expandApartmentGeometry(apartmentSource);
     const requestedScenario = new URLSearchParams(window.location.search).get('scenario');
     const normalizedScenario = normalizeScenarioId(requestedScenario);
-    const scenarioIds = new Set(scenarioData.scenarios.map((scenario) => scenario.id));
-    const selectedScenario = scenarioIds.has(normalizedScenario)
-      ? normalizedScenario
-      : scenarioIds.has(scenarioData.activeScenarioId)
-        ? scenarioData.activeScenarioId
-        : scenarioData.scenarios[0].id;
+    const scenariosById = new Map(scenarioData.scenarios.map((scenario) => [scenario.id, scenario]));
+    const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
+    const requestedLayout = scenariosById.get(normalizedScenario);
+    let selectedScenario = validIds.has(normalizedScenario) ? normalizedScenario : null;
+    if (!selectedScenario && requestedLayout) {
+      const requestedBed = requestedLayout.selection.bedVariantId;
+      const requestedIsCurrent = requestedBed === 'current-bed-90';
+      const requestedWidth = Number(requestedBed.replace('new-bed-', '')) || 90;
+      const candidates = scenarioData.scenarios.filter((scenario) =>
+        validIds.has(scenario.id) && scenario.selection.deskVariantId === requestedLayout.selection.deskVariantId
+      );
+      candidates.sort((first, second) => {
+        const score = (scenario) => {
+          const bed = scenario.selection.bedVariantId;
+          const isCurrent = bed === 'current-bed-90';
+          const width = Number(bed.replace('new-bed-', '')) || 90;
+          return (isCurrent === requestedIsCurrent ? 100 : 0)
+            + (scenario.selection.paxVariantId === requestedLayout.selection.paxVariantId ? 20 : 0)
+            + (scenario.selection.arrangementId === requestedLayout.selection.arrangementId ? 10 : 0)
+            - Math.abs(width - requestedWidth);
+        };
+        return score(second) - score(first);
+      });
+      selectedScenario = candidates[0]?.id ?? null;
+    }
+    selectedScenario ??= validIds.has(scenarioData.activeScenarioId)
+      ? scenarioData.activeScenarioId
+      : evaluations.rankedValidScenarioIds[0];
     if (requestedScenario && requestedScenario !== selectedScenario) {
       const canonicalUrl = new URL(window.location.href);
       canonicalUrl.searchParams.set('scenario', selectedScenario);
@@ -613,7 +651,7 @@ async function main() {
     const fixedDeskVariantId = selectedLayout.selection.deskVariantId;
     const furniture = {
       ...resolvedFurniture,
-      layouts: resolvedFurniture.layouts.filter((layout) => layout.selection.deskVariantId === fixedDeskVariantId),
+      layouts: validLayoutsForDesk(resolvedFurniture.layouts, evaluations, fixedDeskVariantId),
       activeLayoutId: selectedScenario
     };
     const activeEvaluation = evaluations.results.find((result) => result.id === furniture.activeLayoutId);

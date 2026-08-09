@@ -80,7 +80,7 @@ Safety research references:
 - IKEA wall-anchoring guide: https://www.ikea.com/de/de/files/pdf/1a/98/1a987529/bf_leitfaden_wandverankerung_07-2026_online.pdf
 - US EPA guidance on cooking-generated indoor particles and range-hood use: https://www.epa.gov/indoor-air-quality-iaq/sources-indoor-particulate-matter-pm
 
-The browser reads a generated evaluation file and exposes the bedroom dimensions through dedicated controls. It keeps the selected VERNAL desk fixed while bed type, mattress width, PAX width, and orientation change. Invalid bedroom combinations remain selectable and are visibly explained instead of being silently skipped.
+The browser reads a generated evaluation file and exposes the bedroom dimensions through dedicated controls. It keeps the selected VERNAL desk fixed while bed type, mattress width, PAX width, and orientation change. Only geometrically valid bedroom combinations are selectable; impossible mattress sizes are visibly disabled, while invalid scenarios remain in generated data solely for diagnostics and regression tests.
 
 The ranking is an exploration aid, not a purchase recommendation: the approximate source scale can make small reported gaps unreliable.
 
