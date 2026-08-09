@@ -53,6 +53,31 @@ def door_swing_polygon(door: dict[str, Any], steps: int = 36) -> Polygon:
     return Polygon(points)
 
 
+def wardrobe_access_polygon(obj: dict[str, Any], cm_per_pixel: float, depth_cm: float = 45) -> Polygon:
+    """Return a rectangular access strip in front of the rendered PAX opening edge."""
+    wardrobe = furniture_polygon(obj, cm_per_pixel)
+    start, end = list(wardrobe.exterior.coords)[:2]
+    edge_x, edge_y = end[0] - start[0], end[1] - start[1]
+    normal_x, normal_y = -edge_y, edge_x
+    normal_length = math.hypot(normal_x, normal_y)
+    normal_x, normal_y = normal_x / normal_length, normal_y / normal_length
+    midpoint = ((start[0] + end[0]) / 2, (start[1] + end[1]) / 2)
+    center = wardrobe.centroid
+    if math.dist((midpoint[0] + normal_x, midpoint[1] + normal_y), (center.x, center.y)) < math.dist(
+        (midpoint[0] - normal_x, midpoint[1] - normal_y), (center.x, center.y)
+    ):
+        normal_x, normal_y = -normal_x, -normal_y
+    depth_px = depth_cm / cm_per_pixel
+    return Polygon(
+        [
+            start,
+            end,
+            (end[0] + normal_x * depth_px, end[1] + normal_y * depth_px),
+            (start[0] + normal_x * depth_px, start[1] + normal_y * depth_px),
+        ]
+    )
+
+
 def evaluate_layout(
     layout: dict[str, Any], apartment: dict[str, Any], constraints: dict[str, Any]
 ) -> dict[str, Any]:
@@ -85,6 +110,14 @@ def evaluate_layout(
                 collision = f"{first_id} ↔ {second_id} ({overlap:.1f}px²)"
                 collisions.append(collision)
                 reasons.append(f"Furniture overlap: {collision}.")
+
+    wardrobe_access_blocked_by: list[str] = []
+    for wardrobe in (obj for obj in layout["objects"] if obj["type"] == "wardrobe"):
+        access_zone = wardrobe_access_polygon(wardrobe, cm_per_pixel)
+        for storage in (obj for obj in layout["objects"] if obj["type"] == "storage"):
+            if access_zone.intersection(object_polygons[storage["id"]]).area > 0.5:
+                wardrobe_access_blocked_by.append(storage["id"])
+                reasons.append(f"Wardrobe access is blocked by {storage['id']}.")
 
     blocked_by: dict[str, list[str]] = {}
     for door in apartment["doors"]:
@@ -130,6 +163,7 @@ def evaluate_layout(
         "reasons": reasons,
         "collisions": collisions,
         "blockedBy": blocked_by,
+        "wardrobeAccessBlockedBy": wardrobe_access_blocked_by,
         "minimumFurnitureGapCm": round(minimum_gap_cm, 1),
         "bedPaxGapCm": round(bed_pax_gap_cm, 1),
         "freeFloorAreaM2": round(free_floor_m2, 1),

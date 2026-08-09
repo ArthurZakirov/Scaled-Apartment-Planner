@@ -1,7 +1,7 @@
 {
   "version": 1,
   "scenarioCount": 216,
-  "validCount": 72,
+  "validCount": 96,
   "rankedValidScenarioIds": [
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-180-150",
@@ -57,24 +57,48 @@
     "scenario-current-bed-90-pax-200-stable-180-150",
     "scenario-new-bed-90-pax-175-quick-180-150",
     "scenario-new-bed-90-pax-175-stable-180-150",
+    "scenario-new-bed-120-pax-200-quick-180-150",
+    "scenario-new-bed-120-pax-200-stable-180-150",
     "scenario-new-bed-90-pax-200-quick-150-150",
     "scenario-new-bed-90-pax-200-stable-160-140",
     "scenario-current-bed-90-pax-175-quick-180-150",
     "scenario-current-bed-90-pax-175-stable-180-150",
     "scenario-current-bed-90-pax-200-quick-150-150",
     "scenario-current-bed-90-pax-200-stable-160-140",
+    "scenario-new-bed-140-pax-200-quick-180-150",
+    "scenario-new-bed-140-pax-200-stable-180-150",
     "scenario-new-bed-90-pax-150-quick-180-150",
     "scenario-new-bed-90-pax-150-stable-180-150",
+    "scenario-new-bed-120-pax-175-quick-180-150",
+    "scenario-new-bed-120-pax-175-stable-180-150",
     "scenario-new-bed-90-pax-175-quick-150-150",
     "scenario-new-bed-90-pax-175-stable-160-140",
+    "scenario-new-bed-120-pax-200-quick-150-150",
+    "scenario-new-bed-120-pax-200-stable-160-140",
     "scenario-current-bed-90-pax-150-quick-180-150",
     "scenario-current-bed-90-pax-150-stable-180-150",
     "scenario-current-bed-90-pax-175-quick-150-150",
     "scenario-current-bed-90-pax-175-stable-160-140",
+    "scenario-new-bed-140-pax-175-quick-180-150",
+    "scenario-new-bed-140-pax-175-stable-180-150",
+    "scenario-new-bed-140-pax-200-quick-150-150",
+    "scenario-new-bed-140-pax-200-stable-160-140",
+    "scenario-new-bed-120-pax-150-quick-180-150",
+    "scenario-new-bed-120-pax-150-stable-180-150",
     "scenario-new-bed-90-pax-150-quick-150-150",
+    "scenario-new-bed-120-pax-175-quick-150-150",
     "scenario-new-bed-90-pax-150-stable-160-140",
+    "scenario-new-bed-120-pax-175-stable-160-140",
     "scenario-current-bed-90-pax-150-quick-150-150",
-    "scenario-current-bed-90-pax-150-stable-160-140"
+    "scenario-current-bed-90-pax-150-stable-160-140",
+    "scenario-new-bed-140-pax-150-quick-180-150",
+    "scenario-new-bed-140-pax-150-stable-180-150",
+    "scenario-new-bed-140-pax-175-quick-150-150",
+    "scenario-new-bed-140-pax-175-stable-160-140",
+    "scenario-new-bed-120-pax-150-quick-150-150",
+    "scenario-new-bed-120-pax-150-stable-160-140",
+    "scenario-new-bed-140-pax-150-quick-150-150",
+    "scenario-new-bed-140-pax-150-stable-160-140"
   ],
   "results": [
     {
@@ -93,12 +117,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 55.1
+      "score": 59.6
     },
     {
       "id": "scenario-current-bed-90-pax-150-stable-160-140",
@@ -116,12 +141,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 55.0
+      "score": 59.5
     },
     {
       "id": "scenario-current-bed-90-pax-150-quick-180-150",
@@ -139,12 +165,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.6
+      "score": 61.1
     },
     {
       "id": "scenario-current-bed-90-pax-150-stable-180-150",
@@ -162,12 +189,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.6
+      "score": 61.1
     },
     {
       "id": "scenario-current-bed-90-pax-175-quick-150-150",
@@ -185,12 +213,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.3
+      "score": 60.8
     },
     {
       "id": "scenario-current-bed-90-pax-175-stable-160-140",
@@ -208,12 +237,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.3
+      "score": 60.8
     },
     {
       "id": "scenario-current-bed-90-pax-175-quick-180-150",
@@ -231,12 +261,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.8
+      "score": 62.3
     },
     {
       "id": "scenario-current-bed-90-pax-175-stable-180-150",
@@ -254,12 +285,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.8
+      "score": 62.3
     },
     {
       "id": "scenario-current-bed-90-pax-200-quick-150-150",
@@ -277,12 +309,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.6
+      "score": 62.1
     },
     {
       "id": "scenario-current-bed-90-pax-200-stable-160-140",
@@ -300,12 +333,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.5
+      "score": 62.0
     },
     {
       "id": "scenario-current-bed-90-pax-200-quick-180-150",
@@ -323,12 +357,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.1
+      "score": 63.6
     },
     {
       "id": "scenario-current-bed-90-pax-200-stable-180-150",
@@ -346,12 +381,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 23.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.1
+      "score": 63.6
     },
     {
       "id": "scenario-new-bed-90-pax-150-quick-150-150",
@@ -369,12 +405,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 55.6
+      "score": 60.1
     },
     {
       "id": "scenario-new-bed-90-pax-150-stable-160-140",
@@ -392,12 +429,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 55.5
+      "score": 60.0
     },
     {
       "id": "scenario-new-bed-90-pax-150-quick-180-150",
@@ -415,12 +453,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.1
+      "score": 61.6
     },
     {
       "id": "scenario-new-bed-90-pax-150-stable-180-150",
@@ -438,12 +477,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.1
+      "score": 61.6
     },
     {
       "id": "scenario-new-bed-90-pax-175-quick-150-150",
@@ -461,12 +501,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.8
+      "score": 61.3
     },
     {
       "id": "scenario-new-bed-90-pax-175-stable-160-140",
@@ -484,12 +525,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.8
+      "score": 61.3
     },
     {
       "id": "scenario-new-bed-90-pax-175-quick-180-150",
@@ -507,12 +549,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.3
+      "score": 62.8
     },
     {
       "id": "scenario-new-bed-90-pax-175-stable-180-150",
@@ -530,12 +573,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.3
+      "score": 62.8
     },
     {
       "id": "scenario-new-bed-90-pax-200-quick-150-150",
@@ -553,12 +597,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.1
+      "score": 62.6
     },
     {
       "id": "scenario-new-bed-90-pax-200-stable-160-140",
@@ -576,12 +621,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.0
+      "score": 62.5
     },
     {
       "id": "scenario-new-bed-90-pax-200-quick-180-150",
@@ -599,12 +645,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.6
+      "score": 64.1
     },
     {
       "id": "scenario-new-bed-90-pax-200-stable-180-150",
@@ -622,25 +669,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 5.8,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 23.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.6
+      "score": 64.1
     },
     {
       "id": "scenario-new-bed-120-pax-150-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -649,25 +693,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 23.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 58.7
     },
     {
       "id": "scenario-new-bed-120-pax-150-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -676,25 +717,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 23.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 58.7
     },
     {
       "id": "scenario-new-bed-120-pax-150-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -703,25 +741,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 60.2
     },
     {
       "id": "scenario-new-bed-120-pax-150-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -730,25 +765,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 60.2
     },
     {
       "id": "scenario-new-bed-120-pax-175-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -757,25 +789,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 60.0
     },
     {
       "id": "scenario-new-bed-120-pax-175-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -784,25 +813,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 23.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 59.9
     },
     {
       "id": "scenario-new-bed-120-pax-175-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -811,25 +837,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 61.5
     },
     {
       "id": "scenario-new-bed-120-pax-175-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -838,25 +861,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 61.5
     },
     {
       "id": "scenario-new-bed-120-pax-200-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -865,25 +885,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 61.2
     },
     {
       "id": "scenario-new-bed-120-pax-200-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -892,25 +909,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 61.2
     },
     {
       "id": "scenario-new-bed-120-pax-200-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -919,25 +933,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 62.7
     },
     {
       "id": "scenario-new-bed-120-pax-200-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -946,25 +957,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 62.7
     },
     {
       "id": "scenario-new-bed-140-pax-150-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -973,25 +981,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 57.8
     },
     {
       "id": "scenario-new-bed-140-pax-150-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1000,25 +1005,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 57.8
     },
     {
       "id": "scenario-new-bed-140-pax-150-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1027,25 +1029,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 59.3
     },
     {
       "id": "scenario-new-bed-140-pax-150-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1054,25 +1053,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 59.3
     },
     {
       "id": "scenario-new-bed-140-pax-175-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1081,25 +1077,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 59.1
     },
     {
       "id": "scenario-new-bed-140-pax-175-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1108,25 +1101,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 59.1
     },
     {
       "id": "scenario-new-bed-140-pax-175-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1135,25 +1125,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 60.6
     },
     {
       "id": "scenario-new-bed-140-pax-175-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1162,25 +1149,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 60.6
     },
     {
       "id": "scenario-new-bed-140-pax-200-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1189,25 +1173,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 60.3
     },
     {
       "id": "scenario-new-bed-140-pax-200-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1216,25 +1197,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 60.3
     },
     {
       "id": "scenario-new-bed-140-pax-200-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1243,25 +1221,22 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 61.8
     },
     {
       "id": "scenario-new-bed-140-pax-200-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": false,
-      "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)."
-      ],
-      "collisions": [
-        "ikea-pax-divider ↔ owned-bedside-cabinet (1070.2px²)"
-      ],
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
           "vernal-l-desk"
@@ -1270,12 +1245,13 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 0.0,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 0.0
+      "score": 61.8
     },
     {
       "id": "scenario-new-bed-160-pax-150-quick-150-150",
@@ -1284,12 +1260,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1299,9 +1273,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1313,12 +1288,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1328,9 +1301,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1342,12 +1316,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1357,9 +1329,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1371,12 +1344,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1386,9 +1357,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1400,12 +1372,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1415,9 +1385,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1429,12 +1400,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1444,9 +1413,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1458,12 +1428,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1473,9 +1441,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1487,12 +1456,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1502,9 +1469,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1516,12 +1484,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1531,9 +1497,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1545,12 +1512,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1560,9 +1525,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1574,12 +1540,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1589,9 +1553,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1603,12 +1568,10 @@
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
+        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)"
       ],
       "blockedBy": {
         "door-loggia-living": [
@@ -1618,9 +1581,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1633,13 +1597,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1647,10 +1613,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.4,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1662,13 +1629,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1676,10 +1645,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 22.6,
-      "usableLoggiaDoors": 1,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1691,13 +1661,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1705,10 +1677,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.2,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1720,13 +1693,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1734,10 +1709,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.2,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.1,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1749,13 +1725,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1763,10 +1741,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.3,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1778,13 +1757,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1792,10 +1773,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.6,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.5,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1807,13 +1789,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1821,10 +1805,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.2,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.1,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1836,13 +1821,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1850,10 +1837,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.2,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.1,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1865,13 +1853,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1879,10 +1869,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.3,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1894,13 +1885,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1908,10 +1901,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 22.5,
-      "usableLoggiaDoors": 1,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1923,13 +1917,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1937,10 +1933,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.2,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.1,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1952,13 +1949,15 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
-        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
+        "At least one Loggia door must remain usable."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)",
-        "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
+        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)"
       ],
       "blockedBy": {
+        "door-loggia-bedroom": [
+          "owned-bedside-cabinet"
+        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1966,10 +1965,11 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.1,
-      "usableLoggiaDoors": 1,
+      "freeFloorAreaM2": 22.0,
+      "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1989,6 +1989,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
       "freeFloorAreaM2": 23.7,
@@ -2012,6 +2013,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
       "freeFloorAreaM2": 23.8,
@@ -2035,6 +2037,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
       "freeFloorAreaM2": 23.4,
@@ -2058,6 +2061,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
       "freeFloorAreaM2": 23.4,
@@ -2081,6 +2085,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
       "freeFloorAreaM2": 23.5,
@@ -2104,6 +2109,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
       "freeFloorAreaM2": 23.7,
@@ -2127,6 +2133,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
       "freeFloorAreaM2": 23.3,
@@ -2150,6 +2157,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
       "freeFloorAreaM2": 23.2,
@@ -2173,6 +2181,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
       "freeFloorAreaM2": 23.4,
@@ -2196,6 +2205,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
       "freeFloorAreaM2": 23.5,
@@ -2219,6 +2229,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
       "freeFloorAreaM2": 23.2,
@@ -2242,6 +2253,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
       "freeFloorAreaM2": 23.1,
@@ -2265,6 +2277,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 23.7,
@@ -2288,6 +2301,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 23.9,
@@ -2311,6 +2325,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 23.5,
@@ -2334,6 +2349,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 23.5,
@@ -2357,6 +2373,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 23.6,
@@ -2380,6 +2397,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 23.7,
@@ -2403,6 +2421,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 23.4,
@@ -2426,6 +2445,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 23.3,
@@ -2449,6 +2469,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 23.4,
@@ -2472,6 +2493,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 23.6,
@@ -2495,6 +2517,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 23.2,
@@ -2518,6 +2541,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 23.2,
@@ -2546,6 +2570,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 23.1,
@@ -2574,6 +2599,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 23.3,
@@ -2602,6 +2628,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.9,
@@ -2630,6 +2657,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.8,
@@ -2658,6 +2686,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 23.0,
@@ -2686,6 +2715,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 23.1,
@@ -2714,6 +2744,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.8,
@@ -2742,6 +2773,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.7,
@@ -2770,6 +2802,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.8,
@@ -2798,6 +2831,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 23.0,
@@ -2826,6 +2860,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.6,
@@ -2854,6 +2889,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.6,
@@ -2882,6 +2918,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.7,
@@ -2910,6 +2947,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.9,
@@ -2938,6 +2976,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.5,
@@ -2966,6 +3005,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.4,
@@ -2994,6 +3034,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.6,
@@ -3022,6 +3063,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.7,
@@ -3050,6 +3092,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.3,
@@ -3078,6 +3121,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.3,
@@ -3106,6 +3150,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.4,
@@ -3134,6 +3179,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.6,
@@ -3162,6 +3208,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.2,
@@ -3190,6 +3237,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.1,
@@ -3218,6 +3266,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.3,
@@ -3246,6 +3295,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.5,
@@ -3274,6 +3324,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.1,
@@ -3302,6 +3353,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.0,
@@ -3330,6 +3382,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.1,
@@ -3358,6 +3411,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.3,
@@ -3386,6 +3440,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.9,
@@ -3414,6 +3469,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.9,
@@ -3442,6 +3498,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.0,
@@ -3470,6 +3527,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.2,
@@ -3498,6 +3556,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.8,
@@ -3526,6 +3585,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.7,
@@ -3554,6 +3614,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.9,
@@ -3582,6 +3643,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.0,
@@ -3610,6 +3672,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.7,
@@ -3638,6 +3701,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.6,
@@ -3666,6 +3730,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.7,
@@ -3694,6 +3759,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.9,
@@ -3722,6 +3788,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.5,
@@ -3750,6 +3817,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.5,
@@ -3778,6 +3846,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.6,
@@ -3806,6 +3875,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.8,
@@ -3834,6 +3904,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.4,
@@ -3862,6 +3933,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.3,
@@ -3885,6 +3957,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 23.6,
@@ -3908,6 +3981,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 23.8,
@@ -3931,6 +4005,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 23.4,
@@ -3954,6 +4029,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 23.4,
@@ -3977,6 +4053,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
       "freeFloorAreaM2": 23.5,
@@ -4000,6 +4077,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
       "freeFloorAreaM2": 23.7,
@@ -4023,6 +4101,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
       "freeFloorAreaM2": 23.3,
@@ -4046,6 +4125,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
       "freeFloorAreaM2": 23.2,
@@ -4069,6 +4149,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
       "freeFloorAreaM2": 23.3,
@@ -4092,6 +4173,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
       "freeFloorAreaM2": 23.5,
@@ -4115,6 +4197,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
       "freeFloorAreaM2": 23.1,
@@ -4138,6 +4221,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
       "freeFloorAreaM2": 23.1,
@@ -4161,6 +4245,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 23.7,
@@ -4184,6 +4269,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 23.8,
@@ -4207,6 +4293,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 23.5,
@@ -4230,6 +4317,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 23.4,
@@ -4253,6 +4341,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
       "freeFloorAreaM2": 23.5,
@@ -4276,6 +4365,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
       "freeFloorAreaM2": 23.7,
@@ -4299,6 +4389,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
       "freeFloorAreaM2": 23.3,
@@ -4322,6 +4413,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
       "freeFloorAreaM2": 23.3,
@@ -4345,6 +4437,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
       "freeFloorAreaM2": 23.4,
@@ -4368,6 +4461,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
       "freeFloorAreaM2": 23.6,
@@ -4391,6 +4485,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
       "freeFloorAreaM2": 23.2,
@@ -4414,6 +4509,7 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
       "freeFloorAreaM2": 23.1,
@@ -4428,7 +4524,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4443,9 +4538,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 23.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4457,7 +4553,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4472,9 +4567,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 23.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4486,7 +4582,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4501,9 +4596,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 41.6,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4515,7 +4611,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4530,9 +4625,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 41.6,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4544,7 +4640,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4559,9 +4654,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4573,7 +4669,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4588,9 +4683,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 23.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4602,7 +4698,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4617,9 +4712,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 41.6,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4631,7 +4727,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4646,9 +4741,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 41.6,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4660,7 +4756,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4675,9 +4770,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4689,7 +4785,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4704,9 +4799,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4718,7 +4814,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4733,9 +4828,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 41.6,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4747,7 +4843,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4762,9 +4857,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 41.6,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4776,7 +4872,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4791,9 +4886,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4805,7 +4901,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4820,9 +4915,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.4,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4834,7 +4930,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4849,9 +4944,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 35.2,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4863,7 +4959,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4878,9 +4973,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 35.2,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4892,7 +4988,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4907,9 +5002,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4921,7 +5017,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4936,9 +5031,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.4,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4950,7 +5046,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4965,9 +5060,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 35.2,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4979,7 +5075,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4994,9 +5089,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 35.2,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5008,7 +5104,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5023,9 +5118,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5037,7 +5133,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5052,9 +5147,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.4,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5066,7 +5162,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5081,9 +5176,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 35.2,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5095,7 +5191,6 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5110,9 +5205,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 35.2,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5125,7 +5221,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5140,9 +5235,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.4,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5155,7 +5251,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5170,9 +5265,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 46.9,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5185,7 +5281,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5200,9 +5295,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 27.7,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5215,7 +5311,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5230,9 +5325,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 27.7,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5245,7 +5341,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5260,9 +5355,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 51.1,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5275,7 +5371,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5290,9 +5385,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 46.9,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5305,7 +5401,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5320,9 +5415,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 27.7,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5335,7 +5431,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5350,9 +5445,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 27.7,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5365,7 +5461,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5380,9 +5475,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5395,7 +5491,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5410,9 +5505,10 @@
           "vernal-l-desk"
         ]
       },
+      "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 46.9,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5425,7 +5521,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5440,9 +5535,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 27.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5455,7 +5551,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5470,9 +5565,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 27.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5485,7 +5581,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5500,9 +5595,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 51.4,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 49.7,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5515,7 +5611,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5530,9 +5625,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 46.9,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 39.7,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5545,7 +5641,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5560,9 +5655,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 19.7,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5575,7 +5671,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5590,9 +5685,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 19.7,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5605,7 +5701,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5620,9 +5715,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 51.1,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 49.7,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5635,7 +5731,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5650,9 +5745,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 46.9,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 39.7,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5665,7 +5761,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5680,9 +5775,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 19.7,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5695,7 +5791,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5710,9 +5805,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 19.7,
       "bedPaxGapCm": 51.1,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5725,7 +5821,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5740,9 +5835,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 50.7,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 49.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5755,7 +5851,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5770,9 +5865,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 46.9,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 39.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5785,7 +5881,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5800,9 +5895,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 19.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5815,7 +5911,6 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
-        "Furniture owned-bedside-cabinet leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5830,9 +5925,10 @@
           "vernal-l-desk"
         ]
       },
-      "minimumFurnitureGapCm": 35.2,
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 19.7,
       "bedPaxGapCm": 50.7,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0

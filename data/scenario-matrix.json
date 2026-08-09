@@ -12,8 +12,8 @@
       "label": "PAX quer als Raumteiler",
       "installationStatus": "requires_engineered_solution",
       "kitchenExposure": "low",
-      "bedsideSide": 1,
-      "bedsideEnd": 0,
+      "bedsidePlacement": "end",
+      "bedsideDirection": -1,
       "recommendation": "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
     },
     {
@@ -22,8 +22,8 @@
       "bedBaseVariantId": "current-bed-90",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "kitchenExposure": "higher",
-      "bedsideSide": 1,
-      "bedsideEnd": 0,
+      "bedsidePlacement": "side",
+      "bedsideDirection": 1,
       "recommendation": "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante.",
       "paxPositionPx": {"center": [208.6255, 269.074], "rotationDeg": 55.4456},
       "bedPositionPx": {"center": [266.72, 193.62], "rotationDeg": 54}
@@ -34,8 +34,8 @@
       "bedBaseVariantId": "current-bed-90",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "kitchenExposure": "higher",
-      "bedsideSide": 1,
-      "bedsideEnd": -1,
+      "bedsidePlacement": "end",
+      "bedsideDirection": 1,
       "recommendation": "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen.",
       "paxPositionPx": {"center": [208.6255, 269.074], "rotationDeg": 55.4456},
       "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066}

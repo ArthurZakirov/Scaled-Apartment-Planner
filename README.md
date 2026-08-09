@@ -14,6 +14,7 @@ The planner currently includes:
 - 216 explicit generated scenarios with geometric and installation-safety classification;
 - dedicated selectors for current/new bed, mattress width, and PAX width while the selected desk remains fixed;
 - strict filtering to geometrically valid bedroom combinations with score, bed-to-PAX gap, free floor estimate, and usable loggia access;
+- a hard 45 cm PAX opening zone that the bedside cabinet may never obstruct;
 - a direct three-button switch between the transverse divider and both bathroom-wall concepts;
 - automatic door-swing intersection checks;
 - a normal vector-only view;

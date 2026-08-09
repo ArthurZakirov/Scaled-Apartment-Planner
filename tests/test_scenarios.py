@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from furniture import resolve_scenario_data  # noqa: E402
 from geometry import expand_apartment_geometry  # noqa: E402
 from validate_geometry import evaluate_layout  # noqa: E402
-from scenario_metrics import furniture_polygon  # noqa: E402
+from scenario_metrics import furniture_polygon, wardrobe_access_polygon  # noqa: E402
 
 
 def load_json(relative: str):
@@ -73,7 +73,11 @@ class ScenarioTests(unittest.TestCase):
                 2,
                 places=1,
             )
-            self.assertAlmostEqual((cabinet["positionPx"]["rotationDeg"] - bed["positionPx"]["rotationDeg"]) % 180, 90)
+            expected_rotation_difference = 90 if layout["selection"]["arrangementId"] == "bath-wall-bed-shifted" else 0
+            self.assertAlmostEqual(
+                (cabinet["positionPx"]["rotationDeg"] - bed["positionPx"]["rotationDeg"]) % 180,
+                expected_rotation_difference,
+            )
 
     def test_bed_wall_side_stays_fixed_across_width_variants(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
@@ -188,6 +192,22 @@ class ScenarioTests(unittest.TestCase):
             result = evaluate_layout(layout, self.apartment, self.constraints)
             if result["valid"]:
                 self.assertGreaterEqual(result["usableLoggiaDoors"], 1, layout["id"])
+
+    def test_every_valid_scenario_keeps_commode_out_of_pax_access_zone(self):
+        for layout in self.furniture["layouts"]:
+            result = evaluate_layout(layout, self.apartment, self.constraints)
+            if result["valid"]:
+                self.assertEqual(result["wardrobeAccessBlockedBy"], [], layout["id"])
+
+    def test_commode_in_front_of_pax_is_always_invalid(self):
+        layout = deepcopy(next(item for item in self.furniture["layouts"] if item["id"] == self.furniture["activeLayoutId"]))
+        pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
+        cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
+        access_center = wardrobe_access_polygon(pax, self.apartment["scale"]["cmPerPixel"]).centroid
+        cabinet["positionPx"] = {"center": [access_center.x, access_center.y], "rotationDeg": pax["positionPx"]["rotationDeg"]}
+        result = evaluate_layout(layout, self.apartment, self.constraints)
+        self.assertFalse(result["valid"])
+        self.assertIn(cabinet["id"], result["wardrobeAccessBlockedBy"])
 
     def test_blocking_both_loggia_doors_is_always_invalid(self):
         layout = deepcopy(next(item for item in self.furniture["layouts"] if item["id"] == self.furniture["activeLayoutId"]))

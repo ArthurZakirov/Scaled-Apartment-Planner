@@ -74,7 +74,7 @@ test('user-facing bedroom layouts contain only valid geometry and preserve the d
   const furniture = resolveScenarioData(scenarios, catalog);
   const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
   const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
-  assert.equal(layouts.length, 18);
+  assert.equal(layouts.length, 24);
   assert.ok(layouts.every((layout) => validIds.has(layout.id)));
   assert.ok(layouts.every((layout) => layout.selection.deskVariantId === 'quick-150-150'));
 });
