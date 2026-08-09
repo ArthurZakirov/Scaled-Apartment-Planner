@@ -86,7 +86,7 @@
       "id": "lower-balcony-corner",
       "label": "Unten an Balkon/Südwand",
       "wallContactCornerPx": [493, 527],
-      "positionPx": {"topLeft": [493, 527], "rotationDeg": 180, "handedness": "left"},
+      "positionPx": {"topLeft": [493, 428.3158], "rotationDeg": 90, "handedness": "right"},
       "note": "Der Tisch berührt die Südwand und das kurze Segment des originalen Wandversatzes; er blockiert die untere Balkontür, während die obere als Zugang frei bleibt."
     }
   ]

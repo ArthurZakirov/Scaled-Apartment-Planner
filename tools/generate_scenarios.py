@@ -94,8 +94,8 @@ def desk_position(base, selected_variant, cm_per_pixel):
     handedness = position.get("handedness")
     if rotation == 0 and handedness == "right":
         position["topLeft"] = [round(anchor_x - width_px, 4), anchor_y]
-    elif rotation == 180 and handedness == "left":
-        position["topLeft"] = [anchor_x, anchor_y]
+    elif rotation == 90 and handedness == "right":
+        position["topLeft"] = [anchor_x, round(anchor_y - width_px, 4)]
     else:
         raise ValueError("Unsupported wall-corner desk orientation.")
     return position

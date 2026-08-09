@@ -223,12 +223,22 @@ class ScenarioTests(unittest.TestCase):
         self.assertAlmostEqual(anchors["lower-balcony-corner"][0][0], 493, places=3)
         self.assertAlmostEqual(anchors["lower-balcony-corner"][0][1], 527, places=3)
 
-    def test_lower_desk_variants_enforce_the_local_50_cm_kitchen_passage(self):
+    def test_lower_desk_runs_up_the_right_wall_and_opens_into_the_room(self):
+        layout = next(
+            item
+            for item in self.furniture["layouts"]
+            if item["selection"]["deskPlacementId"] == "lower-balcony-corner"
+        )
+        desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
+        self.assertEqual(desk["positionPx"]["rotationDeg"], 90)
+        self.assertEqual(desk["positionPx"]["handedness"], "right")
+
+    def test_rotated_lower_desk_variants_keep_the_local_50_cm_kitchen_passage(self):
         expected_clearance = {
             "quick-150-150": 52.2,
-            "stable-160-140": 42.2,
-            "quick-180-150": 22.2,
-            "stable-180-150": 22.2,
+            "stable-160-140": 62.2,
+            "quick-180-150": 52.2,
+            "stable-180-150": 52.2,
         }
         sampled = {}
         for layout in self.furniture["layouts"]:
@@ -243,10 +253,7 @@ class ScenarioTests(unittest.TestCase):
             result = self.evaluate(layout)
             sampled[layout["selection"]["deskVariantId"]] = result["deskFixedFixtureClearanceCm"]
             passage_reasons = [reason for reason in result["reasons"] if "to the fixed kitchen" in reason]
-            if layout["selection"]["deskVariantId"] == "quick-150-150":
-                self.assertEqual(passage_reasons, [], layout["id"])
-            else:
-                self.assertTrue(any("at least 50 cm is required" in reason for reason in passage_reasons), layout["id"])
+            self.assertEqual(passage_reasons, [], layout["id"])
         self.assertEqual(set(sampled), set(expected_clearance))
         for variant_id, clearance in sampled.items():
             self.assertAlmostEqual(clearance, expected_clearance[variant_id], delta=0.2)
