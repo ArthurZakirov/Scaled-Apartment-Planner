@@ -31,10 +31,29 @@ class ScenarioTests(unittest.TestCase):
         cls.apartment = expand_apartment_geometry(load_json("data/apartment.json"))
         cls.constraints = load_json("data/layout-constraints.json")
 
-    def test_matrix_contains_432_unique_scenarios(self):
+    def test_matrix_contains_1728_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 432)
-        self.assertEqual(len(set(ids)), 432)
+        self.assertEqual(len(ids), 1728)
+        self.assertEqual(len(set(ids)), 1728)
+
+    def test_pax_access_is_an_independent_axis_with_stable_legacy_urls(self):
+        grouped = {}
+        for layout in self.furniture["layouts"]:
+            selection = layout["selection"]
+            key = (
+                selection["arrangementId"],
+                selection["bedVariantId"],
+                selection["paxVariantId"],
+                selection["deskVariantId"],
+                selection["deskPlacementId"],
+            )
+            grouped.setdefault(key, {})[selection["paxAccessDepthCm"]] = layout["id"]
+        self.assertTrue(grouped)
+        for variants in grouped.values():
+            self.assertEqual(set(variants), {0, 30, 45, 60})
+            self.assertNotIn("pax-access", variants[45])
+            for depth in (0, 30, 60):
+                self.assertTrue(variants[depth].endswith(f"-pax-access-{depth}"))
 
     def test_southeast_interior_contour_preserves_original_wall_step(self):
         main_points = next(space["points"] for space in self.apartment["spaces"] if space["id"] == "space-main")
@@ -94,7 +113,7 @@ class ScenarioTests(unittest.TestCase):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         wall_side_positions = []
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner":
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner" or layout["selection"]["paxAccessDepthCm"] != 45:
                 continue
             bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
             angle = math.radians(bed["positionPx"]["rotationDeg"])
@@ -111,7 +130,7 @@ class ScenarioTests(unittest.TestCase):
         bath_end_positions = []
         cross_axis_positions = []
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner":
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner" or layout["selection"]["paxAccessDepthCm"] != 45:
                 continue
             pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
             angle = math.radians(pax["positionPx"]["rotationDeg"])
@@ -130,7 +149,7 @@ class ScenarioTests(unittest.TestCase):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         anchors = {"upper-loggia-corner": [], "lower-balcony-corner": []}
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["paxVariantId"] != "pax-200":
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["paxAccessDepthCm"] != 45:
                 continue
             desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
             polygon = furniture_polygon(desk, cm_per_pixel)
@@ -150,7 +169,7 @@ class ScenarioTests(unittest.TestCase):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         signed_gaps = {}
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner":
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["paxVariantId"] != "pax-200" or layout["selection"]["deskVariantId"] != "stable-180-150" or layout["selection"]["deskPlacementId"] != "upper-loggia-corner" or layout["selection"]["paxAccessDepthCm"] != 45:
                 continue
             bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
             pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
@@ -184,6 +203,7 @@ class ScenarioTests(unittest.TestCase):
             and layout["selection"]["deskPlacementId"] == "upper-loggia-corner"
             and layout["selection"]["bedVariantId"] == "current-bed-90"
             and layout["selection"]["arrangementId"] != "divider"
+            and layout["selection"]["paxAccessDepthCm"] == 45
             for result in [evaluate_layout(layout, self.apartment, self.constraints)]
         }
         self.assertEqual(set(results), {"bath-wall-bed-shifted", "bath-wall-both-rotated"})
@@ -200,6 +220,7 @@ class ScenarioTests(unittest.TestCase):
             for layout in self.furniture["layouts"]
             if layout["selection"]["arrangementId"] == "bath-wall-both-rotated"
             and layout["selection"]["bedVariantId"] == "new-bed-120"
+            and layout["selection"]["paxAccessDepthCm"] == 45
         ]
         self.assertEqual(len(layouts), 24)
         for layout in layouts:
@@ -258,6 +279,16 @@ class ScenarioTests(unittest.TestCase):
             result = evaluate_layout(layout, self.apartment, self.constraints)
             if result["valid"]:
                 self.assertEqual(result["wardrobeAccessBlockedBy"], [], layout["id"])
+
+    def test_access_validation_uses_each_scenario_depth(self):
+        base_id = "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150"
+        layouts = {layout["selection"]["paxAccessDepthCm"]: layout for layout in self.furniture["layouts"] if layout["id"] in {base_id, f"{base_id}-pax-access-0", f"{base_id}-pax-access-30", f"{base_id}-pax-access-60"}}
+        self.assertEqual(set(layouts), {0, 30, 45, 60})
+        results = {depth: evaluate_layout(layout, self.apartment, self.constraints) for depth, layout in layouts.items()}
+        self.assertEqual({depth: result["wardrobeAccessDepthCm"] for depth, result in results.items()}, {0: 0, 30: 30, 45: 45, 60: 60})
+        self.assertEqual(results[0]["wardrobeAccessBlockedBy"], [])
+        self.assertIn("sleeping-bed", results[45]["wardrobeAccessBlockedBy"])
+        self.assertIn("sleeping-bed", results[60]["wardrobeAccessBlockedBy"])
 
     def test_every_valid_scenario_keeps_cabinet_drawers_usable(self):
         for layout in self.furniture["layouts"]:

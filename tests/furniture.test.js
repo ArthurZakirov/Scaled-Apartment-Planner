@@ -8,10 +8,10 @@ const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.jso
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
 const evaluations = JSON.parse(await readFile(new URL('../data/scenario-evaluations.json', import.meta.url), 'utf8'));
 
-test('browser resolves all 432 product, orientation, and desk-position scenarios', () => {
+test('browser resolves all 1728 product, orientation, desk-position, and PAX-access scenarios', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  assert.equal(furniture.layouts.length, 432);
-  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 432);
+  assert.equal(furniture.layouts.length, 1728);
+  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 1728);
 });
 
 test('current bed resolves independently from estimated new beds', () => {
@@ -75,11 +75,26 @@ test('legacy MALM scenario links map to estimated new-bed widths', () => {
   assert.equal(normalizeScenarioId(legacy), 'scenario-new-bed-140-pax-200-quick-150-150');
 });
 
+test('PAX access depth changes without changing another scenario axis', () => {
+  const furniture = resolveScenarioData(scenarios, catalog);
+  const legacyId = 'scenario-new-bed-90-pax-200-quick-150-150';
+  const legacy = furniture.layouts.find((layout) => layout.id === legacyId);
+  assert.equal(legacy.selection.paxAccessDepthCm, 45);
+  for (const depth of [0, 30, 60]) {
+    const alternate = furniture.layouts.find((layout) => layout.id === `${legacyId}-pax-access-${depth}`);
+    assert.ok(alternate);
+    assert.deepEqual(
+      { ...alternate.selection, paxAccessDepthCm: 45 },
+      legacy.selection
+    );
+  }
+});
+
 test('user-facing bedroom layouts contain only valid geometry and preserve the desk', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
   const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
   const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
-  assert.equal(layouts.length, 12);
+  assert.equal(layouts.length, 48);
   assert.ok(layouts.every((layout) => validIds.has(layout.id)));
   assert.ok(layouts.every((layout) => layout.selection.deskVariantId === 'quick-150-150'));
 });

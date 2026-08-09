@@ -33,7 +33,7 @@
 - Bedroom controls preserve the active VERNAL desk variant; changing bed, mattress, PAX, orientation, or desk position must not change the desk size.
 - Each bedroom selector changes only its own axis. If the exact combination is invalid, disable that option; never silently change orientation, bed, PAX, or another furniture choice to make it fit.
 - `owned-bedside-cabinet` is the user's 57.5 × 43 × 54 cm cabinet. It follows the bed orientation, keeps a 2 cm planning gap to the bed, and requires a clear 35 cm drawer-access strip inside the apartment.
-- No furniture footprint or door swing may enter the full 45 cm PAX opening/access strip. This includes the bed, cabinet, and desk; footprint non-overlap alone is not sufficient for a usable scenario.
+- No furniture footprint or door swing may enter the scenario-selected 0/30/45/60 cm PAX opening/access strip. This includes the bed, cabinet, and desk; footprint non-overlap alone is not sufficient for a usable scenario. The 45 cm option is the default and keeps legacy URLs suffix-free.
 - After each geometry change, inspect both `/calibration/` and `/` yourself and iterate until the result is physically possible, geometrically consistent, and practically usable without obvious common-sense contradictions.
 - Preserve the in-plan orientation markers: bed head/pillow edge, open PAX access edge, and cabinet drawer front must follow the same local negative-depth edge used by geometry.
 - The VERNAL desk has two independent anchors. Its upper position touches the Loggia/east walls; its lower position touches the south wall and the reconstructed southeast wall step. Both wall-facing edges remain in contact for every desk size.

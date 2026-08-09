@@ -4,6 +4,7 @@
   "axes": {
     "bedVariantIds": ["current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"],
     "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
+    "paxAccessDepthCm": [0, 30, 45, 60],
     "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"],
     "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner"]
   },

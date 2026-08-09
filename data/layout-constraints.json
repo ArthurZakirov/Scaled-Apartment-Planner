@@ -31,7 +31,7 @@
     "At least one of the two loggia doors must remain usable.",
     "At least one of the two balcony doors must remain usable.",
     "The entrance and bathroom doors must remain usable.",
-    "The full 45 cm access strip in front of an open wardrobe must remain inside the interior and free of every other furniture footprint and door swing.",
+    "The scenario-selected PAX access strip (0, 30, 45, or 60 cm; 45 cm by default) must remain inside the interior and free of every other furniture footprint and door swing.",
     "The full 35 cm drawer access strip must stay inside the interior and remain free of furniture and door swings.",
     "Furniture geometry must use the external product footprint rather than mattress or tabletop marketing size alone.",
     "The entrance-door scale anchor is confirmed; all other measurements derived from the non-scale source remain approximate."

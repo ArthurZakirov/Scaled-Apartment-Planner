@@ -101,6 +101,7 @@ def main() -> int:
     expected_scenario_count = sum(
         len(arrangement.get("bedVariantIds", matrix["axes"]["bedVariantIds"]))
         * len(matrix["axes"]["paxVariantIds"])
+        * len(matrix["axes"].get("paxAccessDepthCm", [45]))
         * len(matrix["axes"]["deskVariantIds"])
         * len(matrix["axes"].get("deskPlacementIds", ["upper-loggia-corner"]))
         for arrangement in arrangements

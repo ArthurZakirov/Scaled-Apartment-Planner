@@ -156,7 +156,11 @@ def main():
         bed_ids = arrangement.get("bedVariantIds", matrix["axes"]["bedVariantIds"])
         for bed_id in bed_ids:
             for pax_id in matrix["axes"]["paxVariantIds"]:
-                for desk_id, desk_placement in itertools.product(matrix["axes"]["deskVariantIds"], desk_placements):
+                for desk_id, desk_placement, pax_access_depth_cm in itertools.product(
+                    matrix["axes"]["deskVariantIds"],
+                    desk_placements,
+                    matrix["axes"].get("paxAccessDepthCm", [45]),
+                ):
                     bed = variants[bed_id]
                     pax = variants[pax_id]
                     desk = variants[desk_id]
@@ -166,6 +170,10 @@ def main():
                         scenario_id = f"scenario-{arrangement['id']}-{bed_id}-{pax_id}-{desk_id}"
                     if desk_placement["id"] != "upper-loggia-corner":
                         scenario_id = f"{scenario_id}-{desk_placement['id']}"
+                    # Keep all existing 45 cm URLs stable. Other access depths use
+                    # an explicit suffix so the axis can be shared/bookmarked.
+                    if pax_access_depth_cm != 45:
+                        scenario_id = f"{scenario_id}-pax-access-{pax_access_depth_cm}"
                     if arrangement.get("bedPositionPx"):
                         arrangement_bed_base = variants[arrangement.get("bedBaseVariantId", "current-bed-90")]
                         arrangement_bed_placement = {
@@ -205,7 +213,7 @@ def main():
                     scenarios.append(
                         {
                             "id": scenario_id,
-                            "name": f"{arrangement['label']} · {bed['label']} · {pax['label']} · {desk['label']} · {desk_placement['label']}",
+                            "name": f"{arrangement['label']} · {bed['label']} · {pax['label']} · {pax_access_depth_cm} cm PAX-Zugriff · {desk['label']} · {desk_placement['label']}",
                             "status": "generated_experiment",
                             "arrangementId": arrangement["id"],
                             "arrangementLabel": arrangement["label"],
@@ -216,6 +224,7 @@ def main():
                                 "arrangementId": arrangement["id"],
                                 "bedVariantId": bed_id,
                                 "paxVariantId": pax_id,
+                                "paxAccessDepthCm": pax_access_depth_cm,
                                 "deskVariantId": desk_id,
                                 "deskPlacementId": desk_placement["id"],
                             },
@@ -225,7 +234,7 @@ def main():
                                     if headboard_gap_cm
                                     else "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker."
                                 ),
-                                "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+                                f"Vor dem PAX sind {pax_access_depth_cm} cm als frei zu haltende Zugriffsfläche reserviert; 0 cm bedeutet keine zusätzliche Reserve über die Stellfläche hinaus.",
                                 "Die vorhandene Kommode steht mit 2 cm Planungsabstand am Bettende oder an der Bettseite; vor den Schubladen bleiben 35 cm Bedienfläche frei.",
                                 desk_placement["note"],
                                 arrangement.get("recommendation", "PAX benötigt eine geprüfte Verankerungslösung."),

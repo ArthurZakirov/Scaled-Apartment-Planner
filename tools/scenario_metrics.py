@@ -112,9 +112,14 @@ def evaluate_layout(
                 reasons.append(f"Furniture overlap: {collision}.")
 
     wardrobe_access_blocked_by: list[str] = []
+    wardrobe_access_depth_cm = layout.get("selection", {}).get(
+        "paxAccessDepthCm", constraints.get("wardrobeAccessDepthCm", 45)
+    )
     for wardrobe in (obj for obj in layout["objects"] if obj["type"] == "wardrobe"):
+        if wardrobe_access_depth_cm <= 0:
+            continue
         access_zone = wardrobe_access_polygon(
-            wardrobe, cm_per_pixel, constraints.get("wardrobeAccessDepthCm", 45)
+            wardrobe, cm_per_pixel, wardrobe_access_depth_cm
         )
         if not interior.buffer(5).covers(access_zone):
             wardrobe_access_blocked_by.append("interior-boundary")
@@ -192,6 +197,7 @@ def evaluate_layout(
         "collisions": collisions,
         "blockedBy": blocked_by,
         "wardrobeAccessBlockedBy": wardrobe_access_blocked_by,
+        "wardrobeAccessDepthCm": wardrobe_access_depth_cm,
         "storageAccessBlockedBy": storage_access_blocked_by,
         "minimumFurnitureGapCm": round(minimum_gap_cm, 1),
         "bedPaxGapCm": round(bed_pax_gap_cm, 1),

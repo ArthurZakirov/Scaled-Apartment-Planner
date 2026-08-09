@@ -378,7 +378,8 @@ function buildSvg(apartment, fixtures, furniture, constraints, calibration) {
 
   const accessLayer = svgEl('g', { class: 'layer layer-access-zones' });
   for (const item of furniturePolygons.filter((entry) => entry.object.type === 'wardrobe')) {
-    const depthCm = constraints.wardrobeAccessDepthCm;
+    const depthCm = activeLayout.selection.paxAccessDepthCm ?? constraints.wardrobeAccessDepthCm;
+    if (depthCm <= 0) continue;
     const zone = accessZonePolygon(item.polygon, depthCm / apartment.scale.cmPerPixel);
     accessLayer.append(svgEl('polygon', {
       points: pointsAttr(zone),
@@ -486,6 +487,7 @@ function findBedroomLayout(furniture, activeLayout, overrides) {
     layout.selection.arrangementId === selection.arrangementId &&
     layout.selection.bedVariantId === selection.bedVariantId &&
     layout.selection.paxVariantId === selection.paxVariantId &&
+    layout.selection.paxAccessDepthCm === selection.paxAccessDepthCm &&
     layout.selection.deskVariantId === selection.deskVariantId &&
     layout.selection.deskPlacementId === selection.deskPlacementId
   );
@@ -495,8 +497,8 @@ function renderBedroomControls(furniture, activeLayout) {
   const controls = htmlEl('div', { className: 'bedroom-controls' });
   const currentBed = activeLayout.selection.bedVariantId === 'current-bed-90';
 
-  const addSelect = (labelText, value, options, onChange, disabled = false) => {
-    const label = htmlEl('label');
+  const addSelect = (labelText, value, options, onChange, disabled = false, wide = false) => {
+    const label = htmlEl('label', wide ? { className: 'wide-control' } : {});
     label.append(htmlEl('span', {}, labelText));
     const select = htmlEl('select', disabled ? { disabled: '' } : {});
     for (const option of options) {
@@ -541,6 +543,21 @@ function renderBedroomControls(furniture, activeLayout) {
     if (target) selectScenario(target.id);
   });
 
+  const paxAccessDepth = activeLayout.selection.paxAccessDepthCm ?? 45;
+  const paxAccessOptions = [
+    { value: '0', label: '0 cm · offen/Schiebetür, keine Reserve' },
+    { value: '30', label: '30 cm · kompakte Zugriffsreserve' },
+    { value: '45', label: '45 cm · offene Front (Standard)' },
+    { value: '60', label: '60 cm · komfortabler Zugriff' }
+  ].map((option) => ({
+    ...option,
+    disabled: !findBedroomLayout(furniture, activeLayout, { paxAccessDepthCm: Number(option.value) })
+  }));
+  addSelect('Freiraum vor PAX', String(paxAccessDepth), paxAccessOptions, (depth) => {
+    const target = findBedroomLayout(furniture, activeLayout, { paxAccessDepthCm: Number(depth) });
+    if (target) selectScenario(target.id);
+  }, false, true);
+
   const deskPlacementOptions = [
     { value: 'upper-loggia-corner', label: 'Oben an Loggia/Balkon' },
     { value: 'lower-balcony-corner', label: 'Unten an Balkon/Südwand' }
@@ -584,7 +601,9 @@ function renderFurnitureSummary(activeLayout) {
     const row = htmlEl('div', { className: 'scenario-object' });
     row.append(htmlEl('strong', {}, object.type === 'storage' ? object.name : object.render.label));
     if (object.modules) {
-      row.append(htmlEl('small', {}, `${object.modules.length} offene PAX-Module · Stellfläche ${object.dimensionsCm.width.toFixed(1)} × ${object.dimensionsCm.depth.toFixed(0)} cm · Zugriffsseite markiert`));
+      const depthCm = activeLayout.selection.paxAccessDepthCm ?? 45;
+      const accessText = depthCm === 0 ? 'keine zusätzliche Zugriffsreserve' : `${depthCm} cm Zugriffsreserve`;
+      row.append(htmlEl('small', {}, `${object.modules.length} PAX-Module · Stellfläche ${object.dimensionsCm.width.toFixed(1)} × ${object.dimensionsCm.depth.toFixed(0)} cm · ${accessText}`));
     }
     else if (object.mattressCm) row.append(htmlEl('small', {}, `${object.estimateNote ? 'Geschätzte ' : ''}Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm · Kopfseite markiert`));
     else if (object.type === 'storage') row.append(htmlEl('small', {}, `${object.dimensionsCm.width} × ${object.dimensionsCm.depth} × ${object.dimensionsCm.height} cm · Schubladenseite markiert`));
@@ -604,6 +623,7 @@ function renderScenarioMetrics(evaluation) {
   const entries = [
     ['Bewertung', `${evaluation.score.toFixed(1)} / 100`],
     ['Bett–PAX', accessLabel],
+    ['PAX-Zugriffsreserve', `${evaluation.wardrobeAccessDepthCm} cm`],
     ['Freie Fläche', `ca. ${evaluation.freeFloorAreaM2.toFixed(1)} m²`],
     ['Loggia-Türen', `${evaluation.usableLoggiaDoors} von 2 · min. 1`]
   ];
@@ -753,6 +773,7 @@ async function main() {
           const isCurrent = bed === 'current-bed-90';
           const width = Number(bed.replace('new-bed-', '')) || 90;
           return (scenario.selection.arrangementId === requestedLayout.selection.arrangementId ? 1000 : 0)
+            + (scenario.selection.paxAccessDepthCm === requestedLayout.selection.paxAccessDepthCm ? 2000 : 0)
             + (scenario.selection.deskPlacementId === requestedLayout.selection.deskPlacementId ? 500 : 0)
             + (scenario.selection.paxVariantId === requestedLayout.selection.paxVariantId ? 100 : 0)
             + (isCurrent === requestedIsCurrent ? 20 : 0)
