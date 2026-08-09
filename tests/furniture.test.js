@@ -45,6 +45,7 @@ test('owned bedside cabinet is present with user-provided dimensions', () => {
     assert.deepEqual(cabinet.dimensionsCm, { width: 57.5, depth: 43, height: 54 });
     assert.equal(cabinet.confidence, 'user_provided_dimensions');
     assert.equal(cabinet.accessLabel, 'Schubladen');
+    assert.equal(cabinet.accessDepthCm, 35);
   }
 });
 
@@ -77,7 +78,7 @@ test('user-facing bedroom layouts contain only valid geometry and preserve the d
   const furniture = resolveScenarioData(scenarios, catalog);
   const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
   const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
-  assert.equal(layouts.length, 21);
+  assert.equal(layouts.length, 6);
   assert.ok(layouts.every((layout) => validIds.has(layout.id)));
   assert.ok(layouts.every((layout) => layout.selection.deskVariantId === 'quick-150-150'));
 });
@@ -86,5 +87,5 @@ test('query-selected scenario becomes active without mutating stored data', () =
   const selected = scenarios.scenarios[5].id;
   const furniture = resolveScenarioData(scenarios, catalog, selected);
   assert.equal(furniture.activeLayoutId, selected);
-  assert.equal(scenarios.activeScenarioId, 'scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150');
+  assert.equal(scenarios.activeScenarioId, 'scenario-new-bed-90-pax-200-quick-150-150');
 });

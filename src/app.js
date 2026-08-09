@@ -197,6 +197,24 @@ function appendAccessIndicator(group, polygon, label, kind) {
   }, label));
 }
 
+function accessZonePolygon(polygon, depthPx) {
+  const [start, end] = polygon;
+  const midpoint = [(start[0] + end[0]) / 2, (start[1] + end[1]) / 2];
+  const centroid = polygon.reduce((sum, [x, y]) => [sum[0] + x / polygon.length, sum[1] + y / polygon.length], [0, 0]);
+  const edge = [end[0] - start[0], end[1] - start[1]];
+  const length = Math.hypot(edge[0], edge[1]);
+  let normal = [-edge[1] / length, edge[0] / length];
+  if ((centroid[0] - midpoint[0]) * normal[0] + (centroid[1] - midpoint[1]) * normal[1] > 0) {
+    normal = [-normal[0], -normal[1]];
+  }
+  return [
+    start,
+    end,
+    [end[0] + normal[0] * depthPx, end[1] + normal[1] * depthPx],
+    [start[0] + normal[0] * depthPx, start[1] + normal[1] * depthPx]
+  ];
+}
+
 function makeFurnitureGroup(object, cmPerPixel) {
   const group = svgEl('g', { class: `furniture furniture-${object.type}`, 'data-id': object.id });
   const polygon = furniturePolygon(object, cmPerPixel);
@@ -251,7 +269,7 @@ function makeFurnitureGroup(object, cmPerPixel) {
   return { group, polygon };
 }
 
-function buildSvg(apartment, fixtures, furniture, calibration) {
+function buildSvg(apartment, fixtures, furniture, constraints, calibration) {
   const [vx, vy, vw, vh] = apartment.coordinateSystem.viewBox;
   const svg = svgEl('svg', {
     viewBox: `${vx} ${vy} ${vw} ${vh}`,
@@ -355,8 +373,36 @@ function buildSvg(apartment, fixtures, furniture, calibration) {
   const furniturePolygons = [];
   for (const object of activeLayout.objects) {
     const rendered = makeFurnitureGroup(object, apartment.scale.cmPerPixel);
-    furnitureLayer.append(rendered.group);
-    furniturePolygons.push({ id: object.id, polygon: rendered.polygon, object });
+    furniturePolygons.push({ id: object.id, polygon: rendered.polygon, object, group: rendered.group });
+  }
+
+  const accessLayer = svgEl('g', { class: 'layer layer-access-zones' });
+  for (const item of furniturePolygons.filter((entry) => entry.object.type === 'wardrobe')) {
+    const depthCm = constraints.wardrobeAccessDepthCm;
+    const zone = accessZonePolygon(item.polygon, depthCm / apartment.scale.cmPerPixel);
+    accessLayer.append(svgEl('polygon', {
+      points: pointsAttr(zone),
+      class: 'wardrobe-access-zone',
+      'data-id': `${item.id}-access-zone`
+    }));
+    const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
+    accessLayer.append(svgEl('text', { x: center[0], y: center[1], class: 'wardrobe-access-zone-label' }, `${depthCm} cm Zugriff`));
+  }
+  for (const item of furniturePolygons.filter((entry) => entry.object.type === 'storage' && entry.object.accessLabel)) {
+    const depthCm = item.object.accessDepthCm || constraints.storageAccessDepthCm;
+    const zone = accessZonePolygon(item.polygon, depthCm / apartment.scale.cmPerPixel);
+    accessLayer.append(svgEl('polygon', {
+      points: pointsAttr(zone),
+      class: 'storage-access-zone',
+      'data-id': `${item.id}-access-zone`
+    }));
+    const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
+    accessLayer.append(svgEl('text', { x: center[0], y: center[1], class: 'storage-access-zone-label' }, `${depthCm} cm Schubladen`));
+  }
+  svg.append(accessLayer);
+
+  for (const item of furniturePolygons) {
+    furnitureLayer.append(item.group);
   }
   svg.append(furnitureLayer);
 
@@ -570,9 +616,16 @@ function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evalu
     ? 'PAX-Rückwand zeigt zur Küche · geringere direkte Küchenexposition'
     : 'PAX-Öffnung zeigt stärker zum Wohnraum · Lüftung oder textiler Schutz sinnvoll'));
   panel.append(arrangement);
-  const validity = htmlEl('div', { className: `scenario-validity ${evaluation.valid ? 'valid' : 'invalid'}` });
+  const requiresEngineeredSupport = activeLayout.installationStatus === 'requires_engineered_solution';
+  const validityClass = !evaluation.valid ? 'invalid' : requiresEngineeredSupport ? 'caution' : 'valid';
+  const validityLabel = !evaluation.valid
+    ? 'Diese Kombination passt geometrisch nicht'
+    : requiresEngineeredSupport
+      ? 'Nur geometrisch passend · Befestigung ungelöst'
+      : 'Geometrisch und funktional nutzbar';
+  const validity = htmlEl('div', { className: `scenario-validity ${validityClass}` });
   validity.append(htmlEl('span', { className: 'status-dot' }));
-  validity.append(htmlEl('strong', {}, evaluation.valid ? 'Geometrisch gültiger Vorschlag' : 'Diese Kombination passt geometrisch nicht'));
+  validity.append(htmlEl('strong', {}, validityLabel));
   panel.append(validity);
   if (!evaluation.valid) {
     const invalid = htmlEl('div', { className: 'notice danger' });
@@ -659,12 +712,13 @@ function renderCalibrationControls() {
 async function main() {
   const root = document.querySelector('#app');
   try {
-    const [apartmentSource, fixtures, catalog, scenarioData, evaluations] = await Promise.all([
+    const [apartmentSource, fixtures, catalog, scenarioData, evaluations, constraints] = await Promise.all([
       loadJson('data/apartment.json'),
       loadJson('data/fixed-fixtures.json'),
       loadJson('data/furniture-catalog.json'),
       loadJson('data/layout-scenarios.json'),
-      loadJson('data/scenario-evaluations.json')
+      loadJson('data/scenario-evaluations.json'),
+      loadJson('data/layout-constraints.json')
     ]);
     const apartment = expandApartmentGeometry(apartmentSource);
     const requestedScenario = new URLSearchParams(window.location.search).get('scenario');
@@ -727,7 +781,7 @@ async function main() {
 
     const workspace = htmlEl('main', { className: isCalibration ? 'workspace calibration-workspace' : 'workspace' });
     const canvas = htmlEl('section', { className: 'canvas-card reconstructed-card' });
-    const rendered = buildSvg(apartment, fixtures, furniture, isCalibration);
+    const rendered = buildSvg(apartment, fixtures, furniture, constraints, isCalibration);
     canvas.append(rendered.svg);
     workspace.append(canvas);
 

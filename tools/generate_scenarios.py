@@ -122,12 +122,13 @@ def bedside_position(bed_position_px, bed_variant, bedside_variant, bedside_base
     else:
         raise ValueError(f"Unsupported bedside placement: {placement}")
     bed_center = bed_position_px["center"]
+    rotation_offset = arrangement.get("bedsideRotationOffsetDeg", 0)
     return {
         "center": [
             round(bed_center[0] + cross_axis[0] * cross_offset_px + long_axis[0] * long_offset_px, 4),
             round(bed_center[1] + cross_axis[1] * cross_offset_px + long_axis[1] * long_offset_px, 4),
         ],
-        "rotationDeg": round(rotation_deg, 4),
+        "rotationDeg": round(rotation_deg + rotation_offset, 4),
     }
 
 
@@ -215,7 +216,7 @@ def main():
                                     else "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker."
                                 ),
                                 "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
-                                "Die vorhandene Kommode steht mit 2 cm Planungsabstand am Bettende oder an der Bettseite und darf die PAX-Öffnung nicht blockieren.",
+                                "Die vorhandene Kommode steht mit 2 cm Planungsabstand am Bettende oder an der Bettseite; vor den Schubladen bleiben 35 cm Bedienfläche frei.",
                                 "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
                                 arrangement.get("recommendation", "PAX benötigt eine geprüfte Verankerungslösung."),
                             ],

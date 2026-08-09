@@ -32,8 +32,9 @@
 - In `bath-wall-both-rotated`, preserve the 20 cm headboard-to-wall strip created by the recessed bedroom-Loggia door reveal; this replaces direct wall contact for that orientation.
 - Bedroom controls preserve the active VERNAL desk variant; changing bed, mattress, PAX, or orientation must not change the desk.
 - Each bedroom selector changes only its own axis. If the exact combination is invalid, disable that option; never silently change orientation, bed, PAX, or another furniture choice to make it fit.
-- `owned-bedside-cabinet` is the user's 57.5 × 43 × 54 cm cabinet. It follows the bed orientation and keeps a 2 cm planning gap to the bed.
-- The cabinet must never enter the 45 cm PAX opening/access strip. Prefer the free bed-end or room-corner position when a side placement would obstruct the open wardrobe.
+- `owned-bedside-cabinet` is the user's 57.5 × 43 × 54 cm cabinet. It follows the bed orientation, keeps a 2 cm planning gap to the bed, and requires a clear 35 cm drawer-access strip inside the apartment.
+- No furniture footprint or door swing may enter the full 45 cm PAX opening/access strip. This includes the bed, cabinet, and desk; footprint non-overlap alone is not sufficient for a usable scenario.
+- After each geometry change, inspect both `/calibration/` and `/` yourself and iterate until the result is physically possible, geometrically consistent, and practically usable without obvious common-sense contradictions.
 - Preserve the in-plan orientation markers: bed head/pillow edge, open PAX access edge, and cabinet drawer front must follow the same local negative-depth edge used by geometry.
 - The VERNAL desk is anchored by its top-right wall-contact corner; both wall-facing edges remain in contact for every desk size.
 - `vernal-l-desk` is intentionally placed in the upper-right living-area corner.

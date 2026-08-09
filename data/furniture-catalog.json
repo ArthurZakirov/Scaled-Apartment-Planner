@@ -99,6 +99,7 @@
       "confidence": "user_provided_dimensions",
       "accessEdge": "negativeDepth",
       "accessLabel": "Schubladen",
+      "accessDepthCm": 35,
       "variants": [
         {
           "id": "bedside-cabinet-57",

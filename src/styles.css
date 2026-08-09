@@ -74,6 +74,10 @@ a:hover { text-decoration: underline; }
 .access-label-storage { fill: #65438e; }
 .furniture-label { font-size: 10px; font-weight: 800; text-anchor: middle; fill: #15241f; paint-order: stroke; stroke: rgba(255,255,255,.86); stroke-width: 3px; stroke-linejoin: round; }
 .furniture-id { font-size: 6px; text-anchor: middle; fill: #31423b; paint-order: stroke; stroke: rgba(255,255,255,.8); stroke-width: 2px; }
+.wardrobe-access-zone { fill: rgba(126,46,119,.08); stroke: rgba(126,46,119,.62); stroke-width: 1; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke; }
+.wardrobe-access-zone-label { fill: #7e2e77; font-size: 6px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
+.storage-access-zone { fill: rgba(91,73,148,.08); stroke: rgba(91,73,148,.68); stroke-width: 1; stroke-dasharray: 3 2; vector-effect: non-scaling-stroke; }
+.storage-access-zone-label { fill: #5b4994; font-size: 5px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
 
 .door-zone { stroke-width: 1; vector-effect: non-scaling-stroke; }
 .door-zone.must_remain_usable.clear { fill: rgba(34,157,96,.13); stroke: rgba(34,157,96,.55); }
@@ -112,6 +116,8 @@ a:hover { text-decoration: underline; }
 .arrangement-navigation button[aria-current="true"] { background: #215e4b; border-color: #215e4b; color: #fff; }
 .arrangement-navigation button:disabled { cursor: not-allowed; opacity: .4; }
 .scenario-validity { display: flex; align-items: center; gap: 8px; margin: -6px 0 12px; color: #267348; font-size: 12px; }
+.scenario-validity.caution { color: #8a5b00; }
+.scenario-validity.caution .status-dot { background: #c98218; }
 .scenario-validity.invalid { color: var(--danger); }
 .scenario-validity.invalid .status-dot { background: var(--danger); }
 .scenario-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 12px; }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "activeScenarioId": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150",
+  "activeScenarioId": "scenario-new-bed-90-pax-200-quick-150-150",
   "axes": {
     "bedVariantIds": ["current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"],
     "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
@@ -13,7 +13,8 @@
       "installationStatus": "requires_engineered_solution",
       "kitchenExposure": "low",
       "bedsidePlacement": "end",
-      "bedsideDirection": -1,
+      "bedsideDirection": 1,
+      "bedsideRotationOffsetDeg": 180,
       "recommendation": "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
     },
     {

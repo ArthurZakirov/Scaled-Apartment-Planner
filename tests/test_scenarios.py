@@ -160,7 +160,7 @@ class ScenarioTests(unittest.TestCase):
         self.assertTrue(all("height" not in obj["dimensionsCm"] for obj in pax_objects))
         self.assertTrue(all(obj["requiresAnchoring"] for obj in pax_objects))
 
-    def test_corrected_loggia_wall_rejects_the_too_narrow_shifted_arrangement(self):
+    def test_wall_aligned_arrangements_are_rejected_when_bed_or_boundary_blocks_use(self):
         results = {
             result["arrangementId"]: result
             for layout in self.furniture["layouts"]
@@ -174,10 +174,11 @@ class ScenarioTests(unittest.TestCase):
         self.assertTrue(all(result["installationStatus"] == "manufacturer_wall_mount_candidate" for result in results.values()))
         self.assertFalse(results["bath-wall-bed-shifted"]["valid"])
         self.assertTrue(any("leaves the approximate interior" in reason for reason in results["bath-wall-bed-shifted"]["reasons"]))
-        self.assertTrue(results["bath-wall-both-rotated"]["valid"])
+        self.assertFalse(results["bath-wall-both-rotated"]["valid"])
+        self.assertIn("sleeping-bed", results["bath-wall-both-rotated"]["wardrobeAccessBlockedBy"])
         self.assertGreater(results["bath-wall-both-rotated"]["bedPaxGapCm"], 30)
 
-    def test_both_rotated_supports_120_cm_mattress_with_correct_loggia_hinge(self):
+    def test_both_rotated_120_clears_loggia_but_not_pax_access(self):
         layouts = [
             layout
             for layout in self.furniture["layouts"]
@@ -187,8 +188,9 @@ class ScenarioTests(unittest.TestCase):
         self.assertEqual(len(layouts), 12)
         for layout in layouts:
             result = evaluate_layout(layout, self.apartment, self.constraints)
-            self.assertTrue(result["valid"], f"{layout['id']}: {result['reasons']}")
+            self.assertFalse(result["valid"])
             self.assertGreaterEqual(result["usableLoggiaDoors"], 1)
+            self.assertIn("sleeping-bed", result["wardrobeAccessBlockedBy"])
 
     def test_rotated_beds_reserve_approximately_20_cm_behind_headboard(self):
         wall = next(item for item in self.apartment["walls"] if item["id"] == "wall-outer-nw")
@@ -226,11 +228,17 @@ class ScenarioTests(unittest.TestCase):
             if result["valid"]:
                 self.assertGreaterEqual(result["usableLoggiaDoors"], 1, layout["id"])
 
-    def test_every_valid_scenario_keeps_commode_out_of_pax_access_zone(self):
+    def test_every_valid_scenario_keeps_every_furniture_item_out_of_pax_access_zone(self):
         for layout in self.furniture["layouts"]:
             result = evaluate_layout(layout, self.apartment, self.constraints)
             if result["valid"]:
                 self.assertEqual(result["wardrobeAccessBlockedBy"], [], layout["id"])
+
+    def test_every_valid_scenario_keeps_cabinet_drawers_usable(self):
+        for layout in self.furniture["layouts"]:
+            result = evaluate_layout(layout, self.apartment, self.constraints)
+            if result["valid"]:
+                self.assertEqual(result["storageAccessBlockedBy"], [], layout["id"])
 
     def test_commode_in_front_of_pax_is_always_invalid(self):
         layout = deepcopy(next(item for item in self.furniture["layouts"] if item["id"] == self.furniture["activeLayoutId"]))
@@ -241,6 +249,25 @@ class ScenarioTests(unittest.TestCase):
         result = evaluate_layout(layout, self.apartment, self.constraints)
         self.assertFalse(result["valid"])
         self.assertIn(cabinet["id"], result["wardrobeAccessBlockedBy"])
+
+    def test_pax_access_zone_never_conflicts_with_a_door_in_valid_scenarios(self):
+        door_ids = {door["id"] for door in self.apartment["doors"]}
+        for layout in self.furniture["layouts"]:
+            result = evaluate_layout(layout, self.apartment, self.constraints)
+            if result["valid"]:
+                self.assertTrue(door_ids.isdisjoint(result["wardrobeAccessBlockedBy"]), layout["id"])
+
+    def test_bed_in_front_of_pax_is_always_invalid(self):
+        layout = deepcopy(
+            next(
+                item
+                for item in self.furniture["layouts"]
+                if item["id"] == "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150"
+            )
+        )
+        result = evaluate_layout(layout, self.apartment, self.constraints)
+        self.assertFalse(result["valid"])
+        self.assertIn("sleeping-bed", result["wardrobeAccessBlockedBy"])
 
     def test_blocking_both_loggia_doors_is_always_invalid(self):
         layout = deepcopy(next(item for item in self.furniture["layouts"] if item["id"] == self.furniture["activeLayoutId"]))

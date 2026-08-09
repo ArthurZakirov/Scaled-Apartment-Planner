@@ -1,92 +1,32 @@
 {
   "version": 1,
   "scenarioCount": 216,
-  "validCount": 84,
+  "validCount": 24,
   "rankedValidScenarioIds": [
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-200-quick-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-200-stable-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-175-quick-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-175-stable-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-200-quick-150-150",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-200-stable-160-140",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-200-stable-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-150-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-160-140",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-150-stable-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-175-quick-150-150",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-175-stable-160-140",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-175-quick-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-175-stable-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-150-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-160-140",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-200-stable-160-140",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-150-150",
-    "scenario-bath-wall-both-rotated-new-bed-90-pax-150-stable-160-140",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-150-quick-180-150",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-150-stable-180-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-150-150",
-    "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-160-140",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-175-quick-150-150",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-175-stable-160-140",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-150-quick-150-150",
-    "scenario-bath-wall-both-rotated-new-bed-120-pax-150-stable-160-140",
     "scenario-new-bed-90-pax-200-quick-180-150",
     "scenario-new-bed-90-pax-200-stable-180-150",
     "scenario-current-bed-90-pax-200-quick-180-150",
     "scenario-current-bed-90-pax-200-stable-180-150",
     "scenario-new-bed-90-pax-175-quick-180-150",
     "scenario-new-bed-90-pax-175-stable-180-150",
-    "scenario-new-bed-120-pax-200-quick-180-150",
-    "scenario-new-bed-120-pax-200-stable-180-150",
     "scenario-new-bed-90-pax-200-quick-150-150",
     "scenario-new-bed-90-pax-200-stable-160-140",
     "scenario-current-bed-90-pax-175-quick-180-150",
     "scenario-current-bed-90-pax-175-stable-180-150",
     "scenario-current-bed-90-pax-200-quick-150-150",
     "scenario-current-bed-90-pax-200-stable-160-140",
-    "scenario-new-bed-140-pax-200-quick-180-150",
-    "scenario-new-bed-140-pax-200-stable-180-150",
     "scenario-new-bed-90-pax-150-quick-180-150",
     "scenario-new-bed-90-pax-150-stable-180-150",
-    "scenario-new-bed-120-pax-175-quick-180-150",
-    "scenario-new-bed-120-pax-175-stable-180-150",
     "scenario-new-bed-90-pax-175-quick-150-150",
     "scenario-new-bed-90-pax-175-stable-160-140",
-    "scenario-new-bed-120-pax-200-quick-150-150",
-    "scenario-new-bed-120-pax-200-stable-160-140",
     "scenario-current-bed-90-pax-150-quick-180-150",
     "scenario-current-bed-90-pax-150-stable-180-150",
     "scenario-current-bed-90-pax-175-quick-150-150",
     "scenario-current-bed-90-pax-175-stable-160-140",
-    "scenario-new-bed-140-pax-175-quick-180-150",
-    "scenario-new-bed-140-pax-175-stable-180-150",
-    "scenario-new-bed-140-pax-200-quick-150-150",
-    "scenario-new-bed-140-pax-200-stable-160-140",
-    "scenario-new-bed-120-pax-150-quick-180-150",
-    "scenario-new-bed-120-pax-150-stable-180-150",
     "scenario-new-bed-90-pax-150-quick-150-150",
-    "scenario-new-bed-120-pax-175-quick-150-150",
     "scenario-new-bed-90-pax-150-stable-160-140",
-    "scenario-new-bed-120-pax-175-stable-160-140",
     "scenario-current-bed-90-pax-150-quick-150-150",
-    "scenario-current-bed-90-pax-150-stable-160-140",
-    "scenario-new-bed-140-pax-150-quick-180-150",
-    "scenario-new-bed-140-pax-150-stable-180-150",
-    "scenario-new-bed-140-pax-175-quick-150-150",
-    "scenario-new-bed-140-pax-175-stable-160-140",
-    "scenario-new-bed-120-pax-150-quick-150-150",
-    "scenario-new-bed-120-pax-150-stable-160-140",
-    "scenario-new-bed-140-pax-150-quick-150-150",
-    "scenario-new-bed-140-pax-150-stable-160-140"
+    "scenario-current-bed-90-pax-150-stable-160-140"
   ],
   "results": [
     {
@@ -106,6 +46,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.7,
@@ -130,6 +71,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.8,
@@ -154,6 +96,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.4,
@@ -178,6 +121,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.4,
@@ -202,6 +146,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.5,
@@ -226,6 +171,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.7,
@@ -250,6 +196,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.3,
@@ -274,6 +221,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.2,
@@ -298,6 +246,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.4,
@@ -322,6 +271,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.5,
@@ -346,6 +296,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.2,
@@ -370,6 +321,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
       "freeFloorAreaM2": 22.1,
@@ -394,6 +346,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.7,
@@ -418,6 +371,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.9,
@@ -442,6 +396,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.5,
@@ -466,6 +421,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.4,
@@ -490,6 +446,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.6,
@@ -514,6 +471,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.7,
@@ -538,6 +496,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.3,
@@ -562,6 +521,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.3,
@@ -586,6 +546,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.4,
@@ -610,6 +571,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.6,
@@ -634,6 +596,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.2,
@@ -658,6 +621,7 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
       "freeFloorAreaM2": 22.1,
@@ -670,8 +634,10 @@
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -681,21 +647,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.7
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-150-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -705,21 +676,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.7
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-150-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -729,21 +705,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.2
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-150-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -753,21 +734,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.2
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-175-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -777,21 +763,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.0
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-175-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -801,21 +792,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.9
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-175-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -825,21 +821,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.5
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-175-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -849,21 +850,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.5
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-200-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -873,21 +879,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.2
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-200-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -897,21 +908,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.2
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-200-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -921,21 +937,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 62.7
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-120-pax-200-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -945,21 +966,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
       "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 62.7
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-150-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -969,21 +995,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.8
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-150-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -993,21 +1024,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.8
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-150-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1017,21 +1053,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.3
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-150-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1041,21 +1082,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.3
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-175-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1065,21 +1111,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.1
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-175-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1089,21 +1140,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.1
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-175-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1113,21 +1169,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.6
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-175-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1137,21 +1198,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.6
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-200-quick-150-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1161,21 +1227,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.3
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-200-stable-160-140",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1185,21 +1256,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.3
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-200-quick-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1209,21 +1285,26 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.8
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-140-pax-200-stable-180-150",
       "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -1233,13 +1314,16 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
       "freeFloorAreaM2": 21.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.8
+      "score": 0.0
     },
     {
       "id": "scenario-new-bed-160-pax-150-quick-150-150",
@@ -1249,15 +1333,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1240.7px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1265,11 +1346,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.5,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1281,15 +1365,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1240.7px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1297,11 +1378,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.7,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1313,15 +1397,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1240.7px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1329,11 +1410,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.3,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1345,15 +1429,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1240.7px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1361,11 +1442,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.3,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1377,15 +1461,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1448.1px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1393,11 +1474,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.4,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1409,15 +1493,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1448.1px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1425,11 +1506,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.6,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1441,15 +1525,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1448.1px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1457,11 +1538,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.2,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1473,15 +1557,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1448.1px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1489,11 +1570,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.2,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1505,15 +1589,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1643.0px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1521,11 +1602,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.3,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1537,15 +1621,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1643.0px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1553,11 +1634,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.5,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1569,15 +1653,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1643.0px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1585,11 +1666,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.1,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1601,15 +1685,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (1643.0px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1617,11 +1698,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.1,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1633,15 +1717,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (2535.7px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1649,11 +1730,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.4,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1665,15 +1749,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (2535.7px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1681,11 +1762,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.6,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1697,15 +1781,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (2535.7px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1713,11 +1794,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.2,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1729,15 +1813,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (2535.7px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1745,11 +1826,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.1,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1761,15 +1845,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (2959.5px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1777,11 +1858,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.4,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1793,15 +1877,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (2959.5px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1809,11 +1890,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.5,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1825,15 +1909,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (2959.5px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1841,11 +1922,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.1,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1857,15 +1941,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (2959.5px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1873,11 +1954,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.1,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1889,15 +1973,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (3357.9px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1905,11 +1986,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.3,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1921,15 +2005,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (3357.9px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1937,11 +2018,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.5,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1953,15 +2037,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (3357.9px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -1969,11 +2050,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.1,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -1985,15 +2069,12 @@
       "valid": false,
       "reasons": [
         "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
-        "At least one Loggia door must remain usable."
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [
         "ikea-pax-divider ↔ sleeping-bed (3357.9px²)"
       ],
       "blockedBy": {
-        "door-loggia-bedroom": [
-          "owned-bedside-cabinet"
-        ],
         "door-loggia-living": [
           "vernal-l-desk"
         ],
@@ -2001,11 +2082,14 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
       "freeFloorAreaM2": 21.0,
-      "usableLoggiaDoors": 0,
+      "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 0.0
     },
@@ -2016,7 +2100,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2027,7 +2112,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
       "freeFloorAreaM2": 22.9,
@@ -2042,7 +2130,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2053,7 +2142,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
       "freeFloorAreaM2": 23.0,
@@ -2068,7 +2160,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2079,7 +2172,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
       "freeFloorAreaM2": 22.7,
@@ -2094,7 +2190,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2105,7 +2202,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
       "freeFloorAreaM2": 22.6,
@@ -2120,7 +2220,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2131,7 +2232,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
       "freeFloorAreaM2": 22.7,
@@ -2146,7 +2250,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2157,7 +2262,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
       "freeFloorAreaM2": 22.9,
@@ -2172,7 +2280,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2183,7 +2292,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
       "freeFloorAreaM2": 22.5,
@@ -2198,7 +2310,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2209,7 +2322,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
       "freeFloorAreaM2": 22.5,
@@ -2224,7 +2340,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2235,7 +2352,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
       "freeFloorAreaM2": 22.6,
@@ -2250,7 +2370,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2261,7 +2382,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
       "freeFloorAreaM2": 22.8,
@@ -2276,7 +2400,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2287,7 +2412,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
       "freeFloorAreaM2": 22.4,
@@ -2302,7 +2430,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2313,7 +2442,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
       "freeFloorAreaM2": 22.3,
@@ -2328,7 +2460,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2339,7 +2472,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.9,
@@ -2354,7 +2490,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2365,7 +2502,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 23.1,
@@ -2380,7 +2520,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2391,7 +2532,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.7,
@@ -2406,7 +2550,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2417,7 +2562,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.7,
@@ -2432,7 +2580,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2443,7 +2592,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.8,
@@ -2458,7 +2610,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2469,7 +2622,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 23.0,
@@ -2484,7 +2640,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2495,7 +2652,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.6,
@@ -2510,7 +2670,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2521,7 +2682,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.5,
@@ -2536,7 +2700,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2547,7 +2712,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.7,
@@ -2562,7 +2730,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2573,7 +2742,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.8,
@@ -2588,7 +2760,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2599,7 +2772,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.5,
@@ -2614,7 +2790,8 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "Furniture sleeping-bed leaves the approximate interior."
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed."
       ],
       "collisions": [],
       "blockedBy": {
@@ -2625,7 +2802,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.4,
@@ -2641,6 +2821,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2655,7 +2836,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.4,
@@ -2671,6 +2855,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2685,7 +2870,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.5,
@@ -2701,6 +2889,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2715,7 +2904,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.2,
@@ -2731,6 +2923,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2745,7 +2938,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.1,
@@ -2761,6 +2957,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2775,7 +2972,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.2,
@@ -2791,6 +2991,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2805,7 +3006,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.4,
@@ -2821,6 +3025,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2835,7 +3040,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.0,
@@ -2851,6 +3059,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2865,7 +3074,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.0,
@@ -2881,6 +3093,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2895,7 +3108,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.1,
@@ -2911,6 +3127,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2925,7 +3142,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 22.3,
@@ -2941,6 +3161,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2955,7 +3176,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.9,
@@ -2971,6 +3195,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2985,7 +3210,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.8,
@@ -3001,6 +3229,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3015,7 +3244,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.0,
@@ -3031,6 +3263,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3045,7 +3278,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 22.2,
@@ -3061,6 +3297,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3075,7 +3312,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.8,
@@ -3091,6 +3331,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3105,7 +3346,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.7,
@@ -3121,6 +3365,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3135,7 +3380,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.9,
@@ -3151,6 +3399,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3165,7 +3414,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 22.0,
@@ -3181,6 +3433,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3195,7 +3448,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.6,
@@ -3211,6 +3467,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3225,7 +3482,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.6,
@@ -3241,6 +3501,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3255,7 +3516,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.7,
@@ -3271,6 +3535,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3285,7 +3550,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.9,
@@ -3301,6 +3569,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3315,7 +3584,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.5,
@@ -3331,6 +3603,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3345,7 +3618,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.5,
@@ -3361,6 +3637,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3375,7 +3652,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.6,
@@ -3391,6 +3671,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3405,7 +3686,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.8,
@@ -3421,6 +3705,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3435,7 +3720,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.4,
@@ -3451,6 +3739,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3465,7 +3754,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.4,
@@ -3481,6 +3773,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3495,7 +3788,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.5,
@@ -3511,6 +3807,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3525,7 +3822,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.6,
@@ -3541,6 +3841,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3555,7 +3856,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.3,
@@ -3571,6 +3875,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3585,7 +3890,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.2,
@@ -3601,6 +3909,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3615,7 +3924,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.4,
@@ -3631,6 +3943,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3645,7 +3958,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.5,
@@ -3661,6 +3977,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3675,7 +3992,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.1,
@@ -3691,6 +4011,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3705,7 +4026,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.1,
@@ -3721,6 +4045,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3735,7 +4060,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.3,
@@ -3751,6 +4079,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3765,7 +4094,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.4,
@@ -3781,6 +4113,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3795,7 +4128,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.0,
@@ -3811,6 +4147,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3825,7 +4162,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.0,
@@ -3841,6 +4181,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3855,7 +4196,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.1,
@@ -3871,6 +4215,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3885,7 +4230,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 21.3,
@@ -3901,6 +4249,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3915,7 +4264,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 20.9,
@@ -3931,6 +4283,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3945,7 +4298,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
       "freeFloorAreaM2": 20.8,
@@ -3961,6 +4317,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3975,7 +4332,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.0,
@@ -3991,6 +4351,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4005,7 +4366,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 21.1,
@@ -4021,6 +4385,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4035,7 +4400,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 20.8,
@@ -4051,6 +4419,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Wardrobe access is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4065,7 +4434,10 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
       "freeFloorAreaM2": 20.7,
@@ -4078,8 +4450,11 @@
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4089,21 +4464,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.1,
       "bedPaxGapCm": 33.1,
       "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-160-140",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4113,21 +4496,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.1,
       "bedPaxGapCm": 33.1,
       "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-180-150",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4137,21 +4528,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.1,
       "bedPaxGapCm": 33.1,
       "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-180-150",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4161,21 +4560,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.1,
       "bedPaxGapCm": 33.1,
       "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-150-150",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4185,21 +4592,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
       "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-160-140",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4209,21 +4624,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
       "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-180-150",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4233,21 +4656,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
       "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.0
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-180-150",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4257,21 +4688,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
       "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.0
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-150-150",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4281,21 +4720,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
       "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-160-140",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4305,21 +4752,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
       "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.7
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-180-150",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4329,21 +4784,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
       "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 62.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-180-150",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4353,21 +4816,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
       "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 62.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-150-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4377,21 +4848,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.7,
       "bedPaxGapCm": 37.7,
       "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-150-stable-160-140",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4401,21 +4880,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.7,
       "bedPaxGapCm": 37.7,
       "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.7
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4425,21 +4912,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.7,
       "bedPaxGapCm": 37.7,
       "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-150-stable-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4449,21 +4944,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.7,
       "bedPaxGapCm": 37.7,
       "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-175-quick-150-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4473,21 +4976,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
       "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 60.0
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-175-stable-160-140",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4497,21 +5008,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
       "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.9
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-175-quick-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4521,21 +5040,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
       "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-175-stable-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4545,21 +5072,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
       "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-200-quick-150-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4569,21 +5104,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
       "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.2
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-200-stable-160-140",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4593,21 +5136,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
       "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.2
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-200-quick-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4617,21 +5168,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
       "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 62.7
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-200-stable-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4641,21 +5200,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
       "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 62.7
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-150-quick-150-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4665,21 +5232,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.3,
       "bedPaxGapCm": 4.3,
       "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.1
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-150-stable-160-140",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4689,21 +5264,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.3,
       "bedPaxGapCm": 4.3,
       "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.0
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-150-quick-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4713,21 +5296,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.3,
       "bedPaxGapCm": 4.3,
       "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.6
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-150-stable-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4737,21 +5328,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.3,
       "bedPaxGapCm": 4.3,
       "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.6
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-175-quick-150-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4761,21 +5360,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
       "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-175-stable-160-140",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4785,21 +5392,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
       "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-175-quick-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4809,21 +5424,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
       "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-175-stable-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4833,21 +5456,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
       "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4857,21 +5488,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
       "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.6
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-stable-160-140",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4881,21 +5520,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
       "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4905,21 +5552,29 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
       "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.1
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-stable-180-150",
       "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-both-rotated",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Wardrobe access is blocked by sleeping-bed.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -4929,13 +5584,18 @@
           "vernal-l-desk"
         ]
       },
-      "wardrobeAccessBlockedBy": [],
+      "wardrobeAccessBlockedBy": [
+        "sleeping-bed"
+      ],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
       "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 61.1
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-150-quick-150-150",
@@ -4945,6 +5605,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4960,6 +5621,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 49.2,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 22.0,
@@ -4975,6 +5639,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4990,6 +5655,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 41.3,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 22.2,
@@ -5005,6 +5673,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5020,6 +5689,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 21.8,
@@ -5035,6 +5707,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5050,6 +5723,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 21.7,
@@ -5065,6 +5741,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5080,6 +5757,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 49.2,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.9,
@@ -5095,6 +5775,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5110,6 +5791,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 41.3,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 22.0,
@@ -5125,6 +5809,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5140,6 +5825,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.6,
@@ -5155,6 +5843,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5170,6 +5859,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.6,
@@ -5185,6 +5877,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5200,6 +5893,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 49.2,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.7,
@@ -5215,6 +5911,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5230,6 +5927,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 41.3,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.9,
@@ -5245,6 +5945,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5260,6 +5961,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.5,
@@ -5275,6 +5979,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5290,6 +5995,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.5,
@@ -5305,6 +6013,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5320,6 +6029,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 46.0,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 22.0,
@@ -5335,6 +6047,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5350,6 +6063,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 36.0,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 22.2,
@@ -5365,6 +6081,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5380,6 +6097,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 21.8,
@@ -5395,6 +6115,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5410,6 +6131,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 21.7,
@@ -5425,6 +6149,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5440,6 +6165,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 46.0,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.9,
@@ -5455,6 +6183,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5470,6 +6199,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 36.0,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 22.0,
@@ -5485,6 +6217,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5500,6 +6233,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.6,
@@ -5515,6 +6251,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5530,6 +6267,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.6,
@@ -5545,6 +6285,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5560,6 +6301,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 46.0,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.7,
@@ -5575,6 +6319,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5590,6 +6335,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 36.0,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.9,
@@ -5605,6 +6353,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5620,6 +6369,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.5,
@@ -5635,6 +6387,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5650,6 +6403,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.5,
@@ -5665,6 +6421,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5680,6 +6437,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.9,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 22.0,
@@ -5695,6 +6455,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5710,6 +6471,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 27.9,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 22.2,
@@ -5725,6 +6489,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5740,6 +6505,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 21.8,
@@ -5755,6 +6523,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5770,6 +6539,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.4,
       "freeFloorAreaM2": 21.7,
@@ -5785,6 +6557,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5800,6 +6573,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.9,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.9,
@@ -5815,6 +6591,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5830,6 +6607,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 27.9,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 22.0,
@@ -5845,6 +6625,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5860,6 +6641,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.6,
@@ -5875,6 +6659,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5890,6 +6675,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.6,
@@ -5905,6 +6693,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5920,6 +6709,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 37.9,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.7,
@@ -5935,6 +6727,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5950,6 +6743,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 27.9,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.9,
@@ -5965,6 +6761,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5980,6 +6777,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.5,
@@ -5995,6 +6795,7 @@
       "valid": false,
       "reasons": [
         "Furniture sleeping-bed leaves the approximate interior.",
+        "Storage access for owned-bedside-cabinet is blocked by sleeping-bed.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -6010,6 +6811,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
+      "storageAccessBlockedBy": [
+        "sleeping-bed"
+      ],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.2,
       "freeFloorAreaM2": 21.5,

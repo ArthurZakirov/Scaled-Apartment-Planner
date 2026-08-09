@@ -54,7 +54,7 @@ def door_swing_polygon(door: dict[str, Any], steps: int = 36) -> Polygon:
 
 
 def wardrobe_access_polygon(obj: dict[str, Any], cm_per_pixel: float, depth_cm: float = 45) -> Polygon:
-    """Return a rectangular access strip in front of the rendered PAX opening edge."""
+    """Return a rectangular access strip at an object's negative-depth opening edge."""
     wardrobe = furniture_polygon(obj, cm_per_pixel)
     start, end = list(wardrobe.exterior.coords)[:2]
     edge_x, edge_y = end[0] - start[0], end[1] - start[1]
@@ -113,11 +113,39 @@ def evaluate_layout(
 
     wardrobe_access_blocked_by: list[str] = []
     for wardrobe in (obj for obj in layout["objects"] if obj["type"] == "wardrobe"):
-        access_zone = wardrobe_access_polygon(wardrobe, cm_per_pixel)
-        for storage in (obj for obj in layout["objects"] if obj["type"] == "storage"):
-            if access_zone.intersection(object_polygons[storage["id"]]).area > 0.5:
-                wardrobe_access_blocked_by.append(storage["id"])
-                reasons.append(f"Wardrobe access is blocked by {storage['id']}.")
+        access_zone = wardrobe_access_polygon(
+            wardrobe, cm_per_pixel, constraints.get("wardrobeAccessDepthCm", 45)
+        )
+        if not interior.buffer(5).covers(access_zone):
+            wardrobe_access_blocked_by.append("interior-boundary")
+            reasons.append("Wardrobe access leaves the approximate interior.")
+        for other in (obj for obj in layout["objects"] if obj["id"] != wardrobe["id"]):
+            if access_zone.intersection(object_polygons[other["id"]]).area > 0.5:
+                wardrobe_access_blocked_by.append(other["id"])
+                reasons.append(f"Wardrobe access is blocked by {other['id']}.")
+        for door in apartment["doors"]:
+            if access_zone.intersection(door_swing_polygon(door)).area > 0.5:
+                wardrobe_access_blocked_by.append(door["id"])
+                reasons.append(f"Wardrobe access conflicts with {door['id']}.")
+
+    storage_access_blocked_by: list[str] = []
+    for storage in (
+        obj for obj in layout["objects"] if obj["type"] == "storage" and obj.get("accessLabel")
+    ):
+        access_zone = wardrobe_access_polygon(
+            storage, cm_per_pixel, storage.get("accessDepthCm", constraints.get("storageAccessDepthCm", 35))
+        )
+        if not interior.buffer(5).covers(access_zone):
+            storage_access_blocked_by.append("interior-boundary")
+            reasons.append(f"Storage access for {storage['id']} leaves the approximate interior.")
+        for other in (obj for obj in layout["objects"] if obj["id"] != storage["id"]):
+            if access_zone.intersection(object_polygons[other["id"]]).area > 0.5:
+                storage_access_blocked_by.append(other["id"])
+                reasons.append(f"Storage access for {storage['id']} is blocked by {other['id']}.")
+        for door in apartment["doors"]:
+            if access_zone.intersection(door_swing_polygon(door)).area > 0.5:
+                storage_access_blocked_by.append(door["id"])
+                reasons.append(f"Storage access for {storage['id']} conflicts with {door['id']}.")
 
     blocked_by: dict[str, list[str]] = {}
     for door in apartment["doors"]:
@@ -164,6 +192,7 @@ def evaluate_layout(
         "collisions": collisions,
         "blockedBy": blocked_by,
         "wardrobeAccessBlockedBy": wardrobe_access_blocked_by,
+        "storageAccessBlockedBy": storage_access_blocked_by,
         "minimumFurnitureGapCm": round(minimum_gap_cm, 1),
         "bedPaxGapCm": round(bed_pax_gap_cm, 1),
         "freeFloorAreaM2": round(free_floor_m2, 1),

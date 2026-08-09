@@ -14,12 +14,13 @@ The planner currently includes:
 - 216 explicit generated scenarios with geometric and installation-safety classification;
 - dedicated selectors for current/new bed, mattress width, and PAX width while the selected desk remains fixed;
 - dimension selectors preserve the active orientation and other furniture choices instead of silently switching to another layout concept;
-- the rotated bed/PAX orientation supports mattresses up to 120 cm by sliding the bed along its headboard wall while keeping the correctly hinged bedroom Loggia door usable;
+- the rotated bed/PAX geometry can clear the Loggia door with mattresses up to 120 cm, but remains diagnostic-only because the bed blocks the required open-PAX access strip;
 - the recessed bedroom-Loggia door reveal is visible in the plan and reserves a 20 cm opening strip behind the rotated bed headboard;
 - the approximately 26 px Loggia-separation wall rendering accompanies a separately calibrated usable interior boundary; the former “PAX an Badwand” comparison remains in diagnostics but is no longer selectable because it does not fit the corrected interior;
 - strict filtering to geometrically valid bedroom combinations with score, bed-to-PAX gap, free floor estimate, and usable loggia access;
-- a hard 45 cm PAX opening zone that the bedside cabinet may never obstruct;
+- a hard 45 cm PAX opening zone that no bed, cabinet, desk, or other furniture may obstruct;
 - integrated orientation markers for bed head/pillows, open PAX access, and cabinet drawer direction;
+- visible access zones reserving 45 cm in front of the open PAX and 35 cm in front of the cabinet drawers, plus a distinct warning state when a layout fits geometrically but still lacks a safe anchoring solution;
 - a direct three-button switch between the transverse divider and both bathroom-wall concepts;
 - automatic door-swing intersection checks;
 - a normal vector-only view;
