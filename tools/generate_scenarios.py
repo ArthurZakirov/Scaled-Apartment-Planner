@@ -44,6 +44,17 @@ def bed_position(base, base_variant, selected_variant, cm_per_pixel):
     return position
 
 
+def shift_position_along_width_axis(position, shift_px):
+    """Slide a bed along its headboard wall without changing wall contact."""
+    shifted = json.loads(json.dumps(position))
+    angle = math.radians(shifted["rotationDeg"])
+    shifted["center"] = [
+        round(shifted["center"][0] + math.cos(angle) * shift_px, 4),
+        round(shifted["center"][1] + math.sin(angle) * shift_px, 4),
+    ]
+    return shifted
+
+
 def pax_position(base, base_variant, selected_variant, cm_per_pixel):
     """Keep the bathroom-facing short end and the cross-axis position fixed."""
     position = json.loads(json.dumps(base["positionPx"]))
@@ -150,6 +161,9 @@ def main():
                         bed_position_px = bed_position(
                             placements["bed"], base_bed_variant, bed, apartment["scale"]["cmPerPixel"]
                         )
+                    wall_shift_px = arrangement.get("bedWallShiftPxByVariant", {}).get(bed_id, 0)
+                    if wall_shift_px:
+                        bed_position_px = shift_position_along_width_axis(bed_position_px, wall_shift_px)
                     pax_position_px = arrangement.get("paxPositionPx") or pax_position(
                         placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
                     )

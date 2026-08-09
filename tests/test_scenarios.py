@@ -178,6 +178,20 @@ class ScenarioTests(unittest.TestCase):
             results["bath-wall-bed-shifted"]["bedPaxGapCm"],
         )
 
+    def test_both_rotated_supports_120_and_140_cm_mattresses(self):
+        for bed_variant_id in ("new-bed-120", "new-bed-140"):
+            layouts = [
+                layout
+                for layout in self.furniture["layouts"]
+                if layout["selection"]["arrangementId"] == "bath-wall-both-rotated"
+                and layout["selection"]["bedVariantId"] == bed_variant_id
+            ]
+            self.assertEqual(len(layouts), 12)
+            for layout in layouts:
+                result = evaluate_layout(layout, self.apartment, self.constraints)
+                self.assertTrue(result["valid"], f"{layout['id']}: {result['reasons']}")
+                self.assertGreaterEqual(result["usableLoggiaDoors"], 1)
+
     def test_every_bed_option_is_generated_in_every_orientation(self):
         expected_beds = {"current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"}
         for arrangement_id in {"divider", "bath-wall-bed-shifted", "bath-wall-both-rotated"}:

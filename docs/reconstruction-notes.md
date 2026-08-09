@@ -88,6 +88,8 @@ The browser reads a generated evaluation file and exposes the bedroom dimensions
 
 Controls are axis-stable: selecting a mattress width never changes the orientation or PAX width, and selecting a PAX width never changes the bed or orientation. An invalid exact combination is disabled. Legacy links to invalid combinations fall back within the same orientation before considering another layout concept.
 
+For the fully rotated arrangement, 120 cm and 140 cm beds retain headboard-wall contact and use calibrated along-wall offsets of 17 px and 30 px respectively so the bedroom Loggia-door swing remains clear.
+
 The ranking is an exploration aid, not a purchase recommendation: the approximate source scale can make small reported gaps unreliable.
 
 ### Furniture anchor invariants
