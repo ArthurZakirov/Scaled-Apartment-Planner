@@ -9,7 +9,7 @@ The planner currently includes:
 - reconstructed sloped exterior envelope, interior partitions, doors, loggia, and balcony;
 - a separate fixed-kitchen layer;
 - a separate furniture layer;
-- the current 111 × 204 cm bed plus three real MALM frame sizes, three modular PAX widths, and four VERNAL L-desk variants;
+- the current 111 × 204 cm bed, the existing 57.5 × 43 × 54 cm bedside cabinet, three real MALM frame sizes, three modular PAX widths, and four VERNAL L-desk variants;
 - three orientation concepts: transverse divider, PAX along the bathroom wall with shifted bed, and PAX plus bed rotated by 90°;
 - 72 explicit generated scenarios with geometric and installation-safety classification;
 - automatic filtering and ranking of geometrically valid scenarios;

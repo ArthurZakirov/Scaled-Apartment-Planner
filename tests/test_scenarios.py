@@ -34,9 +34,14 @@ class ScenarioTests(unittest.TestCase):
         self.assertEqual(len(set(ids)), 72)
 
     def test_external_product_dimensions_are_resolved(self):
-        active = next(layout for layout in self.furniture["layouts"] if layout["id"] == self.furniture["activeLayoutId"])
-        bed = next(obj for obj in active["objects"] if obj["type"] == "bed")
-        pax = next(obj for obj in active["objects"] if obj["type"] == "wardrobe")
+        layout = next(
+            layout
+            for layout in self.furniture["layouts"]
+            if layout["selection"]["bedVariantId"] == "malm-140"
+            and layout["selection"]["paxVariantId"] == "pax-200"
+        )
+        bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
+        pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
         self.assertEqual(bed["dimensionsCm"]["width"], 156)
         self.assertEqual(bed["dimensionsCm"]["depth"], 209)
         self.assertEqual(pax["dimensionsCm"]["width"], 199.6)
@@ -55,6 +60,19 @@ class ScenarioTests(unittest.TestCase):
         self.assertEqual(bed["dimensionsCm"], {"width": 111, "depth": 204})
         self.assertEqual(bed["mattressCm"], {"width": 90, "depth": 200})
         self.assertEqual(bed["confidence"], "user_provided_dimensions")
+
+    def test_owned_bedside_cabinet_follows_every_bed(self):
+        cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
+        for layout in self.furniture["layouts"]:
+            bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
+            cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
+            self.assertEqual(cabinet["dimensionsCm"], {"width": 57.5, "depth": 43, "height": 54})
+            self.assertAlmostEqual(
+                furniture_polygon(bed, cm_per_pixel).distance(furniture_polygon(cabinet, cm_per_pixel)) * cm_per_pixel,
+                2,
+                places=1,
+            )
+            self.assertAlmostEqual((cabinet["positionPx"]["rotationDeg"] - bed["positionPx"]["rotationDeg"]) % 180, 90)
 
     def test_bed_wall_side_stays_fixed_across_width_variants(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]

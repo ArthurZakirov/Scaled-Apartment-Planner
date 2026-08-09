@@ -59,6 +59,7 @@ def evaluate_layout(
     cm_per_pixel = apartment["scale"]["cmPerPixel"]
     interior = Polygon(next(space["points"] for space in apartment["spaces"] if space["id"] == "space-main"))
     object_polygons: dict[str, Polygon] = {}
+    objects_by_id = {obj["id"]: obj for obj in layout["objects"]}
     reasons: list[str] = []
     collisions: list[str] = []
 
@@ -77,7 +78,9 @@ def evaluate_layout(
             first = object_polygons[first_id]
             second = object_polygons[second_id]
             overlap = first.intersection(second).area
-            pair_distances.append(first.distance(second) * cm_per_pixel)
+            pair_types = {objects_by_id[first_id]["type"], objects_by_id[second_id]["type"]}
+            if pair_types != {"bed", "storage"}:
+                pair_distances.append(first.distance(second) * cm_per_pixel)
             if overlap > 0.5:
                 collision = f"{first_id} ↔ {second_id} ({overlap:.1f}px²)"
                 collisions.append(collision)

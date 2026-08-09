@@ -76,6 +76,20 @@
       ]
     },
     {
+      "id": "owned-bedside-cabinet",
+      "type": "storage",
+      "name": "Vorhandene Kommode / Nachttisch",
+      "confidence": "user_provided_dimensions",
+      "variants": [
+        {
+          "id": "bedside-cabinet-57",
+          "label": "Kommode / Nachttisch 57,5 × 43",
+          "dimensionsCm": {"width": 57.5, "depth": 43, "height": 54},
+          "render": {"shape": "rectangle", "label": "Kommode"}
+        }
+      ]
+    },
+    {
       "id": "current-bed",
       "type": "bed",
       "name": "Aktuelles Bett",

@@ -97,6 +97,7 @@ def render(output_svg: Path, output_png: Path):
       .bed { fill:#427eb373; stroke:#28618e; stroke-width:2; }
       .mattress { fill:#ffffff70; stroke:#28618e; stroke-width:1; }
       .desk { fill:#438f677a; stroke:#267348; stroke-width:2; }
+      .storage { fill:#8267ab6b; stroke:#73559c; stroke-width:2; }
       .door { fill:none; stroke:#c27627; stroke-width:1.5; }
       .label { font-size:10px; font-weight:700; text-anchor:middle; fill:#4a5752; }
       .f-label { font-size:8px; font-weight:800; text-anchor:middle; fill:#15241f; }
@@ -132,7 +133,7 @@ def render(output_svg: Path, output_png: Path):
     cm_per_px = apartment["scale"]["cmPerPixel"]
     for obj in layout["objects"]:
         poly = furniture_polygon(obj, cm_per_px)
-        cls = {"wardrobe":"wardrobe", "bed":"bed", "desk":"desk"}.get(obj["type"], "desk")
+        cls = {"wardrobe":"wardrobe", "bed":"bed", "desk":"desk", "storage":"storage"}.get(obj["type"], "desk")
         SubElement(g, "polygon", {"points":points(poly), "class":cls})
         if obj["render"]["shape"] == "bed":
             mw = obj["mattressCm"]["width"] / cm_per_px

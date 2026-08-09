@@ -402,11 +402,12 @@ function renderFurnitureSummary(activeLayout) {
   const summary = htmlEl('div', { className: 'scenario-objects' });
   for (const object of activeLayout.objects) {
     const row = htmlEl('div', { className: 'scenario-object' });
-    row.append(htmlEl('strong', {}, object.render.label));
+    row.append(htmlEl('strong', {}, object.type === 'storage' ? object.name : object.render.label));
     if (object.modules) {
       row.append(htmlEl('small', {}, `${object.modules.length} offene PAX-Module · Stellfläche ${object.dimensionsCm.width.toFixed(1)} × ${object.dimensionsCm.depth.toFixed(0)} cm · Höhe separat beim Kauf wählen`));
     }
     else if (object.mattressCm) row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
+    else if (object.type === 'storage') row.append(htmlEl('small', {}, `${object.dimensionsCm.width} × ${object.dimensionsCm.depth} × ${object.dimensionsCm.height} cm`));
     else row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
     summary.append(row);
   }

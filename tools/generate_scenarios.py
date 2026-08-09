@@ -72,6 +72,32 @@ def desk_position(base, selected_variant, cm_per_pixel):
     return position
 
 
+def bedside_position(bed_position_px, bed_variant, bedside_variant, bedside_base, arrangement, cm_per_pixel):
+    """Place the cabinet beside the bed while following each bed orientation."""
+    angle = math.radians(bed_position_px["rotationDeg"])
+    cross_axis = (math.cos(angle), math.sin(angle))
+    long_axis = (-math.sin(angle), math.cos(angle))
+    side = arrangement.get("bedsideSide", 1)
+    end = arrangement.get("bedsideEnd", 0)
+    cross_offset_px = side * (
+        bed_variant["dimensionsCm"]["width"] / 2
+        + bedside_variant["dimensionsCm"]["depth"] / 2
+        + bedside_base.get("gapToBedCm", 0)
+    ) / cm_per_pixel
+    long_offset_px = end * (
+        bed_variant["dimensionsCm"]["depth"] / 2
+        - bedside_variant["dimensionsCm"]["width"] / 2
+    ) / cm_per_pixel
+    bed_center = bed_position_px["center"]
+    return {
+        "center": [
+            round(bed_center[0] + cross_axis[0] * cross_offset_px + long_axis[0] * long_offset_px, 4),
+            round(bed_center[1] + cross_axis[1] * cross_offset_px + long_axis[1] * long_offset_px, 4),
+        ],
+        "rotationDeg": round(bed_position_px["rotationDeg"] + 90, 4),
+    }
+
+
 def main():
     catalog = load_json("data/furniture-catalog.json")
     matrix = load_json("data/scenario-matrix.json")
@@ -81,6 +107,7 @@ def main():
     placements = matrix["placements"]
     base_bed_variant = variants[placements["bed"]["baseVariantId"]]
     base_pax_variant = variants[placements["pax"]["baseVariantId"]]
+    bedside_variant = variants[placements["bedside"]["variantId"]]
     scenarios = []
 
     arrangements = matrix.get("arrangements") or [{"id": "divider", "label": "Standard"}]
@@ -102,6 +129,14 @@ def main():
                     pax_position_px = arrangement.get("paxPositionPx") or pax_position(
                         placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
                     )
+                    bedside_position_px = bedside_position(
+                        bed_position_px,
+                        bed,
+                        bedside_variant,
+                        placements["bedside"],
+                        arrangement,
+                        apartment["scale"]["cmPerPixel"],
+                    )
                     scenarios.append(
                         {
                             "id": scenario_id,
@@ -121,6 +156,7 @@ def main():
                             "notes": [
                                 "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
                                 "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+                                "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
                                 "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
                                 arrangement.get("recommendation", "PAX benötigt eine geprüfte Verankerungslösung."),
                             ],
@@ -136,6 +172,12 @@ def main():
                                     "templateId": variant_families[bed_id]["id"],
                                     "variantId": bed_id,
                                     "positionPx": bed_position_px,
+                                },
+                                {
+                                    "id": placements["bedside"]["id"],
+                                    "templateId": placements["bedside"]["templateId"],
+                                    "variantId": placements["bedside"]["variantId"],
+                                    "positionPx": bedside_position_px,
                                 },
                                 {
                                     "id": placements["desk"]["id"],

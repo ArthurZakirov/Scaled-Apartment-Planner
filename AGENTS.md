@@ -28,6 +28,7 @@
 - The bathroom-facing short end of PAX and its cross-axis offset are invariant; width changes move only the free end toward or away from the bed.
 - A transverse PAX is never labeled safe without an engineered support solution. Bathroom-wall-parallel concepts are only mounting candidates until the actual wall and fasteners are verified.
 - `ikea-malm-bed` can use the current 90 × 200 cm mattress/111 × 204 cm frame or MALM 140, 160, and 180 cm mattresses while keeping its wall-side edge fixed.
+- `owned-bedside-cabinet` is the user's 57.5 × 43 × 54 cm cabinet. It follows the bed orientation and keeps a 2 cm planning gap to the bed.
 - The VERNAL desk is anchored by its top-right wall-contact corner; both wall-facing edges remain in contact for every desk size.
 - `vernal-l-desk` is intentionally placed in the upper-right living-area corner.
 - The desk may block `door-loggia-living` and `door-balcony-upper`.

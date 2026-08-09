@@ -24,13 +24,22 @@ test('current bed resolves independently from MALM', () => {
 
 test('active scenario uses external MALM and real modular PAX dimensions', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  const active = furniture.layouts.find((layout) => layout.id === furniture.activeLayoutId);
-  const bed = active.objects.find((object) => object.type === 'bed');
-  const pax = active.objects.find((object) => object.type === 'wardrobe');
+  const layout = furniture.layouts.find((item) => item.selection.bedVariantId === 'malm-140' && item.selection.paxVariantId === 'pax-200');
+  const bed = layout.objects.find((object) => object.type === 'bed');
+  const pax = layout.objects.find((object) => object.type === 'wardrobe');
   assert.deepEqual(bed.dimensionsCm, { width: 156, depth: 209, height: 100 });
   assert.equal(pax.dimensionsCm.width, 199.6);
   assert.equal(pax.modules.length, 2);
   assert.equal(pax.requiresAnchoring, true);
+});
+
+test('owned bedside cabinet is present with user-provided dimensions', () => {
+  const furniture = resolveScenarioData(scenarios, catalog);
+  for (const layout of furniture.layouts) {
+    const cabinet = layout.objects.find((object) => object.type === 'storage');
+    assert.deepEqual(cabinet.dimensionsCm, { width: 57.5, depth: 43, height: 54 });
+    assert.equal(cabinet.confidence, 'user_provided_dimensions');
+  }
 });
 
 test('PAX height is not a 2D scenario axis and all three arrangements resolve', () => {
@@ -57,5 +66,5 @@ test('query-selected scenario becomes active without mutating stored data', () =
   const selected = scenarios.scenarios[5].id;
   const furniture = resolveScenarioData(scenarios, catalog, selected);
   assert.equal(furniture.activeLayoutId, selected);
-  assert.equal(scenarios.activeScenarioId, 'scenario-malm-140-pax-200-stable-180-150');
+  assert.equal(scenarios.activeScenarioId, 'scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-180-150');
 });

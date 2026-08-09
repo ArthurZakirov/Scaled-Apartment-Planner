@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "activeScenarioId": "scenario-malm-140-pax-200-stable-180-150",
+  "activeScenarioId": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-180-150",
   "generatedFrom": "data/scenario-matrix.json",
   "scenarioCount": 72,
   "scenarios": [
@@ -22,6 +22,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -48,6 +49,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -83,6 +96,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -109,6 +123,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -144,6 +170,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -170,6 +197,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -205,6 +244,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -231,6 +271,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -266,6 +318,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -292,6 +345,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -327,6 +392,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -353,6 +419,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -388,6 +466,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -414,6 +493,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -449,6 +540,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -475,6 +567,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -510,6 +614,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -536,6 +641,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -571,6 +688,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -597,6 +715,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -632,6 +762,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -658,6 +789,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -693,6 +836,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -719,6 +863,18 @@
               223.0244
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              256.8486,
+              265.072
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -754,6 +910,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -780,6 +937,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -815,6 +984,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -841,6 +1011,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -876,6 +1058,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -902,6 +1085,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -937,6 +1132,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -963,6 +1159,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -998,6 +1206,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1024,6 +1233,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1059,6 +1280,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1085,6 +1307,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1120,6 +1354,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1146,6 +1381,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1181,6 +1428,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1207,6 +1455,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1242,6 +1502,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1268,6 +1529,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1303,6 +1576,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1329,6 +1603,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1364,6 +1650,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1390,6 +1677,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1425,6 +1724,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1451,6 +1751,18 @@
               235.0
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              274.2501,
+              289.0232
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1486,6 +1798,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1512,6 +1825,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1547,6 +1872,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1573,6 +1899,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1608,6 +1946,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1634,6 +1973,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1669,6 +2020,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1695,6 +2047,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1730,6 +2094,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1756,6 +2121,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1791,6 +2168,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1817,6 +2195,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1852,6 +2242,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1878,6 +2269,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1913,6 +2316,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -1939,6 +2343,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -1974,6 +2390,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2000,6 +2417,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2035,6 +2464,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2061,6 +2491,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2096,6 +2538,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2122,6 +2565,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2157,6 +2612,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2183,6 +2639,18 @@
               240.3225
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              281.9841,
+              299.6682
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2218,6 +2686,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2244,6 +2713,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2279,6 +2760,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2305,6 +2787,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2340,6 +2834,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2366,6 +2861,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2401,6 +2908,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2427,6 +2935,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2462,6 +2982,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2488,6 +3009,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2523,6 +3056,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2549,6 +3083,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2584,6 +3130,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2610,6 +3157,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2645,6 +3204,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2671,6 +3231,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2706,6 +3278,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2732,6 +3305,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2767,6 +3352,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2793,6 +3379,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2828,6 +3426,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2854,6 +3453,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2889,6 +3500,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Nicht freistehend verwenden; nur mit fachlich geplanter Wand-, Decken- oder Tragkonstruktion."
       ],
@@ -2915,6 +3527,18 @@
               245.645
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              289.7182,
+              310.3131
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -2950,6 +3574,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -2976,6 +3601,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3011,6 +3648,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3037,6 +3675,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3072,6 +3722,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3098,6 +3749,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3133,6 +3796,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3159,6 +3823,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3194,6 +3870,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3220,6 +3897,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3255,6 +3944,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3281,6 +3971,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3316,6 +4018,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3342,6 +4045,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3377,6 +4092,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3403,6 +4119,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3438,6 +4166,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3464,6 +4193,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3499,6 +4240,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3525,6 +4267,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3560,6 +4314,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3586,6 +4341,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3621,6 +4388,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Wandmontage möglich, aber der Zugriff vor dem offenen PAX ist zu eng; nur als Vergleichsvariante."
       ],
@@ -3647,6 +4415,18 @@
               193.62
             ],
             "rotationDeg": 54
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              297.2694,
+              235.6676
+            ],
+            "rotationDeg": 144
           }
         },
         {
@@ -3682,6 +4462,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -3708,6 +4489,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -3743,6 +4536,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -3769,6 +4563,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -3804,6 +4610,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -3830,6 +4637,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -3865,6 +4684,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -3891,6 +4711,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -3926,6 +4758,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -3952,6 +4785,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -3987,6 +4832,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -4013,6 +4859,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -4048,6 +4906,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -4074,6 +4933,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -4109,6 +4980,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -4135,6 +5007,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -4170,6 +5054,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -4196,6 +5081,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -4231,6 +5128,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -4257,6 +5155,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -4292,6 +5202,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -4318,6 +5229,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
@@ -4353,6 +5276,7 @@
       "notes": [
         "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
         "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
+        "Die vorhandene Kommode folgt der Bettorientierung und steht mit 2 cm Planungsabstand direkt daneben.",
         "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",
         "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen."
       ],
@@ -4379,6 +5303,18 @@
               217.5175
             ],
             "rotationDeg": -36.066
+          }
+        },
+        {
+          "id": "owned-bedside-cabinet",
+          "templateId": "owned-bedside-cabinet",
+          "variantId": "bedside-cabinet-57",
+          "positionPx": {
+            "center": [
+              296.9143,
+              147.9652
+            ],
+            "rotationDeg": 53.934
           }
         },
         {
