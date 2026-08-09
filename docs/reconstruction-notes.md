@@ -64,7 +64,7 @@ The structural model intentionally excludes the marketing illustration's bed, so
 
 ## Product variants and scenario matrix
 
-The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, the user's 57.5 × 43 × 54 cm bedside cabinet, five estimated new-bed footprints for 90, 120, 140, 160, and 180 cm mattresses, three modular PAX widths, and four VERNAL L-desk contexts. New-bed footprints assume 8 cm of frame on each mattress side and 9 cm additional total length, based on the previously verified 140 cm reference footprint; these are estimates, not product specifications. In the divider arrangement the cabinet occupies the audited room-corner position `[290,160]` at 144°, next to both 90 cm bed options and outside the bathroom walls; the other concepts continue to derive it from the bed with a 2 cm planning gap. A reserved 35 cm operating strip keeps the drawers usable. Configurations where it cannot fit or open remain invalid instead of hiding the cabinet. PAX height is purchase metadata rather than a 2D scenario axis because both available heights have the same footprint. Three bedroom orientation concepts, two independent desk positions, and four selectable PAX access reserves produce 1,728 explicit scenarios. The lower desk position is anchored to the reconstructed southeast wall step rather than a fictitious square corner. Each scenario is checked for containment, furniture overlap, full-thickness interior-wall solids, mandatory door access, furniture operating zones, at least one usable loggia door, and at least one usable balcony door.
+The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, the user's 57.5 × 43 × 54 cm bedside cabinet, five estimated new-bed footprints for 90, 120, 140, 160, and 180 cm mattresses, three modular PAX widths, and four VERNAL L-desk contexts. New-bed footprints assume 8 cm of frame on each mattress side and 9 cm additional total length, based on the previously verified 140 cm reference footprint; these are estimates, not product specifications. In the divider arrangement the cabinet occupies the audited room-corner position `[290,160]` at 144°, next to both 90 cm bed options and outside the bathroom; the other concepts continue to derive it from the bed with a 2 cm planning gap. A reserved 35 cm operating strip keeps the drawers usable. Configurations where it cannot fit or open remain invalid instead of hiding the cabinet. PAX height is purchase metadata rather than a 2D scenario axis because both available heights have the same footprint. Three bedroom orientation concepts, two independent desk positions, and four selectable PAX access reserves produce 1,728 explicit scenarios. The lower desk position is anchored to the reconstructed southeast wall step rather than a fictitious square corner. Each scenario is checked for containment, furniture overlap, crossing to the forbidden bathroom side of interior walls, fixed-kitchen clearance, a 60 × 60 cm desk work zone, mandatory door access, furniture operating zones, at least one usable loggia door, and at least one usable balcony door.
 
 The transverse divider remains a geometric experiment only because IKEA requires PAX to be wall anchored. A short-end-only attachment is not treated as equivalent to the documented rear wall mounting. Bathroom-wall-parallel concepts are marked as mounting candidates, not as verified installations; the actual wall substrate, fasteners, permitted drilling, and wardrobe access clearance must be confirmed before purchase.
 
@@ -102,7 +102,7 @@ The ranking is an exploration aid, not a purchase recommendation: the approximat
 
 - New-bed width changes preserve the wall-side external frame edge. The free edge moves toward or away from PAX, so a narrower bed creates a larger signed bed-to-PAX gap.
 - PAX width changes preserve the bathroom-facing short end and its perpendicular offset from the bathroom wall. Only the free end toward the bed moves.
-- VERNAL dimensions are resolved from one of two fixed anchors. The upper position touches the Loggia-side and east walls; the lower position touches the south wall and the inner face of the reconstructed southeast wall step.
+- VERNAL dimensions are resolved from one of two fixed anchors. The upper position touches the Loggia-side and east walls; the lower position touches the south wall and only the short inner face of the reconstructed southeast wall step.
 - Automated tests compare these projected edges and wall-contact coordinates across the complete variant matrix.
 
 ## Default layout experiment
@@ -126,7 +126,9 @@ The ranking is an exploration aid, not a purchase recommendation: the approximat
 - Main top depth: 75 cm.
 - Return depth: 70 cm.
 - The upper position intentionally occupies the corner at the living-room loggia door and upper balcony door.
-- The lower position sits beside the original southeast wall step and blocks the lower balcony door; the upper balcony door remains free.
+- The lower position contacts the south wall and only the short face of the original southeast wall step, not a continuous long right wall. It blocks the lower balcony door while the upper balcony door remains free.
+- A 60 × 60 cm chair/work zone is derived from each desk's handedness and rotation and must remain inside the apartment without intersecting fixed fixtures or loose furniture.
+- A local 60 cm passage minimum applies between the lower desk footprint and the fixed kitchen. The current lower variants leave approximately 52.2, 42.2, or 22.2 cm and are therefore retained for diagnostics but rejected as practical layouts.
 
 ## Next high-value measurements
 

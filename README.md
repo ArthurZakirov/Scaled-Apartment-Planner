@@ -21,6 +21,8 @@ The planner currently includes:
 - a user-selected 0/30/45/60 cm PAX opening zone that no bed, cabinet, desk, or other furniture may obstruct; 45 cm remains the default and 0 cm reserves no area beyond the footprint;
 - integrated orientation markers for bed head/pillows, open PAX access, and cabinet drawer direction;
 - a visible selected access zone in front of the PAX (hidden at 0 cm) and 35 cm in front of the cabinet drawers, plus a distinct warning state when a layout fits geometrically but still lacks a safe anchoring solution;
+- a visible, validated 60 × 60 cm chair/work zone inside every VERNAL cutout;
+- fixed-kitchen collision checks and a local 50 cm hard minimum passage for the lower desk position; 60 cm remains the comfort recommendation;
 - a direct three-button switch between the transverse divider and both bathroom-wall concepts;
 - automatic door-swing intersection checks;
 - a normal vector-only view;

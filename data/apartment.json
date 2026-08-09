@@ -358,6 +358,10 @@
         222,
         338
       ],
+      "forbiddenSidePoint": [
+        100,
+        300
+      ],
       "thicknessPx": 18
     },
     {
@@ -370,6 +374,10 @@
       "end": [
         165,
         380
+      ],
+      "forbiddenSidePoint": [
+        100,
+        300
       ],
       "thicknessPx": 18
     },

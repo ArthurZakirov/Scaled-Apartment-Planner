@@ -9,6 +9,8 @@ from shapely.affinity import rotate, translate
 from shapely.geometry import LineString, Polygon
 from shapely.ops import unary_union
 
+from desk_geometry import desk_work_zone_polygon, fixed_fixture_polygon, fixed_fixture_union
+
 
 def furniture_polygon(obj: dict[str, Any], cm_per_pixel: float) -> Polygon:
     dimensions = obj["dimensionsCm"]
@@ -41,6 +43,30 @@ def wall_solid_polygon(wall: dict[str, Any]) -> Polygon:
     """Expand a wall centerline into its physical solid using its modeled thickness."""
     return LineString([wall["start"], wall["end"]]).buffer(
         wall["thicknessPx"] / 2, cap_style=2, join_style=2
+    )
+
+
+def wall_forbidden_side_polygon(wall: dict[str, Any]) -> Polygon:
+    """Return a large half-plane on the room side furniture may not enter."""
+    start_x, start_y = wall["start"]
+    end_x, end_y = wall["end"]
+    direction_x, direction_y = end_x - start_x, end_y - start_y
+    length = math.hypot(direction_x, direction_y)
+    unit_x, unit_y = direction_x / length, direction_y / length
+    normal_x, normal_y = -unit_y, unit_x
+    forbidden_x, forbidden_y = wall["forbiddenSidePoint"]
+    if (forbidden_x - start_x) * normal_x + (forbidden_y - start_y) * normal_y < 0:
+        normal_x, normal_y = -normal_x, -normal_y
+    reach = 10_000
+    line_start = (start_x - unit_x * reach, start_y - unit_y * reach)
+    line_end = (end_x + unit_x * reach, end_y + unit_y * reach)
+    return Polygon(
+        [
+            line_start,
+            line_end,
+            (line_end[0] + normal_x * reach, line_end[1] + normal_y * reach),
+            (line_start[0] + normal_x * reach, line_start[1] + normal_y * reach),
+        ]
     )
 
 
@@ -86,7 +112,10 @@ def wardrobe_access_polygon(obj: dict[str, Any], cm_per_pixel: float, depth_cm: 
 
 
 def evaluate_layout(
-    layout: dict[str, Any], apartment: dict[str, Any], constraints: dict[str, Any]
+    layout: dict[str, Any],
+    apartment: dict[str, Any],
+    constraints: dict[str, Any],
+    fixtures: dict[str, Any],
 ) -> dict[str, Any]:
     cm_per_pixel = apartment["scale"]["cmPerPixel"]
     interior = Polygon(next(space["points"] for space in apartment["spaces"] if space["id"] == "space-main"))
@@ -95,10 +124,10 @@ def evaluate_layout(
     reasons: list[str] = []
     collisions: list[str] = []
     interior_wall_collisions: list[str] = []
-    interior_wall_solids = {
-        wall["id"]: wall_solid_polygon(wall)
+    interior_wall_forbidden_sides = {
+        wall["id"]: wall_forbidden_side_polygon(wall)
         for wall in apartment["walls"]
-        if wall.get("kind") == "interior"
+        if wall.get("kind") == "interior" and wall.get("forbiddenSidePoint")
     }
 
     for obj in layout["objects"]:
@@ -108,8 +137,8 @@ def evaluate_layout(
             reasons.append(f"Furniture {obj['id']} has invalid geometry.")
         if not interior.buffer(5).covers(polygon):
             reasons.append(f"Furniture {obj['id']} leaves the approximate interior.")
-        for wall_id, wall_solid in interior_wall_solids.items():
-            overlap = polygon.intersection(wall_solid).area
+        for wall_id, forbidden_side in interior_wall_forbidden_sides.items():
+            overlap = polygon.intersection(forbidden_side).area
             if overlap > 0.5:
                 collision = f"{obj['id']} ↔ {wall_id} ({overlap:.1f}px²)"
                 interior_wall_collisions.append(collision)
@@ -129,6 +158,51 @@ def evaluate_layout(
                 collision = f"{first_id} ↔ {second_id} ({overlap:.1f}px²)"
                 collisions.append(collision)
                 reasons.append(f"Furniture overlap: {collision}.")
+
+    fixture_polygons = {
+        fixture["id"]: fixed_fixture_polygon(fixture) for fixture in fixtures["fixtures"]
+    }
+    fixed_union = fixed_fixture_union(fixtures["fixtures"])
+    desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
+    desk_polygon = object_polygons[desk["id"]]
+    desk_fixture_blocked_by: list[str] = []
+    for fixture_id, fixture_polygon in fixture_polygons.items():
+        if desk_polygon.intersection(fixture_polygon).area > 0.5:
+            desk_fixture_blocked_by.append(fixture_id)
+            reasons.append(f"Desk overlaps fixed fixture {fixture_id}.")
+
+    desk_fixture_clearance_cm = desk_polygon.distance(fixed_union) * cm_per_pixel
+    if layout["selection"].get("deskPlacementId") == "lower-balcony-corner":
+        minimum_passage_cm = constraints.get("lowerDeskKitchenPassageMinimumCm", 50)
+        if desk_fixture_clearance_cm + 0.05 < minimum_passage_cm:
+            reasons.append(
+                f"Lower desk leaves only {desk_fixture_clearance_cm:.1f} cm to the fixed kitchen; "
+                f"at least {minimum_passage_cm:g} cm is required."
+            )
+
+    work_zone_dimensions = constraints.get("deskWorkZoneCm", {"width": 60, "depth": 60})
+    desk_work_zone = desk_work_zone_polygon(
+        desk,
+        cm_per_pixel,
+        work_zone_dimensions.get("width", 60),
+        work_zone_dimensions.get("depth", 60),
+    )
+    desk_work_zone_blocked_by: list[str] = []
+    if desk_work_zone.is_empty:
+        desk_work_zone_blocked_by.append("desk-cutout")
+        reasons.append("Desk cutout is too small for the required chair/work zone.")
+    else:
+        if not interior.buffer(0.01).covers(desk_work_zone):
+            desk_work_zone_blocked_by.append("interior-boundary")
+            reasons.append("Desk chair/work zone leaves the approximate interior.")
+        for fixture_id, fixture_polygon in fixture_polygons.items():
+            if desk_work_zone.intersection(fixture_polygon).area > 0.5:
+                desk_work_zone_blocked_by.append(fixture_id)
+                reasons.append(f"Desk chair/work zone is blocked by fixed fixture {fixture_id}.")
+        for other in (obj for obj in layout["objects"] if obj["id"] != desk["id"]):
+            if desk_work_zone.intersection(object_polygons[other["id"]]).area > 0.5:
+                desk_work_zone_blocked_by.append(other["id"])
+                reasons.append(f"Desk chair/work zone is blocked by {other['id']}.")
 
     wardrobe_access_blocked_by: list[str] = []
     wardrobe_access_depth_cm = layout.get("selection", {}).get(
@@ -193,7 +267,6 @@ def evaluate_layout(
     usable_balcony = len({"door-balcony-upper", "door-balcony-lower"} - blocked_by.keys())
     bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
     pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
-    desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
     bed_pax_gap_cm = object_polygons[bed["id"]].distance(object_polygons[pax["id"]]) * cm_per_pixel
     score = 0.0
     if not reasons:
@@ -219,6 +292,9 @@ def evaluate_layout(
         "wardrobeAccessBlockedBy": wardrobe_access_blocked_by,
         "wardrobeAccessDepthCm": wardrobe_access_depth_cm,
         "storageAccessBlockedBy": storage_access_blocked_by,
+        "deskFixedFixtureBlockedBy": desk_fixture_blocked_by,
+        "deskWorkZoneBlockedBy": desk_work_zone_blocked_by,
+        "deskFixedFixtureClearanceCm": round(desk_fixture_clearance_cm, 1),
         "minimumFurnitureGapCm": round(minimum_gap_cm, 1),
         "bedPaxGapCm": round(bed_pax_gap_cm, 1),
         "freeFloorAreaM2": round(free_floor_m2, 1),

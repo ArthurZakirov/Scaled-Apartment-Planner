@@ -87,7 +87,7 @@
       "label": "Unten an Balkon/Südwand",
       "wallContactCornerPx": [493, 527],
       "positionPx": {"topLeft": [493, 527], "rotationDeg": 180, "handedness": "left"},
-      "note": "Der Tisch steht links vom originalen Wandversatz; die obere Balkontür bleibt als Zugang frei."
+      "note": "Der Tisch berührt die Südwand und das kurze Segment des originalen Wandversatzes; er blockiert die untere Balkontür, während die obere als Zugang frei bleibt."
     }
   ]
 }

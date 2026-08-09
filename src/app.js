@@ -124,6 +124,25 @@ function furniturePolygon(object, cmPerPixel) {
   return local.map((point) => rotatePoint(point, object.positionPx.rotationDeg, [cx, cy]));
 }
 
+function deskWorkZonePolygon(object, cmPerPixel, dimensionsCm) {
+  const { width, mainTopDepth, returnDepth } = object.dimensionsCm;
+  const deskWidth = width / cmPerPixel;
+  const mainDepth = mainTopDepth / cmPerPixel;
+  const returnWidth = returnDepth / cmPerPixel;
+  const zoneWidth = dimensionsCm.width / cmPerPixel;
+  const zoneDepth = dimensionsCm.depth / cmPerPixel;
+  const innerX = object.positionPx.handedness === 'left' ? returnWidth : deskWidth - returnWidth;
+  const startX = object.positionPx.handedness === 'left' ? innerX : innerX - zoneWidth;
+  const local = [
+    [startX, mainDepth],
+    [startX + zoneWidth, mainDepth],
+    [startX + zoneWidth, mainDepth + zoneDepth],
+    [startX, mainDepth + zoneDepth]
+  ];
+  const [x, y] = object.positionPx.topLeft;
+  return local.map(([px, py]) => rotatePoint([x + px, y + py], object.positionPx.rotationDeg, [x, y]));
+}
+
 function doorSwingPolygon(door, segments = 24) {
   const [hx, hy] = door.hinge;
   const angle1 = Math.atan2(door.closedPoint[1] - hy, door.closedPoint[0] - hx);
@@ -399,6 +418,16 @@ function buildSvg(apartment, fixtures, furniture, constraints, calibration) {
     }));
     const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
     accessLayer.append(svgEl('text', { x: center[0], y: center[1], class: 'storage-access-zone-label' }, `${depthCm} cm Schubladen`));
+  }
+  for (const item of furniturePolygons.filter((entry) => entry.object.type === 'desk')) {
+    const zone = deskWorkZonePolygon(item.object, apartment.scale.cmPerPixel, constraints.deskWorkZoneCm);
+    accessLayer.append(svgEl('polygon', {
+      points: pointsAttr(zone),
+      class: 'desk-work-zone',
+      'data-id': `${item.id}-work-zone`
+    }));
+    const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
+    accessLayer.append(svgEl('text', { x: center[0], y: center[1], class: 'desk-work-zone-label' }, '60 × 60 cm Stuhlzone'));
   }
   svg.append(accessLayer);
 

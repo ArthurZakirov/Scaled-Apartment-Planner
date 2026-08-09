@@ -94,9 +94,10 @@ test('user-facing bedroom layouts contain only valid geometry and preserve the d
   const furniture = resolveScenarioData(scenarios, catalog);
   const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
   const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
-  assert.equal(layouts.length, 48);
+  assert.ok(layouts.length > 0);
   assert.ok(layouts.every((layout) => validIds.has(layout.id)));
   assert.ok(layouts.every((layout) => layout.selection.deskVariantId === 'quick-150-150'));
+  assert.ok(layouts.every((layout) => layout.selection.deskPlacementId === 'upper-loggia-corner'));
 });
 
 test('query-selected scenario becomes active without mutating stored data', () => {

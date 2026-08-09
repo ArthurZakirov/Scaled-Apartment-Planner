@@ -7,7 +7,7 @@ import unittest
 from copy import deepcopy
 from pathlib import Path
 
-from shapely.geometry import LineString
+from shapely.geometry import LineString, Polygon
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
@@ -15,7 +15,8 @@ sys.path.insert(0, str(ROOT / "tools"))
 from furniture import resolve_scenario_data  # noqa: E402
 from geometry import expand_apartment_geometry  # noqa: E402
 from validate_geometry import evaluate_layout  # noqa: E402
-from scenario_metrics import furniture_polygon, wall_solid_polygon, wardrobe_access_polygon  # noqa: E402
+from desk_geometry import desk_work_zone_polygon, fixed_fixture_union  # noqa: E402
+from scenario_metrics import furniture_polygon, wall_forbidden_side_polygon, wardrobe_access_polygon  # noqa: E402
 
 
 def load_json(relative: str):
@@ -30,6 +31,10 @@ class ScenarioTests(unittest.TestCase):
         cls.furniture = resolve_scenario_data(cls.scenario_data, cls.catalog)
         cls.apartment = expand_apartment_geometry(load_json("data/apartment.json"))
         cls.constraints = load_json("data/layout-constraints.json")
+        cls.fixtures = load_json("data/fixed-fixtures.json")
+
+    def evaluate(self, layout):
+        return evaluate_layout(layout, self.apartment, self.constraints, self.fixtures)
 
     def test_matrix_contains_1728_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
@@ -114,8 +119,8 @@ class ScenarioTests(unittest.TestCase):
 
     def test_divider_commode_stays_out_of_bathroom_walls(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
-        bath_wall_solids = [
-            wall_solid_polygon(wall)
+        bath_forbidden_sides = [
+            wall_forbidden_side_polygon(wall)
             for wall in self.apartment["walls"]
             if wall["id"] in {"wall-bath-upper", "wall-bath-lower"}
         ]
@@ -124,7 +129,7 @@ class ScenarioTests(unittest.TestCase):
                 continue
             cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
             cabinet_polygon = furniture_polygon(cabinet, cm_per_pixel)
-            self.assertTrue(all(cabinet_polygon.intersection(wall).area <= 0.5 for wall in bath_wall_solids), layout["id"])
+            self.assertTrue(all(cabinet_polygon.intersection(side).area <= 0.5 for side in bath_forbidden_sides), layout["id"])
 
     def test_divider_commode_remains_next_to_90_cm_beds_with_clear_drawers(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
@@ -141,11 +146,11 @@ class ScenarioTests(unittest.TestCase):
                 furniture_polygon(bed, cm_per_pixel).distance(furniture_polygon(cabinet, cm_per_pixel)) * cm_per_pixel,
                 5,
             )
-            self.assertNotIn("sleeping-bed", evaluate_layout(layout, self.apartment, self.constraints)["storageAccessBlockedBy"])
+            self.assertNotIn("sleeping-bed", self.evaluate(layout)["storageAccessBlockedBy"])
 
-    def test_every_valid_scenario_is_clear_of_fixed_interior_wall_solids(self):
+    def test_every_valid_scenario_stays_on_the_furniture_side_of_interior_walls(self):
         for layout in self.furniture["layouts"]:
-            result = evaluate_layout(layout, self.apartment, self.constraints)
+            result = self.evaluate(layout)
             if result["valid"]:
                 self.assertEqual(result["interiorWallCollisions"], [], layout["id"])
 
@@ -160,7 +165,7 @@ class ScenarioTests(unittest.TestCase):
             ],
             "rotationDeg": 0,
         }
-        result = evaluate_layout(layout, self.apartment, self.constraints)
+        result = self.evaluate(layout)
         self.assertFalse(result["valid"])
         self.assertTrue(
             any("owned-bedside-cabinet ↔ wall-bath-lower" in collision for collision in result["interiorWallCollisions"])
@@ -222,6 +227,70 @@ class ScenarioTests(unittest.TestCase):
         self.assertAlmostEqual(anchors["lower-balcony-corner"][0][0], 493, places=3)
         self.assertAlmostEqual(anchors["lower-balcony-corner"][0][1], 527, places=3)
 
+    def test_lower_desk_variants_enforce_the_local_50_cm_kitchen_passage(self):
+        expected_clearance = {
+            "quick-150-150": 52.2,
+            "stable-160-140": 42.2,
+            "quick-180-150": 22.2,
+            "stable-180-150": 22.2,
+        }
+        sampled = {}
+        for layout in self.furniture["layouts"]:
+            if (
+                layout["selection"]["arrangementId"] != "divider"
+                or layout["selection"]["bedVariantId"] != "new-bed-90"
+                or layout["selection"]["paxVariantId"] != "pax-200"
+                or layout["selection"]["deskPlacementId"] != "lower-balcony-corner"
+                or layout["selection"]["paxAccessDepthCm"] != 45
+            ):
+                continue
+            result = self.evaluate(layout)
+            sampled[layout["selection"]["deskVariantId"]] = result["deskFixedFixtureClearanceCm"]
+            passage_reasons = [reason for reason in result["reasons"] if "to the fixed kitchen" in reason]
+            if layout["selection"]["deskVariantId"] == "quick-150-150":
+                self.assertEqual(passage_reasons, [], layout["id"])
+            else:
+                self.assertTrue(any("at least 50 cm is required" in reason for reason in passage_reasons), layout["id"])
+        self.assertEqual(set(sampled), set(expected_clearance))
+        for variant_id, clearance in sampled.items():
+            self.assertAlmostEqual(clearance, expected_clearance[variant_id], delta=0.2)
+
+    def test_every_valid_desk_has_a_clear_60_by_60_cm_work_zone(self):
+        cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
+        interior = next(space for space in self.apartment["spaces"] if space["id"] == "space-main")
+        interior_polygon = Polygon(interior["points"])
+        fixtures = fixed_fixture_union(self.fixtures["fixtures"])
+        for layout in self.furniture["layouts"]:
+            result = self.evaluate(layout)
+            if not result["valid"]:
+                continue
+            desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
+            zone = desk_work_zone_polygon(desk, cm_per_pixel, 60, 60)
+            self.assertAlmostEqual(zone.area * cm_per_pixel**2, 3600, places=1, msg=layout["id"])
+            self.assertTrue(interior_polygon.buffer(0.01).covers(zone), layout["id"])
+            self.assertEqual(result["deskWorkZoneBlockedBy"], [], layout["id"])
+            self.assertLess(zone.intersection(fixtures).area, 0.5, layout["id"])
+
+    def test_desk_overlapping_a_fixed_kitchen_fixture_is_invalid(self):
+        layout = deepcopy(next(item for item in self.furniture["layouts"] if item["id"] == self.furniture["activeLayoutId"]))
+        desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
+        desk["positionPx"]["topLeft"] = [205, 500]
+        desk["positionPx"]["rotationDeg"] = 0
+        desk["positionPx"]["handedness"] = "right"
+        result = self.evaluate(layout)
+        self.assertFalse(result["valid"])
+        self.assertIn("kitchen-bottom-run", result["deskFixedFixtureBlockedBy"])
+
+    def test_furniture_inside_the_desk_work_zone_is_invalid(self):
+        layout = deepcopy(next(item for item in self.furniture["layouts"] if item["id"] == self.furniture["activeLayoutId"]))
+        desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
+        cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
+        center = desk_work_zone_polygon(desk, self.apartment["scale"]["cmPerPixel"]).centroid
+        cabinet["positionPx"] = {"center": [center.x, center.y], "rotationDeg": 0}
+        result = self.evaluate(layout)
+        self.assertFalse(result["valid"])
+        self.assertIn(cabinet["id"], result["deskWorkZoneBlockedBy"])
+
     def test_bed_to_pax_gap_grows_as_bed_gets_narrower(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         signed_gaps = {}
@@ -261,7 +330,7 @@ class ScenarioTests(unittest.TestCase):
             and layout["selection"]["bedVariantId"] == "current-bed-90"
             and layout["selection"]["arrangementId"] != "divider"
             and layout["selection"]["paxAccessDepthCm"] == 45
-            for result in [evaluate_layout(layout, self.apartment, self.constraints)]
+            for result in [self.evaluate(layout)]
         }
         self.assertEqual(set(results), {"bath-wall-bed-shifted", "bath-wall-both-rotated"})
         self.assertTrue(all(result["installationStatus"] == "manufacturer_wall_mount_candidate" for result in results.values()))
@@ -281,7 +350,7 @@ class ScenarioTests(unittest.TestCase):
         ]
         self.assertEqual(len(layouts), 24)
         for layout in layouts:
-            result = evaluate_layout(layout, self.apartment, self.constraints)
+            result = self.evaluate(layout)
             self.assertFalse(result["valid"])
             self.assertGreaterEqual(result["usableLoggiaDoors"], 1)
             self.assertIn("sleeping-bed", result["wardrobeAccessBlockedBy"])
@@ -318,7 +387,7 @@ class ScenarioTests(unittest.TestCase):
 
     def test_every_valid_scenario_keeps_at_least_one_loggia_door_usable(self):
         for layout in self.furniture["layouts"]:
-            result = evaluate_layout(layout, self.apartment, self.constraints)
+            result = self.evaluate(layout)
             if result["valid"]:
                 self.assertGreaterEqual(result["usableLoggiaDoors"], 1, layout["id"])
 
@@ -326,14 +395,13 @@ class ScenarioTests(unittest.TestCase):
         for layout in self.furniture["layouts"]:
             if layout["selection"]["deskPlacementId"] != "lower-balcony-corner":
                 continue
-            result = evaluate_layout(layout, self.apartment, self.constraints)
-            if result["valid"]:
-                self.assertNotIn("door-balcony-upper", result["blockedBy"], layout["id"])
-                self.assertIn("vernal-l-desk", result["blockedBy"].get("door-balcony-lower", []), layout["id"])
+            result = self.evaluate(layout)
+            self.assertNotIn("door-balcony-upper", result["blockedBy"], layout["id"])
+            self.assertIn("vernal-l-desk", result["blockedBy"].get("door-balcony-lower", []), layout["id"])
 
     def test_every_valid_scenario_keeps_every_furniture_item_out_of_pax_access_zone(self):
         for layout in self.furniture["layouts"]:
-            result = evaluate_layout(layout, self.apartment, self.constraints)
+            result = self.evaluate(layout)
             if result["valid"]:
                 self.assertEqual(result["wardrobeAccessBlockedBy"], [], layout["id"])
 
@@ -341,7 +409,7 @@ class ScenarioTests(unittest.TestCase):
         base_id = "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150"
         layouts = {layout["selection"]["paxAccessDepthCm"]: layout for layout in self.furniture["layouts"] if layout["id"] in {base_id, f"{base_id}-pax-access-0", f"{base_id}-pax-access-30", f"{base_id}-pax-access-60"}}
         self.assertEqual(set(layouts), {0, 30, 45, 60})
-        results = {depth: evaluate_layout(layout, self.apartment, self.constraints) for depth, layout in layouts.items()}
+        results = {depth: self.evaluate(layout) for depth, layout in layouts.items()}
         self.assertEqual({depth: result["wardrobeAccessDepthCm"] for depth, result in results.items()}, {0: 0, 30: 30, 45: 45, 60: 60})
         self.assertEqual(results[0]["wardrobeAccessBlockedBy"], [])
         self.assertIn("sleeping-bed", results[45]["wardrobeAccessBlockedBy"])
@@ -349,7 +417,7 @@ class ScenarioTests(unittest.TestCase):
 
     def test_every_valid_scenario_keeps_cabinet_drawers_usable(self):
         for layout in self.furniture["layouts"]:
-            result = evaluate_layout(layout, self.apartment, self.constraints)
+            result = self.evaluate(layout)
             if result["valid"]:
                 self.assertEqual(result["storageAccessBlockedBy"], [], layout["id"])
 
@@ -359,14 +427,14 @@ class ScenarioTests(unittest.TestCase):
         cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
         access_center = wardrobe_access_polygon(pax, self.apartment["scale"]["cmPerPixel"]).centroid
         cabinet["positionPx"] = {"center": [access_center.x, access_center.y], "rotationDeg": pax["positionPx"]["rotationDeg"]}
-        result = evaluate_layout(layout, self.apartment, self.constraints)
+        result = self.evaluate(layout)
         self.assertFalse(result["valid"])
         self.assertIn(cabinet["id"], result["wardrobeAccessBlockedBy"])
 
     def test_pax_access_zone_never_conflicts_with_a_door_in_valid_scenarios(self):
         door_ids = {door["id"] for door in self.apartment["doors"]}
         for layout in self.furniture["layouts"]:
-            result = evaluate_layout(layout, self.apartment, self.constraints)
+            result = self.evaluate(layout)
             if result["valid"]:
                 self.assertTrue(door_ids.isdisjoint(result["wardrobeAccessBlockedBy"]), layout["id"])
 
@@ -378,7 +446,7 @@ class ScenarioTests(unittest.TestCase):
                 if item["id"] == "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150"
             )
         )
-        result = evaluate_layout(layout, self.apartment, self.constraints)
+        result = self.evaluate(layout)
         self.assertFalse(result["valid"])
         self.assertIn("sleeping-bed", result["wardrobeAccessBlockedBy"])
 
@@ -395,12 +463,12 @@ class ScenarioTests(unittest.TestCase):
                     "render": {"shape": "rectangle", "label": "Test blocker"},
                 }
             )
-        result = evaluate_layout(layout, self.apartment, self.constraints)
+        result = self.evaluate(layout)
         self.assertFalse(result["valid"])
         self.assertIn("At least one Loggia door must remain usable.", result["reasons"])
 
     def test_generated_evaluations_match_geometric_results(self):
-        results = [evaluate_layout(layout, self.apartment, self.constraints) for layout in self.furniture["layouts"]]
+        results = [self.evaluate(layout) for layout in self.furniture["layouts"]]
         evaluations = load_json("data/scenario-evaluations.json")
         self.assertEqual(sum(result["valid"] for result in results), evaluations["validCount"])
         self.assertGreater(evaluations["validCount"], 0)

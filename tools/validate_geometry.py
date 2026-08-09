@@ -112,7 +112,9 @@ def main() -> int:
             f"found {len(scenario_data['scenarios'])}."
         )
 
-    scenario_results = [evaluate_layout(layout, apartment, constraints) for layout in furniture["layouts"]]
+    scenario_results = [
+        evaluate_layout(layout, apartment, constraints, fixtures) for layout in furniture["layouts"]
+    ]
     valid_scenarios = rank_results(scenario_results)
     expected_evaluations = {
         "version": 1,
