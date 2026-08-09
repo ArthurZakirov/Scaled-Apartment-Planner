@@ -92,6 +92,8 @@ For the fully rotated arrangement, the current bed and estimated 90 cm and 120 c
 
 The bedroom Loggia door is hinged at the upper endpoint `[352, 177]`; its leaf closes toward `[386, 220]` and swings inward toward `[309, 211]`. This matches the opposite hinge shown in the reference instead of the earlier reversed reconstruction.
 
+The physical photo and the white rectangle in the source plan show that this door is recessed in a reveal. The model records a 20 cm reveal depth and renders it as a white outlined strip. In the fully rotated arrangement, the bed headboard is therefore held 20 cm off the wall so the open leaf can occupy that strip; the door-swing polygon remains unchanged and still participates in collision checks.
+
 The ranking is an exploration aid, not a purchase recommendation: the approximate source scale can make small reported gaps unreliable.
 
 ### Furniture anchor invariants

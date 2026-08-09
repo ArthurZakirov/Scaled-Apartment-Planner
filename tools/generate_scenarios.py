@@ -55,6 +55,18 @@ def shift_position_along_width_axis(position, shift_px):
     return shifted
 
 
+def shift_position_away_from_headboard_wall(position, gap_cm, cm_per_pixel):
+    """Create a free strip behind the headboard for a recessed door leaf."""
+    shifted = json.loads(json.dumps(position))
+    angle = math.radians(shifted["rotationDeg"])
+    shift_px = gap_cm / cm_per_pixel
+    shifted["center"] = [
+        round(shifted["center"][0] - math.sin(angle) * shift_px, 4),
+        round(shifted["center"][1] + math.cos(angle) * shift_px, 4),
+    ]
+    return shifted
+
+
 def pax_position(base, base_variant, selected_variant, cm_per_pixel):
     """Keep the bathroom-facing short end and the cross-axis position fixed."""
     position = json.loads(json.dumps(base["positionPx"]))
@@ -164,6 +176,11 @@ def main():
                     wall_shift_px = arrangement.get("bedWallShiftPxByVariant", {}).get(bed_id, 0)
                     if wall_shift_px:
                         bed_position_px = shift_position_along_width_axis(bed_position_px, wall_shift_px)
+                    headboard_gap_cm = arrangement.get("bedHeadboardWallGapCm", 0)
+                    if headboard_gap_cm:
+                        bed_position_px = shift_position_away_from_headboard_wall(
+                            bed_position_px, headboard_gap_cm, apartment["scale"]["cmPerPixel"]
+                        )
                     pax_position_px = arrangement.get("paxPositionPx") or pax_position(
                         placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
                     )
@@ -192,7 +209,11 @@ def main():
                                 "deskVariantId": desk_id,
                             },
                             "notes": [
-                                "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker.",
+                                (
+                                    f"Das Kopfende hält {headboard_gap_cm:g} cm Abstand zur Wand, damit die zurückgesetzte Loggiatür in der Laibung öffnen kann."
+                                    if headboard_gap_cm
+                                    else "Die wandseitige Außenkante des Betts bleibt innerhalb der jeweiligen Anordnung am Wandanker."
+                                ),
                                 "PAX ist offen ohne Türen geplant; seine 58 cm Tiefe bleibt unverändert.",
                                 "Die vorhandene Kommode steht mit 2 cm Planungsabstand am Bettende oder an der Bettseite und darf die PAX-Öffnung nicht blockieren.",
                                 "Die obere und rechte Tischkante bleiben unabhängig von der Tischgröße an ihren Wänden.",

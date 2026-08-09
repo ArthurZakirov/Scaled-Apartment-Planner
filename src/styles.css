@@ -47,6 +47,8 @@ a:hover { text-decoration: underline; }
 .calibration-floorplan .wall { stroke: #ff1f8f; }
 .balustrade { fill: none; stroke: #8ea096; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
 .window-line { stroke: #88cad1; stroke-width: 5; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.door-reveal { fill: rgba(255,255,255,.92); stroke: #aebbb2; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.calibration-floorplan .door-reveal { stroke: #ff1f8f; opacity: var(--vector-opacity); }
 
 .fixture { fill: #d7ded7; stroke: #819086; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
 .fixture-sink, .fixture-hob { fill: #f3f5f2; }

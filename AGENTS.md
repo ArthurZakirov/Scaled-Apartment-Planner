@@ -28,6 +28,7 @@
 - The bathroom-facing short end of PAX and its cross-axis offset are invariant; width changes move only the free end toward or away from the bed.
 - A transverse PAX is never labeled safe without an engineered support solution. Bathroom-wall-parallel concepts are only mounting candidates until the actual wall and fasteners are verified.
 - `sleeping-bed` can use the current 90 × 200 cm mattress/111 × 204 cm frame or an estimated new bed for 90, 120, 140, 160, and 180 cm mattress widths while keeping its wall-side edge fixed.
+- In `bath-wall-both-rotated`, preserve the 20 cm headboard-to-wall strip created by the recessed bedroom-Loggia door reveal; this replaces direct wall contact for that orientation.
 - Bedroom controls preserve the active VERNAL desk variant; changing bed, mattress, PAX, or orientation must not change the desk.
 - Each bedroom selector changes only its own axis. If the exact combination is invalid, disable that option; never silently change orientation, bed, PAX, or another furniture choice to make it fit.
 - `owned-bedside-cabinet` is the user's 57.5 × 43 × 54 cm cabinet. It follows the bed orientation and keeps a 2 cm planning gap to the bed.

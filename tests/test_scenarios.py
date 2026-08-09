@@ -7,6 +7,8 @@ import unittest
 from copy import deepcopy
 from pathlib import Path
 
+from shapely.geometry import LineString
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
@@ -190,6 +192,26 @@ class ScenarioTests(unittest.TestCase):
             result = evaluate_layout(layout, self.apartment, self.constraints)
             self.assertTrue(result["valid"], f"{layout['id']}: {result['reasons']}")
             self.assertGreaterEqual(result["usableLoggiaDoors"], 1)
+
+    def test_rotated_beds_reserve_approximately_20_cm_behind_headboard(self):
+        wall = next(item for item in self.apartment["walls"] if item["id"] == "wall-outer-nw")
+        wall_axis = LineString([wall["start"], wall["end"]])
+        wall_half_thickness_cm = wall["thicknessPx"] * self.apartment["scale"]["cmPerPixel"] / 2
+        for bed_variant_id in ("current-bed-90", "new-bed-90", "new-bed-120"):
+            layout = next(
+                item
+                for item in self.furniture["layouts"]
+                if item["selection"]["arrangementId"] == "bath-wall-both-rotated"
+                and item["selection"]["bedVariantId"] == bed_variant_id
+            )
+            bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
+            clear_gap_cm = (
+                wall_axis.distance(furniture_polygon(bed, self.apartment["scale"]["cmPerPixel"]))
+                * self.apartment["scale"]["cmPerPixel"]
+                - wall_half_thickness_cm
+            )
+            self.assertGreater(clear_gap_cm, 15)
+            self.assertLess(clear_gap_cm, 22)
 
     def test_every_bed_option_is_generated_in_every_orientation(self):
         expected_beds = {"current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"}

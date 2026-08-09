@@ -39,6 +39,7 @@ class GeometryValidationTests(unittest.TestCase):
         self.assertEqual(door["hinge"], [352, 177])
         self.assertEqual(door["closedPoint"], [386, 220])
         self.assertEqual(door["openPoint"], [309, 211])
+        self.assertEqual(door["revealDepthCm"], 20)
 
     def test_skewed_wall_fails_perpendicular_rule(self):
         apartment = copy.deepcopy(self.apartment)

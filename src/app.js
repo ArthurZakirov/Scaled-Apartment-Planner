@@ -143,6 +143,20 @@ function doorSwingPolygon(door, segments = 24) {
   return points;
 }
 
+function doorRevealPolygon(door, cmPerPixel) {
+  if (!door.revealDepthCm) return null;
+  const [hx, hy] = door.hinge;
+  const [cx, cy] = door.closedPoint;
+  const edge = [cx - hx, cy - hy];
+  const length = Math.hypot(edge[0], edge[1]);
+  let normal = [-edge[1] / length, edge[0] / length];
+  const openVector = [door.openPoint[0] - hx, door.openPoint[1] - hy];
+  if (normal[0] * openVector[0] + normal[1] * openVector[1] < 0) normal = [-normal[0], -normal[1]];
+  const depthPx = door.revealDepthCm / cmPerPixel;
+  const offset = [normal[0] * depthPx, normal[1] * depthPx];
+  return [[hx, hy], [cx, cy], [cx + offset[0], cy + offset[1]], [hx + offset[0], hy + offset[1]]];
+}
+
 function arcPath(door) {
   const [hx, hy] = door.hinge;
   const r = Math.max(
@@ -307,6 +321,17 @@ function buildSvg(apartment, fixtures, furniture, calibration) {
     }));
   }
   svg.append(windows);
+
+  const revealLayer = svgEl('g', { class: 'layer layer-door-reveals' });
+  for (const door of apartment.doors) {
+    const reveal = doorRevealPolygon(door, apartment.scale.cmPerPixel);
+    if (reveal) revealLayer.append(svgEl('polygon', {
+      points: pointsAttr(reveal),
+      class: 'door-reveal',
+      'data-id': `${door.id}-reveal`
+    }));
+  }
+  svg.append(revealLayer);
 
   const fixtureLayer = svgEl('g', { class: 'layer layer-fixtures' });
   for (const fixture of fixtures.fixtures) {

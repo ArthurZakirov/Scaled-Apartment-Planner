@@ -432,6 +432,7 @@
         309,
         211
       ],
+      "revealDepthCm": 20,
       "widthPx": 55,
       "policy": "group_requirement",
       "confidence": "medium"
