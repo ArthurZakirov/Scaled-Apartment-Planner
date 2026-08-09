@@ -68,6 +68,7 @@ class ScenarioTests(unittest.TestCase):
             bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
             cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
             self.assertEqual(cabinet["dimensionsCm"], {"width": 57.5, "depth": 43, "height": 54})
+            self.assertEqual(cabinet["accessLabel"], "Schubladen")
             self.assertAlmostEqual(
                 furniture_polygon(bed, cm_per_pixel).distance(furniture_polygon(cabinet, cm_per_pixel)) * cm_per_pixel,
                 2,

@@ -55,11 +55,21 @@ a:hover { text-decoration: underline; }
 .furniture-footprint { stroke-width: 2; vector-effect: non-scaling-stroke; }
 .furniture-wardrobe .furniture-footprint { fill: rgba(211,145,53,.65); stroke: #8f5a12; }
 .wardrobe-opening-edge { stroke: #7e2e77; stroke-width: 4; stroke-dasharray: 5 3; vector-effect: non-scaling-stroke; }
-.wardrobe-opening-label { font-size: 6px; font-weight: 800; text-anchor: middle; fill: #7e2e77; paint-order: stroke; stroke: rgba(255,255,255,.9); stroke-width: 2px; }
 .furniture-bed .furniture-footprint { fill: rgba(66,126,179,.45); stroke: #28618e; }
 .furniture-desk .furniture-footprint { fill: rgba(67,143,103,.48); stroke: #267348; }
 .furniture-storage .furniture-footprint { fill: rgba(130,103,171,.42); stroke: #73559c; }
 .mattress { fill: rgba(255,255,255,.38); stroke: rgba(40,97,142,.75); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.pillow { fill: rgba(255,255,255,.86); stroke: #28618e; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+.head-label { fill: #174d73; font-size: 6px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
+.access-arrow { stroke-width: 2; vector-effect: non-scaling-stroke; }
+.access-arrowhead { stroke: none; }
+.access-arrow-wardrobe { stroke: #7e2e77; }
+.access-arrowhead-wardrobe { fill: #7e2e77; }
+.access-arrow-storage { stroke: #65438e; }
+.access-arrowhead-storage { fill: #65438e; }
+.access-label { font-size: 6px; font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,.95); stroke-width: 2px; }
+.access-label-wardrobe { fill: #7e2e77; }
+.access-label-storage { fill: #65438e; }
 .furniture-label { font-size: 10px; font-weight: 800; text-anchor: middle; fill: #15241f; paint-order: stroke; stroke: rgba(255,255,255,.86); stroke-width: 3px; stroke-linejoin: round; }
 .furniture-id { font-size: 6px; text-anchor: middle; fill: #31423b; paint-order: stroke; stroke: rgba(255,255,255,.8); stroke-width: 2px; }
 

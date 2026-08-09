@@ -6,6 +6,7 @@
       "type": "bed",
       "name": "Geschätztes neues Bettgestell",
       "confidence": "estimated_from_typical_frame_overhang",
+      "headEdge": "negativeDepth",
       "estimateNote": "Die Stellfläche wird mit 8 cm Rahmen je Matratzenseite und insgesamt 9 cm zusätzlicher Länge geschätzt.",
       "variants": [
         {
@@ -54,6 +55,8 @@
       "requiresAnchoring": true,
       "safetyNote": "PAX must be securely anchored; a free-standing room-divider installation requires a suitable wall, ceiling, or engineered support solution.",
       "doorType": "none",
+      "accessEdge": "negativeDepth",
+      "accessLabel": "offener Kleiderzugriff",
       "planningDepthCm": 60,
       "availableHeightsCm": [201.2, 236.4],
       "variants": [
@@ -94,6 +97,8 @@
       "type": "storage",
       "name": "Vorhandene Kommode / Nachttisch",
       "confidence": "user_provided_dimensions",
+      "accessEdge": "negativeDepth",
+      "accessLabel": "Schubladen",
       "variants": [
         {
           "id": "bedside-cabinet-57",
@@ -108,6 +113,7 @@
       "type": "bed",
       "name": "Aktuelles Bett",
       "confidence": "user_provided_dimensions",
+      "headEdge": "negativeDepth",
       "variants": [
         {
           "id": "current-bed-90",

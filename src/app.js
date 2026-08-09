@@ -156,6 +156,33 @@ function arcPath(door) {
   return `M ${door.closedPoint[0]} ${door.closedPoint[1]} A ${r} ${r} 0 0 ${sweep} ${door.openPoint[0]} ${door.openPoint[1]}`;
 }
 
+function appendAccessIndicator(group, polygon, label, kind) {
+  const [start, end] = polygon;
+  const midpoint = [(start[0] + end[0]) / 2, (start[1] + end[1]) / 2];
+  const centroid = polygon.reduce((sum, [x, y]) => [sum[0] + x / polygon.length, sum[1] + y / polygon.length], [0, 0]);
+  const edge = [end[0] - start[0], end[1] - start[1]];
+  const length = Math.hypot(edge[0], edge[1]);
+  let normal = [-edge[1] / length, edge[0] / length];
+  const towardCenter = (centroid[0] - midpoint[0]) * normal[0] + (centroid[1] - midpoint[1]) * normal[1];
+  if (towardCenter > 0) normal = [-normal[0], -normal[1]];
+  const tip = [midpoint[0] + normal[0] * 19, midpoint[1] + normal[1] * 19];
+  const side = [-normal[1], normal[0]];
+  const arrow = [
+    tip,
+    [tip[0] - normal[0] * 6 + side[0] * 3.5, tip[1] - normal[1] * 6 + side[1] * 3.5],
+    [tip[0] - normal[0] * 6 - side[0] * 3.5, tip[1] - normal[1] * 6 - side[1] * 3.5]
+  ];
+  group.append(svgEl('line', {
+    x1: midpoint[0], y1: midpoint[1], x2: tip[0], y2: tip[1], class: `access-arrow access-arrow-${kind}`
+  }));
+  group.append(svgEl('polygon', { points: pointsAttr(arrow), class: `access-arrowhead access-arrowhead-${kind}` }));
+  group.append(svgEl('text', {
+    x: tip[0] + normal[0] * 7,
+    y: tip[1] + normal[1] * 7,
+    class: `access-label access-label-${kind}`
+  }, label));
+}
+
 function makeFurnitureGroup(object, cmPerPixel) {
   const group = svgEl('g', { class: `furniture furniture-${object.type}`, 'data-id': object.id });
   const polygon = furniturePolygon(object, cmPerPixel);
@@ -172,6 +199,25 @@ function makeFurnitureGroup(object, cmPerPixel) {
       [cx - mattressWidth / 2, cy + mattressDepth / 2]
     ].map((point) => rotatePoint(point, object.positionPx.rotationDeg, [cx, cy]));
     group.append(svgEl('polygon', { points: pointsAttr(inner), class: 'mattress' }));
+
+    const pillowCount = object.mattressCm.width >= 120 ? 2 : 1;
+    const pillowDepth = 28 / cmPerPixel;
+    const pillowAreaWidth = mattressWidth * .78;
+    const pillowGap = 5 / cmPerPixel;
+    const pillowWidth = (pillowAreaWidth - pillowGap * (pillowCount - 1)) / pillowCount;
+    const pillowY = cy - mattressDepth / 2 + pillowDepth / 2 + 5 / cmPerPixel;
+    for (let index = 0; index < pillowCount; index += 1) {
+      const pillowX = cx - pillowAreaWidth / 2 + pillowWidth / 2 + index * (pillowWidth + pillowGap);
+      const pillow = [
+        [pillowX - pillowWidth / 2, pillowY - pillowDepth / 2],
+        [pillowX + pillowWidth / 2, pillowY - pillowDepth / 2],
+        [pillowX + pillowWidth / 2, pillowY + pillowDepth / 2],
+        [pillowX - pillowWidth / 2, pillowY + pillowDepth / 2]
+      ].map((point) => rotatePoint(point, object.positionPx.rotationDeg, [cx, cy]));
+      group.append(svgEl('polygon', { points: pointsAttr(pillow), class: 'pillow' }));
+    }
+    const headMidpoint = [(inner[0][0] + inner[1][0]) / 2, (inner[0][1] + inner[1][1]) / 2];
+    group.append(svgEl('text', { x: headMidpoint[0], y: headMidpoint[1] - 5, class: 'head-label' }, 'Kopf'));
   }
 
   if (object.type === 'wardrobe') {
@@ -180,12 +226,10 @@ function makeFurnitureGroup(object, cmPerPixel) {
       x1: frontStart[0], y1: frontStart[1], x2: frontEnd[0], y2: frontEnd[1],
       class: 'wardrobe-opening-edge'
     }));
-    group.append(svgEl('text', {
-      x: (frontStart[0] + frontEnd[0]) / 2,
-      y: (frontStart[1] + frontEnd[1]) / 2 - 3,
-      class: 'wardrobe-opening-label'
-    }, 'offen'));
+    appendAccessIndicator(group, polygon, 'Zugriff', 'wardrobe');
   }
+
+  if (object.type === 'storage') appendAccessIndicator(group, polygon, object.accessLabel ?? 'Schubladen', 'storage');
 
   const centroid = polygon.reduce((sum, [x, y]) => [sum[0] + x / polygon.length, sum[1] + y / polygon.length], [0, 0]);
   group.append(svgEl('text', { x: centroid[0], y: centroid[1] - 3, class: 'furniture-label' }, object.render.label));
@@ -469,10 +513,10 @@ function renderFurnitureSummary(activeLayout) {
     const row = htmlEl('div', { className: 'scenario-object' });
     row.append(htmlEl('strong', {}, object.type === 'storage' ? object.name : object.render.label));
     if (object.modules) {
-      row.append(htmlEl('small', {}, `${object.modules.length} offene PAX-Module · Stellfläche ${object.dimensionsCm.width.toFixed(1)} × ${object.dimensionsCm.depth.toFixed(0)} cm · Höhe separat beim Kauf wählen`));
+      row.append(htmlEl('small', {}, `${object.modules.length} offene PAX-Module · Stellfläche ${object.dimensionsCm.width.toFixed(1)} × ${object.dimensionsCm.depth.toFixed(0)} cm · Zugriffsseite markiert`));
     }
-    else if (object.mattressCm) row.append(htmlEl('small', {}, `${object.estimateNote ? 'Geschätzte ' : ''}Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
-    else if (object.type === 'storage') row.append(htmlEl('small', {}, `${object.dimensionsCm.width} × ${object.dimensionsCm.depth} × ${object.dimensionsCm.height} cm`));
+    else if (object.mattressCm) row.append(htmlEl('small', {}, `${object.estimateNote ? 'Geschätzte ' : ''}Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm · Kopfseite markiert`));
+    else if (object.type === 'storage') row.append(htmlEl('small', {}, `${object.dimensionsCm.width} × ${object.dimensionsCm.depth} × ${object.dimensionsCm.height} cm · Schubladenseite markiert`));
     else row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
     summary.append(row);
   }

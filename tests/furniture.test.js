@@ -21,6 +21,7 @@ test('current bed resolves independently from estimated new beds', () => {
   assert.equal(bed.templateId, 'current-bed');
   assert.deepEqual(bed.dimensionsCm, { width: 111, depth: 204 });
   assert.deepEqual(bed.mattressCm, { width: 90, depth: 200 });
+  assert.equal(bed.headEdge, 'negativeDepth');
 });
 
 test('estimated new bed and real modular PAX dimensions resolve', () => {
@@ -34,6 +35,7 @@ test('estimated new bed and real modular PAX dimensions resolve', () => {
   assert.equal(pax.dimensionsCm.width, 199.6);
   assert.equal(pax.modules.length, 2);
   assert.equal(pax.requiresAnchoring, true);
+  assert.equal(pax.accessLabel, 'offener Kleiderzugriff');
 });
 
 test('owned bedside cabinet is present with user-provided dimensions', () => {
@@ -42,6 +44,7 @@ test('owned bedside cabinet is present with user-provided dimensions', () => {
     const cabinet = layout.objects.find((object) => object.type === 'storage');
     assert.deepEqual(cabinet.dimensionsCm, { width: 57.5, depth: 43, height: 54 });
     assert.equal(cabinet.confidence, 'user_provided_dimensions');
+    assert.equal(cabinet.accessLabel, 'Schubladen');
   }
 });
 

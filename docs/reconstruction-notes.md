@@ -72,6 +72,8 @@ The open wardrobe edge is rendered explicitly. The planner reports the bed-to-PA
 
 The PAX opening also has a 45 cm geometric access strip. A scenario is invalid if the bedside cabinet intersects that strip, even when the two furniture footprints do not overlap. Depending on the bed/PAX orientation, the cabinet therefore moves to the free bed end or another corner-side position.
 
+Furniture orientation is visible in the vector plan: pillows and a head label mark the bed head, an outward arrow marks the open PAX clothing-access side, and another outward arrow marks the cabinet drawer front. These indicators rotate with their furniture footprints.
+
 Loggia access is a hard grouped constraint: a scenario is invalid as soon as both loggia door-swing areas are blocked. The same grouped rule applies to the two balcony doors. Neither rule relies on one permanently preferred door.
 
 Safety research references:

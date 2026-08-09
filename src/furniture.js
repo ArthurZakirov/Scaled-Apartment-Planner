@@ -30,7 +30,7 @@ function resolveScenarioObject(placement, families) {
   for (const key of ['mattressCm', 'modules', 'heightRangeCm']) {
     if (variant[key] !== undefined) resolved[key] = structuredClone(variant[key]);
   }
-  for (const key of ['requiresAnchoring', 'safetyNote', 'doorType', 'planningDepthCm', 'estimateNote']) {
+  for (const key of ['requiresAnchoring', 'safetyNote', 'doorType', 'planningDepthCm', 'estimateNote', 'headEdge', 'accessEdge', 'accessLabel']) {
     if (family[key] !== undefined) resolved[key] = structuredClone(family[key]);
   }
   if (placement.intentionalDoorBlocks) {
