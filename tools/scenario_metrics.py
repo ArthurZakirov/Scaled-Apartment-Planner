@@ -6,7 +6,7 @@ import math
 from typing import Any
 
 from shapely.affinity import rotate, translate
-from shapely.geometry import LineString, Polygon
+from shapely.geometry import Polygon
 from shapely.ops import unary_union
 
 from desk_geometry import desk_work_zone_polygon, fixed_fixture_polygon, fixed_fixture_union
@@ -37,37 +37,6 @@ def furniture_polygon(obj: dict[str, Any], cm_per_pixel: float) -> Polygon:
     polygon = Polygon([(-width / 2, -depth / 2), (width / 2, -depth / 2), (width / 2, depth / 2), (-width / 2, depth / 2)])
     polygon = rotate(polygon, position.get("rotationDeg", 0), origin=(0, 0), use_radians=False)
     return translate(polygon, xoff=cx, yoff=cy)
-
-
-def wall_solid_polygon(wall: dict[str, Any]) -> Polygon:
-    """Expand a wall centerline into its physical solid using its modeled thickness."""
-    return LineString([wall["start"], wall["end"]]).buffer(
-        wall["thicknessPx"] / 2, cap_style=2, join_style=2
-    )
-
-
-def wall_forbidden_side_polygon(wall: dict[str, Any]) -> Polygon:
-    """Return a large half-plane on the room side furniture may not enter."""
-    start_x, start_y = wall["start"]
-    end_x, end_y = wall["end"]
-    direction_x, direction_y = end_x - start_x, end_y - start_y
-    length = math.hypot(direction_x, direction_y)
-    unit_x, unit_y = direction_x / length, direction_y / length
-    normal_x, normal_y = -unit_y, unit_x
-    forbidden_x, forbidden_y = wall["forbiddenSidePoint"]
-    if (forbidden_x - start_x) * normal_x + (forbidden_y - start_y) * normal_y < 0:
-        normal_x, normal_y = -normal_x, -normal_y
-    reach = 10_000
-    line_start = (start_x - unit_x * reach, start_y - unit_y * reach)
-    line_end = (end_x + unit_x * reach, end_y + unit_y * reach)
-    return Polygon(
-        [
-            line_start,
-            line_end,
-            (line_end[0] + normal_x * reach, line_end[1] + normal_y * reach),
-            (line_start[0] + normal_x * reach, line_start[1] + normal_y * reach),
-        ]
-    )
 
 
 def door_swing_polygon(door: dict[str, Any], steps: int = 36) -> Polygon:
@@ -124,10 +93,9 @@ def evaluate_layout(
     reasons: list[str] = []
     collisions: list[str] = []
     interior_wall_collisions: list[str] = []
-    interior_wall_forbidden_sides = {
-        wall["id"]: wall_forbidden_side_polygon(wall)
-        for wall in apartment["walls"]
-        if wall.get("kind") == "interior" and wall.get("forbiddenSidePoint")
+    exclusion_zones = {
+        zone["id"]: (Polygon(zone["points"]), zone.get("tolerancePx2", 0.5))
+        for zone in apartment.get("furnitureExclusionZones", [])
     }
 
     for obj in layout["objects"]:
@@ -137,12 +105,12 @@ def evaluate_layout(
             reasons.append(f"Furniture {obj['id']} has invalid geometry.")
         if not interior.buffer(5).covers(polygon):
             reasons.append(f"Furniture {obj['id']} leaves the approximate interior.")
-        for wall_id, forbidden_side in interior_wall_forbidden_sides.items():
-            overlap = polygon.intersection(forbidden_side).area
-            if overlap > 0.5:
-                collision = f"{obj['id']} ↔ {wall_id} ({overlap:.1f}px²)"
+        for zone_id, (zone_polygon, tolerance) in exclusion_zones.items():
+            overlap = polygon.intersection(zone_polygon).area
+            if overlap > tolerance:
+                collision = f"{obj['id']} ↔ {zone_id} ({overlap:.1f}px²)"
                 interior_wall_collisions.append(collision)
-                reasons.append(f"Furniture crosses fixed interior wall: {collision}.")
+                reasons.append(f"Furniture enters a fixed excluded room: {collision}.")
 
     object_ids = list(object_polygons)
     pair_distances: list[float] = []

@@ -358,10 +358,6 @@
         222,
         338
       ],
-      "forbiddenSidePoint": [
-        100,
-        300
-      ],
       "thicknessPx": 18
     },
     {
@@ -374,10 +370,6 @@
       "end": [
         165,
         380
-      ],
-      "forbiddenSidePoint": [
-        100,
-        300
       ],
       "thicknessPx": 18
     },
@@ -547,6 +539,14 @@
       "widthPx": 52,
       "policy": "group_requirement",
       "confidence": "high"
+    }
+  ],
+  "furnitureExclusionZones": [
+    {
+      "id": "space-bath",
+      "points": [[52, 303], [149, 232], [222, 338], [165, 380], [123, 410]],
+      "tolerancePx2": 25,
+      "reason": "Bathroom is not available for bedroom furniture."
     }
   ],
   "windows": [

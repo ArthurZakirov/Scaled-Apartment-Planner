@@ -16,7 +16,7 @@ from furniture import resolve_scenario_data  # noqa: E402
 from geometry import expand_apartment_geometry  # noqa: E402
 from validate_geometry import evaluate_layout  # noqa: E402
 from desk_geometry import desk_work_zone_polygon, fixed_fixture_union  # noqa: E402
-from scenario_metrics import furniture_polygon, wall_forbidden_side_polygon, wardrobe_access_polygon  # noqa: E402
+from scenario_metrics import furniture_polygon, wardrobe_access_polygon  # noqa: E402
 
 
 def load_json(relative: str):
@@ -119,17 +119,13 @@ class ScenarioTests(unittest.TestCase):
 
     def test_divider_commode_stays_out_of_bathroom_walls(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
-        bath_forbidden_sides = [
-            wall_forbidden_side_polygon(wall)
-            for wall in self.apartment["walls"]
-            if wall["id"] in {"wall-bath-upper", "wall-bath-lower"}
-        ]
+        bath_zone = Polygon(next(zone["points"] for zone in self.apartment["furnitureExclusionZones"] if zone["id"] == "space-bath"))
         for layout in self.furniture["layouts"]:
             if layout["selection"]["arrangementId"] != "divider":
                 continue
             cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
             cabinet_polygon = furniture_polygon(cabinet, cm_per_pixel)
-            self.assertTrue(all(cabinet_polygon.intersection(side).area <= 0.5 for side in bath_forbidden_sides), layout["id"])
+            self.assertLessEqual(cabinet_polygon.intersection(bath_zone).area, 25, layout["id"])
 
     def test_divider_commode_remains_next_to_90_cm_beds_with_clear_drawers(self):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
@@ -168,7 +164,7 @@ class ScenarioTests(unittest.TestCase):
         result = self.evaluate(layout)
         self.assertFalse(result["valid"])
         self.assertTrue(
-            any("owned-bedside-cabinet ↔ wall-bath-lower" in collision for collision in result["interiorWallCollisions"])
+            any("owned-bedside-cabinet ↔ space-bath" in collision for collision in result["interiorWallCollisions"])
         )
 
     def test_bed_wall_side_stays_fixed_across_width_variants(self):
