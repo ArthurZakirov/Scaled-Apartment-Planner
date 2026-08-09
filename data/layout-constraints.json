@@ -4,13 +4,25 @@
   "doorPolicies": {
     "mustRemainUsable": [
       "door-entry",
-      "door-bath",
-      "door-loggia-bedroom",
-      "door-balcony-lower"
+      "door-bath"
     ],
     "mayBeBlocked": [
+      "door-loggia-bedroom",
       "door-loggia-living",
-      "door-balcony-upper"
+      "door-balcony-upper",
+      "door-balcony-lower"
+    ],
+    "atLeastOneUsableGroups": [
+      {
+        "id": "loggia-access",
+        "label": "Loggia",
+        "doorIds": ["door-loggia-bedroom", "door-loggia-living"]
+      },
+      {
+        "id": "balcony-access",
+        "label": "Balkon",
+        "doorIds": ["door-balcony-upper", "door-balcony-lower"]
+      }
     ]
   },
   "requirements": [

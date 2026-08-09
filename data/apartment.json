@@ -433,7 +433,7 @@
         219
       ],
       "widthPx": 55,
-      "policy": "must_remain_usable",
+      "policy": "group_requirement",
       "confidence": "medium"
     },
     {
@@ -456,7 +456,7 @@
         300
       ],
       "widthPx": 54,
-      "policy": "may_be_blocked",
+      "policy": "group_requirement",
       "confidence": "high"
     },
     {
@@ -479,7 +479,7 @@
         333
       ],
       "widthPx": 55,
-      "policy": "may_be_blocked",
+      "policy": "group_requirement",
       "confidence": "high"
     },
     {
@@ -502,7 +502,7 @@
         499
       ],
       "widthPx": 52,
-      "policy": "must_remain_usable",
+      "policy": "group_requirement",
       "confidence": "high"
     }
   ],

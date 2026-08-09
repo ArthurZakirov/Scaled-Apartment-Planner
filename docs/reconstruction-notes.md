@@ -70,6 +70,8 @@ The transverse divider remains a geometric experiment only because IKEA requires
 
 The open wardrobe edge is rendered explicitly. The planner reports the bed-to-PAX gap as an access proxy: 60 cm or more is shown as good, 45–60 cm as tight, and less than 45 cm as too tight. These thresholds remain planning heuristics because the source drawing is not to scale.
 
+Loggia access is a hard grouped constraint: a scenario is invalid as soon as both loggia door-swing areas are blocked. The same grouped rule applies to the two balcony doors. Neither rule relies on one permanently preferred door.
+
 Safety research references:
 
 - IKEA PAX 50 × 58 × 201 product page and wall-mounting requirement: https://www.ikea.com/de/de/p/pax-korpus-kleiderschrank-weiss-70458217/

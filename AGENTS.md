@@ -14,7 +14,7 @@
 - The apartment entrance door is the confirmed 100 cm scale anchor. Dimensions elsewhere remain approximate because the source explicitly states that it is not to scale.
 - Use the full external footprint of products. For example, the MALM 140 × 200 mattress uses a 156 × 209 cm bed-frame footprint.
 - Do not add furniture forms to the user-facing app. Furniture is controlled by editing structured data or, later, through CLI/MCP tools.
-- Preserve the policy that at least one balcony door and at least one loggia door remain usable.
+- Preserve the hard grouped-door policy: every valid scenario must leave at least one balcony door and at least one loggia door usable.
 - Run `npm run validate` before committing layout changes.
 
 ## Current layout scenario system
@@ -31,8 +31,7 @@
 - `owned-bedside-cabinet` is the user's 57.5 × 43 × 54 cm cabinet. It follows the bed orientation and keeps a 2 cm planning gap to the bed.
 - The VERNAL desk is anchored by its top-right wall-contact corner; both wall-facing edges remain in contact for every desk size.
 - `vernal-l-desk` is intentionally placed in the upper-right living-area corner.
-- The desk may block `door-loggia-living` and `door-balcony-upper`.
-- `door-loggia-bedroom` and `door-balcony-lower` must stay usable.
+- An individual loggia or balcony door may be blocked, but never both doors in the same access group.
 
 ## Editing workflow
 

@@ -96,10 +96,9 @@ def evaluate_layout(
     required = set(constraints["doorPolicies"]["mustRemainUsable"])
     for door_id in sorted(required & blocked_by.keys()):
         reasons.append(f"Required door {door_id} is blocked by {', '.join(blocked_by[door_id])}.")
-    if not ({"door-loggia-bedroom", "door-loggia-living"} - blocked_by.keys()):
-        reasons.append("Both loggia doors are blocked.")
-    if not ({"door-balcony-upper", "door-balcony-lower"} - blocked_by.keys()):
-        reasons.append("Both balcony doors are blocked.")
+    for group in constraints["doorPolicies"].get("atLeastOneUsableGroups", []):
+        if not (set(group["doorIds"]) - blocked_by.keys()):
+            reasons.append(f"At least one {group['label']} door must remain usable.")
 
     furniture_union = unary_union(list(object_polygons.values()))
     free_floor_px2 = max(0.0, interior.area - furniture_union.intersection(interior).area)

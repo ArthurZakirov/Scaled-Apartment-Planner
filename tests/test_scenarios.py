@@ -4,6 +4,7 @@ import json
 import math
 import sys
 import unittest
+from copy import deepcopy
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -168,6 +169,29 @@ class ScenarioTests(unittest.TestCase):
             results["bath-wall-both-rotated"]["bedPaxGapCm"],
             results["bath-wall-bed-shifted"]["bedPaxGapCm"],
         )
+
+    def test_every_valid_scenario_keeps_at_least_one_loggia_door_usable(self):
+        for layout in self.furniture["layouts"]:
+            result = evaluate_layout(layout, self.apartment, self.constraints)
+            if result["valid"]:
+                self.assertGreaterEqual(result["usableLoggiaDoors"], 1, layout["id"])
+
+    def test_blocking_both_loggia_doors_is_always_invalid(self):
+        layout = deepcopy(next(item for item in self.furniture["layouts"] if item["id"] == self.furniture["activeLayoutId"]))
+        for door_id in ("door-loggia-bedroom", "door-loggia-living"):
+            door = next(item for item in self.apartment["doors"] if item["id"] == door_id)
+            layout["objects"].append(
+                {
+                    "id": f"test-blocker-{door_id}",
+                    "type": "storage",
+                    "dimensionsCm": {"width": 20, "depth": 20, "height": 20},
+                    "positionPx": {"center": door["hinge"], "rotationDeg": 0},
+                    "render": {"shape": "rectangle", "label": "Test blocker"},
+                }
+            )
+        result = evaluate_layout(layout, self.apartment, self.constraints)
+        self.assertFalse(result["valid"])
+        self.assertIn("At least one Loggia door must remain usable.", result["reasons"])
 
     def test_generated_evaluations_match_geometric_results(self):
         results = [evaluate_layout(layout, self.apartment, self.constraints) for layout in self.furniture["layouts"]]

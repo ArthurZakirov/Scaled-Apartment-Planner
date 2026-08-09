@@ -425,7 +425,7 @@ function renderScenarioMetrics(evaluation) {
     ['Bewertung', `${evaluation.score.toFixed(1)} / 100`],
     ['Bett–PAX', accessLabel],
     ['Freie Fläche', `ca. ${evaluation.freeFloorAreaM2.toFixed(1)} m²`],
-    ['Außentüren', `${evaluation.usableLoggiaDoors + evaluation.usableBalconyDoors} von 4 nutzbar`]
+    ['Loggia-Türen', `${evaluation.usableLoggiaDoors} von 2 · min. 1`]
   ];
   for (const [label, value] of entries) {
     const item = htmlEl('div', { className: 'scenario-metric' });
@@ -476,7 +476,11 @@ function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evalu
     title.append(htmlEl('span', { className: 'status-dot' }));
     title.append(htmlEl('strong', {}, result.door.name));
     row.append(title);
-    const policyText = result.door.policy === 'must_remain_usable' ? 'muss nutzbar bleiben' : 'darf blockiert werden';
+    const policyText = result.door.policy === 'must_remain_usable'
+      ? 'muss nutzbar bleiben'
+      : result.door.policy === 'group_requirement'
+        ? 'mindestens eine Tür dieser Gruppe muss frei bleiben'
+        : 'darf blockiert werden';
     row.append(htmlEl('small', {}, `${result.blocked ? `blockiert durch ${result.blockingObjects.join(', ')}` : 'frei'} · ${policyText}`));
     list.append(row);
   }
