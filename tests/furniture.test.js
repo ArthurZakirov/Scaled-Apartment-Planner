@@ -7,13 +7,13 @@ import { normalizeScenarioId, resolveScenarioData } from '../src/furniture.js';
 const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.json', import.meta.url), 'utf8'));
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
 
-test('browser resolves all 72 product and orientation scenarios', () => {
+test('browser resolves all 216 product and orientation scenarios', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  assert.equal(furniture.layouts.length, 72);
-  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 72);
+  assert.equal(furniture.layouts.length, 216);
+  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 216);
 });
 
-test('current bed resolves independently from MALM', () => {
+test('current bed resolves independently from estimated new beds', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
   const layout = furniture.layouts.find((item) => item.selection.bedVariantId === 'current-bed-90');
   const bed = layout.objects.find((object) => object.type === 'bed');
@@ -22,12 +22,14 @@ test('current bed resolves independently from MALM', () => {
   assert.deepEqual(bed.mattressCm, { width: 90, depth: 200 });
 });
 
-test('active scenario uses external MALM and real modular PAX dimensions', () => {
+test('estimated new bed and real modular PAX dimensions resolve', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  const layout = furniture.layouts.find((item) => item.selection.bedVariantId === 'malm-140' && item.selection.paxVariantId === 'pax-200');
+  const layout = furniture.layouts.find((item) => item.selection.bedVariantId === 'new-bed-140' && item.selection.paxVariantId === 'pax-200');
   const bed = layout.objects.find((object) => object.type === 'bed');
   const pax = layout.objects.find((object) => object.type === 'wardrobe');
-  assert.deepEqual(bed.dimensionsCm, { width: 156, depth: 209, height: 100 });
+  assert.deepEqual(bed.dimensionsCm, { width: 156, depth: 209 });
+  assert.deepEqual(bed.mattressCm, { width: 140, depth: 200 });
+  assert.match(bed.estimateNote, /8 cm/);
   assert.equal(pax.dimensionsCm.width, 199.6);
   assert.equal(pax.modules.length, 2);
   assert.equal(pax.requiresAnchoring, true);
@@ -60,6 +62,11 @@ test('legacy low-height scenario links map to their width-only counterpart', () 
   const furniture = resolveScenarioData(scenarios, catalog, legacy);
   assert.equal(normalizeScenarioId(legacy), canonical);
   assert.equal(furniture.activeLayoutId, canonical);
+});
+
+test('legacy MALM scenario links map to estimated new-bed widths', () => {
+  const legacy = 'scenario-malm-140-pax-200-quick-150-150';
+  assert.equal(normalizeScenarioId(legacy), 'scenario-new-bed-140-pax-200-quick-150-150');
 });
 
 test('query-selected scenario becomes active without mutating stored data', () => {

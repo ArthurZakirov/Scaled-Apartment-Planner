@@ -123,9 +123,23 @@ def main():
                         scenario_id = f"scenario-{bed_id}-{pax_id}-{desk_id}"
                     else:
                         scenario_id = f"scenario-{arrangement['id']}-{bed_id}-{pax_id}-{desk_id}"
-                    bed_position_px = arrangement.get("bedPositionPx") or bed_position(
-                        placements["bed"], base_bed_variant, bed, apartment["scale"]["cmPerPixel"]
-                    )
+                    if arrangement.get("bedPositionPx"):
+                        arrangement_bed_base = variants[arrangement.get("bedBaseVariantId", "current-bed-90")]
+                        arrangement_bed_placement = {
+                            **placements["bed"],
+                            "positionPx": arrangement["bedPositionPx"],
+                            "keepWallSideFixed": True,
+                        }
+                        bed_position_px = bed_position(
+                            arrangement_bed_placement,
+                            arrangement_bed_base,
+                            bed,
+                            apartment["scale"]["cmPerPixel"],
+                        )
+                    else:
+                        bed_position_px = bed_position(
+                            placements["bed"], base_bed_variant, bed, apartment["scale"]["cmPerPixel"]
+                        )
                     pax_position_px = arrangement.get("paxPositionPx") or pax_position(
                         placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
                     )

@@ -1,42 +1,78 @@
 {
   "version": 1,
-  "scenarioCount": 72,
-  "validCount": 36,
+  "scenarioCount": 216,
+  "validCount": 72,
   "rankedValidScenarioIds": [
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-180-150",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-200-quick-180-150",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-200-stable-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-180-150",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-175-quick-180-150",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-175-stable-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-quick-150-150",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-200-quick-150-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-200-stable-160-140",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-200-stable-160-140",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-180-150",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-180-150",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-150-stable-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-150-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-160-140",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-175-quick-150-150",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-175-stable-160-140",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-150-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-160-140",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-150-150",
+    "scenario-bath-wall-both-rotated-new-bed-90-pax-150-stable-160-140",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-180-150",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-quick-180-150",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-stable-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-150-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-160-140",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-quick-180-150",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-stable-180-150",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-quick-150-150",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-stable-160-140",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-quick-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-180-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-150-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-160-140",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-quick-180-150",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-stable-180-150",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-quick-150-150",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-stable-160-140",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-quick-150-150",
     "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-160-140",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-quick-150-150",
+    "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-stable-160-140",
+    "scenario-new-bed-90-pax-200-quick-180-150",
+    "scenario-new-bed-90-pax-200-stable-180-150",
     "scenario-current-bed-90-pax-200-quick-180-150",
     "scenario-current-bed-90-pax-200-stable-180-150",
+    "scenario-new-bed-90-pax-175-quick-180-150",
+    "scenario-new-bed-90-pax-175-stable-180-150",
+    "scenario-new-bed-90-pax-200-quick-150-150",
+    "scenario-new-bed-90-pax-200-stable-160-140",
     "scenario-current-bed-90-pax-175-quick-180-150",
     "scenario-current-bed-90-pax-175-stable-180-150",
     "scenario-current-bed-90-pax-200-quick-150-150",
     "scenario-current-bed-90-pax-200-stable-160-140",
+    "scenario-new-bed-90-pax-150-quick-180-150",
+    "scenario-new-bed-90-pax-150-stable-180-150",
+    "scenario-new-bed-90-pax-175-quick-150-150",
+    "scenario-new-bed-90-pax-175-stable-160-140",
     "scenario-current-bed-90-pax-150-quick-180-150",
     "scenario-current-bed-90-pax-150-stable-180-150",
     "scenario-current-bed-90-pax-175-quick-150-150",
     "scenario-current-bed-90-pax-175-stable-160-140",
+    "scenario-new-bed-90-pax-150-quick-150-150",
+    "scenario-new-bed-90-pax-150-stable-160-140",
     "scenario-current-bed-90-pax-150-quick-150-150",
     "scenario-current-bed-90-pax-150-stable-160-140"
   ],
@@ -318,8 +354,608 @@
       "score": 59.1
     },
     {
-      "id": "scenario-malm-140-pax-150-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "id": "scenario-new-bed-90-pax-150-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.7,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 55.6
+    },
+    {
+      "id": "scenario-new-bed-90-pax-150-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.8,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 55.5
+    },
+    {
+      "id": "scenario-new-bed-90-pax-150-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.5,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 57.1
+    },
+    {
+      "id": "scenario-new-bed-90-pax-150-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.4,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 57.1
+    },
+    {
+      "id": "scenario-new-bed-90-pax-175-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.5,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 56.8
+    },
+    {
+      "id": "scenario-new-bed-90-pax-175-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.7,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 56.8
+    },
+    {
+      "id": "scenario-new-bed-90-pax-175-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.3,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 58.3
+    },
+    {
+      "id": "scenario-new-bed-90-pax-175-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.3,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 58.3
+    },
+    {
+      "id": "scenario-new-bed-90-pax-200-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.4,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 58.1
+    },
+    {
+      "id": "scenario-new-bed-90-pax-200-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.6,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 58.0
+    },
+    {
+      "id": "scenario-new-bed-90-pax-200-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.2,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 59.6
+    },
+    {
+      "id": "scenario-new-bed-90-pax-200-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 5.8,
+      "bedPaxGapCm": 50.8,
+      "freeFloorAreaM2": 23.1,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 59.6
+    },
+    {
+      "id": "scenario-new-bed-120-pax-150-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 23.2,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-150-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 23.4,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-150-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 23.0,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-150-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-175-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 23.0,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-175-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 23.2,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-175-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 22.8,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-175-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 22.8,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-200-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-200-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 23.1,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-200-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-120-pax-200-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "divider",
+      "installationStatus": "requires_engineered_solution",
+      "valid": false,
+      "reasons": [
+        "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)."
+      ],
+      "collisions": [
+        "ikea-pax-divider ↔ owned-bedside-cabinet (601.3px²)"
+      ],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 0.0,
+      "bedPaxGapCm": 20.8,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-new-bed-140-pax-150-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -345,8 +981,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-150-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "id": "scenario-new-bed-140-pax-150-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -372,8 +1008,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-150-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "id": "scenario-new-bed-140-pax-150-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -399,8 +1035,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-150-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-new-bed-140-pax-150-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -426,8 +1062,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-175-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "id": "scenario-new-bed-140-pax-175-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -453,8 +1089,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-175-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "id": "scenario-new-bed-140-pax-175-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -480,8 +1116,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-175-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "id": "scenario-new-bed-140-pax-175-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -507,8 +1143,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-175-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-new-bed-140-pax-175-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -534,8 +1170,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-200-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "id": "scenario-new-bed-140-pax-200-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -561,8 +1197,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-200-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "id": "scenario-new-bed-140-pax-200-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -588,8 +1224,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-200-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "id": "scenario-new-bed-140-pax-200-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -615,8 +1251,8 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-140-pax-200-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 140 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-new-bed-140-pax-200-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
@@ -642,17 +1278,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-150-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "id": "scenario-new-bed-160-pax-150-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1240.7px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -671,17 +1307,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-150-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "id": "scenario-new-bed-160-pax-150-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1240.7px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -700,17 +1336,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-150-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "id": "scenario-new-bed-160-pax-150-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1240.7px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -729,17 +1365,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-150-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-new-bed-160-pax-150-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1240.7px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1240.7px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1240.7px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1240.7px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -758,17 +1394,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-175-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "id": "scenario-new-bed-160-pax-175-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1448.1px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -787,17 +1423,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-175-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "id": "scenario-new-bed-160-pax-175-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1448.1px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -816,17 +1452,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-175-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "id": "scenario-new-bed-160-pax-175-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1448.1px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -845,17 +1481,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-175-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-new-bed-160-pax-175-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1448.1px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1448.1px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1448.1px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1448.1px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -874,17 +1510,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-200-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "id": "scenario-new-bed-160-pax-200-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1643.0px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -903,17 +1539,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-200-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "id": "scenario-new-bed-160-pax-200-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1643.0px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -932,17 +1568,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-200-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "id": "scenario-new-bed-160-pax-200-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1643.0px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -961,17 +1597,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-160-pax-200-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 160 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-new-bed-160-pax-200-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (1643.0px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (1643.0px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (1643.0px²)",
+        "ikea-pax-divider ↔ sleeping-bed (1643.0px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (916.8px²)"
       ],
       "blockedBy": {
@@ -990,17 +1626,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-150-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "id": "scenario-new-bed-180-pax-150-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2535.7px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)",
+        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1019,17 +1655,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-150-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "id": "scenario-new-bed-180-pax-150-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2535.7px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)",
+        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1048,17 +1684,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-150-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "id": "scenario-new-bed-180-pax-150-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2535.7px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)",
+        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1077,17 +1713,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-150-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-new-bed-180-pax-150-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2535.7px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2535.7px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2535.7px²)",
+        "ikea-pax-divider ↔ sleeping-bed (2535.7px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1106,17 +1742,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-175-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "id": "scenario-new-bed-180-pax-175-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2959.5px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)",
+        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1135,17 +1771,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-175-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "id": "scenario-new-bed-180-pax-175-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2959.5px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)",
+        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1164,17 +1800,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-175-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "id": "scenario-new-bed-180-pax-175-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2959.5px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)",
+        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1193,17 +1829,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-175-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-new-bed-180-pax-175-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (2959.5px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (2959.5px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (2959.5px²)",
+        "ikea-pax-divider ↔ sleeping-bed (2959.5px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1222,17 +1858,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-200-quick-150-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "id": "scenario-new-bed-180-pax-200-quick-150-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (3357.9px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)",
+        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1251,17 +1887,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-200-stable-160-140",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "id": "scenario-new-bed-180-pax-200-stable-160-140",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (3357.9px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)",
+        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1280,17 +1916,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-200-quick-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "id": "scenario-new-bed-180-pax-200-quick-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (3357.9px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)",
+        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1309,17 +1945,17 @@
       "score": 0.0
     },
     {
-      "id": "scenario-malm-180-pax-200-stable-180-150",
-      "name": "PAX quer als Raumteiler · MALM 180 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-new-bed-180-pax-200-stable-180-150",
+      "name": "PAX quer als Raumteiler · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "divider",
       "installationStatus": "requires_engineered_solution",
       "valid": false,
       "reasons": [
-        "Furniture overlap: ikea-pax-divider ↔ ikea-malm-bed (3357.9px²).",
+        "Furniture overlap: ikea-pax-divider ↔ sleeping-bed (3357.9px²).",
         "Furniture overlap: ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)."
       ],
       "collisions": [
-        "ikea-pax-divider ↔ ikea-malm-bed (3357.9px²)",
+        "ikea-pax-divider ↔ sleeping-bed (3357.9px²)",
         "ikea-pax-divider ↔ owned-bedside-cabinet (419.1px²)"
       ],
       "blockedBy": {
@@ -1614,6 +2250,1626 @@
       "score": 59.5
     },
     {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 23.7,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 55.3
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 23.9,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 55.3
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 23.5,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 56.8
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 23.5,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 56.8
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 23.6,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 56.5
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 23.7,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 56.5
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 23.4,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 58.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 23.3,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 58.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 23.4,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 57.8
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 23.6,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 57.7
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 23.2,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 59.3
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 23.2,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 59.3
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-150-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 23.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-150-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 23.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-150-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-150-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-175-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 23.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-175-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 23.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-175-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 22.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-175-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-200-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 22.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-200-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 23.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-200-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-200-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-150-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-150-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-150-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.5,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-150-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-175-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-175-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-175-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 22.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-175-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 22.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-200-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 22.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-200-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-200-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 22.2,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-140-pax-200-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 22.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-150-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-150-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.5,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-150-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-150-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-175-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 22.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-175-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 22.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-175-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 21.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-175-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 21.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 22.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 22.2,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 21.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 22.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 21.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 21.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 21.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 21.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 21.5,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 21.5,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
       "id": "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-150-150",
       "name": "PAX und Bett um 90° gedreht · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-both-rotated",
@@ -1888,6 +4144,1698 @@
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 64.1
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.7,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 60.1
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-150-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.8,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 60.1
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.5,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 61.6
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-150-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.4,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 61.6
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-175-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.1,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 23.5,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 61.3
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-175-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.1,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 23.7,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 61.3
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-175-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.1,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 23.3,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 62.8
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-175-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.1,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 23.3,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 62.8
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-200-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.7,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 23.4,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 62.6
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-200-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.7,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 23.6,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 62.5
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-200-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.7,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 23.2,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 64.1
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-90-pax-200-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": true,
+      "reasons": [],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.7,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 23.1,
+      "usableLoggiaDoors": 1,
+      "usableBalconyDoors": 1,
+      "score": 64.1
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-150-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.2,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-150-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-150-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 41.6,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-150-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 41.6,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-175-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.1,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 23.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-175-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.1,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 23.2,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-175-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 41.6,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-175-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 41.6,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.7,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.7,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 23.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 41.6,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 120 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 41.6,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-150-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-150-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-150-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-150-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-175-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.1,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-175-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.4,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-175-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.5,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-175-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.5,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-200-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.7,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-200-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.4,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-200-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-140-pax-200-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 140 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-150-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-150-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 46.9,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-150-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-150-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-175-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.1,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-175-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 46.9,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-175-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.5,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-175-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-200-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.7,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-200-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 46.9,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-200-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-160-pax-200-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-150-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.4,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-150-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 46.9,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 23.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-150-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-150-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.4,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-175-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 51.1,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-175-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 46.9,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-175-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.5,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-175-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 51.1,
+      "freeFloorAreaM2": 22.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-200-quick-150-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 50.7,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.6,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-200-stable-160-140",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 46.9,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.7,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-200-quick-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-both-rotated-new-bed-180-pax-200-stable-180-150",
+      "name": "PAX und Bett um 90° gedreht · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-both-rotated",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "Furniture owned-bedside-cabinet leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "minimumFurnitureGapCm": 35.2,
+      "bedPaxGapCm": 50.7,
+      "freeFloorAreaM2": 22.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
     }
   ]
 }

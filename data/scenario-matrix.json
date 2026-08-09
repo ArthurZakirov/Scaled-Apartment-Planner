@@ -2,7 +2,7 @@
   "version": 1,
   "activeScenarioId": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-180-150",
   "axes": {
-    "bedVariantIds": ["current-bed-90", "malm-140", "malm-160", "malm-180"],
+    "bedVariantIds": ["current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"],
     "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
     "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"]
   },
@@ -19,7 +19,7 @@
     {
       "id": "bath-wall-bed-shifted",
       "label": "PAX an Badwand · Bett zur Loggia",
-      "bedVariantIds": ["current-bed-90"],
+      "bedBaseVariantId": "current-bed-90",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "kitchenExposure": "higher",
       "bedsideSide": 1,
@@ -31,7 +31,7 @@
     {
       "id": "bath-wall-both-rotated",
       "label": "PAX und Bett um 90° gedreht",
-      "bedVariantIds": ["current-bed-90"],
+      "bedBaseVariantId": "current-bed-90",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "kitchenExposure": "higher",
       "bedsideSide": 1,
@@ -43,9 +43,9 @@
   ],
   "placements": {
     "bed": {
-      "id": "ikea-malm-bed",
-      "templateId": "ikea-malm-high",
-      "baseVariantId": "malm-140",
+      "id": "sleeping-bed",
+      "templateId": "estimated-new-bed",
+      "baseVariantId": "new-bed-140",
       "positionPx": {"center": [235, 235], "rotationDeg": 54},
       "keepWallSideFixed": true
     },

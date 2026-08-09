@@ -35,7 +35,7 @@ def resolve_scenario_object(
     for key in ("mattressCm", "modules", "heightRangeCm"):
         if key in variant:
             resolved[key] = copy.deepcopy(variant[key])
-    for key in ("requiresAnchoring", "safetyNote", "doorType", "planningDepthCm"):
+    for key in ("requiresAnchoring", "safetyNote", "doorType", "planningDepthCm", "estimateNote"):
         if key in family:
             resolved[key] = copy.deepcopy(family[key])
     if "intentionalDoorBlocks" in placement:

@@ -3,7 +3,9 @@ function indexFamilies(catalog) {
 }
 
 export function normalizeScenarioId(scenarioId) {
-  return scenarioId?.replace(/pax-(150|175|200)-low/, 'pax-$1') ?? null;
+  return scenarioId
+    ?.replace(/pax-(150|175|200)-low/, 'pax-$1')
+    .replace(/malm-(140|160|180)/, 'new-bed-$1') ?? null;
 }
 
 function resolveScenarioObject(placement, families) {
@@ -28,7 +30,7 @@ function resolveScenarioObject(placement, families) {
   for (const key of ['mattressCm', 'modules', 'heightRangeCm']) {
     if (variant[key] !== undefined) resolved[key] = structuredClone(variant[key]);
   }
-  for (const key of ['requiresAnchoring', 'safetyNote', 'doorType', 'planningDepthCm']) {
+  for (const key of ['requiresAnchoring', 'safetyNote', 'doorType', 'planningDepthCm', 'estimateNote']) {
     if (family[key] !== undefined) resolved[key] = structuredClone(family[key]);
   }
   if (placement.intentionalDoorBlocks) {

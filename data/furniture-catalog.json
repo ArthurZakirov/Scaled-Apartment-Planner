@@ -2,32 +2,46 @@
   "version": 1,
   "families": [
     {
-      "id": "ikea-malm-high",
+      "id": "estimated-new-bed",
       "type": "bed",
-      "name": "IKEA MALM Bettgestell hoch",
-      "sourceUrl": "https://www.ikea.com/de/de/p/malm-bettgestell-hoch-weiss-s29931596/",
-      "confidence": "verified_official_product_page",
+      "name": "Geschätztes neues Bettgestell",
+      "confidence": "estimated_from_typical_frame_overhang",
+      "estimateNote": "Die Stellfläche wird mit 8 cm Rahmen je Matratzenseite und insgesamt 9 cm zusätzlicher Länge geschätzt.",
       "variants": [
         {
-          "id": "malm-140",
-          "label": "MALM 140 × 200",
-          "dimensionsCm": {"width": 156, "depth": 209, "height": 100},
+          "id": "new-bed-90",
+          "label": "Neues Bett · Matratze 90 × 200",
+          "dimensionsCm": {"width": 106, "depth": 209},
+          "mattressCm": {"width": 90, "depth": 200},
+          "render": {"shape": "bed", "label": "Neues Bett 90 · ca. 106 × 209"}
+        },
+        {
+          "id": "new-bed-120",
+          "label": "Neues Bett · Matratze 120 × 200",
+          "dimensionsCm": {"width": 136, "depth": 209},
+          "mattressCm": {"width": 120, "depth": 200},
+          "render": {"shape": "bed", "label": "Neues Bett 120 · ca. 136 × 209"}
+        },
+        {
+          "id": "new-bed-140",
+          "label": "Neues Bett · Matratze 140 × 200",
+          "dimensionsCm": {"width": 156, "depth": 209},
           "mattressCm": {"width": 140, "depth": 200},
-          "render": {"shape": "bed", "label": "MALM 140 · 156 × 209"}
+          "render": {"shape": "bed", "label": "Neues Bett 140 · ca. 156 × 209"}
         },
         {
-          "id": "malm-160",
-          "label": "MALM 160 × 200",
-          "dimensionsCm": {"width": 176, "depth": 209, "height": 100},
+          "id": "new-bed-160",
+          "label": "Neues Bett · Matratze 160 × 200",
+          "dimensionsCm": {"width": 176, "depth": 209},
           "mattressCm": {"width": 160, "depth": 200},
-          "render": {"shape": "bed", "label": "MALM 160 · 176 × 209"}
+          "render": {"shape": "bed", "label": "Neues Bett 160 · ca. 176 × 209"}
         },
         {
-          "id": "malm-180",
-          "label": "MALM 180 × 200",
-          "dimensionsCm": {"width": 196, "depth": 209, "height": 100},
+          "id": "new-bed-180",
+          "label": "Neues Bett · Matratze 180 × 200",
+          "dimensionsCm": {"width": 196, "depth": 209},
           "mattressCm": {"width": 180, "depth": 200},
-          "render": {"shape": "bed", "label": "MALM 180 · 196 × 209"}
+          "render": {"shape": "bed", "label": "Neues Bett 180 · ca. 196 × 209"}
         }
       ]
     },

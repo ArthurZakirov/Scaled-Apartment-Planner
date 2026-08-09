@@ -64,7 +64,7 @@ The structural model intentionally excludes the marketing illustration's bed, so
 
 ## Product variants and scenario matrix
 
-The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, the user's 57.5 × 43 × 54 cm bedside cabinet, three MALM mattress sizes, three modular PAX widths, and four VERNAL L-desk variants. The cabinet follows each bed orientation with a 2 cm planning gap; configurations where it cannot fit remain invalid instead of hiding the cabinet. PAX height is purchase metadata rather than a 2D scenario axis because both available heights have the same footprint. Three orientation concepts produce 72 explicit scenarios: transverse divider, PAX along the bathroom wall with the bed shifted toward the loggia, and PAX plus bed rotated by 90 degrees. Each scenario is checked for containment, furniture overlap, mandatory door access, at least one usable loggia door, and at least one usable balcony door.
+The catalog contains the user's current 111 × 204 cm bed with a 90 × 200 cm mattress, the user's 57.5 × 43 × 54 cm bedside cabinet, five estimated new-bed footprints for 90, 120, 140, 160, and 180 cm mattresses, three modular PAX widths, and four VERNAL L-desk contexts. New-bed footprints assume 8 cm of frame on each mattress side and 9 cm additional total length, based on the previously verified 140 cm reference footprint; these are estimates, not product specifications. The cabinet follows each bed orientation with a 2 cm planning gap; configurations where it cannot fit remain invalid instead of hiding the cabinet. PAX height is purchase metadata rather than a 2D scenario axis because both available heights have the same footprint. Three orientation concepts produce 216 explicit scenarios: transverse divider, PAX along the bathroom wall with the bed shifted toward the loggia, and PAX plus bed rotated by 90 degrees. Each scenario is checked for containment, furniture overlap, mandatory door access, at least one usable loggia door, and at least one usable balcony door.
 
 The transverse divider remains a geometric experiment only because IKEA requires PAX to be wall anchored. A short-end-only attachment is not treated as equivalent to the documented rear wall mounting. Bathroom-wall-parallel concepts are marked as mounting candidates, not as verified installations; the actual wall substrate, fasteners, permitted drilling, and wardrobe access clearance must be confirmed before purchase.
 
@@ -80,13 +80,13 @@ Safety research references:
 - IKEA wall-anchoring guide: https://www.ikea.com/de/de/files/pdf/1a/98/1a987529/bf_leitfaden_wandverankerung_07-2026_online.pdf
 - US EPA guidance on cooking-generated indoor particles and range-hood use: https://www.epa.gov/indoor-air-quality-iaq/sources-indoor-particulate-matter-pm
 
-The browser reads a generated evaluation file and navigates only through valid scenarios, ranked by a transparent planning score. Invalid scenarios remain in the generated data for diagnosis and regression testing.
+The browser reads a generated evaluation file and exposes the bedroom dimensions through dedicated controls. It keeps the selected VERNAL desk fixed while bed type, mattress width, PAX width, and orientation change. Invalid bedroom combinations remain selectable and are visibly explained instead of being silently skipped.
 
 The ranking is an exploration aid, not a purchase recommendation: the approximate source scale can make small reported gaps unreliable.
 
 ### Furniture anchor invariants
 
-- MALM width changes preserve the wall-side external frame edge. The free edge moves toward or away from PAX, so a narrower bed creates a larger signed bed-to-PAX gap.
+- New-bed width changes preserve the wall-side external frame edge. The free edge moves toward or away from PAX, so a narrower bed creates a larger signed bed-to-PAX gap.
 - PAX width changes preserve the bathroom-facing short end and its perpendicular offset from the bathroom wall. Only the free end toward the bed moves.
 - VERNAL dimensions are resolved from a fixed top-right wall-contact corner. Its top edge stays on the loggia-side wall and its right edge stays on the window/east wall for every variant.
 - Automated tests compare these projected edges and wall-contact coordinates across the complete variant matrix.
@@ -100,10 +100,10 @@ The ranking is an exploration aid, not a purchase recommendation: the approximat
 - Used as a visual divider rather than a structural wall.
 - Every PAX scenario carries an explicit anchoring warning.
 
-### IKEA MALM bed
+### Estimated new bed
 
-- Mattress: 140 × 200 cm.
-- Actual outer footprint: 156 × 209 cm.
+- Selectable mattresses: 90, 120, 140, 160, and 180 × 200 cm.
+- Estimated outer footprint: mattress width + 16 cm, total length 209 cm.
 - Rotated 90° relative to the original suggested bed orientation.
 
 ### Vernal L-shaped desk

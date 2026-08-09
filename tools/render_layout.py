@@ -160,7 +160,7 @@ def render(output_svg: Path, output_png: Path):
     title=SubElement(svg,"text",{"x":"30","y":"35","class":"title"})
     title.text="Wohnung 264 – Layout-Experiment"
     subtitle=SubElement(svg,"text",{"x":"30","y":"51","class":"subtitle"})
-    subtitle.text="PAX-Raumteiler · MALM 140×200 gedreht · VERNAL 180×150 · Eingangstür als 100-cm-Anker bestätigt"
+    subtitle.text="Schlafbereich-Experiment · Bett, Kommode und PAX · Eingangstür als 100-cm-Anker bestätigt"
     note=SubElement(svg,"text",{"x":"30","y":str(vh-20),"class":"subtitle"})
     note.text="Planungsstand: geometrische Näherung; der Originalgrundriss ist laut Quelle nicht maßstabsgerecht."
 

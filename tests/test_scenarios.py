@@ -29,16 +29,16 @@ class ScenarioTests(unittest.TestCase):
         cls.apartment = expand_apartment_geometry(load_json("data/apartment.json"))
         cls.constraints = load_json("data/layout-constraints.json")
 
-    def test_matrix_contains_72_unique_scenarios(self):
+    def test_matrix_contains_216_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 72)
-        self.assertEqual(len(set(ids)), 72)
+        self.assertEqual(len(ids), 216)
+        self.assertEqual(len(set(ids)), 216)
 
-    def test_external_product_dimensions_are_resolved(self):
+    def test_estimated_new_bed_dimensions_are_resolved(self):
         layout = next(
             layout
             for layout in self.furniture["layouts"]
-            if layout["selection"]["bedVariantId"] == "malm-140"
+            if layout["selection"]["bedVariantId"] == "new-bed-140"
             and layout["selection"]["paxVariantId"] == "pax-200"
         )
         bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
@@ -88,7 +88,7 @@ class ScenarioTests(unittest.TestCase):
             wall_side_positions.append(
                 center[0] * axis[0] + center[1] * axis[1] - bed["dimensionsCm"]["width"] / cm_per_pixel / 2
             )
-        self.assertEqual(len(wall_side_positions), 4)
+        self.assertEqual(len(wall_side_positions), 6)
         self.assertLess(max(wall_side_positions) - min(wall_side_positions), 0.001)
 
     def test_pax_bath_end_and_cross_axis_stay_fixed_across_width_variants(self):
@@ -96,7 +96,7 @@ class ScenarioTests(unittest.TestCase):
         bath_end_positions = []
         cross_axis_positions = []
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "malm-140" or layout["selection"]["deskVariantId"] != "stable-180-150":
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["deskVariantId"] != "stable-180-150":
                 continue
             pax = next(obj for obj in layout["objects"] if obj["type"] == "wardrobe")
             angle = math.radians(pax["positionPx"]["rotationDeg"])
@@ -115,7 +115,7 @@ class ScenarioTests(unittest.TestCase):
         cm_per_pixel = self.apartment["scale"]["cmPerPixel"]
         anchors = []
         for layout in self.furniture["layouts"]:
-            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "malm-140" or layout["selection"]["paxVariantId"] != "pax-200":
+            if layout["selection"]["arrangementId"] != "divider" or layout["selection"]["bedVariantId"] != "new-bed-140" or layout["selection"]["paxVariantId"] != "pax-200":
                 continue
             desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
             polygon = furniture_polygon(desk, cm_per_pixel)
@@ -137,8 +137,10 @@ class ScenarioTests(unittest.TestCase):
             bed_projection = [x * inward_axis[0] + y * inward_axis[1] for x, y in furniture_polygon(bed, cm_per_pixel).exterior.coords]
             pax_projection = [x * inward_axis[0] + y * inward_axis[1] for x, y in furniture_polygon(pax, cm_per_pixel).exterior.coords]
             signed_gaps[layout["selection"]["bedVariantId"]] = min(pax_projection) - max(bed_projection)
-        self.assertGreater(signed_gaps["malm-140"], signed_gaps["malm-160"])
-        self.assertGreater(signed_gaps["malm-160"], signed_gaps["malm-180"])
+        self.assertGreater(signed_gaps["new-bed-90"], signed_gaps["new-bed-120"])
+        self.assertGreater(signed_gaps["new-bed-120"], signed_gaps["new-bed-140"])
+        self.assertGreater(signed_gaps["new-bed-140"], signed_gaps["new-bed-160"])
+        self.assertGreater(signed_gaps["new-bed-160"], signed_gaps["new-bed-180"])
 
     def test_pax_height_does_not_create_duplicate_2d_variants(self):
         pax_objects = [
@@ -157,6 +159,7 @@ class ScenarioTests(unittest.TestCase):
             for layout in self.furniture["layouts"]
             if layout["selection"]["paxVariantId"] == "pax-200"
             and layout["selection"]["deskVariantId"] == "stable-160-140"
+            and layout["selection"]["bedVariantId"] == "current-bed-90"
             and layout["selection"]["arrangementId"] != "divider"
             for result in [evaluate_layout(layout, self.apartment, self.constraints)]
         }
@@ -169,6 +172,16 @@ class ScenarioTests(unittest.TestCase):
             results["bath-wall-both-rotated"]["bedPaxGapCm"],
             results["bath-wall-bed-shifted"]["bedPaxGapCm"],
         )
+
+    def test_every_bed_option_is_generated_in_every_orientation(self):
+        expected_beds = {"current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"}
+        for arrangement_id in {"divider", "bath-wall-bed-shifted", "bath-wall-both-rotated"}:
+            actual = {
+                layout["selection"]["bedVariantId"]
+                for layout in self.furniture["layouts"]
+                if layout["selection"]["arrangementId"] == arrangement_id
+            }
+            self.assertEqual(actual, expected_beds)
 
     def test_every_valid_scenario_keeps_at_least_one_loggia_door_usable(self):
         for layout in self.furniture["layouts"]:
