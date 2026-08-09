@@ -58,3 +58,16 @@ export function validLayoutsForDesk(layouts, evaluations, deskVariantId) {
     layout.selection.deskVariantId === deskVariantId && validIds.has(layout.id)
   );
 }
+
+export function findLayoutForSelection(layouts, activeLayout, overrides) {
+  const selection = { ...activeLayout.selection, ...overrides };
+  return layouts.find((layout) =>
+    layout.selection.arrangementId === selection.arrangementId &&
+    layout.selection.bedVariantId === selection.bedVariantId &&
+    layout.selection.paxVariantId === selection.paxVariantId &&
+    layout.selection.paxAccessDepthCm === selection.paxAccessDepthCm &&
+    layout.selection.deskVariantId === selection.deskVariantId &&
+    layout.selection.deskPlacementId === selection.deskPlacementId &&
+    layout.selection.minifridgePlacementId === selection.minifridgePlacementId
+  );
+}

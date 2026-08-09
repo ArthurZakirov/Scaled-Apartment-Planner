@@ -12,7 +12,7 @@ The planner currently includes:
 - the current 111 × 204 cm bed, the existing 57.5 × 43 × 54 cm bedside cabinet, the existing 40 × 43 × 57 cm KESSER minifridge, five estimated new-bed footprints for 90–180 cm mattresses, three modular PAX widths, and four VERNAL L-desk contexts;
 - three orientation concepts: transverse divider, PAX along the bathroom wall with shifted bed, and PAX plus bed rotated by 90°;
 - 3,456 explicit generated scenarios with geometric and installation-safety classification, including two independent VERNAL positions, four independently selectable PAX access reserves, and two KESSER-minifridge placements;
-- dedicated selectors for current/new bed, mattress width, PAX width, PAX access reserve (0/30/45/60 cm), VERNAL position, and minifridge placement while the selected desk size remains fixed;
+- two clearly separated control sections, “Möbel & Maße” and “Möbelpositionen”, with consistent dropdowns for bed type, mattress width, PAX width, PAX access reserve (0/30/45/60 cm), sleeping-area arrangement, VERNAL position, and minifridge placement while the selected desk size remains fixed;
 - dimension selectors preserve the active orientation and other furniture choices instead of silently switching to another layout concept;
 - the rotated bed/PAX geometry can clear the Loggia door with mattresses up to 120 cm, but remains diagnostic-only because the bed blocks the required open-PAX access strip;
 - the recessed bedroom-Loggia door reveal is visible in the plan and reserves a 20 cm opening strip behind the rotated bed headboard;
@@ -24,7 +24,7 @@ The planner currently includes:
 - a visible, validated 60 × 60 cm chair/work zone inside every VERNAL cutout;
 - a marked minifridge door edge and validated 40 cm operating zone that remain inside the apartment and clear of fixed kitchen fixtures, doors, bathroom, and loose furniture;
 - fixed-kitchen collision checks and a local 50 cm hard minimum passage for the lower desk position; 60 cm remains the comfort recommendation;
-- a direct three-button switch between the transverse divider and both bathroom-wall concepts;
+- a sleeping-area arrangement dropdown for the transverse divider and both bathroom-wall concepts, with geometrically impossible options visibly disabled;
 - automatic door-swing intersection checks;
 - a normal vector-only view;
 - a calibration route that overlays the vector geometry on the immutable source image;

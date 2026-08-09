@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
-import { normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from '../src/furniture.js';
+import { findLayoutForSelection, normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from '../src/furniture.js';
 
 const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.json', import.meta.url), 'utf8'));
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
@@ -102,6 +102,40 @@ test('PAX access depth changes without changing another scenario axis', () => {
       legacy.selection
     );
   }
+});
+
+test('each furniture control changes only its own scenario axis', () => {
+  const resolved = resolveScenarioData(scenarios, catalog);
+  const activeLayout = resolved.layouts.find((layout) => layout.id === resolved.activeLayoutId);
+  const alternateByAxis = {
+    arrangementId: 'bath-wall-both-rotated',
+    bedVariantId: 'new-bed-120',
+    paxVariantId: 'pax-175',
+    paxAccessDepthCm: 30,
+    deskPlacementId: 'lower-balcony-corner',
+    minifridgePlacementId: 'kitchen-back-wall'
+  };
+
+  for (const [axis, value] of Object.entries(alternateByAxis)) {
+    const target = findLayoutForSelection(resolved.layouts, activeLayout, { [axis]: value });
+    assert.ok(target, `${axis} alternate is present in the unchanged scenario matrix`);
+    assert.equal(target.selection[axis], value);
+    assert.deepEqual(
+      { ...target.selection, [axis]: activeLayout.selection[axis] },
+      activeLayout.selection,
+      `${axis} changed another selection axis`
+    );
+  }
+});
+
+test('geometrically unavailable axis options remain unselectable', () => {
+  const resolved = resolveScenarioData(scenarios, catalog);
+  const layouts = validLayoutsForDesk(resolved.layouts, evaluations, 'quick-150-150');
+  const activeLayout = layouts.find((layout) => layout.id === resolved.activeLayoutId);
+  assert.equal(
+    findLayoutForSelection(layouts, activeLayout, { arrangementId: 'bath-wall-both-rotated' }),
+    undefined
+  );
 });
 
 test('user-facing bedroom layouts contain only valid geometry and preserve the desk', () => {

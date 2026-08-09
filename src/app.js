@@ -1,5 +1,5 @@
 import { expandApartmentGeometry } from './geometry.js';
-import { normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from './furniture.js';
+import { findLayoutForSelection, normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from './furniture.js';
 
 const isCalibration = window.location.pathname.includes('/calibration');
 const base = isCalibration ? '..' : '.';
@@ -529,27 +529,23 @@ function renderScenarioNavigation(furniture, activeLayout, evaluations) {
   return navigation;
 }
 
-function findBedroomLayout(furniture, activeLayout, overrides) {
-  const selection = { ...activeLayout.selection, ...overrides };
-  return furniture.layouts.find((layout) =>
-    layout.selection.arrangementId === selection.arrangementId &&
-    layout.selection.bedVariantId === selection.bedVariantId &&
-    layout.selection.paxVariantId === selection.paxVariantId &&
-    layout.selection.paxAccessDepthCm === selection.paxAccessDepthCm &&
-    layout.selection.deskVariantId === selection.deskVariantId &&
-    layout.selection.deskPlacementId === selection.deskPlacementId &&
-    layout.selection.minifridgePlacementId === selection.minifridgePlacementId
-  );
-}
-
 function renderBedroomControls(furniture, activeLayout) {
   const controls = htmlEl('div', { className: 'bedroom-controls' });
+  const dimensions = htmlEl('fieldset', { className: 'control-section' });
+  dimensions.append(htmlEl('legend', {}, 'Möbel & Maße'));
+  const positions = htmlEl('fieldset', { className: 'control-section' });
+  positions.append(htmlEl('legend', {}, 'Möbelpositionen'));
   const currentBed = activeLayout.selection.bedVariantId === 'current-bed-90';
+  let controlIndex = 0;
 
-  const addSelect = (labelText, value, options, onChange, disabled = false, wide = false) => {
+  const addSelect = (section, labelText, value, options, onChange, disabled = false, wide = false) => {
+    const id = `bedroom-control-${controlIndex++}`;
     const label = htmlEl('label', wide ? { className: 'wide-control' } : {});
-    label.append(htmlEl('span', {}, labelText));
-    const select = htmlEl('select', disabled ? { disabled: '' } : {});
+    label.setAttribute('for', id);
+    label.append(htmlEl('span', { className: 'control-label' }, labelText));
+    const selectAttrs = { id, name: id };
+    if (disabled) selectAttrs.disabled = '';
+    const select = htmlEl('select', selectAttrs);
     for (const option of options) {
       const attrs = { value: option.value };
       if (option.value === value) attrs.selected = '';
@@ -558,37 +554,39 @@ function renderBedroomControls(furniture, activeLayout) {
     }
     select.addEventListener('change', () => onChange(select.value));
     label.append(select);
-    controls.append(label);
+    section.append(label);
   };
 
-  addSelect('Bett', currentBed ? 'current' : 'new', [
-    { value: 'current', label: 'Mein aktuelles Bett', disabled: !findBedroomLayout(furniture, activeLayout, { bedVariantId: 'current-bed-90' }) },
-    { value: 'new', label: 'Neues Bett', disabled: !findBedroomLayout(furniture, activeLayout, { bedVariantId: 'new-bed-90' }) }
+  const findBedroomLayout = (overrides) => findLayoutForSelection(furniture.layouts, activeLayout, overrides);
+
+  addSelect(dimensions, 'Bettart', currentBed ? 'current' : 'new', [
+    { value: 'current', label: 'Mein aktuelles Bett', disabled: !findBedroomLayout({ bedVariantId: 'current-bed-90' }) },
+    { value: 'new', label: 'Neues Bett', disabled: !findBedroomLayout({ bedVariantId: 'new-bed-90' }) }
   ], (value) => {
     const bedVariantId = value === 'current'
       ? 'current-bed-90'
       : currentBed ? 'new-bed-90' : activeLayout.selection.bedVariantId;
-    const target = findBedroomLayout(furniture, activeLayout, { bedVariantId });
+    const target = findBedroomLayout({ bedVariantId });
     if (target) selectScenario(target.id);
   });
 
   const mattressWidth = currentBed ? '90' : activeLayout.selection.bedVariantId.replace('new-bed-', '');
-  addSelect('Matratzenbreite', mattressWidth, ['90', '120', '140', '160', '180'].map((width) => ({
+  addSelect(dimensions, 'Matratzenbreite', mattressWidth, ['90', '120', '140', '160', '180'].map((width) => ({
     value: width,
     label: `${width} cm`,
-    disabled: !findBedroomLayout(furniture, activeLayout, { bedVariantId: `new-bed-${width}` })
+    disabled: !findBedroomLayout({ bedVariantId: `new-bed-${width}` })
   })), (width) => {
-    const target = findBedroomLayout(furniture, activeLayout, { bedVariantId: `new-bed-${width}` });
+    const target = findBedroomLayout({ bedVariantId: `new-bed-${width}` });
     if (target) selectScenario(target.id);
   }, currentBed);
 
   const paxWidth = activeLayout.selection.paxVariantId.replace('pax-', '');
-  addSelect('PAX-Breite', paxWidth, ['150', '175', '200'].map((width) => ({
+  addSelect(dimensions, 'PAX-Breite', paxWidth, ['150', '175', '200'].map((width) => ({
     value: width,
     label: `${width} cm`,
-    disabled: !findBedroomLayout(furniture, activeLayout, { paxVariantId: `pax-${width}` })
+    disabled: !findBedroomLayout({ paxVariantId: `pax-${width}` })
   })), (width) => {
-    const target = findBedroomLayout(furniture, activeLayout, { paxVariantId: `pax-${width}` });
+    const target = findBedroomLayout({ paxVariantId: `pax-${width}` });
     if (target) selectScenario(target.id);
   });
 
@@ -600,10 +598,25 @@ function renderBedroomControls(furniture, activeLayout) {
     { value: '60', label: '60 cm · komfortabler Zugriff' }
   ].map((option) => ({
     ...option,
-    disabled: !findBedroomLayout(furniture, activeLayout, { paxAccessDepthCm: Number(option.value) })
+    disabled: !findBedroomLayout({ paxAccessDepthCm: Number(option.value) })
   }));
-  addSelect('Freiraum vor PAX', String(paxAccessDepth), paxAccessOptions, (depth) => {
-    const target = findBedroomLayout(furniture, activeLayout, { paxAccessDepthCm: Number(depth) });
+  addSelect(dimensions, 'Freiraum vor PAX', String(paxAccessDepth), paxAccessOptions, (depth) => {
+    const target = findBedroomLayout({ paxAccessDepthCm: Number(depth) });
+    if (target) selectScenario(target.id);
+  }, false, true);
+
+  if (!currentBed) dimensions.append(htmlEl('p', {}, 'Geschätztes Bettgestell: Matratzenbreite + 16 cm, Länge ca. 209 cm.'));
+
+  const arrangementOptions = [
+    { value: 'divider', label: 'Raumteiler quer' },
+    { value: 'bath-wall-bed-shifted', label: 'PAX an Badwand' },
+    { value: 'bath-wall-both-rotated', label: 'Beide gedreht' }
+  ].map((option) => ({
+    ...option,
+    disabled: !findBedroomLayout({ arrangementId: option.value })
+  }));
+  addSelect(positions, 'Schlafbereich-Anordnung', activeLayout.selection.arrangementId, arrangementOptions, (arrangementId) => {
+    const target = findBedroomLayout({ arrangementId });
     if (target) selectScenario(target.id);
   }, false, true);
 
@@ -612,48 +625,27 @@ function renderBedroomControls(furniture, activeLayout) {
     { value: 'lower-balcony-corner', label: 'Unten an Balkon/Südwand' }
   ].map((option) => ({
     ...option,
-    disabled: !findBedroomLayout(furniture, activeLayout, { deskPlacementId: option.value })
+    disabled: !findBedroomLayout({ deskPlacementId: option.value })
   }));
-  addSelect('Schreibtischposition', activeLayout.selection.deskPlacementId, deskPlacementOptions, (deskPlacementId) => {
-    const target = findBedroomLayout(furniture, activeLayout, { deskPlacementId });
+  addSelect(positions, 'Schreibtischposition', activeLayout.selection.deskPlacementId, deskPlacementOptions, (deskPlacementId) => {
+    const target = findBedroomLayout({ deskPlacementId });
     if (target) selectScenario(target.id);
-  });
+  }, false, true);
 
   const minifridgePlacementOptions = [
     { value: 'endcap-extension', label: 'A · hinter der Endkappe' },
     { value: 'kitchen-back-wall', label: 'B · bündig zur Küchenrückwand' }
   ].map((option) => ({
     ...option,
-    disabled: !findBedroomLayout(furniture, activeLayout, { minifridgePlacementId: option.value })
+    disabled: !findBedroomLayout({ minifridgePlacementId: option.value })
   }));
-  addSelect('KESSER-Minikühlschrank', activeLayout.selection.minifridgePlacementId, minifridgePlacementOptions, (minifridgePlacementId) => {
-    const target = findBedroomLayout(furniture, activeLayout, { minifridgePlacementId });
+  addSelect(positions, 'Kühlschrankposition', activeLayout.selection.minifridgePlacementId, minifridgePlacementOptions, (minifridgePlacementId) => {
+    const target = findBedroomLayout({ minifridgePlacementId });
     if (target) selectScenario(target.id);
   }, false, true);
 
-  if (!currentBed) controls.append(htmlEl('p', {}, 'Geschätztes Bettgestell: Matratzenbreite + 16 cm, Länge ca. 209 cm.'));
+  controls.append(dimensions, positions);
   return controls;
-}
-
-function renderArrangementNavigation(furniture, activeLayout) {
-  const labels = {
-    divider: 'Raumteiler quer',
-    'bath-wall-bed-shifted': 'PAX an Badwand',
-    'bath-wall-both-rotated': 'Beide gedreht'
-  };
-  const navigation = htmlEl('div', { className: 'arrangement-navigation', role: 'group', 'aria-label': 'Grundorientierung' });
-  for (const [arrangementId, label] of Object.entries(labels)) {
-    const target = findBedroomLayout(furniture, activeLayout, { arrangementId });
-    const buttonAttrs = {
-      type: 'button',
-      'aria-current': activeLayout.selection.arrangementId === arrangementId ? 'true' : 'false'
-    };
-    if (!target) buttonAttrs.disabled = '';
-    const button = htmlEl('button', buttonAttrs, label);
-    if (target && target.id !== activeLayout.id) button.addEventListener('click', () => selectScenario(target.id));
-    navigation.append(button);
-  }
-  return navigation;
 }
 
 function renderFurnitureSummary(activeLayout) {
@@ -702,7 +694,6 @@ function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evalu
   const panel = htmlEl('aside', { className: 'status-panel' });
   panel.append(renderScenarioNavigation(furniture, activeLayout, evaluations));
   panel.append(renderBedroomControls(furniture, activeLayout));
-  panel.append(renderArrangementNavigation(furniture, activeLayout));
   panel.append(htmlEl('h2', {}, 'Aktuelles Szenario'));
   panel.append(htmlEl('div', { className: 'layout-name' }, activeLayout.name));
   const arrangement = htmlEl('div', { className: 'arrangement-summary' });
