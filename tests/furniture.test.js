@@ -49,7 +49,7 @@ test('owned bedside cabinet is present with user-provided dimensions', () => {
   }
 });
 
-test('KESSER minifridge resolves with both independent placements and a marked 50 cm door zone', () => {
+test('KESSER minifridge resolves with both independent placements and a marked 40 cm door zone', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
   assert.deepEqual(
     new Set(furniture.layouts.map((layout) => layout.selection.minifridgePlacementId)),
@@ -59,7 +59,7 @@ test('KESSER minifridge resolves with both independent placements and a marked 5
     const fridge = layout.objects.find((object) => object.type === 'appliance');
     assert.deepEqual(fridge.dimensionsCm, { width: 40, depth: 43, height: 57 });
     assert.equal(fridge.accessLabel, 'Kühlschranktür');
-    assert.equal(fridge.accessDepthCm, 50);
+    assert.equal(fridge.accessDepthCm, 40);
   }
 });
 

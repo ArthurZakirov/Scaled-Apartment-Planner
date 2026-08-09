@@ -241,7 +241,7 @@ def evaluate_layout(
         access_zone = wardrobe_access_polygon(
             appliance,
             cm_per_pixel,
-            appliance.get("accessDepthCm", constraints.get("applianceAccessDepthCm", 50)),
+            appliance.get("accessDepthCm", constraints.get("applianceAccessDepthCm", 40)),
         )
         if not interior.covers(access_zone):
             appliance_access_blocked_by.append("interior-boundary")

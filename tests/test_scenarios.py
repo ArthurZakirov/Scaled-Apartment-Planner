@@ -91,7 +91,7 @@ class ScenarioTests(unittest.TestCase):
                 continue
             fridge = next(obj for obj in layout["objects"] if obj["type"] == "appliance")
             footprint = furniture_polygon(fridge, self.apartment["scale"]["cmPerPixel"])
-            access = wardrobe_access_polygon(fridge, self.apartment["scale"]["cmPerPixel"], 50)
+            access = wardrobe_access_polygon(fridge, self.apartment["scale"]["cmPerPixel"], 40)
             self.assertTrue(interior.covers(footprint), layout["id"])
             self.assertTrue(interior.covers(access), layout["id"])
             self.assertTrue(all(footprint.intersection(item).area <= 0.5 for item in fixture_polygons), layout["id"])

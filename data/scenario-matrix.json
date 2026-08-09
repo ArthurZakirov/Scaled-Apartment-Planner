@@ -93,8 +93,8 @@
       "label": "B · bündig an der Küchenrückwand",
       "profileId": "profile-garderobe",
       "anchor": "kitchen_side_back_wall",
-      "endOffsetCm": 15,
-      "note": "Die Kühlschrankrückseite liegt bündig in der Flucht der küchenseitigen Profilrückwand; 15 cm Versatz hinter dem Profilende halten die 50-cm-Bedienzone aus dem festen Küchenrücklauf."
+      "distanceFromProfileStartCm": 150,
+      "note": "Die Kühlschrankrückseite liegt tatsächlich bündig an der küchenseitigen Längswand des Garderobenprofils; die Position hält die 40-cm-Bedienzone zwischen Spüle und Küchenrücklauf frei."
     }
   ],
   "deskPlacements": [

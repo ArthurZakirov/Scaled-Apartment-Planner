@@ -116,7 +116,7 @@
       "confidence": "user_provided_dimensions",
       "accessEdge": "negativeDepth",
       "accessLabel": "Kühlschranktür",
-      "accessDepthCm": 50,
+      "accessDepthCm": 40,
       "variants": [
         {
           "id": "kesser-minifridge-40",

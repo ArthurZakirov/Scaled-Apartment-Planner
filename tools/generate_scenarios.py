@@ -134,10 +134,14 @@ def minifridge_position(placement, selected_variant, apartment):
         ]
         rotation_deg = math.degrees(math.atan2(side_y, side_x))
     elif placement["anchor"] == "kitchen_side_back_wall":
-        end_offset_px = placement.get("endOffsetCm", 0) / cm_per_pixel
+        distance_from_start_px = placement["distanceFromProfileStartCm"] / cm_per_pixel
+        far_start = [
+            start[0] + side_x * profile["depthPx"],
+            start[1] + side_y * profile["depthPx"],
+        ]
         center = [
-            far_end[0] + axis_x * (width_px / 2 + end_offset_px) + side_x * (wall_half_px + depth_px / 2),
-            far_end[1] + axis_y * (width_px / 2 + end_offset_px) + side_y * (wall_half_px + depth_px / 2),
+            far_start[0] + axis_x * distance_from_start_px + side_x * (wall_half_px + depth_px / 2),
+            far_start[1] + axis_y * distance_from_start_px + side_y * (wall_half_px + depth_px / 2),
         ]
         # The first polygon edge is the marked door edge. Using the negative
         # profile axis as width direction makes that edge face the kitchen.
@@ -304,7 +308,7 @@ def main():
                                 ),
                                 desk_placement["note"],
                                 minifridge_placement["note"],
-                                "Vor der markierten Kühlschranktür bleiben 50 cm Bedienzone innerhalb der Wohnung frei.",
+                                "Vor der markierten Kühlschranktür bleiben 40 cm Bedienzone innerhalb der Wohnung frei.",
                                 arrangement.get("recommendation", "PAX benötigt eine geprüfte Verankerungslösung."),
                             ],
                             "objects": [

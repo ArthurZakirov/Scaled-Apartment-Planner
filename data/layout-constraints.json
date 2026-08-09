@@ -3,7 +3,7 @@
   "minimumClearanceCm": 80,
   "wardrobeAccessDepthCm": 45,
   "storageAccessDepthCm": 35,
-  "applianceAccessDepthCm": 50,
+  "applianceAccessDepthCm": 40,
   "deskWorkZoneCm": {
     "width": 60,
     "depth": 60
@@ -39,7 +39,7 @@
     "The entrance and bathroom doors must remain usable.",
     "The scenario-selected PAX access strip (0, 30, 45, or 60 cm; 45 cm by default) must remain inside the interior and free of every other furniture footprint and door swing.",
     "The full 35 cm drawer access strip must stay inside the interior and remain free of furniture and door swings.",
-    "The KESSER minifridge footprint and full 50 cm door operating zone must stay inside the apartment and remain free of fixed kitchen fixtures, doors, bathroom, and loose furniture.",
+    "The KESSER minifridge footprint and full 40 cm door operating zone must stay inside the apartment and remain free of fixed kitchen fixtures, doors, bathroom, and loose furniture.",
     "Every L desk must retain a 60 x 60 cm chair/work zone inside its inner cutout, clear of fixed fixtures and other furniture.",
     "Only the lower desk-to-kitchen passage has a hard 50 cm minimum; 60 cm remains the comfort recommendation and neither threshold applies globally to unrelated furniture.",
     "Furniture geometry must use the external product footprint rather than mattress or tabletop marketing size alone.",

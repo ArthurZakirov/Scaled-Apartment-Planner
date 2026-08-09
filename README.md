@@ -22,7 +22,7 @@ The planner currently includes:
 - integrated orientation markers for bed head/pillows, open PAX access, and cabinet drawer direction;
 - a visible selected access zone in front of the PAX (hidden at 0 cm) and 35 cm in front of the cabinet drawers, plus a distinct warning state when a layout fits geometrically but still lacks a safe anchoring solution;
 - a visible, validated 60 × 60 cm chair/work zone inside every VERNAL cutout;
-- a marked minifridge door edge and validated 50 cm operating zone that remain inside the apartment and clear of fixed kitchen fixtures, doors, bathroom, and loose furniture;
+- a marked minifridge door edge and validated 40 cm operating zone that remain inside the apartment and clear of fixed kitchen fixtures, doors, bathroom, and loose furniture;
 - fixed-kitchen collision checks and a local 50 cm hard minimum passage for the lower desk position; 60 cm remains the comfort recommendation;
 - a direct three-button switch between the transverse divider and both bathroom-wall concepts;
 - automatic door-swing intersection checks;

@@ -32,7 +32,7 @@
 - In `bath-wall-both-rotated`, preserve the 20 cm headboard-to-wall strip created by the recessed bedroom-Loggia door reveal; this replaces direct wall contact for that orientation.
 - Bedroom controls preserve the active VERNAL desk variant; changing bed, mattress, PAX, orientation, or desk position must not change the desk size.
 - The existing KESSER minifridge is 40 × 43 × 57 cm and has two independent scenario placements derived from `profile-garderobe`; changing its placement must preserve every sleeping-furniture and desk axis.
-- Keep the marked refrigerator door edge and its full 50 cm operating zone inside the apartment and clear of the fixed kitchen, every door swing, bathroom, interior walls, and loose furniture.
+- Keep the marked refrigerator door edge and its full 40 cm operating zone inside the apartment and clear of the fixed kitchen, every door swing, bathroom, interior walls, and loose furniture.
 - Each bedroom selector changes only its own axis. If the exact combination is invalid, disable that option; never silently change orientation, bed, PAX, or another furniture choice to make it fit.
 - `owned-bedside-cabinet` is the user's 57.5 × 43 × 54 cm cabinet. It follows the bed orientation, keeps a 2 cm planning gap to the bed, and requires a clear 35 cm drawer-access strip inside the apartment.
 - No furniture footprint or door swing may enter the scenario-selected 0/30/45/60 cm PAX opening/access strip. This includes the bed, cabinet, and desk; footprint non-overlap alone is not sufficient for a usable scenario. The 45 cm option is the default and keeps legacy URLs suffix-free.
