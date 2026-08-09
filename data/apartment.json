@@ -52,20 +52,20 @@
           303
         ],
         [
-          296,
-          122
+          290,
+          133
         ],
         [
-          339,
-          181
+          333,
+          192
         ],
         [
-          392,
-          250
+          384,
+          263
         ],
         [
           507,
-          250
+          263
         ],
         [
           507,
@@ -187,53 +187,53 @@
       "id": "wall-outer-bedroom-loggia-left",
       "kind": "exterior",
       "start": [
-        303,
-        109
+        294,
+        116
       ],
       "end": [
-        353,
-        177
+        344,
+        184
       ],
-      "thicknessPx": 21
+      "thicknessPx": 26
     },
     {
       "id": "wall-loggia-return-left",
       "kind": "exterior",
       "start": [
-        386,
-        220
+        375,
+        228
       ],
       "end": [
-        404,
-        246
+        393,
+        254
       ],
-      "thicknessPx": 20
+      "thicknessPx": 26
     },
     {
       "id": "wall-loggia-bottom-left",
       "kind": "exterior",
       "start": [
         404,
-        246
+        250
       ],
       "end": [
         412,
-        246
+        250
       ],
-      "thicknessPx": 20
+      "thicknessPx": 26
     },
     {
       "id": "wall-loggia-bottom-right",
       "kind": "exterior",
       "start": [
         466,
-        246
+        250
       ],
       "end": [
         521,
-        246
+        250
       ],
-      "thicknessPx": 20
+      "thicknessPx": 26
     },
     {
       "id": "wall-east-upper",

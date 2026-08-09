@@ -8,6 +8,7 @@
 - Keep building structure, fixed fixtures, and loose furniture in separate data files.
 - Do not remove source furniture by covering it with white shapes. Omit it from the reconstructed vector model instead.
 - Do not simplify the apartment into a rectangle. Preserve the sloped walls, corners, door openings, loggia, and balcony.
+- Preserve the measured 26 px Loggia-separation wall footprint and its inset interior boundary; wall centerlines are not interchangeable with usable-room boundaries.
 - Geometry correctness comes before styling.
 - A successful build is not visual validation. Changes to the apartment geometry must be checked in `/calibration/` against the source image.
 - Never silently convert estimated dimensions into exact dimensions. Preserve `confidence`, `status`, and source notes.

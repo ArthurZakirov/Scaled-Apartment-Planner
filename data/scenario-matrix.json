@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "activeScenarioId": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-180-150",
+  "activeScenarioId": "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150",
   "axes": {
     "bedVariantIds": ["current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"],
     "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
@@ -65,8 +65,8 @@
     "desk": {
       "id": "vernal-l-desk",
       "templateId": "vernal-l-desk",
-      "wallContactCornerPx": [510.4211, 252],
-      "positionPx": {"topLeft": [392, 252], "rotationDeg": 0, "handedness": "right"}
+      "wallContactCornerPx": [510.4211, 263],
+      "positionPx": {"topLeft": [392, 263], "rotationDeg": 0, "handedness": "right"}
     },
     "bedside": {
       "id": "owned-bedside-cabinet",

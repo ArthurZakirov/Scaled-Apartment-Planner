@@ -41,6 +41,19 @@ class GeometryValidationTests(unittest.TestCase):
         self.assertEqual(door["openPoint"], [309, 211])
         self.assertEqual(door["revealDepthCm"], 20)
 
+    def test_loggia_walls_use_the_measured_thicker_footprint(self):
+        wall_ids = {
+            "wall-outer-bedroom-loggia-left",
+            "wall-loggia-return-left",
+            "wall-loggia-bottom-left",
+            "wall-loggia-bottom-right",
+        }
+        walls = [item for item in self.apartment["walls"] if item["id"] in wall_ids]
+        self.assertEqual(len(walls), 4)
+        self.assertTrue(all(item["thicknessPx"] == 26 for item in walls))
+        interior = next(item for item in self.apartment["spaces"] if item["id"] == "space-main")
+        self.assertEqual(interior["points"][1:5], [[290, 133], [333, 192], [384, 263], [507, 263]])
+
     def test_skewed_wall_fails_perpendicular_rule(self):
         apartment = copy.deepcopy(self.apartment)
         wall = next(item for item in apartment["walls"] if item["id"] == "wall-bath-upper")

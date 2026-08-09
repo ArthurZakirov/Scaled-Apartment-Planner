@@ -94,6 +94,8 @@ The bedroom Loggia door is hinged at the upper endpoint `[352, 177]`; its leaf c
 
 The physical photo and the white rectangle in the source plan show that this door is recessed in a reveal. The model records a 20 cm reveal depth and renders it as a white outlined strip. In the fully rotated arrangement, the bed headboard is therefore held 20 cm off the wall so the open leaf can occupy that strip; the door-swing polygon remains unchanged and still participates in collision checks.
 
+Pixel sampling perpendicular to the bedroom–Loggia wall shows a contiguous dark wall band of approximately 26 source pixels. The earlier 21 px centered stroke placed the usable interior edge about 11–12 px too far toward the Loggia. The four adjoining Loggia-separation segments now use 26 px thickness, shifted centerlines, and an inset `space-main` boundary through `[290,133]`, `[333,192]`, `[384,263]`, and `[507,263]`. The desk wall-contact anchor follows the corrected horizontal inner face at `y=263`.
+
 The ranking is an exploration aid, not a purchase recommendation: the approximate source scale can make small reported gaps unreliable.
 
 ### Furniture anchor invariants

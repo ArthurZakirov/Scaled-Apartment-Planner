@@ -1,7 +1,7 @@
 {
   "version": 1,
   "scenarioCount": 216,
-  "validCount": 108,
+  "validCount": 84,
   "rankedValidScenarioIds": [
     "scenario-bath-wall-both-rotated-new-bed-90-pax-200-quick-180-150",
     "scenario-bath-wall-both-rotated-new-bed-90-pax-200-stable-180-150",
@@ -26,43 +26,19 @@
     "scenario-bath-wall-both-rotated-new-bed-120-pax-175-quick-180-150",
     "scenario-bath-wall-both-rotated-new-bed-120-pax-175-stable-180-150",
     "scenario-bath-wall-both-rotated-new-bed-120-pax-200-quick-150-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-quick-150-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-175-stable-160-140",
     "scenario-bath-wall-both-rotated-new-bed-120-pax-200-stable-160-140",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-quick-180-150",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-stable-180-150",
     "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-150-150",
     "scenario-bath-wall-both-rotated-new-bed-90-pax-150-stable-160-140",
     "scenario-bath-wall-both-rotated-new-bed-120-pax-150-quick-180-150",
     "scenario-bath-wall-both-rotated-new-bed-120-pax-150-stable-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-180-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-quick-150-150",
     "scenario-bath-wall-both-rotated-current-bed-90-pax-150-stable-160-140",
     "scenario-bath-wall-both-rotated-new-bed-120-pax-175-quick-150-150",
     "scenario-bath-wall-both-rotated-new-bed-120-pax-175-stable-160-140",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-150-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-160-140",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-quick-180-150",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-stable-180-150",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-quick-150-150",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-stable-160-140",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-quick-180-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-180-150",
     "scenario-bath-wall-both-rotated-new-bed-120-pax-150-quick-150-150",
     "scenario-bath-wall-both-rotated-new-bed-120-pax-150-stable-160-140",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-150-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-160-140",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-quick-180-150",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-stable-180-150",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-quick-150-150",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-stable-160-140",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-quick-150-150",
-    "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-160-140",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-quick-150-150",
-    "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-stable-160-140",
     "scenario-new-bed-90-pax-200-quick-180-150",
     "scenario-new-bed-90-pax-200-stable-180-150",
     "scenario-current-bed-90-pax-200-quick-180-150",
@@ -132,7 +108,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.6,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.6
@@ -156,7 +132,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.8,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.5
@@ -180,7 +156,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.1
@@ -204,7 +180,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.1
@@ -228,7 +204,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.8
@@ -252,7 +228,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.8
@@ -276,7 +252,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.3
@@ -300,7 +276,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.3
@@ -324,7 +300,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.1
@@ -348,7 +324,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.0
@@ -372,7 +348,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 63.6
@@ -396,7 +372,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 45.8,
       "bedPaxGapCm": 45.8,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 63.6
@@ -420,7 +396,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.1
@@ -444,7 +420,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.8,
+      "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.0
@@ -468,7 +444,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.6
@@ -492,7 +468,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.6
@@ -516,7 +492,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.3
@@ -540,7 +516,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.3
@@ -564,7 +540,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.8
@@ -588,7 +564,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.8
@@ -612,7 +588,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.6
@@ -636,7 +612,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.6,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.5
@@ -660,7 +636,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 64.1
@@ -684,7 +660,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 50.8,
       "bedPaxGapCm": 50.8,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 64.1
@@ -708,7 +684,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.7
@@ -732,7 +708,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.7
@@ -756,7 +732,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.2
@@ -780,7 +756,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.2
@@ -804,7 +780,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.0
@@ -828,7 +804,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.9
@@ -852,7 +828,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.5
@@ -876,7 +852,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.5
@@ -900,7 +876,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.2
@@ -924,7 +900,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.2
@@ -948,7 +924,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.7
@@ -972,7 +948,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 20.8,
       "bedPaxGapCm": 20.8,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.7
@@ -996,7 +972,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 57.8
@@ -1020,7 +996,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 57.8
@@ -1044,7 +1020,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.3
@@ -1068,7 +1044,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.3
@@ -1092,7 +1068,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.1
@@ -1116,7 +1092,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.1
@@ -1140,7 +1116,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.6
@@ -1164,7 +1140,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.2,
+      "freeFloorAreaM2": 21.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.6
@@ -1188,7 +1164,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.3
@@ -1212,7 +1188,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.3
@@ -1236,7 +1212,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.8
@@ -1260,7 +1236,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.8,
       "bedPaxGapCm": 0.8,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.8
@@ -1292,7 +1268,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1324,7 +1300,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1356,7 +1332,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1388,7 +1364,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.2,
+      "freeFloorAreaM2": 21.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1420,7 +1396,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1452,7 +1428,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1484,7 +1460,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.2,
+      "freeFloorAreaM2": 21.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1516,7 +1492,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1548,7 +1524,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1580,7 +1556,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1612,7 +1588,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1644,7 +1620,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.0,
+      "freeFloorAreaM2": 21.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1676,7 +1652,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1708,7 +1684,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1740,7 +1716,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.2,
+      "freeFloorAreaM2": 21.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1772,7 +1748,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1804,7 +1780,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1836,7 +1812,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1868,7 +1844,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1900,7 +1876,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1932,7 +1908,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1964,7 +1940,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -1996,7 +1972,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2028,7 +2004,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 0.0,
       "bedPaxGapCm": 0.0,
-      "freeFloorAreaM2": 22.0,
+      "freeFloorAreaM2": 21.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2038,8 +2014,10 @@
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2052,18 +2030,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 55.6
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-160-140",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2076,18 +2056,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
-      "freeFloorAreaM2": 23.8,
+      "freeFloorAreaM2": 23.0,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 55.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-quick-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2100,18 +2082,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.1
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-150-stable-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2124,18 +2108,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 6.0,
       "bedPaxGapCm": 6.0,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.1
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-150-150",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2148,18 +2134,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-160-140",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2172,18 +2160,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-quick-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2196,18 +2186,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-175-stable-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2220,18 +2212,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.7,
       "bedPaxGapCm": 5.7,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-150-150",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2244,18 +2238,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.0
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-160-140",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2268,18 +2264,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.0
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-quick-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2292,18 +2290,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-current-bed-90-pax-200-stable-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Aktuelles Bett 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2316,18 +2316,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 5.4,
       "bedPaxGapCm": 5.4,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-quick-150-150",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2340,18 +2342,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 55.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-stable-160-140",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2364,18 +2368,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 23.9,
+      "freeFloorAreaM2": 23.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 55.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-quick-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2388,18 +2394,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-150-stable-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2412,18 +2420,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-quick-150-150",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2436,18 +2446,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 23.6,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-stable-160-140",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2460,18 +2472,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 23.0,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 56.5
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-quick-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2484,18 +2498,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.0
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-175-stable-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2508,18 +2524,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 58.0
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-quick-150-150",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2532,18 +2550,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.8
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-stable-160-140",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2556,18 +2576,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 23.6,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 57.7
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-quick-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2580,18 +2602,20 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-90-pax-200-stable-180-150",
       "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 90 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": true,
-      "reasons": [],
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior."
+      ],
       "collisions": [],
       "blockedBy": {
         "door-loggia-living": [
@@ -2604,10 +2628,10 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
-      "score": 59.3
+      "score": 0.0
     },
     {
       "id": "scenario-bath-wall-bed-shifted-new-bed-120-pax-150-quick-150-150",
@@ -2616,6 +2640,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2633,7 +2658,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2645,6 +2670,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2662,7 +2688,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2674,6 +2700,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2691,7 +2718,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2703,6 +2730,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2720,7 +2748,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2732,6 +2760,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2749,7 +2778,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2761,6 +2790,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2778,7 +2808,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2790,6 +2820,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2807,7 +2838,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2819,6 +2850,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2836,7 +2868,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2848,6 +2880,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2865,7 +2898,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2877,6 +2910,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2894,7 +2928,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 23.0,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2906,6 +2940,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2923,7 +2958,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2935,6 +2970,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2952,7 +2988,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2964,6 +3000,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -2981,7 +3018,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -2993,6 +3030,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3010,7 +3048,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3022,6 +3060,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3039,7 +3078,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3051,6 +3090,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3068,7 +3108,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3080,6 +3120,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3097,7 +3138,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3109,6 +3150,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3126,7 +3168,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3138,6 +3180,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3155,7 +3198,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3167,6 +3210,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3184,7 +3228,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3196,6 +3240,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3213,7 +3258,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3225,6 +3270,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3242,7 +3288,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3254,6 +3300,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3271,7 +3318,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 22.2,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3283,6 +3330,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3300,7 +3348,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3312,6 +3360,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3329,7 +3378,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3341,6 +3390,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3358,7 +3408,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3370,6 +3420,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3387,7 +3438,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3399,6 +3450,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3416,7 +3468,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.5,
       "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.0,
+      "freeFloorAreaM2": 21.4,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3428,6 +3480,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3445,7 +3498,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3457,6 +3510,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3474,7 +3528,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3486,6 +3540,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3503,7 +3558,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 21.9,
+      "freeFloorAreaM2": 21.3,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3515,6 +3570,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3532,7 +3588,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 3.2,
       "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 21.9,
+      "freeFloorAreaM2": 21.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -3544,412 +3600,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 2.9,
-      "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 22.0,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 2.9,
-      "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 22.2,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 2.9,
-      "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 21.8,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 2.9,
-      "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 21.7,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-quick-150-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 3.5,
-      "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 21.9,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 3.5,
-      "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 22.0,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 3.5,
-      "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 21.7,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 3.5,
-      "bedPaxGapCm": 3.5,
-      "freeFloorAreaM2": 21.6,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-quick-150-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 3.2,
-      "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 21.7,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 3.2,
-      "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 21.9,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 3.2,
-      "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 21.5,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 3.2,
-      "bedPaxGapCm": 3.2,
-      "freeFloorAreaM2": 21.5,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-quick-150-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 2.9,
-      "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 21.6,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-stable-160-140",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
-        "At least one Loggia door must remain usable."
-      ],
-      "collisions": [],
-      "blockedBy": {
-        "door-loggia-bedroom": [
-          "sleeping-bed"
-        ],
-        "door-loggia-living": [
-          "vernal-l-desk"
-        ],
-        "door-balcony-upper": [
-          "vernal-l-desk"
-        ]
-      },
-      "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 2.9,
-      "bedPaxGapCm": 2.9,
-      "freeFloorAreaM2": 21.8,
-      "usableLoggiaDoors": 0,
-      "usableBalconyDoors": 1,
-      "score": 0.0
-    },
-    {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-quick-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
-      "arrangementId": "bath-wall-bed-shifted",
-      "installationStatus": "manufacturer_wall_mount_candidate",
-      "valid": false,
-      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3973,12 +3624,13 @@
       "score": 0.0
     },
     {
-      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-stable-180-150",
-      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
       "arrangementId": "bath-wall-bed-shifted",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -3996,7 +3648,427 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 2.9,
       "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.5,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-160-pax-200-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 160 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
       "freeFloorAreaM2": 21.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 21.4,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 21.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-150-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 150 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 3.5,
+      "bedPaxGapCm": 3.5,
+      "freeFloorAreaM2": 21.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 21.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 21.3,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 20.9,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-175-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 175 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 3.2,
+      "bedPaxGapCm": 3.2,
+      "freeFloorAreaM2": 20.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-quick-150-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 150 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.0,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-stable-160-140",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 160 × 140 × 60",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 21.1,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-quick-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Schnell 180 × 150 × 70",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 20.8,
+      "usableLoggiaDoors": 0,
+      "usableBalconyDoors": 1,
+      "score": 0.0
+    },
+    {
+      "id": "scenario-bath-wall-bed-shifted-new-bed-180-pax-200-stable-180-150",
+      "name": "PAX an Badwand · Bett zur Loggia · Neues Bett · Matratze 180 × 200 · PAX 200 × 58 · VERNAL Stabil 180 × 150 × 75",
+      "arrangementId": "bath-wall-bed-shifted",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "valid": false,
+      "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
+        "At least one Loggia door must remain usable."
+      ],
+      "collisions": [],
+      "blockedBy": {
+        "door-loggia-bedroom": [
+          "sleeping-bed"
+        ],
+        "door-loggia-living": [
+          "vernal-l-desk"
+        ],
+        "door-balcony-upper": [
+          "vernal-l-desk"
+        ]
+      },
+      "wardrobeAccessBlockedBy": [],
+      "minimumFurnitureGapCm": 2.9,
+      "bedPaxGapCm": 2.9,
+      "freeFloorAreaM2": 20.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4020,7 +4092,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.1,
       "bedPaxGapCm": 33.1,
-      "freeFloorAreaM2": 23.6,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.3
@@ -4044,7 +4116,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.1,
       "bedPaxGapCm": 33.1,
-      "freeFloorAreaM2": 23.8,
+      "freeFloorAreaM2": 22.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.3
@@ -4068,7 +4140,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.1,
       "bedPaxGapCm": 33.1,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.8
@@ -4092,7 +4164,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.1,
       "bedPaxGapCm": 33.1,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.8
@@ -4116,7 +4188,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.5
@@ -4140,7 +4212,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.5
@@ -4164,7 +4236,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.0
@@ -4188,7 +4260,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.0
@@ -4212,7 +4284,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.8
@@ -4236,7 +4308,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.7
@@ -4260,7 +4332,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.3
@@ -4284,7 +4356,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 33.0,
       "bedPaxGapCm": 33.0,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.3
@@ -4308,7 +4380,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.7,
       "bedPaxGapCm": 37.7,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.8
@@ -4332,7 +4404,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.7,
       "bedPaxGapCm": 37.7,
-      "freeFloorAreaM2": 23.8,
+      "freeFloorAreaM2": 22.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.7
@@ -4356,7 +4428,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.7,
       "bedPaxGapCm": 37.7,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.3
@@ -4380,7 +4452,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.7,
       "bedPaxGapCm": 37.7,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.3
@@ -4404,7 +4476,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
-      "freeFloorAreaM2": 23.5,
+      "freeFloorAreaM2": 22.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 60.0
@@ -4428,7 +4500,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
-      "freeFloorAreaM2": 23.7,
+      "freeFloorAreaM2": 22.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.9
@@ -4452,7 +4524,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.5
@@ -4476,7 +4548,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
-      "freeFloorAreaM2": 23.3,
+      "freeFloorAreaM2": 22.3,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.5
@@ -4500,7 +4572,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
-      "freeFloorAreaM2": 23.4,
+      "freeFloorAreaM2": 22.4,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.2
@@ -4524,7 +4596,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
-      "freeFloorAreaM2": 23.6,
+      "freeFloorAreaM2": 22.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.2
@@ -4548,7 +4620,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.7
@@ -4572,7 +4644,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 37.5,
       "bedPaxGapCm": 37.5,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 62.7
@@ -4596,7 +4668,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.3,
       "bedPaxGapCm": 4.3,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 57.1
@@ -4620,7 +4692,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.3,
       "bedPaxGapCm": 4.3,
-      "freeFloorAreaM2": 23.2,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 57.0
@@ -4644,7 +4716,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.3,
       "bedPaxGapCm": 4.3,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.6
@@ -4668,7 +4740,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.3,
       "bedPaxGapCm": 4.3,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.6
@@ -4692,7 +4764,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.3
@@ -4716,7 +4788,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
-      "freeFloorAreaM2": 23.1,
+      "freeFloorAreaM2": 22.1,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 58.3
@@ -4740,7 +4812,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.8
@@ -4764,7 +4836,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.8
@@ -4788,7 +4860,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.6
@@ -4812,7 +4884,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
-      "freeFloorAreaM2": 22.9,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 59.5
@@ -4836,7 +4908,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.1
@@ -4860,7 +4932,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 4.1,
       "bedPaxGapCm": 4.1,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 1,
       "usableBalconyDoors": 1,
       "score": 61.1
@@ -4872,6 +4944,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4887,9 +4960,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 42.2,
+      "minimumFurnitureGapCm": 49.2,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4901,6 +4974,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4916,9 +4990,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 32.6,
+      "minimumFurnitureGapCm": 41.3,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4930,6 +5004,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4945,9 +5020,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.3,
+      "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4959,6 +5034,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -4974,9 +5050,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.3,
+      "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -4988,6 +5064,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5003,9 +5080,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 42.2,
+      "minimumFurnitureGapCm": 49.2,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5017,6 +5094,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5032,9 +5110,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 32.6,
+      "minimumFurnitureGapCm": 41.3,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.7,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5046,6 +5124,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5061,9 +5140,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.3,
+      "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5075,6 +5154,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5090,9 +5170,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.3,
+      "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.2,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5104,6 +5184,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5119,9 +5200,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 42.2,
+      "minimumFurnitureGapCm": 49.2,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5133,6 +5214,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5148,9 +5230,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 32.6,
+      "minimumFurnitureGapCm": 41.3,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5162,6 +5244,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5177,9 +5260,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.3,
+      "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5191,6 +5274,7 @@
       "installationStatus": "manufacturer_wall_mount_candidate",
       "valid": false,
       "reasons": [
+        "Furniture sleeping-bed leaves the approximate interior.",
         "At least one Loggia door must remain usable."
       ],
       "collisions": [],
@@ -5206,9 +5290,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.3,
+      "minimumFurnitureGapCm": 24.1,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5236,9 +5320,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 33.5,
+      "minimumFurnitureGapCm": 46.0,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5266,9 +5350,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 26.9,
+      "minimumFurnitureGapCm": 36.0,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5296,9 +5380,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.2,
+      "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5326,9 +5410,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.2,
+      "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5356,9 +5440,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 33.5,
+      "minimumFurnitureGapCm": 46.0,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5386,9 +5470,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 26.9,
+      "minimumFurnitureGapCm": 36.0,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5416,9 +5500,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.2,
+      "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5446,9 +5530,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.2,
+      "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.2,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5476,9 +5560,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 33.5,
+      "minimumFurnitureGapCm": 46.0,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5506,9 +5590,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 26.9,
+      "minimumFurnitureGapCm": 36.0,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5536,9 +5620,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.2,
+      "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5566,9 +5650,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 15.2,
+      "minimumFurnitureGapCm": 16.0,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5596,9 +5680,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 32.8,
+      "minimumFurnitureGapCm": 37.9,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5626,9 +5710,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 26.9,
+      "minimumFurnitureGapCm": 27.9,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.8,
+      "freeFloorAreaM2": 22.2,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5658,7 +5742,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.4,
+      "freeFloorAreaM2": 21.8,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5688,7 +5772,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.4,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5716,9 +5800,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 32.8,
+      "minimumFurnitureGapCm": 37.9,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5746,9 +5830,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 26.9,
+      "minimumFurnitureGapCm": 27.9,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.6,
+      "freeFloorAreaM2": 22.0,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5778,7 +5862,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5808,7 +5892,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.2,
+      "freeFloorAreaM2": 21.6,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5836,9 +5920,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 32.8,
+      "minimumFurnitureGapCm": 37.9,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.3,
+      "freeFloorAreaM2": 21.7,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5866,9 +5950,9 @@
         ]
       },
       "wardrobeAccessBlockedBy": [],
-      "minimumFurnitureGapCm": 26.9,
+      "minimumFurnitureGapCm": 27.9,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.5,
+      "freeFloorAreaM2": 21.9,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5898,7 +5982,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0
@@ -5928,7 +6012,7 @@
       "wardrobeAccessBlockedBy": [],
       "minimumFurnitureGapCm": 7.9,
       "bedPaxGapCm": 51.2,
-      "freeFloorAreaM2": 22.1,
+      "freeFloorAreaM2": 21.5,
       "usableLoggiaDoors": 0,
       "usableBalconyDoors": 1,
       "score": 0.0

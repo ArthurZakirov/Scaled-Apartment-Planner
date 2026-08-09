@@ -160,7 +160,7 @@ class ScenarioTests(unittest.TestCase):
         self.assertTrue(all("height" not in obj["dimensionsCm"] for obj in pax_objects))
         self.assertTrue(all(obj["requiresAnchoring"] for obj in pax_objects))
 
-    def test_wall_aligned_arrangements_are_geometrically_valid(self):
+    def test_corrected_loggia_wall_rejects_the_too_narrow_shifted_arrangement(self):
         results = {
             result["arrangementId"]: result
             for layout in self.furniture["layouts"]
@@ -171,14 +171,11 @@ class ScenarioTests(unittest.TestCase):
             for result in [evaluate_layout(layout, self.apartment, self.constraints)]
         }
         self.assertEqual(set(results), {"bath-wall-bed-shifted", "bath-wall-both-rotated"})
-        self.assertTrue(all(result["valid"] for result in results.values()))
         self.assertTrue(all(result["installationStatus"] == "manufacturer_wall_mount_candidate" for result in results.values()))
-        self.assertLess(results["bath-wall-bed-shifted"]["bedPaxGapCm"], 10)
+        self.assertFalse(results["bath-wall-bed-shifted"]["valid"])
+        self.assertTrue(any("leaves the approximate interior" in reason for reason in results["bath-wall-bed-shifted"]["reasons"]))
+        self.assertTrue(results["bath-wall-both-rotated"]["valid"])
         self.assertGreater(results["bath-wall-both-rotated"]["bedPaxGapCm"], 30)
-        self.assertGreater(
-            results["bath-wall-both-rotated"]["bedPaxGapCm"],
-            results["bath-wall-bed-shifted"]["bedPaxGapCm"],
-        )
 
     def test_both_rotated_supports_120_cm_mattress_with_correct_loggia_hinge(self):
         layouts = [

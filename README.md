@@ -16,6 +16,7 @@ The planner currently includes:
 - dimension selectors preserve the active orientation and other furniture choices instead of silently switching to another layout concept;
 - the rotated bed/PAX orientation supports mattresses up to 120 cm by sliding the bed along its headboard wall while keeping the correctly hinged bedroom Loggia door usable;
 - the recessed bedroom-Loggia door reveal is visible in the plan and reserves a 20 cm opening strip behind the rotated bed headboard;
+- the measured 26 px Loggia-separation walls inset the usable apartment boundary; the former “PAX an Badwand” comparison remains in diagnostics but is no longer selectable because it does not fit the corrected interior;
 - strict filtering to geometrically valid bedroom combinations with score, bed-to-PAX gap, free floor estimate, and usable loggia access;
 - a hard 45 cm PAX opening zone that the bedside cabinet may never obstruct;
 - integrated orientation markers for bed head/pillows, open PAX access, and cabinet drawer direction;
