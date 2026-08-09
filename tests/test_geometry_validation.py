@@ -34,6 +34,12 @@ class GeometryValidationTests(unittest.TestCase):
     def test_current_geometry_satisfies_all_declared_rules(self):
         self.assertEqual(self.errors_for(), [])
 
+    def test_bedroom_loggia_door_hinges_at_opposite_upper_endpoint(self):
+        door = next(item for item in self.apartment["doors"] if item["id"] == "door-loggia-bedroom")
+        self.assertEqual(door["hinge"], [352, 177])
+        self.assertEqual(door["closedPoint"], [386, 220])
+        self.assertEqual(door["openPoint"], [309, 211])
+
     def test_skewed_wall_fails_perpendicular_rule(self):
         apartment = copy.deepcopy(self.apartment)
         wall = next(item for item in apartment["walls"] if item["id"] == "wall-bath-upper")

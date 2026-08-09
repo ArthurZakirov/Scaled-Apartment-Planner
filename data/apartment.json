@@ -421,16 +421,16 @@
         "space-loggia"
       ],
       "hinge": [
-        386,
-        220
-      ],
-      "closedPoint": [
         352,
         177
       ],
+      "closedPoint": [
+        386,
+        220
+      ],
       "openPoint": [
-        330,
-        219
+        309,
+        211
       ],
       "widthPx": 55,
       "policy": "group_requirement",

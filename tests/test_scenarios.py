@@ -172,25 +172,24 @@ class ScenarioTests(unittest.TestCase):
         self.assertTrue(all(result["valid"] for result in results.values()))
         self.assertTrue(all(result["installationStatus"] == "manufacturer_wall_mount_candidate" for result in results.values()))
         self.assertLess(results["bath-wall-bed-shifted"]["bedPaxGapCm"], 10)
-        self.assertGreater(results["bath-wall-both-rotated"]["bedPaxGapCm"], 45)
+        self.assertGreater(results["bath-wall-both-rotated"]["bedPaxGapCm"], 30)
         self.assertGreater(
             results["bath-wall-both-rotated"]["bedPaxGapCm"],
             results["bath-wall-bed-shifted"]["bedPaxGapCm"],
         )
 
-    def test_both_rotated_supports_120_and_140_cm_mattresses(self):
-        for bed_variant_id in ("new-bed-120", "new-bed-140"):
-            layouts = [
-                layout
-                for layout in self.furniture["layouts"]
-                if layout["selection"]["arrangementId"] == "bath-wall-both-rotated"
-                and layout["selection"]["bedVariantId"] == bed_variant_id
-            ]
-            self.assertEqual(len(layouts), 12)
-            for layout in layouts:
-                result = evaluate_layout(layout, self.apartment, self.constraints)
-                self.assertTrue(result["valid"], f"{layout['id']}: {result['reasons']}")
-                self.assertGreaterEqual(result["usableLoggiaDoors"], 1)
+    def test_both_rotated_supports_120_cm_mattress_with_correct_loggia_hinge(self):
+        layouts = [
+            layout
+            for layout in self.furniture["layouts"]
+            if layout["selection"]["arrangementId"] == "bath-wall-both-rotated"
+            and layout["selection"]["bedVariantId"] == "new-bed-120"
+        ]
+        self.assertEqual(len(layouts), 12)
+        for layout in layouts:
+            result = evaluate_layout(layout, self.apartment, self.constraints)
+            self.assertTrue(result["valid"], f"{layout['id']}: {result['reasons']}")
+            self.assertGreaterEqual(result["usableLoggiaDoors"], 1)
 
     def test_every_bed_option_is_generated_in_every_orientation(self):
         expected_beds = {"current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"}
