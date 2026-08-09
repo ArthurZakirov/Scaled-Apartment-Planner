@@ -13,6 +13,7 @@ The planner currently includes:
 - three orientation concepts: transverse divider, PAX along the bathroom wall with shifted bed, and PAX plus bed rotated by 90°;
 - 216 explicit generated scenarios with geometric and installation-safety classification;
 - dedicated selectors for current/new bed, mattress width, and PAX width while the selected desk remains fixed;
+- dimension selectors preserve the active orientation and other furniture choices instead of silently switching to another layout concept;
 - strict filtering to geometrically valid bedroom combinations with score, bed-to-PAX gap, free floor estimate, and usable loggia access;
 - a hard 45 cm PAX opening zone that the bedside cabinet may never obstruct;
 - integrated orientation markers for bed head/pillows, open PAX access, and cabinet drawer direction;

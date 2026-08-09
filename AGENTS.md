@@ -29,6 +29,7 @@
 - A transverse PAX is never labeled safe without an engineered support solution. Bathroom-wall-parallel concepts are only mounting candidates until the actual wall and fasteners are verified.
 - `sleeping-bed` can use the current 90 × 200 cm mattress/111 × 204 cm frame or an estimated new bed for 90, 120, 140, 160, and 180 cm mattress widths while keeping its wall-side edge fixed.
 - Bedroom controls preserve the active VERNAL desk variant; changing bed, mattress, PAX, or orientation must not change the desk.
+- Each bedroom selector changes only its own axis. If the exact combination is invalid, disable that option; never silently change orientation, bed, PAX, or another furniture choice to make it fit.
 - `owned-bedside-cabinet` is the user's 57.5 × 43 × 54 cm cabinet. It follows the bed orientation and keeps a 2 cm planning gap to the bed.
 - The cabinet must never enter the 45 cm PAX opening/access strip. Prefer the free bed-end or room-corner position when a side placement would obstruct the open wardrobe.
 - Preserve the in-plan orientation markers: bed head/pillow edge, open PAX access edge, and cabinet drawer front must follow the same local negative-depth edge used by geometry.

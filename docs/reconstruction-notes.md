@@ -86,6 +86,8 @@ Safety research references:
 
 The browser reads a generated evaluation file and exposes the bedroom dimensions through dedicated controls. It keeps the selected VERNAL desk fixed while bed type, mattress width, PAX width, and orientation change. Only geometrically valid bedroom combinations are selectable; impossible mattress sizes are visibly disabled, while invalid scenarios remain in generated data solely for diagnostics and regression tests.
 
+Controls are axis-stable: selecting a mattress width never changes the orientation or PAX width, and selecting a PAX width never changes the bed or orientation. An invalid exact combination is disabled. Legacy links to invalid combinations fall back within the same orientation before considering another layout concept.
+
 The ranking is an exploration aid, not a purchase recommendation: the approximate source scale can make small reported gaps unreliable.
 
 ### Furniture anchor invariants

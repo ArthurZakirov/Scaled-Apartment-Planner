@@ -419,19 +419,6 @@ function findBedroomLayout(furniture, activeLayout, overrides) {
   );
 }
 
-function findClosestBedroomLayout(furniture, activeLayout, overrides) {
-  const candidates = furniture.layouts.filter((layout) =>
-    Object.entries(overrides).every(([key, value]) => layout.selection[key] === value)
-  );
-  return candidates.sort((first, second) => {
-    const similarity = (layout) =>
-      (layout.selection.arrangementId === activeLayout.selection.arrangementId ? 4 : 0) +
-      (layout.selection.bedVariantId === activeLayout.selection.bedVariantId ? 3 : 0) +
-      (layout.selection.paxVariantId === activeLayout.selection.paxVariantId ? 2 : 0);
-    return similarity(second) - similarity(first);
-  })[0] ?? null;
-}
-
 function renderBedroomControls(furniture, activeLayout) {
   const controls = htmlEl('div', { className: 'bedroom-controls' });
   const currentBed = activeLayout.selection.bedVariantId === 'current-bed-90';
@@ -452,13 +439,13 @@ function renderBedroomControls(furniture, activeLayout) {
   };
 
   addSelect('Bett', currentBed ? 'current' : 'new', [
-    { value: 'current', label: 'Mein aktuelles Bett', disabled: !furniture.layouts.some((layout) => layout.selection.bedVariantId === 'current-bed-90') },
-    { value: 'new', label: 'Neues Bett', disabled: !furniture.layouts.some((layout) => layout.selection.bedVariantId.startsWith('new-bed-')) }
+    { value: 'current', label: 'Mein aktuelles Bett', disabled: !findBedroomLayout(furniture, activeLayout, { bedVariantId: 'current-bed-90' }) },
+    { value: 'new', label: 'Neues Bett', disabled: !findBedroomLayout(furniture, activeLayout, { bedVariantId: 'new-bed-90' }) }
   ], (value) => {
     const bedVariantId = value === 'current'
       ? 'current-bed-90'
       : currentBed ? 'new-bed-90' : activeLayout.selection.bedVariantId;
-    const target = findClosestBedroomLayout(furniture, activeLayout, { bedVariantId });
+    const target = findBedroomLayout(furniture, activeLayout, { bedVariantId });
     if (target) selectScenario(target.id);
   });
 
@@ -466,9 +453,9 @@ function renderBedroomControls(furniture, activeLayout) {
   addSelect('Matratzenbreite', mattressWidth, ['90', '120', '140', '160', '180'].map((width) => ({
     value: width,
     label: `${width} cm`,
-    disabled: !furniture.layouts.some((layout) => layout.selection.bedVariantId === `new-bed-${width}`)
+    disabled: !findBedroomLayout(furniture, activeLayout, { bedVariantId: `new-bed-${width}` })
   })), (width) => {
-    const target = findClosestBedroomLayout(furniture, activeLayout, { bedVariantId: `new-bed-${width}` });
+    const target = findBedroomLayout(furniture, activeLayout, { bedVariantId: `new-bed-${width}` });
     if (target) selectScenario(target.id);
   }, currentBed);
 
@@ -476,9 +463,9 @@ function renderBedroomControls(furniture, activeLayout) {
   addSelect('PAX-Breite', paxWidth, ['150', '175', '200'].map((width) => ({
     value: width,
     label: `${width} cm`,
-    disabled: !furniture.layouts.some((layout) => layout.selection.paxVariantId === `pax-${width}`)
+    disabled: !findBedroomLayout(furniture, activeLayout, { paxVariantId: `pax-${width}` })
   })), (width) => {
-    const target = findClosestBedroomLayout(furniture, activeLayout, { paxVariantId: `pax-${width}` });
+    const target = findBedroomLayout(furniture, activeLayout, { paxVariantId: `pax-${width}` });
     if (target) selectScenario(target.id);
   });
 
@@ -673,9 +660,9 @@ async function main() {
           const bed = scenario.selection.bedVariantId;
           const isCurrent = bed === 'current-bed-90';
           const width = Number(bed.replace('new-bed-', '')) || 90;
-          return (isCurrent === requestedIsCurrent ? 100 : 0)
-            + (scenario.selection.paxVariantId === requestedLayout.selection.paxVariantId ? 20 : 0)
-            + (scenario.selection.arrangementId === requestedLayout.selection.arrangementId ? 10 : 0)
+          return (scenario.selection.arrangementId === requestedLayout.selection.arrangementId ? 1000 : 0)
+            + (scenario.selection.paxVariantId === requestedLayout.selection.paxVariantId ? 100 : 0)
+            + (isCurrent === requestedIsCurrent ? 20 : 0)
             - Math.abs(width - requestedWidth);
         };
         return score(second) - score(first);
