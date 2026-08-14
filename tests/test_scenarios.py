@@ -488,6 +488,14 @@ class ScenarioTests(unittest.TestCase):
             if result["valid"]:
                 self.assertGreaterEqual(result["usableLoggiaDoors"], 1, layout["id"])
 
+    def test_upper_desk_remains_available_when_bedroom_loggia_door_opens_80_percent(self):
+        scenario_id = "scenario-bath-wall-both-rotated-new-bed-120-pax-150-quick-150-150-pax-access-0-fridge-kitchen-back-wall"
+        layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
+        result = self.evaluate(layout)
+        self.assertTrue(result["valid"], result["reasons"])
+        self.assertGreaterEqual(result["doorOpeningFractions"]["door-loggia-bedroom"], 0.8)
+        self.assertNotIn("door-loggia-bedroom", result["blockedBy"])
+
     def test_lower_desk_position_preserves_the_upper_balcony_door(self):
         for layout in self.furniture["layouts"]:
             if layout["selection"]["deskPlacementId"] != "lower-balcony-corner":

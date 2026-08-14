@@ -320,7 +320,7 @@ function makeFurnitureGroup(object, cmPerPixel) {
   return { group, polygon };
 }
 
-function buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints, calibration) {
+function buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints, evaluation, calibration) {
   const [vx, vy, vw, vh] = apartment.coordinateSystem.viewBox;
   const svg = svgEl('svg', {
     viewBox: `${vx} ${vy} ${vw} ${vh}`,
@@ -497,9 +497,11 @@ function buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints,
   const doorResults = [];
   for (const door of apartment.doors) {
     const zone = doorSwingPolygon(door);
-    const blockingObjects = furniturePolygons.filter((item) => polygonsIntersect(zone, item.polygon));
-    const blocked = blockingObjects.length > 0;
-    doorResults.push({ door, blocked, blockingObjects: blockingObjects.map((item) => item.id) });
+    const openingFraction = evaluation.doorOpeningFractions[door.id] ?? 1;
+    const minimumOpeningFraction = constraints.doorPolicies.minimumOpeningFractionByDoor[door.id] ?? 1;
+    const blockingObjects = evaluation.doorOpeningLimitedBy[door.id] ?? [];
+    const blocked = openingFraction < minimumOpeningFraction;
+    doorResults.push({ door, blocked, blockingObjects, openingFraction, minimumOpeningFraction });
 
     doorLayer.append(svgEl('polygon', {
       points: pointsAttr(zone),
@@ -874,7 +876,11 @@ function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evalu
       : result.door.policy === 'group_requirement'
         ? 'mindestens eine Tür dieser Gruppe muss frei bleiben'
         : 'darf blockiert werden';
-    row.append(htmlEl('small', {}, `${result.blocked ? `blockiert durch ${result.blockingObjects.join(', ')}` : 'frei'} · ${policyText}`));
+    const openingPercent = Math.round(result.openingFraction * 100);
+    const openingText = result.openingFraction < 1
+      ? `${openingPercent} % öffnbar${result.blocked ? ` · begrenzt durch ${result.blockingObjects.join(', ')}` : ' · ausreichend'}`
+      : '100 % öffnbar';
+    row.append(htmlEl('small', {}, `${openingText} · ${policyText}`));
     list.append(row);
   }
   panel.append(list);
@@ -992,7 +998,7 @@ async function main() {
 
     const workspace = htmlEl('main', { className: isCalibration ? 'workspace calibration-workspace' : 'workspace' });
     const canvas = htmlEl('section', { className: 'canvas-card reconstructed-card' });
-    const rendered = buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints, isCalibration);
+    const rendered = buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints, activeEvaluation, isCalibration);
     if (isCalibration) root.append(renderCalibrationControls(rendered.svg));
     canvas.append(rendered.svg);
     workspace.append(canvas);

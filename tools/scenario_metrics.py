@@ -55,6 +55,34 @@ def door_swing_polygon(door: dict[str, Any], steps: int = 36) -> Polygon:
     return Polygon(points)
 
 
+def door_opening_fraction(
+    door: dict[str, Any], object_polygons: dict[str, Polygon], steps: int = 100
+) -> tuple[float, list[str]]:
+    """Return the unobstructed share of the door swing and its first blockers."""
+    swing = door_swing_polygon(door)
+    candidates = {
+        obj_id: polygon for obj_id, polygon in object_polygons.items() if swing.intersects(polygon)
+    }
+    if not candidates:
+        return 1.0, []
+
+    hx, hy = door["hinge"]
+    closed = door["closedPoint"]
+    opened = door["openPoint"]
+    start = math.atan2(closed[1] - hy, closed[0] - hx)
+    end = math.atan2(opened[1] - hy, opened[0] - hx)
+    delta = (end - start + math.pi) % (2 * math.pi) - math.pi
+    radius = max(math.dist((hx, hy), closed), math.dist((hx, hy), opened))
+
+    for index in range(steps + 1):
+        angle = start + delta * index / steps
+        leaf = LineString([(hx, hy), (hx + radius * math.cos(angle), hy + radius * math.sin(angle))])
+        blockers = [obj_id for obj_id, polygon in candidates.items() if leaf.intersects(polygon)]
+        if blockers:
+            return max(0.0, (index - 1) / steps), blockers
+    return 1.0, []
+
+
 def wardrobe_access_polygon(obj: dict[str, Any], cm_per_pixel: float, depth_cm: float = 45) -> Polygon:
     """Return a rectangular access strip at an object's negative-depth opening edge."""
     wardrobe = furniture_polygon(obj, cm_per_pixel)
@@ -264,17 +292,24 @@ def evaluate_layout(
                 reasons.append(f"Appliance access for {appliance['id']} conflicts with {door['id']}.")
 
     blocked_by: dict[str, list[str]] = {}
+    door_opening_fractions: dict[str, float] = {}
+    door_opening_limited_by: dict[str, list[str]] = {}
+    minimum_opening_fractions = constraints["doorPolicies"].get("minimumOpeningFractionByDoor", {})
     for door in apartment["doors"]:
-        zone = door_swing_polygon(door)
-        blockers = [obj_id for obj_id, polygon in object_polygons.items() if zone.intersects(polygon)]
+        opening_fraction, blockers = door_opening_fraction(door, object_polygons)
+        door_id = door["id"]
+        minimum_fraction = minimum_opening_fractions.get(door_id, 1.0)
+        door_opening_fractions[door_id] = round(opening_fraction, 2)
         if blockers:
-            blocked_by[door["id"]] = blockers
+            door_opening_limited_by[door_id] = blockers
+        if opening_fraction + 1e-9 < minimum_fraction:
+            blocked_by[door_id] = blockers
             appliance_blockers = [
                 obj_id for obj_id in blockers if objects_by_id[obj_id]["type"] == "appliance"
             ]
             if appliance_blockers:
                 reasons.append(
-                    f"Door {door['id']} is blocked by appliance {', '.join(appliance_blockers)}."
+                    f"Door {door_id} cannot reach its minimum opening because of appliance {', '.join(appliance_blockers)}."
                 )
 
     required = set(constraints["doorPolicies"]["mustRemainUsable"])
@@ -314,6 +349,8 @@ def evaluate_layout(
         "collisions": collisions,
         "interiorWallCollisions": interior_wall_collisions,
         "blockedBy": blocked_by,
+        "doorOpeningFractions": door_opening_fractions,
+        "doorOpeningLimitedBy": door_opening_limited_by,
         "wardrobeAccessBlockedBy": wardrobe_access_blocked_by,
         "wardrobeAccessDepthCm": wardrobe_access_depth_cm,
         "storageAccessBlockedBy": storage_access_blocked_by,

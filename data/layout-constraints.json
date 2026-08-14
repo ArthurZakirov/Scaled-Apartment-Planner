@@ -10,6 +10,14 @@
   },
   "lowerDeskKitchenPassageMinimumCm": 50,
   "doorPolicies": {
+    "minimumOpeningFractionByDoor": {
+      "door-entry": 1.0,
+      "door-bath": 1.0,
+      "door-loggia-bedroom": 0.8,
+      "door-loggia-living": 0.8,
+      "door-balcony-upper": 0.8,
+      "door-balcony-lower": 0.8
+    },
     "mustRemainUsable": [
       "door-entry",
       "door-bath"
@@ -34,8 +42,8 @@
     ]
   },
   "requirements": [
-    "At least one of the two loggia doors must remain usable.",
-    "At least one of the two balcony doors must remain usable.",
+    "At least one of the two loggia doors must open to at least 80%.",
+    "At least one of the two balcony doors must open to at least 80%.",
     "The entrance and bathroom doors must remain usable.",
     "The scenario-selected PAX access strip (0, 30, 45, or 60 cm; 45 cm by default) must remain inside the interior and free of every other furniture footprint and door swing.",
     "The full 35 cm drawer access strip must stay inside the interior and remain free of furniture and door swings.",
