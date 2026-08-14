@@ -150,7 +150,11 @@ class ScenarioTests(unittest.TestCase):
                 2,
                 places=1,
             )
-            expected_rotation_difference = 90 if layout["selection"]["arrangementId"] == "bath-wall-bed-shifted" else 0
+            expected_rotation_difference = (
+                0
+                if layout["selection"]["arrangementId"] == "bath-wall-both-rotated"
+                else 90
+            )
             self.assertAlmostEqual(
                 (cabinet["positionPx"]["rotationDeg"] - bed["positionPx"]["rotationDeg"]) % 180,
                 expected_rotation_difference,
@@ -414,6 +418,17 @@ class ScenarioTests(unittest.TestCase):
         self.assertAlmostEqual(
             (cabinet["positionPx"]["rotationDeg"] - bed["positionPx"]["rotationDeg"]) % 360,
             180,
+        )
+        bed_angle = math.radians(bed["positionPx"]["rotationDeg"])
+        bed_long_axis = (-math.sin(bed_angle), math.cos(bed_angle))
+        cabinet_from_bed = (
+            cabinet["positionPx"]["center"][0] - bed["positionPx"]["center"][0],
+            cabinet["positionPx"]["center"][1] - bed["positionPx"]["center"][1],
+        )
+        self.assertLess(
+            cabinet_from_bed[0] * bed_long_axis[0]
+            + cabinet_from_bed[1] * bed_long_axis[1],
+            0,
         )
 
     def test_rotated_beds_reserve_approximately_20_cm_behind_headboard(self):

@@ -179,6 +179,19 @@ def bedside_position(bed_position_px, bed_variant, bedside_variant, bedside_base
             + gap_cm
         ) / cm_per_pixel
         rotation_deg = bed_position_px["rotationDeg"]
+    elif placement == "head-side":
+        cross_offset_px = direction * (
+            bed_variant["dimensionsCm"]["width"] / 2
+            + bedside_variant["dimensionsCm"]["width"] / 2
+            + gap_cm
+        ) / cm_per_pixel
+        long_offset_px = arrangement.get("bedsideEndDirection", -1) * (
+            bed_variant["dimensionsCm"]["depth"] / 2
+            - bedside_variant["dimensionsCm"]["depth"] / 2
+        ) / cm_per_pixel
+        # The drawer front faces the foot end, so drawers travel parallel to
+        # the bed instead of opening into the wall or across the bedside gap.
+        rotation_deg = bed_position_px["rotationDeg"] + 180
     else:
         raise ValueError(f"Unsupported bedside placement: {placement}")
     bed_center = bed_position_px["center"]
@@ -304,7 +317,11 @@ def main():
                                 (
                                     "Die vorhandene Kommode steht in der geprüften Schlafbereichsecke; vor den Schubladen bleiben 35 cm Bedienfläche frei."
                                     if arrangement.get("bedsidePositionPx")
-                                    else "Die vorhandene Kommode steht mit 2 cm Planungsabstand am Bettende oder an der Bettseite; vor den Schubladen bleiben 35 cm Bedienfläche frei."
+                                    else (
+                                        "Die vorhandene Kommode steht mit 2 cm Planungsabstand seitlich am Kopfende; vor den Schubladen bleiben 35 cm Bedienfläche frei."
+                                        if arrangement.get("bedsidePlacement") == "head-side"
+                                        else "Die vorhandene Kommode steht mit 2 cm Planungsabstand am Bettende oder an der Bettseite; vor den Schubladen bleiben 35 cm Bedienfläche frei."
+                                    )
                                 ),
                                 desk_placement["note"],
                                 minifridge_placement["note"],
