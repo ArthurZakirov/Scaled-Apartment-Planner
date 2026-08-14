@@ -386,7 +386,7 @@ class ScenarioTests(unittest.TestCase):
         self.assertIn("sleeping-bed", results["bath-wall-both-rotated"]["wardrobeAccessBlockedBy"])
         self.assertGreater(results["bath-wall-both-rotated"]["bedPaxGapCm"], 30)
 
-    def test_both_rotated_120_clears_loggia_but_not_pax_access(self):
+    def test_both_rotated_120_with_lower_desk_clears_loggia_but_not_pax_access(self):
         layouts = [
             layout
             for layout in self.furniture["layouts"]
@@ -394,8 +394,9 @@ class ScenarioTests(unittest.TestCase):
             and layout["selection"]["bedVariantId"] == "new-bed-120"
             and layout["selection"]["paxAccessDepthCm"] == 45
             and layout["selection"]["minifridgePlacementId"] == "endcap-extension"
+            and layout["selection"]["deskPlacementId"] == "lower-balcony-corner"
         ]
-        self.assertEqual(len(layouts), 24)
+        self.assertEqual(len(layouts), 12)
         for layout in layouts:
             result = self.evaluate(layout)
             self.assertFalse(result["valid"])
