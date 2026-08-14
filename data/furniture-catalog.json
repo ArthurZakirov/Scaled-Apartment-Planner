@@ -103,8 +103,8 @@
       "variants": [
         {
           "id": "bedside-cabinet-57",
-          "label": "Kommode / Nachttisch 57,5 × 43",
-          "dimensionsCm": {"width": 57.5, "depth": 43, "height": 54},
+          "label": "Kommode / Nachttisch · Front 43 × Tiefe 57,5",
+          "dimensionsCm": {"width": 43, "depth": 57.5, "height": 54},
           "render": {"shape": "rectangle", "label": "Kommode"}
         }
       ]

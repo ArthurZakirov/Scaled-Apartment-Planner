@@ -140,10 +140,10 @@ class ScenarioTests(unittest.TestCase):
         for layout in self.furniture["layouts"]:
             bed = next(obj for obj in layout["objects"] if obj["type"] == "bed")
             cabinet = next(obj for obj in layout["objects"] if obj["type"] == "storage")
-            self.assertEqual(cabinet["dimensionsCm"], {"width": 57.5, "depth": 43, "height": 54})
+            self.assertEqual(cabinet["dimensionsCm"], {"width": 43, "depth": 57.5, "height": 54})
             self.assertEqual(cabinet["accessLabel"], "Schubladen")
             if layout["selection"]["arrangementId"] == "divider":
-                self.assertEqual(cabinet["positionPx"], {"center": [290, 160], "rotationDeg": 144})
+                self.assertEqual(cabinet["positionPx"], {"center": [287, 163], "rotationDeg": 144})
                 continue
             self.assertAlmostEqual(
                 furniture_polygon(bed, cm_per_pixel).distance(furniture_polygon(cabinet, cm_per_pixel)) * cm_per_pixel,
@@ -415,6 +415,7 @@ class ScenarioTests(unittest.TestCase):
 
         self.assertTrue(result["valid"], result["reasons"])
         self.assertEqual(result["storageAccessBlockedBy"], [])
+        self.assertGreater(result["bedPaxGapCm"], 45)
         self.assertAlmostEqual(
             (cabinet["positionPx"]["rotationDeg"] - bed["positionPx"]["rotationDeg"]) % 360,
             180,
@@ -428,6 +429,16 @@ class ScenarioTests(unittest.TestCase):
         self.assertLess(
             cabinet_from_bed[0] * bed_long_axis[0]
             + cabinet_from_bed[1] * bed_long_axis[1],
+            0,
+        )
+        access_zone = wardrobe_access_polygon(cabinet, self.apartment["scale"]["cmPerPixel"], 35)
+        access_from_cabinet = (
+            access_zone.centroid.x - cabinet["positionPx"]["center"][0],
+            access_zone.centroid.y - cabinet["positionPx"]["center"][1],
+        )
+        self.assertGreater(
+            access_from_cabinet[0] * bed_long_axis[0]
+            + access_from_cabinet[1] * bed_long_axis[1],
             0,
         )
 
