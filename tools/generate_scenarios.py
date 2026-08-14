@@ -205,6 +205,45 @@ def bedside_position(bed_position_px, bed_variant, bedside_variant, bedside_base
     }
 
 
+def bed_position_from_bedside(
+    bed_position_px, bed_variant, bedside_position_px, bedside_variant, bedside_base, arrangement, cm_per_pixel
+):
+    """Anchor a bed beside a wall-fixed cabinet instead of moving the cabinet with the bed."""
+    if arrangement.get("bedsidePlacement") != "head-side":
+        raise ValueError("Wall-fixed bedside anchoring currently requires head-side placement.")
+    angle = math.radians(bed_position_px["rotationDeg"])
+    cross_axis = (math.cos(angle), math.sin(angle))
+    long_axis = (-math.sin(angle), math.cos(angle))
+    direction = arrangement.get("bedsideDirection", 1)
+    gap_cm = bedside_base.get("gapToBedCm", 0)
+    cross_offset_px = direction * (
+        bed_variant["dimensionsCm"]["width"] / 2
+        + bedside_variant["dimensionsCm"]["width"] / 2
+        + gap_cm
+    ) / cm_per_pixel
+    long_offset_px = arrangement.get("bedsideEndDirection", -1) * (
+        bed_variant["dimensionsCm"]["depth"] / 2
+        - bedside_variant["dimensionsCm"]["depth"] / 2
+    ) / cm_per_pixel
+    return {
+        "center": [
+            round(
+                bedside_position_px["center"][0]
+                - cross_axis[0] * cross_offset_px
+                - long_axis[0] * long_offset_px,
+                4,
+            ),
+            round(
+                bedside_position_px["center"][1]
+                - cross_axis[1] * cross_offset_px
+                - long_axis[1] * long_offset_px,
+                4,
+            ),
+        ],
+        "rotationDeg": bed_position_px["rotationDeg"],
+    }
+
+
 def main():
     catalog = load_json("data/furniture-catalog.json")
     matrix = load_json("data/scenario-matrix.json")
@@ -269,14 +308,25 @@ def main():
                         bed_position_px = bed_position(
                             placements["bed"], base_bed_variant, bed, apartment["scale"]["cmPerPixel"]
                         )
-                    wall_shift_px = arrangement.get("bedWallShiftPxByVariant", {}).get(bed_id, 0)
-                    if wall_shift_px:
-                        bed_position_px = shift_position_along_width_axis(bed_position_px, wall_shift_px)
                     headboard_gap_cm = arrangement.get("bedHeadboardWallGapCm", 0)
-                    if headboard_gap_cm:
-                        bed_position_px = shift_position_away_from_headboard_wall(
-                            bed_position_px, headboard_gap_cm, apartment["scale"]["cmPerPixel"]
+                    if arrangement.get("bedPositionFromBedside"):
+                        bed_position_px = bed_position_from_bedside(
+                            bed_position_px,
+                            bed,
+                            arrangement["bedsidePositionPx"],
+                            bedside_variant,
+                            placements["bedside"],
+                            arrangement,
+                            apartment["scale"]["cmPerPixel"],
                         )
+                    else:
+                        wall_shift_px = arrangement.get("bedWallShiftPxByVariant", {}).get(bed_id, 0)
+                        if wall_shift_px:
+                            bed_position_px = shift_position_along_width_axis(bed_position_px, wall_shift_px)
+                        if headboard_gap_cm:
+                            bed_position_px = shift_position_away_from_headboard_wall(
+                                bed_position_px, headboard_gap_cm, apartment["scale"]["cmPerPixel"]
+                            )
                     pax_position_px = arrangement.get("paxPositionPx") or pax_position(
                         placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
                     )
@@ -315,7 +365,9 @@ def main():
                                 ),
                                 f"Vor dem PAX sind {pax_access_depth_cm} cm als frei zu haltende Zugriffsfläche reserviert; 0 cm bedeutet keine zusätzliche Reserve über die Stellfläche hinaus.",
                                 (
-                                    "Die vorhandene Kommode steht in der geprüften Schlafbereichsecke; vor den Schubladen bleiben 35 cm Bedienfläche frei."
+                                    "Die vorhandene Kommode bleibt am festen Loggia-Wandanker; jede Bettbreite wird mit 2 cm Abstand daneben gesetzt und vor den Schubladen bleiben 35 cm Bedienfläche frei."
+                                    if arrangement.get("bedPositionFromBedside")
+                                    else "Die vorhandene Kommode steht in der geprüften Schlafbereichsecke; vor den Schubladen bleiben 35 cm Bedienfläche frei."
                                     if arrangement.get("bedsidePositionPx")
                                     else (
                                         "Die vorhandene Kommode steht mit 2 cm Planungsabstand seitlich am Kopfende; vor den Schubladen bleiben 35 cm Bedienfläche frei."

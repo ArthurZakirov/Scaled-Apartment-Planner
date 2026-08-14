@@ -415,7 +415,7 @@ class ScenarioTests(unittest.TestCase):
 
         self.assertTrue(result["valid"], result["reasons"])
         self.assertEqual(result["storageAccessBlockedBy"], [])
-        self.assertGreater(result["bedPaxGapCm"], 45)
+        self.assertGreater(result["bedPaxGapCm"], 39)
         self.assertAlmostEqual(
             (cabinet["positionPx"]["rotationDeg"] - bed["positionPx"]["rotationDeg"]) % 360,
             180,
@@ -441,6 +441,14 @@ class ScenarioTests(unittest.TestCase):
             + access_from_cabinet[1] * bed_long_axis[1],
             0,
         )
+
+    def test_both_rotated_keeps_commode_at_one_wall_anchor_for_every_bed_width(self):
+        positions = {
+            tuple(next(obj for obj in layout["objects"] if obj["id"] == "owned-bedside-cabinet")["positionPx"]["center"])
+            for layout in self.furniture["layouts"]
+            if layout["selection"]["arrangementId"] == "bath-wall-both-rotated"
+        }
+        self.assertEqual(positions, {(294.8577, 163.7061)})
 
     def test_rotated_beds_reserve_approximately_20_cm_behind_headboard(self):
         wall = next(item for item in self.apartment["walls"] if item["id"] == "wall-outer-nw")

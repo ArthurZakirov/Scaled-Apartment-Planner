@@ -39,15 +39,12 @@
       "bedsidePlacement": "head-side",
       "bedsideDirection": 1,
       "bedsideEndDirection": -1,
+      "bedsidePositionPx": {"center": [294.8577, 163.7061], "rotationDeg": 143.934},
+      "bedPositionFromBedside": true,
       "bedHeadboardWallGapCm": 20,
       "recommendation": "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen.",
       "paxPositionPx": {"center": [208.6255, 269.074], "rotationDeg": 55.4456},
-      "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066},
-      "bedWallShiftPxByVariant": {
-        "current-bed-90": -6,
-        "new-bed-90": -3,
-        "new-bed-120": -31
-      }
+      "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066}
     }
   ],
   "placements": {
