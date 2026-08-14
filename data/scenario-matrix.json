@@ -38,6 +38,7 @@
       "kitchenExposure": "higher",
       "bedsidePlacement": "end",
       "bedsideDirection": 1,
+      "bedsideRotationOffsetDeg": 180,
       "bedHeadboardWallGapCm": 20,
       "recommendation": "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen.",
       "paxPositionPx": {"center": [208.6255, 269.074], "rotationDeg": 55.4456},

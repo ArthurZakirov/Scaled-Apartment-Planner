@@ -398,6 +398,24 @@ class ScenarioTests(unittest.TestCase):
             self.assertGreaterEqual(result["usableLoggiaDoors"], 1)
             self.assertIn("sleeping-bed", result["wardrobeAccessBlockedBy"])
 
+    def test_both_rotated_90_with_open_pax_keeps_commode_drawers_usable(self):
+        layout = next(
+            item
+            for item in self.furniture["layouts"]
+            if item["id"]
+            == "scenario-bath-wall-both-rotated-new-bed-90-pax-150-quick-150-150-lower-balcony-corner-pax-access-0-fridge-kitchen-back-wall"
+        )
+        result = self.evaluate(layout)
+        cabinet = next(obj for obj in layout["objects"] if obj["id"] == "owned-bedside-cabinet")
+        bed = next(obj for obj in layout["objects"] if obj["id"] == "sleeping-bed")
+
+        self.assertTrue(result["valid"], result["reasons"])
+        self.assertEqual(result["storageAccessBlockedBy"], [])
+        self.assertAlmostEqual(
+            (cabinet["positionPx"]["rotationDeg"] - bed["positionPx"]["rotationDeg"]) % 360,
+            180,
+        )
+
     def test_rotated_beds_reserve_approximately_20_cm_behind_headboard(self):
         wall = next(item for item in self.apartment["walls"] if item["id"] == "wall-outer-nw")
         wall_axis = LineString([wall["start"], wall["end"]])
