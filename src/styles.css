@@ -53,6 +53,7 @@ a:hover { text-decoration: underline; }
 .fixture { fill: #d7ded7; stroke: #819086; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
 .fixture-sink, .fixture-hob { fill: #f3f5f2; }
 .fixture-detail { fill: none; stroke: #67766e; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.fixed-furnishing-outline { fill: none; stroke: #67766e; stroke-width: 1.2; stroke-linecap: square; stroke-linejoin: miter; vector-effect: non-scaling-stroke; }
 
 .furniture-footprint { stroke-width: 2; vector-effect: non-scaling-stroke; }
 .furniture-wardrobe .furniture-footprint { fill: rgba(211,145,53,.65); stroke: #8f5a12; }

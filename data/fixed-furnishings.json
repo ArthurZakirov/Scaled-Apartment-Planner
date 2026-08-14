@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "furnishings": [
+    {
+      "id": "kitchen-chair-upper",
+      "type": "dining_chair",
+      "shape": "side_chair",
+      "x": 364,
+      "y": 469,
+      "widthPx": 13,
+      "depthPx": 13,
+      "openSide": "west",
+      "anchorFixtureId": "kitchen-return",
+      "confidence": "estimated_from_reference",
+      "note": "Upper of the two dining chairs shown on the right-hand long edge of the kitchen table in the original floor plan."
+    },
+    {
+      "id": "kitchen-chair-lower",
+      "type": "dining_chair",
+      "shape": "side_chair",
+      "x": 364,
+      "y": 494,
+      "widthPx": 13,
+      "depthPx": 13,
+      "openSide": "west",
+      "anchorFixtureId": "kitchen-return",
+      "confidence": "estimated_from_reference",
+      "note": "Lower of the two dining chairs shown on the right-hand long edge of the kitchen table in the original floor plan."
+    }
+  ]
+}

@@ -70,6 +70,7 @@ def centroid(poly):
 def render(output_svg: Path, output_png: Path):
     apartment = expand_apartment_geometry(load_json(ROOT / "data/apartment.json"))
     fixtures = load_json(ROOT / "data/fixed-fixtures.json")
+    fixed_furnishings = load_json(ROOT / "data/fixed-furnishings.json")
     catalog = load_json(ROOT / "data/furniture-catalog.json")
     scenario_data = load_json(ROOT / "data/layout-scenarios.json")
     furniture = resolve_scenario_data(scenario_data, catalog)
@@ -93,6 +94,7 @@ def render(output_svg: Path, output_png: Path):
       .window { stroke:#88cad1; stroke-width:5; stroke-linecap:round; }
       .fixture { fill:#d7ded7; stroke:#819086; stroke-width:1.2; }
       .fixture-detail { fill:#f3f5f2; stroke:#67766e; stroke-width:1; }
+      .fixed-furnishing { fill:none; stroke:#67766e; stroke-width:1.2; stroke-linecap:square; stroke-linejoin:miter; }
       .wardrobe { fill:#d39135aa; stroke:#8f5a12; stroke-width:2; }
       .bed { fill:#427eb373; stroke:#28618e; stroke-width:2; }
       .mattress { fill:#ffffff70; stroke:#28618e; stroke-width:1; }
@@ -129,6 +131,17 @@ def render(output_svg: Path, output_png: Path):
         SubElement(g, "rect", {"x":str(f["x"]), "y":str(f["y"]), "width":str(f["widthPx"]), "height":str(f["depthPx"]), "class":"fixture"})
         if f["type"] in {"sink", "hob"}:
             SubElement(g, "rect", {"x":str(f["x"]+5), "y":str(f["y"]+5), "width":str(max(1,f["widthPx"]-10)), "height":str(max(1,f["depthPx"]-10)), "class":"fixture-detail"})
+
+    for item in fixed_furnishings["furnishings"]:
+        if item["shape"] != "side_chair" or item["openSide"] != "west":
+            raise ValueError(f"Unsupported fixed furnishing: {item['id']}")
+        right = item["x"] + item["widthPx"]
+        bottom = item["y"] + item["depthPx"]
+        SubElement(g, "path", {
+            "d": f"M {item['x']} {item['y']} H {right} V {bottom} H {item['x']}",
+            "class": "fixed-furnishing",
+            "data-id": item["id"],
+        })
 
     cm_per_px = apartment["scale"]["cmPerPixel"]
     for obj in layout["objects"]:

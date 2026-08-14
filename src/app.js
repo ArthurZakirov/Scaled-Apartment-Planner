@@ -46,6 +46,23 @@ function pointsAttr(points) {
   return points.map(([x, y]) => `${x},${y}`).join(' ');
 }
 
+function fixedFurnishingElement(item) {
+  if (item.shape !== 'side_chair' || item.openSide !== 'west') {
+    throw new Error(`Unsupported fixed furnishing: ${item.id}`);
+  }
+  const right = item.x + item.widthPx;
+  const bottom = item.y + item.depthPx;
+  const group = svgEl('g', {
+    class: `fixed-furnishing fixed-furnishing-${item.type}`,
+    'data-id': item.id
+  });
+  group.append(svgEl('path', {
+    d: `M ${item.x} ${item.y} H ${right} V ${bottom} H ${item.x}`,
+    class: 'fixed-furnishing-outline'
+  }));
+  return group;
+}
+
 function pointInPolygon(point, polygon) {
   const [x, y] = point;
   let inside = false;
@@ -303,7 +320,7 @@ function makeFurnitureGroup(object, cmPerPixel) {
   return { group, polygon };
 }
 
-function buildSvg(apartment, fixtures, furniture, constraints, calibration) {
+function buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints, calibration) {
   const [vx, vy, vw, vh] = apartment.coordinateSystem.viewBox;
   const svg = svgEl('svg', {
     viewBox: `${vx} ${vy} ${vw} ${vh}`,
@@ -404,6 +421,9 @@ function buildSvg(apartment, fixtures, furniture, constraints, calibration) {
 
   const activeLayout = furniture.layouts.find((layout) => layout.id === furniture.activeLayoutId);
   const furnitureLayer = svgEl('g', { class: 'layer layer-furniture' });
+  for (const item of fixedFurnishings.furnishings) {
+    furnitureLayer.append(fixedFurnishingElement(item));
+  }
   const furniturePolygons = [];
   for (const object of activeLayout.objects) {
     const rendered = makeFurnitureGroup(object, apartment.scale.cmPerPixel);
@@ -902,9 +922,10 @@ function renderCalibrationControls(svg) {
 async function main() {
   const root = document.querySelector('#app');
   try {
-    const [apartmentSource, fixtures, catalog, scenarioData, evaluations, constraints] = await Promise.all([
+    const [apartmentSource, fixtures, fixedFurnishings, catalog, scenarioData, evaluations, constraints] = await Promise.all([
       loadJson('data/apartment.json'),
       loadJson('data/fixed-fixtures.json'),
+      loadJson('data/fixed-furnishings.json'),
       loadJson('data/furniture-catalog.json'),
       loadJson('data/layout-scenarios.json'),
       loadJson('data/scenario-evaluations.json'),
@@ -971,7 +992,7 @@ async function main() {
 
     const workspace = htmlEl('main', { className: isCalibration ? 'workspace calibration-workspace' : 'workspace' });
     const canvas = htmlEl('section', { className: 'canvas-card reconstructed-card' });
-    const rendered = buildSvg(apartment, fixtures, furniture, constraints, isCalibration);
+    const rendered = buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints, isCalibration);
     if (isCalibration) root.append(renderCalibrationControls(rendered.svg));
     canvas.append(rendered.svg);
     workspace.append(canvas);
