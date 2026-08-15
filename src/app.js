@@ -1,5 +1,5 @@
 import { expandApartmentGeometry } from './geometry.js';
-import { findLayoutForSelection, normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from './furniture.js';
+import { findLayoutForArrangement, findLayoutForSelection, normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from './furniture.js';
 import {
   DISPLAY_OPTIONS,
   allDisplayLayers,
@@ -681,6 +681,7 @@ function renderBedroomControls(furniture, activeLayout) {
   };
 
   const findBedroomLayout = (overrides) => findLayoutForSelection(furniture.layouts, activeLayout, overrides);
+  const findArrangementLayout = (arrangementId) => findLayoutForArrangement(furniture.layouts, activeLayout, arrangementId);
 
   addSelect(dimensions, 'Bettart', currentBed ? 'current' : 'new', [
     { value: 'current', label: 'Mein aktuelles Bett', disabled: !findBedroomLayout({ bedVariantId: 'current-bed-90' }) },
@@ -737,10 +738,10 @@ function renderBedroomControls(furniture, activeLayout) {
     { value: 'east-wall-wardrobe', label: 'PAX an Balkonwand' }
   ].map((option) => ({
     ...option,
-    disabled: !findBedroomLayout({ arrangementId: option.value })
+    disabled: !findArrangementLayout(option.value)
   }));
   addSelect(positions, 'Schlafbereich-Anordnung', activeLayout.selection.arrangementId, arrangementOptions, (arrangementId) => {
-    const target = findBedroomLayout({ arrangementId });
+    const target = findArrangementLayout(arrangementId);
     if (target) selectScenario(target.id);
   }, false, true);
 

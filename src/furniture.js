@@ -71,3 +71,14 @@ export function findLayoutForSelection(layouts, activeLayout, overrides) {
     layout.selection.minifridgePlacementId === selection.minifridgePlacementId
   );
 }
+
+export function findLayoutForArrangement(layouts, activeLayout, arrangementId) {
+  return layouts.find((layout) => (
+    layout.selection.arrangementId === arrangementId
+    && layout.selection.bedVariantId === activeLayout.selection.bedVariantId
+    && layout.selection.paxVariantId === activeLayout.selection.paxVariantId
+    && layout.selection.paxAccessDepthCm === activeLayout.selection.paxAccessDepthCm
+    && layout.selection.deskVariantId === activeLayout.selection.deskVariantId
+    && layout.selection.minifridgePlacementId === activeLayout.selection.minifridgePlacementId
+  ));
+}

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
-import { findLayoutForSelection, normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from '../src/furniture.js';
+import { findLayoutForArrangement, findLayoutForSelection, normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from '../src/furniture.js';
 
 const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.json', import.meta.url), 'utf8'));
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
@@ -135,6 +135,19 @@ test('geometrically unavailable axis options remain unselectable', () => {
   assert.equal(
     findLayoutForSelection(layouts, activeLayout, { arrangementId: 'bath-wall-both-rotated' }),
     undefined
+  );
+});
+
+test('changing an arrangement selects its compatible desk placement instead of disabling existing layouts', () => {
+  const resolved = resolveScenarioData(scenarios, catalog);
+  const validLayouts = validLayoutsForDesk(resolved.layouts, evaluations, 'quick-150-150');
+  const eastWall = validLayouts.find((layout) => layout.id === 'scenario-east-wall-wardrobe-new-bed-90-pax-150-quick-150-150-living-room-centre-pax-access-0-fridge-kitchen-back-wall');
+  const divider = findLayoutForArrangement(validLayouts, eastWall, 'divider');
+  assert.ok(divider);
+  assert.equal(divider.selection.deskPlacementId, 'upper-loggia-corner');
+  assert.deepEqual(
+    { ...divider.selection, arrangementId: eastWall.selection.arrangementId, deskPlacementId: eastWall.selection.deskPlacementId },
+    eastWall.selection
   );
 });
 
