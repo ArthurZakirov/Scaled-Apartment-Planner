@@ -6,7 +6,7 @@ import math
 from typing import Any
 
 from shapely.affinity import rotate, translate
-from shapely.geometry import LineString, Polygon
+from shapely.geometry import LineString, Polygon, box
 from shapely.ops import unary_union
 
 from desk_geometry import desk_work_zone_polygon, fixed_fixture_polygon, fixed_fixture_union
@@ -113,6 +113,7 @@ def evaluate_layout(
     apartment: dict[str, Any],
     constraints: dict[str, Any],
     fixtures: dict[str, Any],
+    fixed_furnishings: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     cm_per_pixel = apartment["scale"]["cmPerPixel"]
     interior = Polygon(next(space["points"] for space in apartment["spaces"] if space["id"] == "space-main"))
@@ -160,6 +161,11 @@ def evaluate_layout(
     }
     fixed_union = fixed_fixture_union(fixtures["fixtures"])
     fixed_fixture_blocked_by: dict[str, list[str]] = {}
+    fixed_furnishing_blocked_by: dict[str, list[str]] = {}
+    fixed_furnishing_polygons = {
+        item["id"]: box(item["x"], item["y"], item["x"] + item["widthPx"], item["y"] + item["depthPx"])
+        for item in (fixed_furnishings or {}).get("furnishings", [])
+    }
     for obj in layout["objects"]:
         blockers = [
             fixture_id
@@ -170,6 +176,15 @@ def evaluate_layout(
             fixed_fixture_blocked_by[obj["id"]] = blockers
             for fixture_id in blockers:
                 reasons.append(f"Furniture {obj['id']} overlaps fixed fixture {fixture_id}.")
+        furnishing_blockers = [
+            furnishing_id
+            for furnishing_id, furnishing_polygon in fixed_furnishing_polygons.items()
+            if object_polygons[obj["id"]].intersection(furnishing_polygon).area > 0.5
+        ]
+        if furnishing_blockers:
+            fixed_furnishing_blocked_by[obj["id"]] = furnishing_blockers
+            for furnishing_id in furnishing_blockers:
+                reasons.append(f"Furniture {obj['id']} overlaps fixed furnishing {furnishing_id}.")
 
     desk = next(obj for obj in layout["objects"] if obj["type"] == "desk")
     desk_polygon = object_polygons[desk["id"]]
@@ -362,6 +377,7 @@ def evaluate_layout(
         "applianceAccessBlockedBy": sorted(set(appliance_access_blocked_by)),
         "applianceInteriorWallBlockedBy": sorted(set(appliance_interior_wall_blocked_by)),
         "fixedFixtureBlockedBy": fixed_fixture_blocked_by,
+        "fixedFurnishingBlockedBy": fixed_furnishing_blocked_by,
         "deskFixedFixtureBlockedBy": desk_fixture_blocked_by,
         "deskWorkZoneBlockedBy": desk_work_zone_blocked_by,
         "deskFixedFixtureClearanceCm": round(desk_fixture_clearance_cm, 1),

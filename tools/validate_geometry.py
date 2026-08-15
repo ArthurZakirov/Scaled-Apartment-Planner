@@ -31,6 +31,7 @@ def main() -> int:
     apartment_source = load_json("data/apartment.json")
     apartment = expand_apartment_geometry(apartment_source)
     fixtures = load_json("data/fixed-fixtures.json")
+    fixed_furnishings = load_json("data/fixed-furnishings.json")
     catalog = load_json("data/furniture-catalog.json")
     scenario_data = load_json("data/layout-scenarios.json")
     scenario_evaluations = load_json("data/scenario-evaluations.json")
@@ -114,7 +115,7 @@ def main() -> int:
         )
 
     scenario_results = [
-        evaluate_layout(layout, apartment, constraints, fixtures) for layout in furniture["layouts"]
+        evaluate_layout(layout, apartment, constraints, fixtures, fixed_furnishings) for layout in furniture["layouts"]
     ]
     valid_scenarios = rank_results(scenario_results)
     expected_evaluations = {

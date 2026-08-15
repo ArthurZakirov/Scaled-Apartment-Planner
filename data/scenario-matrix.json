@@ -82,7 +82,7 @@
       "bedPositionFromBedside": true,
       "bedHeadboardWallGapCm": 20,
       "paxBaseVariantId": "pax-150",
-      "paxPositionPx": {"center": [413, 508], "rotationDeg": 0},
+      "paxPositionPx": {"center": [440, 508], "rotationDeg": 0},
       "keepPaxEndFixed": true,
       "paxWallSegmentMaximumCm": 167,
       "deskPlacementIds": ["upper-loggia-corner", "balcony-between-doors"],

@@ -32,9 +32,10 @@ class ScenarioTests(unittest.TestCase):
         cls.apartment = expand_apartment_geometry(load_json("data/apartment.json"))
         cls.constraints = load_json("data/layout-constraints.json")
         cls.fixtures = load_json("data/fixed-fixtures.json")
+        cls.fixed_furnishings = load_json("data/fixed-furnishings.json")
 
     def evaluate(self, layout):
-        return evaluate_layout(layout, self.apartment, self.constraints, self.fixtures)
+        return evaluate_layout(layout, self.apartment, self.constraints, self.fixtures, self.fixed_furnishings)
 
     def test_matrix_contains_5760_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
@@ -533,6 +534,15 @@ class ScenarioTests(unittest.TestCase):
         for scenario_id in scenario_ids:
             layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
             self.assertTrue(self.evaluate(layout)["valid"], scenario_id)
+
+    def test_kitchen_wall_pax_is_anchored_at_the_far_end_away_from_dining_chairs(self):
+        scenario_id = "scenario-kitchen-wall-wardrobe-new-bed-90-pax-150-quick-150-150-pax-access-0-fridge-kitchen-back-wall"
+        layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
+        pax = next(item for item in layout["objects"] if item["type"] == "wardrobe")
+        result = self.evaluate(layout)
+        self.assertTrue(result["valid"], result["reasons"])
+        self.assertAlmostEqual(furniture_polygon(pax, self.apartment["scale"]["cmPerPixel"]).bounds[2], 489.2, places=1)
+        self.assertEqual(result["fixedFurnishingBlockedBy"], {})
 
     def test_lower_desk_position_preserves_the_upper_balcony_door(self):
         for layout in self.furniture["layouts"]:

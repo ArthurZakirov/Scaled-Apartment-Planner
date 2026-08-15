@@ -24,9 +24,10 @@ def main() -> None:
     scenarios = load_json("data/layout-scenarios.json")
     constraints = load_json("data/layout-constraints.json")
     fixtures = load_json("data/fixed-fixtures.json")
+    fixed_furnishings = load_json("data/fixed-furnishings.json")
     furniture = resolve_scenario_data(scenarios, catalog)
     results = [
-        evaluate_layout(layout, apartment, constraints, fixtures) for layout in furniture["layouts"]
+        evaluate_layout(layout, apartment, constraints, fixtures, fixed_furnishings) for layout in furniture["layouts"]
     ]
     ranked = rank_results(results)
     payload = {
