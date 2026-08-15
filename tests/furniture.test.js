@@ -8,10 +8,10 @@ const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.jso
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
 const evaluations = JSON.parse(await readFile(new URL('../data/scenario-evaluations.json', import.meta.url), 'utf8'));
 
-test('browser resolves all 5760 product, orientation, desk, PAX-access, and fridge-placement scenarios', () => {
+test('browser resolves all 7680 product, orientation, desk, PAX-access, and fridge-placement scenarios', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  assert.equal(furniture.layouts.length, 5760);
-  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 5760);
+  assert.equal(furniture.layouts.length, 7680);
+  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 7680);
 });
 
 test('current bed resolves independently from estimated new beds', () => {
@@ -71,7 +71,7 @@ test('PAX height is not a 2D scenario axis and all five arrangements resolve', (
     arrangements.add(layout.arrangementId);
     paxVariants.add(layout.objects.find((object) => object.type === 'wardrobe').variantId);
   }
-  assert.deepEqual(paxVariants, new Set(['pax-150', 'pax-175', 'pax-200']));
+  assert.deepEqual(paxVariants, new Set(['pax-100', 'pax-150', 'pax-175', 'pax-200']));
   assert.deepEqual(arrangements, new Set(['divider', 'bath-wall-bed-shifted', 'bath-wall-both-rotated', 'east-wall-wardrobe', 'kitchen-wall-wardrobe']));
   assert.deepEqual(new Set(furniture.layouts.map((layout) => layout.selection.deskPlacementId)), new Set(['upper-loggia-corner', 'lower-balcony-corner', 'living-room-centre', 'balcony-between-doors', 'kitchen-balcony-corner']));
 });
@@ -166,7 +166,7 @@ test('user-facing bedroom layouts contain only valid geometry and preserve the d
   const furniture = resolveScenarioData(scenarios, catalog);
   const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
   const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
-  assert.equal(layouts.length, 222);
+  assert.equal(layouts.length, 340);
   assert.ok(layouts.every((layout) => validIds.has(layout.id)));
   assert.ok(layouts.every((layout) => layout.selection.deskVariantId === 'quick-150-150'));
   assert.deepEqual(new Set(layouts.map((layout) => layout.selection.deskPlacementId)), new Set(['upper-loggia-corner', 'lower-balcony-corner', 'living-room-centre', 'balcony-between-doors', 'kitchen-balcony-corner']));

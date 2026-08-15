@@ -705,7 +705,7 @@ function renderBedroomControls(furniture, activeLayout) {
   }, currentBed);
 
   const paxWidth = activeLayout.selection.paxVariantId.replace('pax-', '');
-  addSelect(dimensions, 'PAX-Breite', paxWidth, ['150', '175', '200'].map((width) => ({
+  addSelect(dimensions, 'PAX-Breite', paxWidth, ['100', '150', '175', '200'].map((width) => ({
     value: width,
     label: `${width} cm`,
     disabled: !findBedroomLayout({ paxVariantId: `pax-${width}` })

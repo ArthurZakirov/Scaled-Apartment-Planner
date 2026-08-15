@@ -61,6 +61,25 @@
       "availableHeightsCm": [201.2, 236.4],
       "variants": [
         {
+          "id": "pax-100",
+          "label": "PAX 100 × 58",
+          "modules": [
+            {
+              "nominalWidthCm": 100,
+              "widthCm": 99.8,
+              "depthCm": 58
+            }
+          ],
+          "dimensionsCm": {
+            "width": 99.8,
+            "depth": 58
+          },
+          "render": {
+            "shape": "rectangle",
+            "label": "PAX 100"
+          }
+        },
+        {
           "id": "pax-150",
           "label": "PAX 150 × 58",
           "modules": [

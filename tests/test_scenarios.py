@@ -37,10 +37,10 @@ class ScenarioTests(unittest.TestCase):
     def evaluate(self, layout):
         return evaluate_layout(layout, self.apartment, self.constraints, self.fixtures, self.fixed_furnishings)
 
-    def test_matrix_contains_5760_unique_scenarios(self):
+    def test_matrix_contains_7680_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 5760)
-        self.assertEqual(len(set(ids)), 5760)
+        self.assertEqual(len(ids), 7680)
+        self.assertEqual(len(set(ids)), 7680)
 
     def test_pax_access_is_an_independent_axis_with_stable_legacy_urls(self):
         grouped = {}
@@ -363,7 +363,7 @@ class ScenarioTests(unittest.TestCase):
             for obj in layout["objects"]
             if obj["type"] == "wardrobe"
         ]
-        self.assertEqual({obj["variantId"] for obj in pax_objects}, {"pax-150", "pax-175", "pax-200"})
+        self.assertEqual({obj["variantId"] for obj in pax_objects}, {"pax-100", "pax-150", "pax-175", "pax-200"})
         self.assertTrue(all("height" not in obj["dimensionsCm"] for obj in pax_objects))
         self.assertTrue(all(obj["requiresAnchoring"] for obj in pax_objects))
 
@@ -399,7 +399,7 @@ class ScenarioTests(unittest.TestCase):
             and layout["selection"]["minifridgePlacementId"] == "endcap-extension"
             and layout["selection"]["deskPlacementId"] == "lower-balcony-corner"
         ]
-        self.assertEqual(len(layouts), 12)
+        self.assertEqual(len(layouts), 16)
         for layout in layouts:
             result = self.evaluate(layout)
             self.assertFalse(result["valid"])
@@ -537,6 +537,15 @@ class ScenarioTests(unittest.TestCase):
 
     def test_kitchen_wall_pax_is_anchored_at_the_far_end_away_from_dining_chairs(self):
         scenario_id = "scenario-kitchen-wall-wardrobe-new-bed-90-pax-150-quick-150-150-pax-access-0-fridge-kitchen-back-wall"
+        layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
+        pax = next(item for item in layout["objects"] if item["type"] == "wardrobe")
+        result = self.evaluate(layout)
+        self.assertTrue(result["valid"], result["reasons"])
+        self.assertAlmostEqual(furniture_polygon(pax, self.apartment["scale"]["cmPerPixel"]).bounds[2], 489.2, places=1)
+        self.assertEqual(result["fixedFurnishingBlockedBy"], {})
+
+    def test_kitchen_wall_pax_100_keeps_the_far_end_away_from_dining_chairs(self):
+        scenario_id = "scenario-kitchen-wall-wardrobe-new-bed-90-pax-100-quick-150-150-pax-access-0-fridge-kitchen-back-wall"
         layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
         pax = next(item for item in layout["objects"] if item["type"] == "wardrobe")
         result = self.evaluate(layout)

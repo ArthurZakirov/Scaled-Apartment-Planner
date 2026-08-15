@@ -71,14 +71,15 @@ def shift_position_away_from_headboard_wall(position, gap_cm, cm_per_pixel):
 def pax_position(base, base_variant, selected_variant, cm_per_pixel):
     """Keep the bathroom-facing short end and the cross-axis position fixed."""
     position = json.loads(json.dumps(base["positionPx"]))
-    if not base.get("keepBathEndFixed"):
+    if not (base.get("keepBathEndFixed") or base.get("keepPaxFarEndFixed")):
         return position
     delta_cm = selected_variant["dimensionsCm"]["width"] - base_variant["dimensionsCm"]["width"]
     shift_px = delta_cm / cm_per_pixel / 2
     angle = math.radians(position["rotationDeg"])
+    direction = -1 if base.get("keepPaxFarEndFixed") else 1
     position["center"] = [
-        round(position["center"][0] + math.cos(angle) * shift_px, 4),
-        round(position["center"][1] + math.sin(angle) * shift_px, 4),
+        round(position["center"][0] + direction * math.cos(angle) * shift_px, 4),
+        round(position["center"][1] + direction * math.sin(angle) * shift_px, 4),
     ]
     return position
 
@@ -336,6 +337,7 @@ def main():
                             **placements["pax"],
                             "positionPx": arrangement["paxPositionPx"],
                             "keepBathEndFixed": arrangement.get("keepPaxEndFixed", False),
+                            "keepPaxFarEndFixed": arrangement.get("keepPaxFarEndFixed", False),
                         }
                         arrangement_pax_base = variants[arrangement.get("paxBaseVariantId", "pax-200")]
                         pax_position_px = pax_position(

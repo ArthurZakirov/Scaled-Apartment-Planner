@@ -3,7 +3,7 @@
   "activeScenarioId": "scenario-new-bed-90-pax-200-quick-150-150",
   "axes": {
     "bedVariantIds": ["current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"],
-    "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
+    "paxVariantIds": ["pax-100", "pax-150", "pax-175", "pax-200"],
     "paxAccessDepthCm": [0, 30, 45, 60],
     "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"],
     "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner", "living-room-centre"],
@@ -66,7 +66,7 @@
       "keepPaxEndFixed": true,
       "paxWallSegmentMaximumCm": 167,
       "deskPlacementIds": ["living-room-centre", "kitchen-balcony-corner"],
-      "recommendation": "Der 150-cm-PAX steht längs an der festen Balkonwand; breitere Varianten werden nur angeboten, wenn sie geometrisch innerhalb des Wandabschnitts bleiben.",
+      "recommendation": "Der PAX steht längs an der festen Balkonwand; breitere Varianten werden nur angeboten, wenn sie geometrisch innerhalb des Wandabschnitts bleiben.",
       "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066}
     },
     {
@@ -84,9 +84,10 @@
       "paxBaseVariantId": "pax-150",
       "paxPositionPx": {"center": [440, 508], "rotationDeg": 0},
       "keepPaxEndFixed": true,
+      "keepPaxFarEndFixed": true,
       "paxWallSegmentMaximumCm": 167,
       "deskPlacementIds": ["upper-loggia-corner", "balcony-between-doors"],
-      "recommendation": "Der 150-cm-PAX nutzt den freien Küchenwandabschnitt rechts der festen Küchenzeile; die offene Seite zeigt in den Wohnraum.",
+      "recommendation": "Der PAX nutzt den freien Küchenwandabschnitt rechts der festen Küchenzeile; die offene Seite zeigt in den Wohnraum.",
       "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066}
     }
   ],
