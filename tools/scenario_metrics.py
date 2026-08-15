@@ -308,6 +308,10 @@ def evaluate_layout(
                 reasons.append(f"Appliance access for {appliance['id']} is blocked by {other['id']}.")
         for door in apartment["doors"]:
             if access_zone.intersection(door_swing_polygon(door)).area > 0.5:
+                opening_fraction, _ = door_opening_fraction(door, {appliance["id"]: footprint})
+                minimum_fraction = constraints["doorPolicies"].get("minimumOpeningFractionByDoor", {}).get(door["id"], 1.0)
+                if opening_fraction + 0.01 >= minimum_fraction:
+                    continue
                 appliance_access_blocked_by.append(door["id"])
                 reasons.append(f"Appliance access for {appliance['id']} conflicts with {door['id']}.")
 

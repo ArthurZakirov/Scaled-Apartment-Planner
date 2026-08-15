@@ -105,12 +105,14 @@ def desk_position(base, selected_variant, cm_per_pixel):
 def minifridge_position(placement, selected_variant, apartment):
     """Anchor the fridge to geometry derived from the Garderobe wall profile."""
     cm_per_pixel = apartment["scale"]["cmPerPixel"]
-    if placement["anchor"] == "south_wall_balcony_corner":
+    if placement["anchor"] in {"south_wall_balcony_corner", "south_wall_kitchen_end"}:
         width_px = selected_variant["dimensionsCm"]["width"] / cm_per_pixel
         depth_px = selected_variant["dimensionsCm"]["depth"] / cm_per_pixel
         corner_x, corner_y = placement["cornerPx"]
+        wall_inset_px = placement.get("wallInsetPx", 0)
+        center_x = corner_x - width_px / 2 if placement["anchor"] == "south_wall_balcony_corner" else corner_x + width_px / 2
         return {
-            "center": [round(corner_x - width_px / 2, 4), round(corner_y - depth_px / 2, 4)],
+            "center": [round(center_x, 4), round(corner_y - wall_inset_px - depth_px / 2, 4)],
             "rotationDeg": 0,
         }
     profile = next(

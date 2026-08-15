@@ -141,10 +141,11 @@
     },
     {
       "id": "kitchen-balcony-wall",
-      "label": "C · Küchenwand am Balkoneck",
+      "label": "C · Küchenwand vor unterer Balkontür",
       "anchor": "south_wall_balcony_corner",
-      "cornerPx": [505, 527],
-      "note": "Der Kühlschrank steht an der freien Küchenwand direkt links des Balkonecks; seine Front und Türzone öffnen in den Wohnraum."
+      "cornerPx": [493, 527],
+      "wallInsetPx": 2,
+      "note": "Der Kühlschrank steht an der kurzen Küchenwand links der unteren Balkontür und endet vor dem originalen Wandversatz; seine Front und Türzone öffnen in den Wohnraum."
     }
   ],
   "deskPlacements": [
