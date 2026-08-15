@@ -556,6 +556,17 @@ class ScenarioTests(unittest.TestCase):
         self.assertAlmostEqual(furniture_polygon(pax, self.apartment["scale"]["cmPerPixel"]).bounds[2], 489.2, places=1)
         self.assertEqual(result["fixedFurnishingBlockedBy"], {})
 
+    def test_bosch_fits_between_central_desk_and_lower_balcony_door(self):
+        scenario_id = "scenario-east-wall-wardrobe-new-bed-140-pax-150-quick-150-150-living-room-centre-pax-access-0-fridge-kitchen-balcony-wall-fridge-bosch-kgn36vict-60"
+        layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
+        result = self.evaluate(layout)
+        fridge = next(item for item in layout["objects"] if item["variantId"] == "bosch-kgn36vict-60")
+
+        self.assertTrue(result["valid"], result["reasons"])
+        self.assertAlmostEqual(result["doorOpeningFractions"]["door-balcony-lower"], 0.8, places=2)
+        self.assertEqual(result["applianceAccessBlockedBy"], [])
+        self.assertAlmostEqual(fridge["positionPx"]["center"][0], 451.7895, places=3)
+
     def test_lower_desk_position_preserves_the_upper_balcony_door(self):
         for layout in self.furniture["layouts"]:
             if layout["selection"]["deskPlacementId"] != "lower-balcony-corner":
