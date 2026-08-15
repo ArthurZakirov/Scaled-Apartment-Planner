@@ -255,13 +255,13 @@ def main():
     base_bed_variant = variants[placements["bed"]["baseVariantId"]]
     base_pax_variant = variants[placements["pax"]["baseVariantId"]]
     bedside_variant = variants[placements["bedside"]["variantId"]]
-    minifridge_variant = variants[placements["minifridge"]["variantId"]]
     desk_placements = matrix.get("deskPlacements") or [{"id": "upper-loggia-corner", **placements["desk"]}]
     minifridge_placement_map = {item["id"]: item for item in matrix["minifridgePlacements"]}
     minifridge_placements = [
         minifridge_placement_map[item_id]
         for item_id in matrix["axes"]["minifridgePlacementIds"]
     ]
+    fridge_variant_ids = matrix["axes"].get("fridgeVariantIds", [placements["minifridge"]["variantId"]])
     scenarios = []
 
     arrangements = matrix.get("arrangements") or [{"id": "divider", "label": "Standard"}]
@@ -273,15 +273,18 @@ def main():
         ]
         for bed_id in bed_ids:
             for pax_id in matrix["axes"]["paxVariantIds"]:
-                for desk_id, desk_placement, pax_access_depth_cm, minifridge_placement in itertools.product(
+                for desk_id, desk_placement, pax_access_depth_cm, minifridge_placement, fridge_variant_id in itertools.product(
                     matrix["axes"]["deskVariantIds"],
                     arrangement_desk_placements,
                     matrix["axes"].get("paxAccessDepthCm", [45]),
                     minifridge_placements,
+                    fridge_variant_ids,
                 ):
                     bed = variants[bed_id]
                     pax = variants[pax_id]
                     desk = variants[desk_id]
+                    fridge_variant = variants[fridge_variant_id]
+                    fridge_family = variant_families[fridge_variant_id]
                     if arrangement["id"] == "divider":
                         scenario_id = f"scenario-{bed_id}-{pax_id}-{desk_id}"
                     else:
@@ -296,6 +299,8 @@ def main():
                     # keep selecting the default fridge placement.
                     if minifridge_placement["id"] != "endcap-extension":
                         scenario_id = f"{scenario_id}-fridge-{minifridge_placement['id']}"
+                    if fridge_variant_id != placements["minifridge"]["variantId"]:
+                        scenario_id = f"{scenario_id}-fridge-{fridge_variant_id}"
                     if arrangement.get("bedPositionPx"):
                         arrangement_bed_base = variants[arrangement.get("bedBaseVariantId", "current-bed-90")]
                         arrangement_bed_placement = {
@@ -361,7 +366,7 @@ def main():
                     scenarios.append(
                         {
                             "id": scenario_id,
-                            "name": f"{arrangement['label']} · {bed['label']} · {pax['label']} · {pax_access_depth_cm} cm PAX-Zugriff · {desk['label']} · {desk_placement['label']} · Kühlschrank {minifridge_placement['label']}",
+                            "name": f"{arrangement['label']} · {bed['label']} · {pax['label']} · {pax_access_depth_cm} cm PAX-Zugriff · {desk['label']} · {desk_placement['label']} · {fridge_variant['label']} · Kühlschrank {minifridge_placement['label']}",
                             "status": "generated_experiment",
                             "arrangementId": arrangement["id"],
                             "arrangementLabel": arrangement["label"],
@@ -377,6 +382,7 @@ def main():
                                 "deskVariantId": desk_id,
                                 "deskPlacementId": desk_placement["id"],
                                 "minifridgePlacementId": minifridge_placement["id"],
+                                "fridgeVariantId": fridge_variant_id,
                             },
                             "notes": [
                                 (
@@ -398,7 +404,8 @@ def main():
                                 ),
                                 desk_placement["note"],
                                 minifridge_placement["note"],
-                                "Vor der markierten Kühlschranktür bleiben 40 cm Bedienzone innerhalb der Wohnung frei.",
+                                f"Vor der markierten Kühlschranktür bleiben {fridge_family.get('accessDepthCm', 40):g} cm Bedienzone innerhalb der Wohnung frei.",
+                                fridge_family.get("planningNote", ""),
                                 arrangement.get("recommendation", "PAX benötigt eine geprüfte Verankerungslösung."),
                             ],
                             "objects": [
@@ -429,11 +436,11 @@ def main():
                                     ),
                                 },
                                 {
-                                    "id": placements["minifridge"]["id"],
-                                    "templateId": placements["minifridge"]["templateId"],
-                                    "variantId": placements["minifridge"]["variantId"],
+                                    "id": fridge_family["id"],
+                                    "templateId": fridge_family["id"],
+                                    "variantId": fridge_variant_id,
                                     "positionPx": minifridge_position(
-                                        minifridge_placement, minifridge_variant, apartment
+                                        minifridge_placement, fridge_variant, apartment
                                     ),
                                 },
                             ],

@@ -7,7 +7,8 @@
     "paxAccessDepthCm": [0, 30, 45, 60],
     "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"],
     "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner", "living-room-centre"],
-    "minifridgePlacementIds": ["endcap-extension", "kitchen-back-wall"]
+    "minifridgePlacementIds": ["endcap-extension", "kitchen-back-wall"],
+    "fridgeVariantIds": ["kesser-minifridge-40", "bosch-kgn36vict-60"]
   },
   "arrangements": [
     {
@@ -128,7 +129,7 @@
       "label": "A · direkt hinter der Endkappe",
       "profileId": "profile-garderobe",
       "anchor": "end_cap_extension",
-      "note": "Der Minikühlschrank verlängert die freie Endkappe des Garderobenprofils; die Tür öffnet vom Profil weg in den Wohnraum."
+      "note": "Der Kühlschrank verlängert die freie Endkappe des Garderobenprofils; die Tür öffnet vom Profil weg in den Wohnraum."
     },
     {
       "id": "kitchen-back-wall",

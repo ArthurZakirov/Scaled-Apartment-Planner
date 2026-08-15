@@ -761,6 +761,18 @@ function renderBedroomControls(furniture, activeLayout) {
     if (target) selectScenario(target.id);
   }, false, true);
 
+  const fridgeVariantOptions = [
+    { value: 'kesser-minifridge-40', label: 'KESSER Mini · 40 × 43 cm' },
+    { value: 'bosch-kgn36vict-60', label: 'Bosch KGN36VICT · 60 × 72 cm' }
+  ].map((option) => ({
+    ...option,
+    disabled: !findBedroomLayout({ fridgeVariantId: option.value })
+  }));
+  addSelect(positions, 'Kühlschrankmodell', activeLayout.selection.fridgeVariantId, fridgeVariantOptions, (fridgeVariantId) => {
+    const target = findBedroomLayout({ fridgeVariantId });
+    if (target) selectScenario(target.id);
+  }, false, true);
+
   const minifridgePlacementOptions = [
     { value: 'endcap-extension', label: 'A · hinter der Endkappe' },
     { value: 'kitchen-back-wall', label: 'B · bündig zur Küchenrückwand' }
@@ -789,7 +801,12 @@ function renderFurnitureSummary(activeLayout) {
     }
     else if (object.mattressCm) row.append(htmlEl('small', {}, `${object.estimateNote ? 'Geschätzte ' : ''}Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm · Kopfseite markiert`));
     else if (object.type === 'storage') row.append(htmlEl('small', {}, `${object.dimensionsCm.width} × ${object.dimensionsCm.depth} × ${object.dimensionsCm.height} cm · Schubladenseite markiert`));
-    else if (object.type === 'appliance') row.append(htmlEl('small', {}, `${object.dimensionsCm.width} × ${object.dimensionsCm.depth} × ${object.dimensionsCm.height} cm · Türseite markiert · ${object.accessDepthCm} cm Bedienzone`));
+    else if (object.type === 'appliance') {
+      const body = object.bodyDimensionsCm;
+      const bodyText = body ? `Korpus ${body.width} × ${body.depth} × ${body.height} cm · ` : '';
+      const sweepText = object.doorSweepRadiusCm ? ` · Türbogen R ${object.doorSweepRadiusCm} cm` : '';
+      row.append(htmlEl('small', {}, `${bodyText}Planungsfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm · ${object.accessDepthCm} cm Bedienzone${sweepText}`));
+    }
     else row.append(htmlEl('small', {}, `Stellfläche ${object.dimensionsCm.width} × ${object.dimensionsCm.depth} cm`));
     summary.append(row);
   }

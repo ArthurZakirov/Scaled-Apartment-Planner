@@ -30,7 +30,7 @@ function resolveScenarioObject(placement, families) {
   for (const key of ['mattressCm', 'modules', 'heightRangeCm']) {
     if (variant[key] !== undefined) resolved[key] = structuredClone(variant[key]);
   }
-  for (const key of ['requiresAnchoring', 'safetyNote', 'doorType', 'planningDepthCm', 'estimateNote', 'headEdge', 'accessEdge', 'accessLabel', 'accessDepthCm']) {
+  for (const key of ['requiresAnchoring', 'safetyNote', 'doorType', 'planningDepthCm', 'estimateNote', 'headEdge', 'accessEdge', 'accessLabel', 'accessDepthCm', 'bodyDimensionsCm', 'doorSweepRadiusCm', 'doorOpeningDegrees', 'planningNote']) {
     if (family[key] !== undefined) resolved[key] = structuredClone(family[key]);
   }
   if (placement.intentionalDoorBlocks) {
@@ -68,7 +68,8 @@ export function findLayoutForSelection(layouts, activeLayout, overrides) {
     layout.selection.paxAccessDepthCm === selection.paxAccessDepthCm &&
     layout.selection.deskVariantId === selection.deskVariantId &&
     layout.selection.deskPlacementId === selection.deskPlacementId &&
-    layout.selection.minifridgePlacementId === selection.minifridgePlacementId
+    layout.selection.minifridgePlacementId === selection.minifridgePlacementId &&
+    layout.selection.fridgeVariantId === selection.fridgeVariantId
   );
 }
 
@@ -84,6 +85,7 @@ export function findLayoutForArrangement(layouts, activeLayout, arrangementId) {
       (layout.selection.paxAccessDepthCm === activeLayout.selection.paxAccessDepthCm ? 100 : 0)
       + (layout.selection.deskPlacementId === activeLayout.selection.deskPlacementId ? 20 : 0)
       + (layout.selection.minifridgePlacementId === activeLayout.selection.minifridgePlacementId ? 10 : 0)
+      + (layout.selection.fridgeVariantId === activeLayout.selection.fridgeVariantId ? 5 : 0)
       - Math.abs(layout.selection.paxAccessDepthCm - activeLayout.selection.paxAccessDepthCm) / 10
     );
     return score(second) - score(first);

@@ -8,10 +8,10 @@ const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.jso
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
 const evaluations = JSON.parse(await readFile(new URL('../data/scenario-evaluations.json', import.meta.url), 'utf8'));
 
-test('browser resolves all 7680 product, orientation, desk, PAX-access, and fridge-placement scenarios', () => {
+test('browser resolves all 15360 product, orientation, desk, PAX-access, fridge-model, and fridge-placement scenarios', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  assert.equal(furniture.layouts.length, 7680);
-  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 7680);
+  assert.equal(furniture.layouts.length, 15360);
+  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 15360);
 });
 
 test('current bed resolves independently from estimated new beds', () => {
@@ -49,17 +49,30 @@ test('owned bedside cabinet is present with user-provided dimensions', () => {
   }
 });
 
-test('KESSER minifridge resolves with both independent placements and a marked 40 cm door zone', () => {
+test('KESSER and Bosch are mutually exclusive fridge alternatives with independent placements', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
   assert.deepEqual(
     new Set(furniture.layouts.map((layout) => layout.selection.minifridgePlacementId)),
     new Set(['endcap-extension', 'kitchen-back-wall'])
   );
-  for (const layout of furniture.layouts) {
+  assert.deepEqual(
+    new Set(furniture.layouts.map((layout) => layout.selection.fridgeVariantId)),
+    new Set(['kesser-minifridge-40', 'bosch-kgn36vict-60'])
+  );
+  for (const layout of furniture.layouts.filter((layout) => layout.selection.fridgeVariantId === 'kesser-minifridge-40')) {
     const fridge = layout.objects.find((object) => object.type === 'appliance');
     assert.deepEqual(fridge.dimensionsCm, { width: 40, depth: 43, height: 57 });
     assert.equal(fridge.accessLabel, 'Kühlschranktür');
     assert.equal(fridge.accessDepthCm, 40);
+  }
+  for (const layout of furniture.layouts.filter((layout) => layout.selection.fridgeVariantId === 'bosch-kgn36vict-60')) {
+    const appliances = layout.objects.filter((object) => object.type === 'appliance');
+    assert.equal(appliances.length, 1);
+    const fridge = appliances[0];
+    assert.deepEqual(fridge.dimensionsCm, { width: 60, depth: 72, height: 186 });
+    assert.deepEqual(fridge.bodyDimensionsCm, { width: 60, depth: 66.5, height: 186 });
+    assert.equal(fridge.accessDepthCm, 55);
+    assert.equal(fridge.doorSweepRadiusCm, 65.5);
   }
 });
 
@@ -113,7 +126,8 @@ test('each furniture control changes only its own scenario axis', () => {
     paxVariantId: 'pax-175',
     paxAccessDepthCm: 30,
     deskPlacementId: 'lower-balcony-corner',
-    minifridgePlacementId: 'kitchen-back-wall'
+    minifridgePlacementId: 'kitchen-back-wall',
+    fridgeVariantId: 'bosch-kgn36vict-60'
   };
 
   for (const [axis, value] of Object.entries(alternateByAxis)) {
@@ -166,7 +180,7 @@ test('user-facing bedroom layouts contain only valid geometry and preserve the d
   const furniture = resolveScenarioData(scenarios, catalog);
   const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
   const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
-  assert.equal(layouts.length, 340);
+  assert.equal(layouts.length, 492);
   assert.ok(layouts.every((layout) => validIds.has(layout.id)));
   assert.ok(layouts.every((layout) => layout.selection.deskVariantId === 'quick-150-150'));
   assert.deepEqual(new Set(layouts.map((layout) => layout.selection.deskPlacementId)), new Set(['upper-loggia-corner', 'lower-balcony-corner', 'living-room-centre', 'balcony-between-doors', 'kitchen-balcony-corner']));

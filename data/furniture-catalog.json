@@ -146,6 +146,28 @@
       ]
     },
     {
+      "id": "bosch-kgn36vict",
+      "type": "appliance",
+      "name": "Bosch KGN36VICT Kühl-Gefrier-Kombination",
+      "sourceUrl": "https://www.bosch-home.com/de/de/product/kuehlen-gefrieren/kuehl-gefrier-kombinationen/freistehende-kuehl-gefrier-kombinationen-gefrierteil-unten/KGN36VICT",
+      "confidence": "verified_official_product_page",
+      "accessEdge": "negativeDepth",
+      "accessLabel": "Bosch-Türöffnung (90°)",
+      "accessDepthCm": 55,
+      "bodyDimensionsCm": {"width": 60, "depth": 66.5, "height": 186},
+      "doorSweepRadiusCm": 65.5,
+      "doorOpeningDegrees": {"normal": 90, "maximum": 125},
+      "planningNote": "Die Stellfläche enthält die konservative Griff-Tiefe von 72 cm. Zusätzlich bleiben vor der Front 55 cm für die normale 90°-Türöffnung frei; 125° bleibt ein Komfortziel.",
+      "variants": [
+        {
+          "id": "bosch-kgn36vict-60",
+          "label": "Bosch KGN36VICT 60 × 72 × 186",
+          "dimensionsCm": {"width": 60, "depth": 72, "height": 186},
+          "render": {"shape": "rectangle", "label": "Bosch 60 × 72"}
+        }
+      ]
+    },
+    {
       "id": "current-bed",
       "type": "bed",
       "name": "Aktuelles Bett",
