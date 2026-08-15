@@ -775,7 +775,8 @@ function renderBedroomControls(furniture, activeLayout) {
 
   const minifridgePlacementOptions = [
     { value: 'endcap-extension', label: 'A · hinter der Endkappe' },
-    { value: 'kitchen-back-wall', label: 'B · bündig zur Küchenrückwand' }
+    { value: 'kitchen-back-wall', label: 'B · bündig zur Küchenrückwand' },
+    { value: 'kitchen-balcony-wall', label: 'C · Küchenwand am Balkoneck' }
   ].map((option) => ({
     ...option,
     disabled: !findBedroomLayout({ minifridgePlacementId: option.value })

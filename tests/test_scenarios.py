@@ -37,10 +37,10 @@ class ScenarioTests(unittest.TestCase):
     def evaluate(self, layout):
         return evaluate_layout(layout, self.apartment, self.constraints, self.fixtures, self.fixed_furnishings)
 
-    def test_matrix_contains_15360_unique_scenarios(self):
+    def test_matrix_contains_23040_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 15360)
-        self.assertEqual(len(set(ids)), 15360)
+        self.assertEqual(len(ids), 23040)
+        self.assertEqual(len(set(ids)), 23040)
 
     def test_pax_access_is_an_independent_axis_with_stable_legacy_urls(self):
         grouped = {}
@@ -82,7 +82,7 @@ class ScenarioTests(unittest.TestCase):
             grouped.setdefault(key, set()).add(selection["minifridgePlacementId"])
         self.assertTrue(grouped)
         self.assertTrue(
-            all(placements == {"endcap-extension", "kitchen-back-wall"} for placements in grouped.values())
+            all(placements == {"endcap-extension", "kitchen-back-wall", "kitchen-balcony-wall"} for placements in grouped.values())
         )
 
     def test_minifridge_footprint_and_door_zone_are_clear_in_every_valid_scenario(self):

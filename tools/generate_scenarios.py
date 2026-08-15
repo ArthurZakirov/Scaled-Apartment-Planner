@@ -104,6 +104,15 @@ def desk_position(base, selected_variant, cm_per_pixel):
 
 def minifridge_position(placement, selected_variant, apartment):
     """Anchor the fridge to geometry derived from the Garderobe wall profile."""
+    cm_per_pixel = apartment["scale"]["cmPerPixel"]
+    if placement["anchor"] == "south_wall_balcony_corner":
+        width_px = selected_variant["dimensionsCm"]["width"] / cm_per_pixel
+        depth_px = selected_variant["dimensionsCm"]["depth"] / cm_per_pixel
+        corner_x, corner_y = placement["cornerPx"]
+        return {
+            "center": [round(corner_x - width_px / 2, 4), round(corner_y - depth_px / 2, 4)],
+            "rotationDeg": 0,
+        }
     profile = next(
         item for item in apartment.get("wallProfiles", [])
         if item["id"] == placement["profileId"]
@@ -122,7 +131,6 @@ def minifridge_position(placement, selected_variant, apartment):
         end[0] + side_x * profile["depthPx"],
         end[1] + side_y * profile["depthPx"],
     ]
-    cm_per_pixel = apartment["scale"]["cmPerPixel"]
     width_px = selected_variant["dimensionsCm"]["width"] / cm_per_pixel
     depth_px = selected_variant["dimensionsCm"]["depth"] / cm_per_pixel
     wall_half_px = profile["wallThicknessPx"] / 2
@@ -147,6 +155,10 @@ def minifridge_position(placement, selected_variant, apartment):
         # The first polygon edge is the marked door edge. Using the negative
         # profile axis as width direction makes that edge face the kitchen.
         rotation_deg = math.degrees(math.atan2(-axis_y, -axis_x))
+    elif placement["anchor"] == "south_wall_balcony_corner":
+        corner_x, corner_y = placement["cornerPx"]
+        center = [corner_x - width_px / 2, corner_y - depth_px / 2]
+        rotation_deg = 0
     else:
         raise ValueError(f"Unsupported minifridge anchor: {placement['anchor']}")
 

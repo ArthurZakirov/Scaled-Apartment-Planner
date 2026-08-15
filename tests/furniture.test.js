@@ -8,10 +8,10 @@ const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.jso
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
 const evaluations = JSON.parse(await readFile(new URL('../data/scenario-evaluations.json', import.meta.url), 'utf8'));
 
-test('browser resolves all 15360 product, orientation, desk, PAX-access, fridge-model, and fridge-placement scenarios', () => {
+test('browser resolves all 23040 product, orientation, desk, fridge-model, and fridge-placement scenarios', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  assert.equal(furniture.layouts.length, 15360);
-  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 15360);
+  assert.equal(furniture.layouts.length, 23040);
+  assert.equal(new Set(furniture.layouts.map((layout) => layout.id)).size, 23040);
 });
 
 test('current bed resolves independently from estimated new beds', () => {
@@ -53,7 +53,7 @@ test('KESSER and Bosch are mutually exclusive fridge alternatives with independe
   const furniture = resolveScenarioData(scenarios, catalog);
   assert.deepEqual(
     new Set(furniture.layouts.map((layout) => layout.selection.minifridgePlacementId)),
-    new Set(['endcap-extension', 'kitchen-back-wall'])
+    new Set(['endcap-extension', 'kitchen-back-wall', 'kitchen-balcony-wall'])
   );
   assert.deepEqual(
     new Set(furniture.layouts.map((layout) => layout.selection.fridgeVariantId)),
