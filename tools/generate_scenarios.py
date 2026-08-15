@@ -109,6 +109,7 @@ def minifridge_position(placement, selected_variant, apartment):
         width_px = selected_variant["dimensionsCm"]["width"] / cm_per_pixel
         depth_px = selected_variant["dimensionsCm"]["depth"] / cm_per_pixel
         corner_x, corner_y = placement["cornerPx"]
+        corner_x -= placement.get("doorClearanceCmByVariant", {}).get(selected_variant["id"], 0) / cm_per_pixel
         wall_inset_px = placement.get("wallInsetPx", 0)
         center_x = corner_x - width_px / 2 if placement["anchor"] == "south_wall_balcony_corner" else corner_x + width_px / 2
         return {
