@@ -65,8 +65,28 @@
       "paxPositionPx": {"center": [488, 388], "rotationDeg": -90},
       "keepPaxEndFixed": true,
       "paxWallSegmentMaximumCm": 167,
-      "deskPlacementIds": ["living-room-centre"],
+      "deskPlacementIds": ["living-room-centre", "kitchen-balcony-corner"],
       "recommendation": "Der 150-cm-PAX steht längs an der festen Balkonwand; breitere Varianten werden nur angeboten, wenn sie geometrisch innerhalb des Wandabschnitts bleiben.",
+      "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066}
+    },
+    {
+      "id": "kitchen-wall-wardrobe",
+      "label": "PAX an Küchenwand",
+      "bedBaseVariantId": "current-bed-90",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "kitchenExposure": "higher",
+      "bedsidePlacement": "head-side",
+      "bedsideDirection": 1,
+      "bedsideEndDirection": -1,
+      "bedsidePositionPx": {"center": [294.8577, 163.7061], "rotationDeg": 143.934},
+      "bedPositionFromBedside": true,
+      "bedHeadboardWallGapCm": 20,
+      "paxBaseVariantId": "pax-150",
+      "paxPositionPx": {"center": [413, 508], "rotationDeg": 0},
+      "keepPaxEndFixed": true,
+      "paxWallSegmentMaximumCm": 167,
+      "deskPlacementIds": ["upper-loggia-corner", "balcony-between-doors"],
+      "recommendation": "Der 150-cm-PAX nutzt den freien Küchenwandabschnitt rechts der festen Küchenzeile; die offene Seite zeigt in den Wohnraum.",
       "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066}
     }
   ],
@@ -138,6 +158,18 @@
       "label": "Mitte im Wohnbereich",
       "positionPx": {"topLeft": [333, 350], "rotationDeg": 0, "handedness": "right"},
       "note": "Der Tisch steht freistehend in der Mitte des Wohnbereichs; die Stuhlzone im L-Ausschnitt bleibt frei."
+    },
+    {
+      "id": "balcony-between-doors",
+      "label": "An Balkonwand zwischen Türen",
+      "positionPx": {"topLeft": [507, 344], "rotationDeg": 90, "handedness": "right"},
+      "note": "Der Tisch steht längs an der Balkonwand zwischen den beiden Balkontüren; die Stuhlzone im L-Ausschnitt bleibt frei."
+    },
+    {
+      "id": "kitchen-balcony-corner",
+      "label": "Im Küchen-/Balkoneck",
+      "positionPx": {"topLeft": [394, 527], "rotationDeg": -90, "handedness": "left"},
+      "note": "Der gedrehte Tisch nutzt das Küchen-/Balkoneck: ein Schenkel liegt an der Küchenwand, der andere an der Balkonwand, ohne den PAX an der Balkonwand zu berühren."
     }
   ]
 }

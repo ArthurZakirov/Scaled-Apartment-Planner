@@ -735,7 +735,8 @@ function renderBedroomControls(furniture, activeLayout) {
     { value: 'divider', label: 'Raumteiler quer' },
     { value: 'bath-wall-bed-shifted', label: 'PAX an Badwand' },
     { value: 'bath-wall-both-rotated', label: 'Beide gedreht' },
-    { value: 'east-wall-wardrobe', label: 'PAX an Balkonwand' }
+    { value: 'east-wall-wardrobe', label: 'PAX an Balkonwand' },
+    { value: 'kitchen-wall-wardrobe', label: 'PAX an Küchenwand' }
   ].map((option) => ({
     ...option,
     disabled: !findArrangementLayout(option.value)
@@ -748,7 +749,9 @@ function renderBedroomControls(furniture, activeLayout) {
   const deskPlacementOptions = [
     { value: 'upper-loggia-corner', label: 'Oben an Loggia/Balkon' },
     { value: 'lower-balcony-corner', label: 'Unten an Balkon/Südwand' },
-    { value: 'living-room-centre', label: 'Mitte im Wohnbereich' }
+    { value: 'living-room-centre', label: 'Mitte im Wohnbereich' },
+    { value: 'balcony-between-doors', label: 'An Balkonwand zwischen Türen' },
+    { value: 'kitchen-balcony-corner', label: 'Im Küchen-/Balkoneck' }
   ].map((option) => ({
     ...option,
     disabled: !findBedroomLayout({ deskPlacementId: option.value })

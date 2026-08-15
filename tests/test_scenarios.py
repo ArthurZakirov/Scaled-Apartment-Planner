@@ -36,10 +36,10 @@ class ScenarioTests(unittest.TestCase):
     def evaluate(self, layout):
         return evaluate_layout(layout, self.apartment, self.constraints, self.fixtures)
 
-    def test_matrix_contains_4032_unique_scenarios(self):
+    def test_matrix_contains_5760_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 4032)
-        self.assertEqual(len(set(ids)), 4032)
+        self.assertEqual(len(ids), 5760)
+        self.assertEqual(len(set(ids)), 5760)
 
     def test_pax_access_is_an_independent_axis_with_stable_legacy_urls(self):
         grouped = {}
@@ -152,7 +152,7 @@ class ScenarioTests(unittest.TestCase):
             )
             expected_rotation_difference = (
                 0
-                if layout["selection"]["arrangementId"] in {"bath-wall-both-rotated", "east-wall-wardrobe"}
+                if layout["selection"]["arrangementId"] in {"bath-wall-both-rotated", "east-wall-wardrobe", "kitchen-wall-wardrobe"}
                 else 90
             )
             self.assertAlmostEqual(
@@ -378,13 +378,15 @@ class ScenarioTests(unittest.TestCase):
             and layout["selection"]["paxAccessDepthCm"] == 45
             for result in [self.evaluate(layout)]
         }
-        self.assertEqual(set(results), {"bath-wall-bed-shifted", "bath-wall-both-rotated"})
+        self.assertEqual(set(results), {"bath-wall-bed-shifted", "bath-wall-both-rotated", "kitchen-wall-wardrobe"})
         self.assertTrue(all(result["installationStatus"] == "manufacturer_wall_mount_candidate" for result in results.values()))
         self.assertFalse(results["bath-wall-bed-shifted"]["valid"])
         self.assertTrue(any("leaves the approximate interior" in reason for reason in results["bath-wall-bed-shifted"]["reasons"]))
         self.assertFalse(results["bath-wall-both-rotated"]["valid"])
         self.assertIn("sleeping-bed", results["bath-wall-both-rotated"]["wardrobeAccessBlockedBy"])
         self.assertGreater(results["bath-wall-both-rotated"]["bedPaxGapCm"], 30)
+        self.assertFalse(results["kitchen-wall-wardrobe"]["valid"])
+        self.assertIn("exceeds the 167 cm fixed balcony-wall segment", " ".join(results["kitchen-wall-wardrobe"]["reasons"]))
 
     def test_both_rotated_120_with_lower_desk_clears_loggia_but_not_pax_access(self):
         layouts = [
@@ -474,7 +476,7 @@ class ScenarioTests(unittest.TestCase):
 
     def test_every_bed_option_is_generated_in_every_orientation(self):
         expected_beds = {"current-bed-90", "new-bed-90", "new-bed-120", "new-bed-140", "new-bed-160", "new-bed-180"}
-        for arrangement_id in {"divider", "bath-wall-bed-shifted", "bath-wall-both-rotated"}:
+        for arrangement_id in {"divider", "bath-wall-bed-shifted", "bath-wall-both-rotated", "east-wall-wardrobe", "kitchen-wall-wardrobe"}:
             actual = {
                 layout["selection"]["bedVariantId"]
                 for layout in self.furniture["layouts"]
@@ -513,6 +515,24 @@ class ScenarioTests(unittest.TestCase):
         result = self.evaluate(layout)
         self.assertFalse(result["valid"])
         self.assertIn("exceeds the 167 cm fixed balcony-wall segment", " ".join(result["reasons"]))
+
+    def test_east_balcony_wall_arrangement_allows_rotated_desk_in_kitchen_balcony_corner(self):
+        scenario_id = "scenario-east-wall-wardrobe-new-bed-90-pax-150-quick-150-150-kitchen-balcony-corner-pax-access-0-fridge-kitchen-back-wall"
+        layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
+        result = self.evaluate(layout)
+        desk = next(item for item in layout["objects"] if item["type"] == "desk")
+        self.assertTrue(result["valid"], result["reasons"])
+        self.assertEqual(desk["positionPx"], {"topLeft": [394, 527], "rotationDeg": -90, "handedness": "left"})
+
+    def test_kitchen_wall_arrangement_supports_upper_and_between_doors_desks(self):
+        prefix = "scenario-kitchen-wall-wardrobe-new-bed-90-pax-150-quick-150-150"
+        scenario_ids = [
+            f"{prefix}-pax-access-0-fridge-kitchen-back-wall",
+            f"{prefix}-balcony-between-doors-pax-access-0-fridge-kitchen-back-wall",
+        ]
+        for scenario_id in scenario_ids:
+            layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
+            self.assertTrue(self.evaluate(layout)["valid"], scenario_id)
 
     def test_lower_desk_position_preserves_the_upper_balcony_door(self):
         for layout in self.furniture["layouts"]:
