@@ -103,7 +103,7 @@ def main() -> int:
         * len(matrix["axes"]["paxVariantIds"])
         * len(matrix["axes"].get("paxAccessDepthCm", [45]))
         * len(matrix["axes"]["deskVariantIds"])
-        * len(matrix["axes"].get("deskPlacementIds", ["upper-loggia-corner"]))
+        * len(arrangement.get("deskPlacementIds", matrix["axes"].get("deskPlacementIds", ["upper-loggia-corner"])))
         * len(matrix["axes"].get("minifridgePlacementIds", ["endcap-extension"]))
         for arrangement in arrangements
     )

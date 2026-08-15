@@ -213,6 +213,11 @@ def evaluate_layout(
         "paxAccessDepthCm", constraints.get("wardrobeAccessDepthCm", 45)
     )
     for wardrobe in (obj for obj in layout["objects"] if obj["type"] == "wardrobe"):
+        maximum_width_cm = layout.get("paxWallSegmentMaximumCm")
+        if maximum_width_cm is not None and wardrobe["dimensionsCm"]["width"] > maximum_width_cm + 0.01:
+            reasons.append(
+                f"Wardrobe {wardrobe['id']} exceeds the {maximum_width_cm:g} cm fixed balcony-wall segment."
+            )
         if wardrobe_access_depth_cm <= 0:
             continue
         access_zone = wardrobe_access_polygon(

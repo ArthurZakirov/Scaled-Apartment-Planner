@@ -6,13 +6,14 @@
     "paxVariantIds": ["pax-150", "pax-175", "pax-200"],
     "paxAccessDepthCm": [0, 30, 45, 60],
     "deskVariantIds": ["quick-150-150", "stable-160-140", "quick-180-150", "stable-180-150"],
-    "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner"],
+    "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner", "living-room-centre"],
     "minifridgePlacementIds": ["endcap-extension", "kitchen-back-wall"]
   },
   "arrangements": [
     {
       "id": "divider",
       "label": "PAX quer als Raumteiler",
+      "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner"],
       "installationStatus": "requires_engineered_solution",
       "kitchenExposure": "low",
       "bedsidePositionPx": {"center": [287, 163], "rotationDeg": 144},
@@ -21,6 +22,7 @@
     {
       "id": "bath-wall-bed-shifted",
       "label": "PAX an Badwand · Bett zur Loggia",
+      "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner"],
       "bedBaseVariantId": "current-bed-90",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "kitchenExposure": "higher",
@@ -33,6 +35,7 @@
     {
       "id": "bath-wall-both-rotated",
       "label": "PAX und Bett um 90° gedreht",
+      "deskPlacementIds": ["upper-loggia-corner", "lower-balcony-corner"],
       "bedBaseVariantId": "current-bed-90",
       "installationStatus": "manufacturer_wall_mount_candidate",
       "kitchenExposure": "higher",
@@ -44,6 +47,26 @@
       "bedHeadboardWallGapCm": 20,
       "recommendation": "Beste PAX-Grundorientierung im Modell; Wandaufbau und realen Bedienabstand vor Kauf prüfen.",
       "paxPositionPx": {"center": [208.6255, 269.074], "rotationDeg": 55.4456},
+      "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066}
+    },
+    {
+      "id": "east-wall-wardrobe",
+      "label": "PAX an Balkonwand · Tisch im Wohnbereich",
+      "bedBaseVariantId": "current-bed-90",
+      "installationStatus": "manufacturer_wall_mount_candidate",
+      "kitchenExposure": "higher",
+      "bedsidePlacement": "head-side",
+      "bedsideDirection": 1,
+      "bedsideEndDirection": -1,
+      "bedsidePositionPx": {"center": [294.8577, 163.7061], "rotationDeg": 143.934},
+      "bedPositionFromBedside": true,
+      "bedHeadboardWallGapCm": 20,
+      "paxBaseVariantId": "pax-150",
+      "paxPositionPx": {"center": [488, 388], "rotationDeg": -90},
+      "keepPaxEndFixed": true,
+      "paxWallSegmentMaximumCm": 167,
+      "deskPlacementIds": ["living-room-centre"],
+      "recommendation": "Der 150-cm-PAX steht längs an der festen Balkonwand; breitere Varianten werden nur angeboten, wenn sie geometrisch innerhalb des Wandabschnitts bleiben.",
       "bedPositionPx": {"center": [283.2727, 217.5175], "rotationDeg": -36.066}
     }
   ],
@@ -109,6 +132,12 @@
       "wallContactCornerPx": [493, 527],
       "positionPx": {"topLeft": [493, 428.3158], "rotationDeg": 90, "handedness": "right"},
       "note": "Der Tisch berührt die Südwand und das kurze Segment des originalen Wandversatzes; er blockiert die untere Balkontür, während die obere als Zugang frei bleibt."
+    },
+    {
+      "id": "living-room-centre",
+      "label": "Mitte im Wohnbereich",
+      "positionPx": {"topLeft": [333, 350], "rotationDeg": 0, "handedness": "right"},
+      "note": "Der Tisch steht freistehend in der Mitte des Wohnbereichs; die Stuhlzone im L-Ausschnitt bleibt frei."
     }
   ]
 }

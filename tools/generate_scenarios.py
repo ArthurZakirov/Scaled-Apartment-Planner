@@ -266,11 +266,15 @@ def main():
     arrangements = matrix.get("arrangements") or [{"id": "divider", "label": "Standard"}]
     for arrangement in arrangements:
         bed_ids = arrangement.get("bedVariantIds", matrix["axes"]["bedVariantIds"])
+        arrangement_desk_placements = [
+            item for item in desk_placements
+            if item["id"] in arrangement.get("deskPlacementIds", matrix["axes"].get("deskPlacementIds", []))
+        ]
         for bed_id in bed_ids:
             for pax_id in matrix["axes"]["paxVariantIds"]:
                 for desk_id, desk_placement, pax_access_depth_cm, minifridge_placement in itertools.product(
                     matrix["axes"]["deskVariantIds"],
-                    desk_placements,
+                    arrangement_desk_placements,
                     matrix["axes"].get("paxAccessDepthCm", [45]),
                     minifridge_placements,
                 ):
@@ -327,9 +331,23 @@ def main():
                             bed_position_px = shift_position_away_from_headboard_wall(
                                 bed_position_px, headboard_gap_cm, apartment["scale"]["cmPerPixel"]
                             )
-                    pax_position_px = arrangement.get("paxPositionPx") or pax_position(
-                        placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
-                    )
+                    if arrangement.get("paxPositionPx"):
+                        arrangement_pax_placement = {
+                            **placements["pax"],
+                            "positionPx": arrangement["paxPositionPx"],
+                            "keepBathEndFixed": arrangement.get("keepPaxEndFixed", False),
+                        }
+                        arrangement_pax_base = variants[arrangement.get("paxBaseVariantId", "pax-200")]
+                        pax_position_px = pax_position(
+                            arrangement_pax_placement,
+                            arrangement_pax_base,
+                            pax,
+                            apartment["scale"]["cmPerPixel"],
+                        )
+                    else:
+                        pax_position_px = pax_position(
+                            placements["pax"], base_pax_variant, pax, apartment["scale"]["cmPerPixel"]
+                        )
                     bedside_position_px = arrangement.get("bedsidePositionPx") or bedside_position(
                         bed_position_px,
                         bed,
@@ -348,6 +366,7 @@ def main():
                             "installationStatus": arrangement.get("installationStatus", "requires_engineered_solution"),
                             "kitchenExposure": arrangement.get("kitchenExposure", "unknown"),
                             "recommendation": arrangement.get("recommendation", "Befestigung vor Kauf fachlich prüfen."),
+                            "paxWallSegmentMaximumCm": arrangement.get("paxWallSegmentMaximumCm"),
                             "selection": {
                                 "arrangementId": arrangement["id"],
                                 "bedVariantId": bed_id,

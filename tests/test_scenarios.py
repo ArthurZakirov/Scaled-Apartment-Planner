@@ -36,10 +36,10 @@ class ScenarioTests(unittest.TestCase):
     def evaluate(self, layout):
         return evaluate_layout(layout, self.apartment, self.constraints, self.fixtures)
 
-    def test_matrix_contains_3456_unique_scenarios(self):
+    def test_matrix_contains_4032_unique_scenarios(self):
         ids = [scenario["id"] for scenario in self.scenario_data["scenarios"]]
-        self.assertEqual(len(ids), 3456)
-        self.assertEqual(len(set(ids)), 3456)
+        self.assertEqual(len(ids), 4032)
+        self.assertEqual(len(set(ids)), 4032)
 
     def test_pax_access_is_an_independent_axis_with_stable_legacy_urls(self):
         grouped = {}
@@ -152,7 +152,7 @@ class ScenarioTests(unittest.TestCase):
             )
             expected_rotation_difference = (
                 0
-                if layout["selection"]["arrangementId"] == "bath-wall-both-rotated"
+                if layout["selection"]["arrangementId"] in {"bath-wall-both-rotated", "east-wall-wardrobe"}
                 else 90
             )
             self.assertAlmostEqual(
@@ -495,6 +495,24 @@ class ScenarioTests(unittest.TestCase):
         self.assertTrue(result["valid"], result["reasons"])
         self.assertGreaterEqual(result["doorOpeningFractions"]["door-loggia-bedroom"], 0.8)
         self.assertNotIn("door-loggia-bedroom", result["blockedBy"])
+
+    def test_east_balcony_wall_arrangement_accepts_150_cm_pax_with_central_desk(self):
+        scenario_id = "scenario-east-wall-wardrobe-new-bed-90-pax-150-quick-150-150-living-room-centre-pax-access-0-fridge-kitchen-back-wall"
+        layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
+        result = self.evaluate(layout)
+        pax = next(item for item in layout["objects"] if item["type"] == "wardrobe")
+        desk = next(item for item in layout["objects"] if item["type"] == "desk")
+        self.assertTrue(result["valid"], result["reasons"])
+        self.assertEqual(pax["dimensionsCm"]["width"], 149.6)
+        self.assertEqual(pax["positionPx"]["rotationDeg"], -90)
+        self.assertEqual(desk["positionPx"]["topLeft"], [333, 350])
+
+    def test_east_balcony_wall_arrangement_rejects_pax_wider_than_wall_segment(self):
+        scenario_id = "scenario-east-wall-wardrobe-new-bed-90-pax-200-quick-150-150-living-room-centre-pax-access-0-fridge-kitchen-back-wall"
+        layout = next(item for item in self.furniture["layouts"] if item["id"] == scenario_id)
+        result = self.evaluate(layout)
+        self.assertFalse(result["valid"])
+        self.assertIn("exceeds the 167 cm fixed balcony-wall segment", " ".join(result["reasons"]))
 
     def test_lower_desk_position_preserves_the_upper_balcony_door(self):
         for layout in self.furniture["layouts"]:
