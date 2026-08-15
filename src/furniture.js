@@ -73,12 +73,19 @@ export function findLayoutForSelection(layouts, activeLayout, overrides) {
 }
 
 export function findLayoutForArrangement(layouts, activeLayout, arrangementId) {
-  return layouts.find((layout) => (
+  const candidates = layouts.filter((layout) => (
     layout.selection.arrangementId === arrangementId
     && layout.selection.bedVariantId === activeLayout.selection.bedVariantId
     && layout.selection.paxVariantId === activeLayout.selection.paxVariantId
-    && layout.selection.paxAccessDepthCm === activeLayout.selection.paxAccessDepthCm
     && layout.selection.deskVariantId === activeLayout.selection.deskVariantId
-    && layout.selection.minifridgePlacementId === activeLayout.selection.minifridgePlacementId
   ));
+  return candidates.sort((first, second) => {
+    const score = (layout) => (
+      (layout.selection.paxAccessDepthCm === activeLayout.selection.paxAccessDepthCm ? 100 : 0)
+      + (layout.selection.deskPlacementId === activeLayout.selection.deskPlacementId ? 20 : 0)
+      + (layout.selection.minifridgePlacementId === activeLayout.selection.minifridgePlacementId ? 10 : 0)
+      - Math.abs(layout.selection.paxAccessDepthCm - activeLayout.selection.paxAccessDepthCm) / 10
+    );
+    return score(second) - score(first);
+  })[0];
 }

@@ -151,6 +151,17 @@ test('changing an arrangement selects its compatible desk placement instead of d
   );
 });
 
+test('changing an arrangement keeps it available when only the PAX access reserve must change', () => {
+  const resolved = resolveScenarioData(scenarios, catalog);
+  const validLayouts = validLayoutsForDesk(resolved.layouts, evaluations, 'quick-150-150');
+  const divider = validLayouts.find((layout) => layout.id === 'scenario-new-bed-90-pax-200-quick-150-150-lower-balcony-corner');
+  const rotated = findLayoutForArrangement(validLayouts, divider, 'bath-wall-both-rotated');
+  assert.ok(rotated);
+  assert.equal(rotated.selection.arrangementId, 'bath-wall-both-rotated');
+  assert.equal(rotated.selection.paxAccessDepthCm, 30);
+  assert.equal(rotated.selection.deskPlacementId, 'lower-balcony-corner');
+});
+
 test('user-facing bedroom layouts contain only valid geometry and preserve the desk', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
   const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
