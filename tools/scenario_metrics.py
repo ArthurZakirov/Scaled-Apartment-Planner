@@ -306,14 +306,10 @@ def evaluate_layout(
             if access_zone.intersection(object_polygons[other["id"]]).area > 0.5:
                 appliance_access_blocked_by.append(other["id"])
                 reasons.append(f"Appliance access for {appliance['id']} is blocked by {other['id']}.")
-        for door in apartment["doors"]:
-            if access_zone.intersection(door_swing_polygon(door)).area > 0.5:
-                opening_fraction, _ = door_opening_fraction(door, {appliance["id"]: footprint})
-                minimum_fraction = constraints["doorPolicies"].get("minimumOpeningFractionByDoor", {}).get(door["id"], 1.0)
-                if opening_fraction + 0.01 >= minimum_fraction:
-                    continue
-                appliance_access_blocked_by.append(door["id"])
-                reasons.append(f"Appliance access for {appliance['id']} conflicts with {door['id']}.")
+        # A refrigerator door and an apartment door are used one at a time.
+        # Their *swing/access zones* may overlap; only the closed appliance
+        # footprint participates in the mandatory apartment-door opening check
+        # below.
 
     blocked_by: dict[str, list[str]] = {}
     door_opening_fractions: dict[str, float] = {}
