@@ -163,6 +163,14 @@ a:hover { text-decoration: underline; }
 .door-status.blocked.group_requirement .status-dot { background: #c98218; }
 .collision-summary { display: flex; align-items: center; gap: 8px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; }
 .collision-summary.blocked .status-dot { background: var(--danger); }
+.furniture.has-conflict .furniture-footprint { stroke: var(--danger); stroke-width: 3; filter: drop-shadow(0 0 3px rgba(185, 53, 53, 0.65)); }
+.layer-access-zones .has-conflict { stroke: var(--danger); stroke-width: 2.5; fill: rgba(185, 53, 53, 0.18); }
+.conflict-reasons { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+.scenario-alternatives { display: grid; gap: 8px; margin: 12px 0; padding: 12px; border: 1px solid #a9d8b7; border-radius: 10px; background: #edf7ef; color: #1f653d; }
+.scenario-alternatives > small { color: #476553; }
+.alternative-button { display: flex; justify-content: space-between; gap: 12px; align-items: center; width: 100%; padding: 9px 10px; border: 1px solid #9bc8a8; border-radius: 8px; background: #fff; color: #194f31; text-align: left; cursor: pointer; }
+.alternative-button:hover { border-color: #267348; background: #f7fcf8; }
+.alternative-button small { white-space: nowrap; color: #4f6d59; }
 .layout-notes { border-top: 1px solid var(--line); padding-top: 14px; }
 .layout-notes h3 { margin: 0 0 8px; font-size: 14px; }
 .layout-notes ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 12px; line-height: 1.5; }

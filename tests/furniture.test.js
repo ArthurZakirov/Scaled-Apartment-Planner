@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
-import { findLayoutForArrangement, findLayoutForSelection, normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from '../src/furniture.js';
+import { evaluationSummary, findLayoutForArrangement, findLayoutForSelection, formatEvaluationReason, layoutsForDesk, normalizeScenarioId, recommendAlternativeLayouts, resolveScenarioData, validLayoutsForDesk } from '../src/furniture.js';
 
 const catalog = JSON.parse(await readFile(new URL('../data/furniture-catalog.json', import.meta.url), 'utf8'));
 const scenarios = JSON.parse(await readFile(new URL('../data/layout-scenarios.json', import.meta.url), 'utf8'));
@@ -142,14 +142,15 @@ test('each furniture control changes only its own scenario axis', () => {
   }
 });
 
-test('geometrically unavailable axis options remain unselectable', () => {
+test('evaluated-invalid axis options remain selectable for visual inspection', () => {
   const resolved = resolveScenarioData(scenarios, catalog);
   const layouts = validLayoutsForDesk(resolved.layouts, evaluations, 'quick-150-150');
   const activeLayout = layouts.find((layout) => layout.id === resolved.activeLayoutId);
-  assert.equal(
-    findLayoutForSelection(layouts, activeLayout, { arrangementId: 'bath-wall-both-rotated' }),
-    undefined
-  );
+  const target = findLayoutForSelection(layouts, activeLayout, { arrangementId: 'bath-wall-both-rotated' });
+  assert.ok(target);
+  const evaluation = evaluations.results.find((item) => item.id === target.id);
+  assert.equal(evaluation.valid, false);
+  assert.ok(evaluationSummary(evaluation));
 });
 
 test('changing an arrangement selects its compatible desk placement instead of disabling existing layouts', () => {
@@ -165,25 +166,56 @@ test('changing an arrangement selects its compatible desk placement instead of d
   );
 });
 
-test('changing an arrangement keeps it available when only the PAX access reserve must change', () => {
+test('changing an arrangement preserves the selected PAX access reserve even when evaluation flags it', () => {
   const resolved = resolveScenarioData(scenarios, catalog);
   const validLayouts = validLayoutsForDesk(resolved.layouts, evaluations, 'quick-150-150');
   const divider = validLayouts.find((layout) => layout.id === 'scenario-new-bed-90-pax-200-quick-150-150-lower-balcony-corner');
   const rotated = findLayoutForArrangement(validLayouts, divider, 'bath-wall-both-rotated');
   assert.ok(rotated);
   assert.equal(rotated.selection.arrangementId, 'bath-wall-both-rotated');
-  assert.equal(rotated.selection.paxAccessDepthCm, 30);
+  assert.equal(rotated.selection.paxAccessDepthCm, 45);
   assert.equal(rotated.selection.deskPlacementId, 'lower-balcony-corner');
 });
 
-test('user-facing bedroom layouts contain only valid geometry and preserve the desk', () => {
+test('user-facing bedroom layouts contain valid and invalid evaluations and preserve the desk', () => {
   const furniture = resolveScenarioData(scenarios, catalog);
-  const layouts = validLayoutsForDesk(furniture.layouts, evaluations, 'quick-150-150');
+  const layouts = layoutsForDesk(furniture.layouts, 'quick-150-150');
   const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
-  assert.equal(layouts.length, 668);
-  assert.ok(layouts.every((layout) => validIds.has(layout.id)));
+  assert.equal(layouts.length, 5760);
+  assert.ok(layouts.some((layout) => validIds.has(layout.id)));
+  assert.ok(layouts.some((layout) => !validIds.has(layout.id)));
   assert.ok(layouts.every((layout) => layout.selection.deskVariantId === 'quick-150-150'));
   assert.deepEqual(new Set(layouts.map((layout) => layout.selection.deskPlacementId)), new Set(['upper-loggia-corner', 'lower-balcony-corner', 'living-room-centre', 'balcony-between-doors', 'kitchen-balcony-corner']));
+});
+
+test('every invalid scenario has a concrete reason for the adviser', () => {
+  const invalid = evaluations.results.filter((result) => !result.valid);
+  assert.ok(invalid.length > 0);
+  assert.ok(invalid.every((result) => result.reasons.length > 0));
+  assert.ok(invalid.every((result) => evaluationSummary(result)));
+});
+
+test('PAX wall-limit conflicts state the dimension and corrective action', () => {
+  const evaluation = evaluations.results.find((result) =>
+    result.arrangementId === 'east-wall-wardrobe'
+    && result.id.includes('pax-200')
+    && result.reasons.some((reason) => reason.includes('fixed balcony-wall segment'))
+  );
+  assert.equal(evaluationSummary(evaluation), 'PAX 200 cm > Wand 167 cm');
+  const wallReason = evaluation.reasons.find((reason) => reason.includes('fixed balcony-wall segment'));
+  assert.match(formatEvaluationReason(wallReason), /Wähle.*PAX 150 cm/);
+});
+
+test('invalid layouts receive at most three valid nearby alternatives', () => {
+  const furniture = resolveScenarioData(scenarios, catalog);
+  const layouts = layoutsForDesk(furniture.layouts, 'quick-150-150');
+  const active = layouts.find((layout) => layout.id === 'scenario-east-wall-wardrobe-new-bed-90-pax-200-quick-150-150-living-room-centre');
+  const alternatives = recommendAlternativeLayouts(layouts, evaluations, active, 3);
+  const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
+  assert.ok(alternatives.length > 0 && alternatives.length <= 3);
+  assert.ok(alternatives.every((candidate) => validIds.has(candidate.layout.id)));
+  assert.ok(alternatives.every((candidate) => candidate.changedAxes.length > 0));
+  assert.ok(alternatives.every((candidate, index) => index === 0 || candidate.changedAxes.length >= alternatives[index - 1].changedAxes.length));
 });
 
 test('query-selected scenario becomes active without mutating stored data', () => {

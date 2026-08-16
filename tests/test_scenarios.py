@@ -245,7 +245,7 @@ class ScenarioTests(unittest.TestCase):
                 center[0] * long_axis[0] + center[1] * long_axis[1] - pax["dimensionsCm"]["width"] / cm_per_pixel / 2
             )
             cross_axis_positions.append(center[0] * cross_axis[0] + center[1] * cross_axis[1])
-        self.assertEqual(len(bath_end_positions), 3)
+        self.assertEqual(len(bath_end_positions), 4)
         self.assertLess(max(bath_end_positions) - min(bath_end_positions), 0.001)
         self.assertLess(max(cross_axis_positions) - min(cross_axis_positions), 0.001)
 

@@ -15,7 +15,7 @@
 - The apartment entrance door is the confirmed 100 cm scale anchor. Dimensions elsewhere remain approximate because the source explicitly states that it is not to scale.
 - Use the full external footprint of products. Generic new beds currently use an explicit planning estimate of mattress width + 16 cm and 209 cm total length; never present this estimate as an exact product dimension.
 - Do not add furniture forms to the user-facing app. Furniture is controlled by editing structured data or, later, through CLI/MCP tools.
-- Preserve the hard grouped-door policy: every valid scenario must leave at least one balcony door and at least one loggia door usable.
+- Preserve the grouped-door recommendation: a recommended scenario leaves at least one balcony door and at least one loggia door usable. A violating scenario remains previewable and must explain the trade-off.
 - Run `npm run validate` before committing layout changes.
 
 ## Current layout scenario system
@@ -23,7 +23,10 @@
 - `data/furniture-catalog.json` is the source of truth for product templates and verified external dimensions.
 - `data/scenario-matrix.json` defines bed, PAX width, VERNAL, and orientation concepts with common placement anchors.
 - Run `npm run generate:scenarios` after editing the catalog or matrix; do not hand-edit generated scenario or evaluation files.
-- The bedroom controls must expose only geometrically valid combinations. Keep invalid scenarios in generated evaluation data for diagnostics, but never make them selectable in the user-facing planner.
+- The planner is an exploratory decision tool: every generated combination remains selectable and renderable, including combinations that violate current rules.
+- Never use `disabled` dropdown options to hide a generated combination. Mark problematic choices in natural language, render them, and show the exact evaluated conflicts.
+- Treat the renderer, constraint evaluator, and UI adviser as separate layers. Evaluation may recommend against a rendered layout but must not silently replace or block the user's requested scenario.
+- Reserve "impossible" for immutable dimensional facts. Geometric overlap, operating clearance, door opening, and circulation issues are inspectable conflicts, not hidden options.
 - `ikea-pax-divider` varies between real modular widths of 149.6, 174.6, and 199.6 cm.
 - PAX height is deliberately not a 2D scenario axis. The purchasable 201.2 and 236.4 cm heights share the same footprint and both require anchoring.
 - The bathroom-facing short end of PAX and its cross-axis offset are invariant; width changes move only the free end toward or away from the bed.
@@ -33,7 +36,7 @@
 - Bedroom controls preserve the active VERNAL desk variant; changing bed, mattress, PAX, orientation, or desk position must not change the desk size.
 - The existing KESSER minifridge is 40 × 43 × 57 cm and has two independent scenario placements derived from `profile-garderobe`; changing its placement must preserve every sleeping-furniture and desk axis.
 - Keep the marked refrigerator door edge and its full 40 cm operating zone inside the apartment and clear of the fixed kitchen, every door swing, bathroom, interior walls, and loose furniture.
-- Each bedroom selector changes only its own axis. If the exact combination is invalid, disable that option; never silently change orientation, bed, PAX, or another furniture choice to make it fit.
+- Each bedroom selector changes only its own axis. Render the exact selected combination even when it is invalid; never silently change orientation, bed, PAX, or another furniture choice to make it fit.
 - `owned-bedside-cabinet` is the user's 57.5 × 43 × 54 cm cabinet. It follows the bed orientation, keeps a 2 cm planning gap to the bed, and requires a clear 35 cm drawer-access strip inside the apartment.
 - No furniture footprint or door swing may enter the scenario-selected 0/30/45/60 cm PAX opening/access strip. This includes the bed, cabinet, and desk; footprint non-overlap alone is not sufficient for a usable scenario. The 45 cm option is the default and keeps legacy URLs suffix-free.
 - After each geometry change, inspect both `/calibration/` and `/` yourself and iterate until the result is physically possible, geometrically consistent, and practically usable without obvious common-sense contradictions.
@@ -44,6 +47,7 @@
 - Preserve the southeast interior step `[507,263] → [507,514] → [493,514] → [493,527]`; it represents the visible structural projection beside the lower balcony door.
 - Treat every `kind: interior` wall as a solid formed from its centerline and full `thicknessPx`; no loose furniture footprint may overlap that solid.
 - An individual loggia or balcony door may be blocked, but never both doors in the same access group.
+- Before changing layout behavior, read `docs/layout-design-contract.md` and keep `data/layout-policy.json` and regression tests aligned with it.
 
 ## Editing workflow
 

@@ -106,6 +106,7 @@ def main() -> int:
         * len(matrix["axes"]["deskVariantIds"])
         * len(arrangement.get("deskPlacementIds", matrix["axes"].get("deskPlacementIds", ["upper-loggia-corner"])))
         * len(matrix["axes"].get("minifridgePlacementIds", ["endcap-extension"]))
+        * len(matrix["axes"].get("fridgeVariantIds", ["kesser-minifridge-40"]))
         for arrangement in arrangements
     )
     if len(scenario_data["scenarios"]) != expected_scenario_count:

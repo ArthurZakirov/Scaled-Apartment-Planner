@@ -1,5 +1,5 @@
 import { expandApartmentGeometry } from './geometry.js';
-import { findLayoutForArrangement, findLayoutForSelection, normalizeScenarioId, resolveScenarioData, validLayoutsForDesk } from './furniture.js';
+import { evaluationSummary, findLayoutForArrangement, findLayoutForSelection, formatEvaluationReason, layoutsForDesk, normalizeScenarioId, recommendAlternativeLayouts, resolveScenarioData } from './furniture.js';
 import {
   DISPLAY_OPTIONS,
   allDisplayLayers,
@@ -431,13 +431,19 @@ function buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints,
   }
 
   const accessLayer = svgEl('g', { class: 'layer layer-access-zones' });
+  const wardrobeAccessConflict = (evaluation.wardrobeAccessBlockedBy ?? []).length > 0
+    || (evaluation.reasons ?? []).some((reason) => reason.startsWith('Wardrobe access conflicts'));
+  const storageAccessConflict = (evaluation.storageAccessBlockedBy ?? []).length > 0;
+  const applianceAccessConflict = (evaluation.applianceAccessBlockedBy ?? []).length > 0
+    || (evaluation.applianceInteriorWallBlockedBy ?? []).length > 0;
+  const deskWorkZoneConflict = (evaluation.deskWorkZoneBlockedBy ?? []).length > 0;
   for (const item of furniturePolygons.filter((entry) => entry.object.type === 'wardrobe')) {
     const depthCm = activeLayout.selection.paxAccessDepthCm ?? constraints.wardrobeAccessDepthCm;
     if (depthCm <= 0) continue;
     const zone = accessZonePolygon(item.polygon, depthCm / apartment.scale.cmPerPixel);
     accessLayer.append(svgEl('polygon', {
       points: pointsAttr(zone),
-      class: 'wardrobe-access-zone',
+      class: `wardrobe-access-zone ${wardrobeAccessConflict ? 'has-conflict' : ''}`,
       'data-id': `${item.id}-access-zone`
     }));
     const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
@@ -448,7 +454,7 @@ function buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints,
     const zone = accessZonePolygon(item.polygon, depthCm / apartment.scale.cmPerPixel);
     accessLayer.append(svgEl('polygon', {
       points: pointsAttr(zone),
-      class: 'storage-access-zone',
+      class: `storage-access-zone ${storageAccessConflict ? 'has-conflict' : ''}`,
       'data-id': `${item.id}-access-zone`
     }));
     const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
@@ -459,7 +465,7 @@ function buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints,
     const zone = accessZonePolygon(item.polygon, depthCm / apartment.scale.cmPerPixel);
     accessLayer.append(svgEl('polygon', {
       points: pointsAttr(zone),
-      class: 'appliance-access-zone',
+      class: `appliance-access-zone ${applianceAccessConflict ? 'has-conflict' : ''}`,
       'data-id': `${item.id}-access-zone`
     }));
     const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
@@ -469,7 +475,7 @@ function buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints,
     const zone = deskWorkZonePolygon(item.object, apartment.scale.cmPerPixel, constraints.deskWorkZoneCm);
     accessLayer.append(svgEl('polygon', {
       points: pointsAttr(zone),
-      class: 'desk-work-zone',
+      class: `desk-work-zone ${deskWorkZoneConflict ? 'has-conflict' : ''}`,
       'data-id': `${item.id}-work-zone`
     }));
     const center = zone.reduce((sum, [x, y]) => [sum[0] + x / zone.length, sum[1] + y / zone.length], [0, 0]);
@@ -483,14 +489,44 @@ function buildSvg(apartment, fixtures, fixedFurnishings, furniture, constraints,
   svg.append(furnitureLayer);
 
   const furnitureCollisions = [];
+  const conflictingFurnitureIds = new Set();
   for (let firstIndex = 0; firstIndex < furniturePolygons.length; firstIndex += 1) {
     for (let secondIndex = firstIndex + 1; secondIndex < furniturePolygons.length; secondIndex += 1) {
       const first = furniturePolygons[firstIndex];
       const second = furniturePolygons[secondIndex];
       if (polygonsIntersect(first.polygon, second.polygon)) {
         furnitureCollisions.push([first.id, second.id]);
+        conflictingFurnitureIds.add(first.id);
+        conflictingFurnitureIds.add(second.id);
       }
     }
+  }
+
+  for (const id of [
+    ...(evaluation.wardrobeAccessBlockedBy ?? []),
+    ...(evaluation.storageAccessBlockedBy ?? []),
+    ...(evaluation.applianceAccessBlockedBy ?? []),
+    ...(evaluation.applianceInteriorWallBlockedBy ?? []),
+    ...(evaluation.deskWorkZoneBlockedBy ?? []),
+    ...Object.keys(evaluation.fixedFixtureBlockedBy ?? {}),
+    ...Object.keys(evaluation.fixedFurnishingBlockedBy ?? {})
+  ]) {
+    conflictingFurnitureIds.add(id);
+  }
+  for (const collision of [...(evaluation.collisions ?? []), ...(evaluation.interiorWallCollisions ?? [])]) {
+    for (const item of furniturePolygons) {
+      if (collision.includes(item.id)) conflictingFurnitureIds.add(item.id);
+    }
+  }
+  for (const reason of evaluation.reasons ?? []) {
+    for (const item of furniturePolygons) {
+      if (reason.includes(item.id) || (item.object.type === 'wardrobe' && reason.startsWith('Wardrobe '))) {
+        conflictingFurnitureIds.add(item.id);
+      }
+    }
+  }
+  for (const item of furniturePolygons) {
+    if (conflictingFurnitureIds.has(item.id)) item.group.classList.add('has-conflict');
   }
 
   const doorLayer = svgEl('g', { class: 'layer layer-doors' });
@@ -647,12 +683,65 @@ function renderScenarioNavigation(furniture, activeLayout, evaluations) {
   const navigation = htmlEl('div', { className: 'scenario-navigation' });
   const position = htmlEl('div', { className: 'scenario-position' });
   position.append(htmlEl('strong', {}, 'Schlafbereich-Experiment'));
-  position.append(htmlEl('small', {}, `${furniture.layouts.length} geometrisch mögliche Kombinationen · Schreibtischgröße bleibt unverändert`));
+  position.append(htmlEl('small', {}, 'Jede Auswahl wird direkt im Plan geprüft und bei Konflikten erklärt.'));
   navigation.append(position);
   return navigation;
 }
 
-function renderBedroomControls(furniture, activeLayout) {
+function describeAlternative(activeLayout, alternative) {
+  const labels = {
+    arrangementId: {
+      divider: 'Raumteiler quer',
+      'bath-wall-bed-shifted': 'PAX an Badwand',
+      'bath-wall-both-rotated': 'Beide gedreht',
+      'east-wall-wardrobe': 'PAX an Balkonwand',
+      'kitchen-wall-wardrobe': 'PAX an Küchenwand'
+    },
+    deskPlacementId: {
+      'upper-loggia-corner': 'Tisch oben an Loggia/Balkon',
+      'lower-balcony-corner': 'Tisch unten an Balkon/Südwand',
+      'living-room-centre': 'Tisch in Wohnraummitte',
+      'balcony-between-doors': 'Tisch zwischen Balkontüren',
+      'kitchen-balcony-corner': 'Tisch im Küchen-/Balkoneck'
+    },
+    minifridgePlacementId: {
+      'endcap-extension': 'Kühlschrank hinter Endkappe',
+      'kitchen-back-wall': 'Kühlschrank an Küchenrückwand',
+      'kitchen-balcony-wall': 'Kühlschrank an Balkonwand'
+    },
+    fridgeVariantId: {
+      'kesser-minifridge-40': 'KESSER-Kühlschrank',
+      'bosch-kgn36vict-60': 'Bosch-Kühlschrank'
+    }
+  };
+  return alternative.changedAxes.map((axis) => {
+    const value = alternative.layout.selection[axis];
+    if (axis === 'paxVariantId') return `PAX ${value.replace('pax-', '')} cm`;
+    if (axis === 'paxAccessDepthCm') return `${value} cm PAX-Freiraum`;
+    if (axis === 'bedVariantId') return value === 'current-bed-90'
+      ? 'aktuelles Bett'
+      : `Matratze ${value.replace('new-bed-', '')} cm`;
+    return labels[axis]?.[value] ?? value;
+  }).join(' + ');
+}
+
+function renderAlternatives(furniture, activeLayout, evaluations) {
+  const alternatives = recommendAlternativeLayouts(furniture.layouts, evaluations, activeLayout, 3);
+  if (!alternatives.length) return null;
+  const section = htmlEl('div', { className: 'scenario-alternatives' });
+  section.append(htmlEl('strong', {}, 'Schnelle Lösungen ohne Konflikt'));
+  section.append(htmlEl('small', {}, 'Nur die notwendigen Änderungen gegenüber deiner aktuellen Auswahl:'));
+  for (const alternative of alternatives) {
+    const button = htmlEl('button', { type: 'button', className: 'alternative-button' });
+    button.append(htmlEl('span', {}, describeAlternative(activeLayout, alternative)));
+    button.append(htmlEl('small', {}, `${alternative.evaluation.score.toFixed(1)} / 100`));
+    button.addEventListener('click', () => selectScenario(alternative.layout.id));
+    section.append(button);
+  }
+  return section;
+}
+
+function renderBedroomControls(furniture, activeLayout, evaluations) {
   const controls = htmlEl('div', { className: 'bedroom-controls' });
   const dimensions = htmlEl('fieldset', { className: 'control-section' });
   dimensions.append(htmlEl('legend', {}, 'Möbel & Maße'));
@@ -661,6 +750,7 @@ function renderBedroomControls(furniture, activeLayout) {
   const currentBed = activeLayout.selection.bedVariantId === 'current-bed-90';
   let controlIndex = 0;
 
+  const evaluationById = new Map(evaluations.results.map((item) => [item.id, item]));
   const addSelect = (section, labelText, value, options, onChange, disabled = false, wide = false) => {
     const id = `bedroom-control-${controlIndex++}`;
     const label = htmlEl('label', wide ? { className: 'wide-control' } : {});
@@ -672,8 +762,7 @@ function renderBedroomControls(furniture, activeLayout) {
     for (const option of options) {
       const attrs = { value: option.value };
       if (option.value === value) attrs.selected = '';
-      if (option.disabled) attrs.disabled = '';
-      select.append(htmlEl('option', attrs, option.disabled ? `${option.label} · nicht passend` : option.label));
+      select.append(htmlEl('option', attrs, option.warning ? `${option.label} · ${option.warning}` : option.label));
     }
     select.addEventListener('change', () => onChange(select.value));
     label.append(select);
@@ -682,11 +771,17 @@ function renderBedroomControls(furniture, activeLayout) {
 
   const findBedroomLayout = (overrides) => findLayoutForSelection(furniture.layouts, activeLayout, overrides);
   const findArrangementLayout = (arrangementId) => findLayoutForArrangement(furniture.layouts, activeLayout, arrangementId);
+  const activeSummary = evaluationSummary(evaluationById.get(activeLayout.id));
+  const markOption = (option, target) => {
+    if (!target) return null;
+    const targetSummary = evaluationSummary(evaluationById.get(target.id));
+    return { ...option, warning: targetSummary !== activeSummary ? targetSummary : null };
+  };
 
   addSelect(dimensions, 'Bettart', currentBed ? 'current' : 'new', [
-    { value: 'current', label: 'Mein aktuelles Bett', disabled: !findBedroomLayout({ bedVariantId: 'current-bed-90' }) },
-    { value: 'new', label: 'Neues Bett', disabled: !findBedroomLayout({ bedVariantId: 'new-bed-90' }) }
-  ], (value) => {
+    markOption({ value: 'current', label: 'Mein aktuelles Bett' }, findBedroomLayout({ bedVariantId: 'current-bed-90' })),
+    markOption({ value: 'new', label: 'Neues Bett' }, findBedroomLayout({ bedVariantId: 'new-bed-90' }))
+  ].filter(Boolean), (value) => {
     const bedVariantId = value === 'current'
       ? 'current-bed-90'
       : currentBed ? 'new-bed-90' : activeLayout.selection.bedVariantId;
@@ -695,21 +790,19 @@ function renderBedroomControls(furniture, activeLayout) {
   });
 
   const mattressWidth = currentBed ? '90' : activeLayout.selection.bedVariantId.replace('new-bed-', '');
-  addSelect(dimensions, 'Matratzenbreite', mattressWidth, ['90', '120', '140', '160', '180'].map((width) => ({
+  addSelect(dimensions, 'Matratzenbreite', mattressWidth, ['90', '120', '140', '160', '180'].map((width) => markOption({
     value: width,
-    label: `${width} cm`,
-    disabled: !findBedroomLayout({ bedVariantId: `new-bed-${width}` })
-  })), (width) => {
+    label: `${width} cm`
+  }, findBedroomLayout({ bedVariantId: `new-bed-${width}` }))).filter(Boolean), (width) => {
     const target = findBedroomLayout({ bedVariantId: `new-bed-${width}` });
     if (target) selectScenario(target.id);
   }, currentBed);
 
   const paxWidth = activeLayout.selection.paxVariantId.replace('pax-', '');
-  addSelect(dimensions, 'PAX-Breite', paxWidth, ['100', '150', '175', '200'].map((width) => ({
+  addSelect(dimensions, 'PAX-Breite', paxWidth, ['100', '150', '175', '200'].map((width) => markOption({
     value: width,
-    label: `${width} cm`,
-    disabled: !findBedroomLayout({ paxVariantId: `pax-${width}` })
-  })), (width) => {
+    label: `${width} cm`
+  }, findBedroomLayout({ paxVariantId: `pax-${width}` }))).filter(Boolean), (width) => {
     const target = findBedroomLayout({ paxVariantId: `pax-${width}` });
     if (target) selectScenario(target.id);
   });
@@ -720,10 +813,7 @@ function renderBedroomControls(furniture, activeLayout) {
     { value: '30', label: '30 cm · kompakte Zugriffsreserve' },
     { value: '45', label: '45 cm · offene Front (Standard)' },
     { value: '60', label: '60 cm · komfortabler Zugriff' }
-  ].map((option) => ({
-    ...option,
-    disabled: !findBedroomLayout({ paxAccessDepthCm: Number(option.value) })
-  }));
+  ].map((option) => markOption(option, findBedroomLayout({ paxAccessDepthCm: Number(option.value) }))).filter(Boolean);
   addSelect(dimensions, 'Freiraum vor PAX', String(paxAccessDepth), paxAccessOptions, (depth) => {
     const target = findBedroomLayout({ paxAccessDepthCm: Number(depth) });
     if (target) selectScenario(target.id);
@@ -737,10 +827,7 @@ function renderBedroomControls(furniture, activeLayout) {
     { value: 'bath-wall-both-rotated', label: 'Beide gedreht' },
     { value: 'east-wall-wardrobe', label: 'PAX an Balkonwand' },
     { value: 'kitchen-wall-wardrobe', label: 'PAX an Küchenwand' }
-  ].map((option) => ({
-    ...option,
-    disabled: !findArrangementLayout(option.value)
-  }));
+  ].map((option) => markOption(option, findArrangementLayout(option.value))).filter(Boolean);
   addSelect(positions, 'Schlafbereich-Anordnung', activeLayout.selection.arrangementId, arrangementOptions, (arrangementId) => {
     const target = findArrangementLayout(arrangementId);
     if (target) selectScenario(target.id);
@@ -752,10 +839,7 @@ function renderBedroomControls(furniture, activeLayout) {
     { value: 'living-room-centre', label: 'Mitte im Wohnbereich' },
     { value: 'balcony-between-doors', label: 'An Balkonwand zwischen Türen' },
     { value: 'kitchen-balcony-corner', label: 'Im Küchen-/Balkoneck' }
-  ].map((option) => ({
-    ...option,
-    disabled: !findBedroomLayout({ deskPlacementId: option.value })
-  }));
+  ].map((option) => markOption(option, findBedroomLayout({ deskPlacementId: option.value }))).filter(Boolean);
   addSelect(positions, 'Schreibtischposition', activeLayout.selection.deskPlacementId, deskPlacementOptions, (deskPlacementId) => {
     const target = findBedroomLayout({ deskPlacementId });
     if (target) selectScenario(target.id);
@@ -764,10 +848,7 @@ function renderBedroomControls(furniture, activeLayout) {
   const fridgeVariantOptions = [
     { value: 'kesser-minifridge-40', label: 'KESSER Mini · 40 × 43 cm' },
     { value: 'bosch-kgn36vict-60', label: 'Bosch KGN36VICT · 60 × 72 cm' }
-  ].map((option) => ({
-    ...option,
-    disabled: !findBedroomLayout({ fridgeVariantId: option.value })
-  }));
+  ].map((option) => markOption(option, findBedroomLayout({ fridgeVariantId: option.value }))).filter(Boolean);
   addSelect(positions, 'Kühlschrankmodell', activeLayout.selection.fridgeVariantId, fridgeVariantOptions, (fridgeVariantId) => {
     const target = findBedroomLayout({ fridgeVariantId });
     if (target) selectScenario(target.id);
@@ -777,10 +858,7 @@ function renderBedroomControls(furniture, activeLayout) {
     { value: 'endcap-extension', label: 'A · hinter der Endkappe' },
     { value: 'kitchen-back-wall', label: 'B · bündig zur Küchenrückwand' },
     { value: 'kitchen-balcony-wall', label: 'C · Küchenwand vor unterer Balkontür' }
-  ].map((option) => ({
-    ...option,
-    disabled: !findBedroomLayout({ minifridgePlacementId: option.value })
-  }));
+  ].map((option) => markOption(option, findBedroomLayout({ minifridgePlacementId: option.value }))).filter(Boolean);
   addSelect(positions, 'Kühlschrankposition', activeLayout.selection.minifridgePlacementId, minifridgePlacementOptions, (minifridgePlacementId) => {
     const target = findBedroomLayout({ minifridgePlacementId });
     if (target) selectScenario(target.id);
@@ -840,7 +918,7 @@ function renderScenarioMetrics(evaluation) {
 function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evaluations, doorResults, furnitureCollisions, svg) {
   const panel = htmlEl('aside', { className: 'status-panel' });
   panel.append(renderScenarioNavigation(furniture, activeLayout, evaluations));
-  panel.append(renderBedroomControls(furniture, activeLayout));
+  panel.append(renderBedroomControls(furniture, activeLayout, evaluations));
   panel.append(renderDisplayControls(svg));
   panel.append(htmlEl('h2', {}, 'Aktuelles Szenario'));
   panel.append(htmlEl('div', { className: 'layout-name' }, activeLayout.name));
@@ -853,7 +931,7 @@ function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evalu
   const requiresEngineeredSupport = activeLayout.installationStatus === 'requires_engineered_solution';
   const validityClass = !evaluation.valid ? 'invalid' : requiresEngineeredSupport ? 'caution' : 'valid';
   const validityLabel = !evaluation.valid
-    ? 'Diese Kombination passt geometrisch nicht'
+    ? 'Nicht empfohlen · Konflikt im Plan markiert'
     : requiresEngineeredSupport
       ? 'Nur geometrisch passend · Befestigung ungelöst'
       : 'Geometrisch und funktional nutzbar';
@@ -863,13 +941,13 @@ function renderStatusPanel(apartment, furniture, activeLayout, evaluation, evalu
   panel.append(validity);
   if (!evaluation.valid) {
     const invalid = htmlEl('div', { className: 'notice danger' });
-    invalid.append(htmlEl('strong', {}, 'Warum sie nicht passt'));
-    invalid.append(htmlEl('span', {}, evaluation.reasons.some((reason) => reason.includes('overlap'))
-      ? 'Mindestens zwei Möbel überschneiden sich. Probiere eine andere Orientierung, Bett- oder PAX-Breite.'
-      : evaluation.reasons.some((reason) => reason.includes('door'))
-        ? 'Mindestens eine feste Türregel wird verletzt.'
-        : 'Mindestens ein Möbelstück liegt außerhalb der geschätzten Wohnungsfläche.'));
+    invalid.append(htmlEl('strong', {}, 'Warum die aktuelle Prüfung abrät'));
+    const reasons = htmlEl('ul', { className: 'conflict-reasons' });
+    for (const reason of evaluation.reasons) reasons.append(htmlEl('li', {}, formatEvaluationReason(reason)));
+    invalid.append(reasons);
     panel.append(invalid);
+    const alternatives = renderAlternatives(furniture, activeLayout, evaluations);
+    if (alternatives) panel.append(alternatives);
   }
   panel.append(renderScenarioMetrics(evaluation));
   panel.append(renderFurnitureSummary(activeLayout));
@@ -967,31 +1045,7 @@ async function main() {
     const scenariosById = new Map(scenarioData.scenarios.map((scenario) => [scenario.id, scenario]));
     const validIds = new Set(evaluations.results.filter((result) => result.valid).map((result) => result.id));
     const requestedLayout = scenariosById.get(normalizedScenario);
-    let selectedScenario = validIds.has(normalizedScenario) ? normalizedScenario : null;
-    if (!selectedScenario && requestedLayout) {
-      const requestedBed = requestedLayout.selection.bedVariantId;
-      const requestedIsCurrent = requestedBed === 'current-bed-90';
-      const requestedWidth = Number(requestedBed.replace('new-bed-', '')) || 90;
-      const candidates = scenarioData.scenarios.filter((scenario) =>
-        validIds.has(scenario.id) && scenario.selection.deskVariantId === requestedLayout.selection.deskVariantId
-      );
-      candidates.sort((first, second) => {
-        const score = (scenario) => {
-          const bed = scenario.selection.bedVariantId;
-          const isCurrent = bed === 'current-bed-90';
-          const width = Number(bed.replace('new-bed-', '')) || 90;
-          return (scenario.selection.arrangementId === requestedLayout.selection.arrangementId ? 1000 : 0)
-            + (scenario.selection.paxAccessDepthCm === requestedLayout.selection.paxAccessDepthCm ? 2000 : 0)
-            + (scenario.selection.minifridgePlacementId === requestedLayout.selection.minifridgePlacementId ? 1500 : 0)
-            + (scenario.selection.deskPlacementId === requestedLayout.selection.deskPlacementId ? 500 : 0)
-            + (scenario.selection.paxVariantId === requestedLayout.selection.paxVariantId ? 100 : 0)
-            + (isCurrent === requestedIsCurrent ? 20 : 0)
-            - Math.abs(width - requestedWidth);
-        };
-        return score(second) - score(first);
-      });
-      selectedScenario = candidates[0]?.id ?? null;
-    }
+    let selectedScenario = requestedLayout ? normalizedScenario : null;
     selectedScenario ??= validIds.has(scenarioData.activeScenarioId)
       ? scenarioData.activeScenarioId
       : evaluations.rankedValidScenarioIds[0];
@@ -1005,7 +1059,7 @@ async function main() {
     const fixedDeskVariantId = selectedLayout.selection.deskVariantId;
     const furniture = {
       ...resolvedFurniture,
-      layouts: validLayoutsForDesk(resolvedFurniture.layouts, evaluations, fixedDeskVariantId),
+      layouts: layoutsForDesk(resolvedFurniture.layouts, fixedDeskVariantId),
       activeLayoutId: selectedScenario
     };
     const activeEvaluation = evaluations.results.find((result) => result.id === furniture.activeLayoutId);

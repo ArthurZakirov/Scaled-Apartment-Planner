@@ -20,9 +20,14 @@ const [scenarioData, evaluations] = await Promise.all([
   readJson('data/layout-scenarios.json'),
   readJson('data/scenario-evaluations.json')
 ]);
-const validResults = evaluations.results.filter((result) => result.valid);
-const validIds = new Set(validResults.map((result) => result.id));
-const validScenarios = scenarioData.scenarios.filter((scenario) => validIds.has(scenario.id));
+const activeScenario = scenarioData.scenarios.find((scenario) => scenario.id === scenarioData.activeScenarioId);
+const hostedDeskVariantId = activeScenario.selection.deskVariantId;
+const hostedScenarios = scenarioData.scenarios.filter(
+  (scenario) => scenario.selection.deskVariantId === hostedDeskVariantId
+);
+const hostedIds = new Set(hostedScenarios.map((scenario) => scenario.id));
+const hostedResults = evaluations.results.filter((result) => hostedIds.has(result.id));
+const hostedValidIds = evaluations.rankedValidScenarioIds.filter((id) => hostedIds.has(id));
 
 const staticFiles = [
   'index.html',
@@ -36,7 +41,8 @@ const staticFiles = [
   'data/fixed-fixtures.json',
   'data/fixed-furnishings.json',
   'data/furniture-catalog.json',
-  'data/layout-constraints.json'
+  'data/layout-constraints.json',
+  'data/layout-policy.json'
 ];
 for (const path of staticFiles) {
   await cp(join(root, path), join(client, path));
@@ -44,14 +50,15 @@ for (const path of staticFiles) {
 
 await writeJson('data/layout-scenarios.json', {
   ...scenarioData,
-  scenarioCount: validScenarios.length,
-  scenarios: validScenarios
+  scenarioCount: hostedScenarios.length,
+  scenarios: hostedScenarios
 });
 await writeJson('data/scenario-evaluations.json', {
   ...evaluations,
-  scenarioCount: validResults.length,
-  validCount: validResults.length,
-  results: validResults
+  scenarioCount: hostedResults.length,
+  validCount: hostedValidIds.length,
+  rankedValidScenarioIds: hostedValidIds,
+  results: hostedResults
 });
 
 await writeFile(join(dist, 'server/index.js'), `export default {
@@ -61,4 +68,4 @@ await writeFile(join(dist, 'server/index.js'), `export default {
 };
 `, 'utf8');
 
-console.log(`Built ${validScenarios.length} validated layouts for hosting.`);
+console.log(`Built ${hostedScenarios.length} selectable ${hostedDeskVariantId} layouts (${hostedValidIds.length} without conflicts) for hosting.`);

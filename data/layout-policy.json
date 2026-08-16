@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "interactionModel": "select_anything_explain_everything",
+  "selection": {
+    "renderGeneratedInvalidScenarios": true,
+    "disableGeneratedOptions": false,
+    "preserveUnchangedAxes": true,
+    "redirectInvalidScenarioUrls": false
+  },
+  "adviceLevels": [
+    "recommended",
+    "usable_with_tradeoffs",
+    "not_recommended",
+    "dimensionally_impossible"
+  ],
+  "visualConflictSignals": {
+    "furnitureOutline": true,
+    "operatingZoneOutline": true,
+    "concreteReasonList": true
+  },
+  "hardBlockers": [
+    "scenario_not_generated",
+    "immutable_product_exceeds_fixed_anchor"
+  ],
+  "regressionInvariants": [
+    "generated_scenarios_remain_reachable",
+    "one_control_changes_one_axis",
+    "invalid_evaluations_have_reasons",
+    "valid_scenarios_preserve_physical_rules"
+  ]
+}
