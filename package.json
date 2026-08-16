@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node tools/serve.mjs",
+    "build": "node tools/build_static_site.mjs",
     "generate:scenarios": "python3 tools/generate_scenarios.py && python3 tools/generate_evaluations.py",
     "validate": "python3 tools/validate_geometry.py && python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/*.test.js",
     "render": "python3 tools/render_layout.py"
