@@ -7,6 +7,13 @@
 - The source explicitly states that the illustration is non-binding and not to scale.
 - The source also states that the shown fitted kitchen may differ from reality.
 - Broker information supplied by the user: one door is 1 metre wide.
+- A separate `plan=measured` survey mode records measurements taken by the user during an apartment visit. It intentionally does not globally rescale the marketing plan.
+
+## Measured survey mode
+
+The measured mode is a furniture-free planning basis assembled from on-site notes and visit photos. It currently contains exact local dimensions for the 308 × 239 cm sleeping area, the 191/193 cm balcony-wall segment, the 104 cm kitchen passage, the 48/46/26/220 cm stepped wall chain, and the 54/13/40/157/41/46 cm hall/wardrobe chain. Consecutive values are preserved as orthogonal wall segments, following the user's clarification.
+
+These measurements do not yet close one complete apartment polygon. The app therefore renders the verified parts as independently scaled survey geometry and marks unresolved assignments or connections rather than inventing dimensions. In particular, 121 + 93 + 72 cm accounts for 286 cm of the measured 308 cm bedroom side, leaving 22 cm not yet assigned to a specific wall/opening segment.
 
 ## Scale status
 

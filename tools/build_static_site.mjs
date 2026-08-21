@@ -14,6 +14,7 @@ await rm(dist, { recursive: true, force: true });
 await mkdir(join(client, 'data'), { recursive: true });
 await mkdir(join(client, 'src'), { recursive: true });
 await mkdir(join(client, 'calibration'), { recursive: true });
+await mkdir(join(client, 'reference', 'measurement-visit'), { recursive: true });
 await mkdir(join(dist, 'server'), { recursive: true });
 
 const [scenarioData, evaluations] = await Promise.all([
@@ -36,17 +37,20 @@ const staticFiles = [
   'src/display-filter.js',
   'src/furniture.js',
   'src/geometry.js',
+  'src/measured-plan.js',
   'src/styles.css',
   'data/apartment.json',
   'data/fixed-fixtures.json',
   'data/fixed-furnishings.json',
   'data/furniture-catalog.json',
   'data/layout-constraints.json',
-  'data/layout-policy.json'
+  'data/layout-policy.json',
+  'data/measured-survey.json'
 ];
 for (const path of staticFiles) {
   await cp(join(root, path), join(client, path));
 }
+await cp(join(root, 'reference', 'measurement-visit'), join(client, 'reference', 'measurement-visit'), { recursive: true });
 
 await writeJson('data/layout-scenarios.json', {
   ...scenarioData,

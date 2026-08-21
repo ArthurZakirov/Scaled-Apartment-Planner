@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "name": "Aufmaß nach Wohnungsbesichtigung",
+  "status": "partial_measured_survey",
+  "units": "cm",
+  "sourceNote": "Vom Nutzer vor Ort gemessene Innenmaße. Die Teilbereiche sind maßstäblich; noch nicht gemessene Verbindungen zwischen ihnen werden nicht als exakt dargestellt.",
+  "measuredAreas": [
+    {
+      "id": "sleeping-area",
+      "name": "Schlafbereich",
+      "kind": "room",
+      "x": 48,
+      "y": 84,
+      "widthCm": 308,
+      "depthCm": 239,
+      "confidence": "measured",
+      "dimensions": [
+        "Innenmaß 308 × 239 cm",
+        "Fenster-/Wandkette an der 308-cm-Seite: 121 + 93 + 72 cm",
+        "22 cm der 308-cm-Gesamtlänge sind in der Notiz noch keinem Abschnitt eindeutig zugeordnet",
+        "Fensterausschnitt: 92 × 23 cm",
+        "Wand neben dem Schlafbereich: 228 cm"
+      ],
+      "openingChainCm": [121, 93, 72],
+      "unassignedCm": 22
+    },
+    {
+      "id": "balcony-wall",
+      "name": "Balkon-/Wohnwand",
+      "kind": "wall_chain",
+      "x": 430,
+      "y": 96,
+      "segmentsCm": [193],
+      "secondaryMeasurementCm": 191,
+      "confidence": "measured",
+      "dimensions": [
+        "193 cm am Boden/Plintus, 191 cm an der Wand",
+        "Rollladenschalter links 13–21 cm von der Wand",
+        "Rollladen + Licht rechts 14–22 cm von der Wand"
+      ]
+    },
+    {
+      "id": "living-step",
+      "name": "Gestuftes Wohn-/Balkoneck",
+      "kind": "orthogonal_chain",
+      "x": 430,
+      "y": 335,
+      "segmentsCm": [48, 46, 26, 220],
+      "directions": ["right", "down", "right", "down"],
+      "confidence": "measured_sequence_orientation_photo_confirmed",
+      "dimensions": [
+        "Aufeinanderfolgende 90°-Wandsegmente: 48, 46, 26 und 220 cm",
+        "Reihenfolge gemessen; Startpunkt und Laufrichtung sind anhand der Fotos vorläufig zugeordnet"
+      ]
+    },
+    {
+      "id": "hall-wardrobe",
+      "name": "Flur / Garderobenprofil",
+      "kind": "orthogonal_chain",
+      "x": 48,
+      "y": 388,
+      "segmentsCm": [54, 13, 40, 157, 41, 46],
+      "directions": ["right", "down", "right", "down", "left", "down"],
+      "confidence": "measured_sequence_mapping_open",
+      "dimensions": [
+        "Maßkette: 54, 13, 40, 157, 41 und 46 cm",
+        "Türbereich: 116 cm",
+        "Alle aufeinanderfolgenden Segmente treffen sich im 90°-Winkel"
+      ]
+    },
+    {
+      "id": "kitchen-access",
+      "name": "Küche",
+      "kind": "room_detail",
+      "x": 245,
+      "y": 410,
+      "widthCm": 104,
+      "depthCm": 122,
+      "confidence": "partially_measured",
+      "dimensions": [
+        "Freier Küchendurchgang: 104 cm",
+        "Spülmaschinenecke: 46 cm zur Wand",
+        "Vom Lot bis zum Ende der Küchenwand: 63 cm"
+      ]
+    }
+  ],
+  "photos": [
+    { "file": "reference/measurement-visit/1238.jpg", "label": "Schlafbereich und Loggia-Tür" },
+    { "file": "reference/measurement-visit/1244.jpg", "label": "Balkon-/Loggia-Öffnungen" },
+    { "file": "reference/measurement-visit/1249.jpg", "label": "Balkonwand und Wandprofile" },
+    { "file": "reference/measurement-visit/1252.jpg", "label": "Wohn-/Balkoneck mit 90°-Profil" },
+    { "file": "reference/measurement-visit/1253.jpg", "label": "Küche und untere Balkontür" },
+    { "file": "reference/measurement-visit/1255.jpg", "label": "Küche und Durchgang" },
+    { "file": "reference/measurement-visit/1256.jpg", "label": "Flur, Küche und Garderobenprofil" },
+    { "file": "reference/measurement-visit/1257.jpg", "label": "Eingangsbereich und 90°-Rücksprünge" }
+  ],
+  "openMeasurements": [
+    "Verbindungslängen zwischen den gemessenen Teilbereichen",
+    "Eindeutige Zuordnung der 22 cm Restlänge an der 308-cm-Seite",
+    "Exakter Startpunkt und Laufrichtung der 48/46/26/220-cm-Kette",
+    "Vollständige Raumkontur von Wohnen/Essen und Bad"
+  ]
+}

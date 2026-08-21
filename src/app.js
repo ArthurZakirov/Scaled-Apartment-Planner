@@ -7,10 +7,35 @@ import {
   parseDisplayState,
   setDisplayStateInUrl
 } from './display-filter.js';
+import { buildMeasuredSurveyPanel, buildMeasuredSurveySvg } from './measured-plan.js';
 
 const isCalibration = window.location.pathname.includes('/calibration');
 const base = isCalibration ? '..' : '.';
 const NS = 'http://www.w3.org/2000/svg';
+
+function currentPlanMode() {
+  return new URLSearchParams(window.location.search).get('plan') === 'measured' ? 'measured' : 'reconstruction';
+}
+
+function setPlanMode(mode) {
+  const url = new URL(window.location.href);
+  if (mode === 'measured') url.searchParams.set('plan', 'measured');
+  else url.searchParams.delete('plan');
+  window.location.assign(url);
+}
+
+function renderPlanModeControl(mode) {
+  const label = htmlEl('label', { className: 'plan-mode-control' });
+  label.append(htmlEl('span', {}, 'Grundrissbasis'));
+  const select = htmlEl('select', { 'aria-label': 'Grundrissbasis auswählen' });
+  select.append(
+    htmlEl('option', mode === 'reconstruction' ? { value: 'reconstruction', selected: '' } : { value: 'reconstruction' }, 'Original-Rekonstruktion'),
+    htmlEl('option', mode === 'measured' ? { value: 'measured', selected: '' } : { value: 'measured' }, 'Besichtigungsmaße · ohne Möbel')
+  );
+  select.addEventListener('change', () => setPlanMode(select.value));
+  label.append(select);
+  return label;
+}
 
 function svgEl(name, attrs = {}, text = null) {
   const el = document.createElementNS(NS, name);
@@ -1030,6 +1055,29 @@ function renderCalibrationControls(svg) {
 async function main() {
   const root = document.querySelector('#app');
   try {
+    const planMode = currentPlanMode();
+    if (planMode === 'measured') {
+      const survey = await loadJson('data/measured-survey.json');
+      const header = htmlEl('header', { className: 'app-header' });
+      const titleWrap = htmlEl('div');
+      titleWrap.append(htmlEl('p', { className: 'eyebrow' }, 'Scaled Apartment Planner'));
+      titleWrap.append(htmlEl('h1', {}, 'Wohnung 264 · Aufmaß-Grundriss'));
+      header.append(titleWrap, renderPlanModeControl(planMode));
+      root.append(header);
+
+      const workspace = htmlEl('main', { className: 'workspace measured-workspace' });
+      const canvas = htmlEl('section', { className: 'canvas-card reconstructed-card' });
+      canvas.append(buildMeasuredSurveySvg(survey));
+      workspace.append(canvas, buildMeasuredSurveyPanel(survey, resolveAsset));
+      root.append(workspace);
+
+      const footer = htmlEl('footer', { className: 'app-footer' });
+      footer.append(htmlEl('span', {}, 'Maßstäbliche Teilgeometrie aus der Besichtigung · noch kein geschlossener Gesamtgrundriss.'));
+      footer.append(htmlEl('code', {}, 'Möbel: ausgeblendet'));
+      root.append(footer);
+      return;
+    }
+
     const [apartmentSource, fixtures, fixedFurnishings, catalog, scenarioData, evaluations, constraints] = await Promise.all([
       loadJson('data/apartment.json'),
       loadJson('data/fixed-fixtures.json'),
@@ -1071,6 +1119,7 @@ async function main() {
     header.append(titleWrap);
     const nav = htmlEl('nav');
     nav.append(htmlEl('a', { href: `${isCalibration ? '../' : './calibration/'}${window.location.search}` }, isCalibration ? 'Plan öffnen' : 'Kalibrierung öffnen'));
+    nav.append(renderPlanModeControl(planMode));
     header.append(nav);
     root.append(header);
 
