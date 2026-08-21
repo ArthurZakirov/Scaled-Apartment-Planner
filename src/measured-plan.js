@@ -42,27 +42,48 @@ function dimension(svg, x1, y1, x2, y2, label, offset = 0) {
   }, label));
 }
 
-function drawRoom(svg, area) {
+function controlBand(svg, x1, y1, x2, y2, label, labelX, labelY, anchor = 'middle') {
+  line(svg, x1, y1, x2, y2, 'survey-control-band');
+  svg.append(svgEl('text', { x: labelX, y: labelY, class: 'survey-control-label', 'text-anchor': anchor }, label));
+}
+
+function drawSleepingArea(svg, area) {
   const x = area.x;
   const y = area.y;
-  const width = area.widthCm * SCALE;
-  const depth = area.depthCm * SCALE;
-  svg.append(svgEl('rect', { x, y, width, height: depth, class: 'survey-room' }));
-  svg.append(svgEl('text', { x: x + width / 2, y: y + depth / 2, class: 'survey-room-label' }, area.name));
-  dimension(svg, x, y, x + width, y, `${area.widthCm} cm`, -20);
-  dimension(svg, x, y, x, y + depth, `${area.depthCm} cm`, 20);
+  const width = area.backWallCm * SCALE;
+  const bathDepth = area.bathWallCm * SCALE;
+  const loggiaDepth = area.loggiaChain.reduce((sum, segment) => sum + segment.lengthCm, 0) * SCALE;
+  line(svg, x, y, x + width, y);
+  line(svg, x, y, x, y + bathDepth);
 
-  if (area.openingChainCm) {
-    let cursor = x;
-    for (const value of area.openingChainCm) {
-      const next = cursor + value * SCALE;
-      line(svg, cursor, y + depth, next, y + depth, 'survey-opening-segment');
-      dimension(svg, cursor, y + depth, next, y + depth, `${value}`, 17);
-      cursor = next;
+  let cursor = y;
+  area.loggiaChain.forEach((segment) => {
+    const next = cursor + segment.lengthCm * SCALE;
+    line(svg, x + width, cursor, x + width, next, segment.type === 'window' ? 'survey-opening-segment' : 'survey-wall');
+    dimension(svg, x + width, cursor, x + width, next, `${segment.lengthCm}`, -17);
+    cursor = next;
+  });
+
+  line(svg, x, y + bathDepth, x + width, y + loggiaDepth, 'survey-open-side');
+  svg.append(svgEl('text', { x: x + width / 2, y: y + Math.min(bathDepth, loggiaDepth) / 2, class: 'survey-room-label' }, area.name));
+  svg.append(svgEl('text', { x: x + width / 2, y: y + Math.max(bathDepth, loggiaDepth) + 27, class: 'survey-open-label' }, 'offen zum Wohnbereich'));
+  dimension(svg, x, y, x + width, y, `${area.backWallCm} cm`, -20);
+  dimension(svg, x, y, x, y + bathDepth, `${area.bathWallCm} cm Badwand`, -18);
+
+  for (const control of area.controls) {
+    if (control.wall === 'back') {
+      const start = x + control.startCm * SCALE;
+      const end = x + control.endCm * SCALE;
+      controlBand(svg, start, y, end, y, '55–63 cm · Schalter/Steckdose', (start + end) / 2, y + 17);
+    } else if (control.wall === 'loggia') {
+      const windowEndCm = area.loggiaChain[0].lengthCm + area.loggiaChain[1].lengthCm;
+      const start = y + (windowEndCm + control.offsetFromWindowEndCm[0]) * SCALE;
+      const end = y + (windowEndCm + control.offsetFromWindowEndCm[1]) * SCALE;
+      controlBand(svg, x + width, start, x + width, end, '13–21 cm · Rollladen', x + width - 24, (start + end) / 2 - 4, 'end');
+    } else if (control.wall === 'bath') {
+      const position = y + bathDepth - control.offsetFromOpenEndCm * SCALE;
+      controlBand(svg, x, position - 5, x, position + 5, '20 cm · Bedienfeld', x + 18, position - 7, 'start');
     }
-    const end = x + width;
-    line(svg, cursor, y + depth, end, y + depth, 'survey-unresolved');
-    dimension(svg, cursor, y + depth, end, y + depth, `${area.unassignedCm} offen`, 17);
   }
 }
 
@@ -114,16 +135,17 @@ function drawKitchen(svg, area) {
 
 export function buildMeasuredSurveySvg(survey) {
   const svg = svgEl('svg', {
-    viewBox: '0 0 760 680',
+    viewBox: '0 0 760 780',
     class: 'floorplan measured-floorplan',
     role: 'img',
     'aria-label': 'Maßstäbliche Aufmaß-Skizze der bei der Besichtigung gemessenen Teilbereiche'
   });
-  svg.append(svgEl('text', { x: 38, y: 28, class: 'survey-title' }, 'Aufmaß · 1 Einheit = 1 cm'));
+  svg.append(svgEl('text', { x: 38, y: 28, class: 'survey-title' }, 'Aufmaß · maßstäbliche Teilgeometrie in cm'));
   svg.append(svgEl('text', { x: 38, y: 45, class: 'survey-subtitle' }, 'Durchgezogen = gemessen · gestrichelt = noch nicht eindeutig verbunden'));
+  svg.append(svgEl('text', { x: 38, y: 58, class: 'survey-subtitle survey-control-legend' }, 'Magenta = Bedienelemente bei der Möbelplanung zugänglich halten'));
 
   for (const area of survey.measuredAreas) {
-    if (area.kind === 'room') drawRoom(svg, area);
+    if (area.kind === 'open_sleeping_area') drawSleepingArea(svg, area);
     else if (area.kind === 'room_detail') drawKitchen(svg, area);
     else drawChain(svg, area);
   }
@@ -144,6 +166,13 @@ export function buildMeasuredSurveyPanel(survey, resolveAsset) {
   notice.append(htmlEl('strong', {}, 'Echte Maße, keine globale Bildskalierung'));
   notice.append(htmlEl('span', {}, survey.sourceNote));
   panel.append(notice);
+
+  const basis = htmlEl('div', { className: 'notice survey-basis' });
+  basis.append(htmlEl('strong', {}, 'Wie gemessen wurde'));
+  basis.append(htmlEl('span', {}, survey.measurementBasis.roomLengths));
+  basis.append(htmlEl('span', {}, survey.measurementBasis.controls));
+  basis.append(htmlEl('span', {}, survey.measurementBasis.skirtingPlanning));
+  panel.append(basis);
 
   const list = htmlEl('div', { className: 'survey-area-list' });
   for (const area of survey.measuredAreas) {

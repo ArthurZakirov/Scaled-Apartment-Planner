@@ -42,11 +42,16 @@ a:hover { text-decoration: underline; }
 .survey-wall, .survey-wall-chain, .survey-room-detail { fill: none; stroke: #20372f; stroke-width: 8; stroke-linecap: square; stroke-linejoin: miter; vector-effect: non-scaling-stroke; }
 .survey-opening-segment { stroke: #69a9b1; stroke-width: 7; vector-effect: non-scaling-stroke; }
 .survey-unresolved { stroke: #c98218; stroke-width: 7; stroke-dasharray: 7 5; vector-effect: non-scaling-stroke; }
+.survey-open-side { stroke: #8a9791; stroke-width: 2; stroke-dasharray: 8 6; vector-effect: non-scaling-stroke; }
+.survey-open-label { fill: #68756f; font-size: 8px; font-weight: 700; text-anchor: middle; }
+.survey-control-band { stroke: #c23e78; stroke-width: 10; vector-effect: non-scaling-stroke; }
+.survey-control-label { fill: #9b255b; font-size: 7px; font-weight: 800; paint-order: stroke; stroke: #fbfcfa; stroke-width: 3px; }
 .survey-dimension-line, .survey-dimension-tick { stroke: #6f7c76; stroke-width: 1; vector-effect: non-scaling-stroke; }
 .survey-dimension-label { fill: #40504a; font-size: 8px; font-weight: 750; text-anchor: middle; paint-order: stroke; stroke: #fbfcfa; stroke-width: 3px; }
 .survey-room-label { fill: #263b34; font-size: 14px; font-weight: 800; text-anchor: middle; }
 .survey-section-label { fill: #263b34; font-size: 12px; font-weight: 800; }
 .measured-panel h3 { margin: 18px 0 10px; font-size: 14px; }
+.notice.survey-basis { margin: 12px 0; background: #f5f1fb; color: #4f3b69; border: 1px solid #d6c9e8; }
 .survey-area-list { display: grid; gap: 8px; margin: 14px 0; }
 .survey-area { border: 1px solid var(--line); border-radius: 10px; background: #fafbf9; }
 .survey-area summary { padding: 10px; display: grid; gap: 2px; cursor: pointer; }

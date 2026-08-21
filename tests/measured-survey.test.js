@@ -6,10 +6,20 @@ const survey = JSON.parse(await readFile(new URL('../data/measured-survey.json',
 
 test('measured survey preserves the verified bedroom dimensions', () => {
   const bedroom = survey.measuredAreas.find((area) => area.id === 'sleeping-area');
-  assert.equal(bedroom.widthCm, 308);
-  assert.equal(bedroom.depthCm, 239);
-  assert.deepEqual(bedroom.openingChainCm, [121, 93, 72]);
-  assert.equal(bedroom.openingChainCm.reduce((sum, value) => sum + value, 0) + bedroom.unassignedCm, 308);
+  assert.equal(bedroom.kind, 'open_sleeping_area');
+  assert.equal(bedroom.backWallCm, 308);
+  assert.equal(bedroom.bathWallCm, 239);
+  assert.deepEqual(bedroom.loggiaChain.map((segment) => segment.lengthCm), [121, 93, 72]);
+  assert.equal(bedroom.loggiaChain.find((segment) => segment.type === 'window').lengthCm, 93);
+  assert.equal(bedroom.loggiaChain.reduce((sum, segment) => sum + segment.lengthCm, 0), 286);
+  assert.equal(bedroom.controls.length, 3);
+});
+
+test('survey distinguishes skirting-based room lengths from corner-based control offsets', () => {
+  assert.match(survey.measurementBasis.roomLengths, /Sockelleiste/);
+  assert.match(survey.measurementBasis.controls, /Wandecke/);
+  assert.equal(survey.measurementBasis.standardWindowOpeningCm, 93);
+  assert.deepEqual(survey.measurementBasis.observedWindowOpeningRangeCm, [92, 93]);
 });
 
 test('sequential site measurements remain explicit orthogonal chains', () => {

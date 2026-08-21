@@ -4,25 +4,58 @@
   "status": "partial_measured_survey",
   "units": "cm",
   "sourceNote": "Vom Nutzer vor Ort gemessene Innenmaße. Die Teilbereiche sind maßstäblich; noch nicht gemessene Verbindungen zwischen ihnen werden nicht als exakt dargestellt.",
+  "measurementBasis": {
+    "roomLengths": "In der Regel Sockelleiste bis Sockelleiste (Plintusmaß).",
+    "controls": "Schalter- und Steckdosenpositionen wurden ab der tatsächlichen Wandecke gemessen.",
+    "skirtingPlanning": "Die Sockelleiste wird nicht separat modelliert. Eine mögliche Differenz von ungefähr 1 cm je Wandende erklärt kleine Abweichungen zwischen Maßketten, ohne die nutzbare Möbelplanung wesentlich zu verändern.",
+    "standardWindowOpeningCm": 93,
+    "observedWindowOpeningRangeCm": [92, 93]
+  },
   "measuredAreas": [
     {
       "id": "sleeping-area",
       "name": "Schlafbereich",
-      "kind": "room",
+      "kind": "open_sleeping_area",
       "x": 48,
-      "y": 84,
-      "widthCm": 308,
-      "depthCm": 239,
+      "y": 95,
+      "backWallCm": 308,
+      "bathWallCm": 239,
+      "loggiaChain": [
+        { "type": "wall", "lengthCm": 121 },
+        { "type": "window", "lengthCm": 93 },
+        { "type": "wall", "lengthCm": 72 }
+      ],
       "confidence": "measured",
       "dimensions": [
-        "Innenmaß 308 × 239 cm",
-        "Fenster-/Wandkette an der 308-cm-Seite: 121 + 93 + 72 cm",
-        "22 cm der 308-cm-Gesamtlänge sind in der Notiz noch keinem Abschnitt eindeutig zugeordnet",
-        "Fensterausschnitt: 92 × 23 cm",
-        "Wand neben dem Schlafbereich: 228 cm"
+        "Drei Wände; die vierte Seite ist offen zum Wohnbereich",
+        "Rückwand: 308 cm",
+        "Badwand: 239 cm",
+        "Loggia-Seite: 121 cm Wand + 93 cm Fenster + 72 cm Wand = 286 cm",
+        "Fensterbreite wird für die Planung wohnungsweit mit 93 cm vereinheitlicht (vor Ort 92–93 cm)",
+        "Fensterausschnitt/Laibung: ca. 23 cm tief",
+        "Angrenzende Wand neben dem Schlafbereich: 228 cm"
       ],
-      "openingChainCm": [121, 93, 72],
-      "unassignedCm": 22
+      "controls": [
+        {
+          "wall": "back",
+          "startCm": 55,
+          "endCm": 63,
+          "label": "Lichtschalter / Steckdose",
+          "planningRule": "zugänglich halten"
+        },
+        {
+          "wall": "loggia",
+          "offsetFromWindowEndCm": [13, 21],
+          "label": "Rollladenknöpfe",
+          "planningRule": "zugänglich halten"
+        },
+        {
+          "wall": "bath",
+          "offsetFromOpenEndCm": 20,
+          "label": "Heizung / Licht / Steckdose",
+          "planningRule": "zugänglich halten"
+        }
+      ]
     },
     {
       "id": "balcony-wall",
@@ -44,7 +77,7 @@
       "name": "Gestuftes Wohn-/Balkoneck",
       "kind": "orthogonal_chain",
       "x": 430,
-      "y": 335,
+      "y": 420,
       "segmentsCm": [48, 46, 26, 220],
       "directions": ["right", "down", "right", "down"],
       "confidence": "measured_sequence_orientation_photo_confirmed",
@@ -58,7 +91,7 @@
       "name": "Flur / Garderobenprofil",
       "kind": "orthogonal_chain",
       "x": 48,
-      "y": 388,
+      "y": 460,
       "segmentsCm": [54, 13, 40, 157, 41, 46],
       "directions": ["right", "down", "right", "down", "left", "down"],
       "confidence": "measured_sequence_mapping_open",
@@ -73,7 +106,7 @@
       "name": "Küche",
       "kind": "room_detail",
       "x": 245,
-      "y": 410,
+      "y": 480,
       "widthCm": 104,
       "depthCm": 122,
       "confidence": "partially_measured",
@@ -96,7 +129,7 @@
   ],
   "openMeasurements": [
     "Verbindungslängen zwischen den gemessenen Teilbereichen",
-    "Eindeutige Zuordnung der 22 cm Restlänge an der 308-cm-Seite",
+    "Exakte Breite der Sockelleisten und der Bedienelemente",
     "Exakter Startpunkt und Laufrichtung der 48/46/26/220-cm-Kette",
     "Vollständige Raumkontur von Wohnen/Essen und Bad"
   ]

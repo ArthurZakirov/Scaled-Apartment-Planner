@@ -13,7 +13,9 @@
 
 The measured mode is a furniture-free planning basis assembled from on-site notes and visit photos. It currently contains exact local dimensions for the 308 × 239 cm sleeping area, the 191/193 cm balcony-wall segment, the 104 cm kitchen passage, the 48/46/26/220 cm stepped wall chain, and the 54/13/40/157/41/46 cm hall/wardrobe chain. Consecutive values are preserved as orthogonal wall segments, following the user's clarification.
 
-These measurements do not yet close one complete apartment polygon. The app therefore renders the verified parts as independently scaled survey geometry and marks unresolved assignments or connections rather than inventing dimensions. In particular, 121 + 93 + 72 cm accounts for 286 cm of the measured 308 cm bedroom side, leaving 22 cm not yet assigned to a specific wall/opening segment.
+These measurements do not yet close one complete apartment polygon. The app therefore renders the verified parts as independently scaled survey geometry and marks unresolved connections rather than inventing dimensions. The sleeping area has three physical boundaries and remains open toward the living area: a 308 cm rear wall, a 239 cm bathroom wall, and a 286 cm Loggia-side chain consisting of 121 cm wall, 93 cm window, and 72 cm wall. The 55–63 cm rear-wall control band, the shutter controls 13–21 cm after the Loggia window, and the bathroom-wall controls 20 cm from the hall-side open end are recorded as future furniture keep-clear constraints.
+
+Room lengths were generally measured from skirting board to skirting board, while control offsets were measured from the actual wall corner. The skirting depth is not modeled separately; an approximately centimetre-scale discrepancy at either end is treated as measurement-basis uncertainty rather than a new wall profile. Window openings use 93 cm as a simplified planning width, with 92–93 cm observed on site.
 
 ## Scale status
 
